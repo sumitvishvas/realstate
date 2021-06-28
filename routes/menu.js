@@ -6,6 +6,9 @@ const router=express.Router();
 router.get('/', (req, res)=> {
     res.render('index');
    });
+
+
+   
    router.get('/flats',(req,res)=>{
     const allFlats= FlatOrHouse.findAll(
        {
