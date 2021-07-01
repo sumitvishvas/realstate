@@ -1,5 +1,5 @@
 const express= require('express'); 
-const { where } = require('sequelize/types');
+const { where } = require('sequelize');
 const {FlatOrHouse}  = require("../models/Flats");
 const router=express.Router();
 
