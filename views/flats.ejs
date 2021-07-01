@@ -465,57 +465,53 @@
 							<div class="row">
 
 								<!-- Single Property Start -->
+								<%  data.forEach((item,index)=>{%>
 								<div class="col-lg-12 col-md-12">
 									<div class="property-listing property-1">
-											
 										<div class="listing-img-wrapper">
-											<a href="single-property-2.html">
-												<img src="assets/img/p-1.jpg" class="img-fluid mx-auto" alt="" />
+											<a href="<%=item.url%>">
+												<img src="assets/uploads/<%=JSON.parse(item.gallery).gallery[0].smImg%>" class="img-fluid mx-auto" alt="" />
 											</a>
 										</div>
 										
 										<div class="listing-content">
-										
+									
+																																								
+
 											<div class="listing-detail-wrapper-box">
 												<div class="listing-detail-wrapper">
 													<div class="listing-short-detail">
-														<h4 class="listing-name"><a href="single-property-2.html">Resort Valley Ocs</a></h4>
-														<div class="fr-can-rating">
-															<i class="fas fa-star filled"></i>
-															<i class="fas fa-star filled"></i>
-															<i class="fas fa-star filled"></i>
-															<i class="fas fa-star filled"></i>
-															<i class="fas fa-star"></i>
-															<span class="reviews_text">(42 Reviews)</span>
-														</div>
-														<span class="prt-types sale">For Sale</span>
+														<h4 class="listing-name"><a href="<%=item.url%>"><%=item.bedrooms%>bhk <%=item.propType%> in <%=item.locality%></a></h4>
+														
 													</div>
+													<h3></h3>
 													<div class="list-price">
-														<h6 class="listing-card-info-price">$7,000</h6>
+														<% let x = Math.round(item.expectedPrice / item.BuiltUpArea)  %>
+														<h6 class="listing-card-info-price">₹ <%=x%>/Sqft</h6>
 													</div>
 												</div>
 											</div>
-											
+										
 											<div class="price-features-wrapper">
 												<div class="list-fx-features">
 													<div class="listing-card-info-icon">
-														<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>3 Beds
+														<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div> <%=item.bedrooms%> Beds
 													</div>
 													<div class="listing-card-info-icon">
-														<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>1 Bath
+														<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div><%=item.bathrooms%> Bath
 													</div>
 													<div class="listing-card-info-icon">
-														<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>800 sqft
+														<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div><%= item.BuiltUpArea%> sqft
 													</div>
 												</div>
 											</div>
 										
 											<div class="listing-footer-wrapper">
 												<div class="listing-locate">
-													<span class="listing-location"><i class="ti-location-pin"></i>Quice Market, Canada</span>
+													<span class="listing-location"><i class="ti-location-pin"></i><%= item.locality%>, <%= item.socityName %></span>
 												</div>
 												<div class="listing-detail-btn">
-													<a href="single-property-2.html" class="more-btn">View</a>
+													<a href="<%=item.url%>" class="more-btn">View</a>
 												</div>
 											</div>
 											
@@ -523,6 +519,7 @@
 										
 									</div>
 								</div>
+								<%})%>
 								<!-- Single Property End -->
 								
 								<!-- Single Property Start -->
