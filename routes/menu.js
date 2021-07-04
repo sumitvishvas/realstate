@@ -1,6 +1,6 @@
 const express= require('express'); 
 const { where } = require('sequelize');
-const {FlatOrHouse}  = require("../models/Flats");
+const {FlatOrHouse}  = require("../models/adminModels");
 const router=express.Router();
 
 router.get('/', (req, res)=> {

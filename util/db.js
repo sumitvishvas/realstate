@@ -3,9 +3,11 @@ const Sequelize  = require('sequelize');
 // dialect:'mysql'
 // });
 
+
 const sequelize=new  Sequelize('baafilac_realEstate' ,'root','',{host:'localhost',
 dialect:'mysql'
 });
+
 sequelize.authenticate()
 .then(()=>{
     console.log(`Connection`);
