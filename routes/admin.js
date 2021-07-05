@@ -5,7 +5,7 @@ const router = express.Router();
 var uniqid = require("uniqid");
 const trimRequest = require("trim-request"); 
      const fs  =require("fs");
-const { FlatOrHouse, validateFltasOrHouse } = require("../models/Flats");
+const { FlatOrHouse, validateFltasOrHouse,PlotOrLand, validatePlotsOrLand } = require("../models/adminModels");
 // const upload= require('../util/fileUpload');
 const multer = require("multer");
 const sharp = require("sharp");
@@ -60,6 +60,10 @@ router.post("/registerUser", async (req, res) => {
 
 router.get("/createFlate", (req, res) => {
   res.render("admin/createFlate");
+});
+
+router.get("/createPlot_Land", (req, res) => {
+  res.render("admin/createPlot_Land");
 });
 
 const uploads = upload.fields([{ name: "gallery", maxCount: 6 }]);
@@ -131,6 +135,76 @@ router.post("/createFlat", uploads, trimRequest.all, async (req, res) => {
       videoLink: req.body.videoLink,
       uuid: uuid,
     }).then(res.send("new property added."));
+  } catch (err) {
+    console.log("error from /createflat" + err);
+    res.send("something went wrong");
+  }
+});
+
+router.post("/createPlot_Land", uploads, trimRequest.all, async (req, res) => {
+  try {
+    let galleryImage = {
+      banner: {},
+      gallery: [],
+    };
+    let soci = spaceReplacer(req.body.societyName);
+    let local = spaceReplacer(req.body.locality);
+    let type =
+      req.body.propType === "Commercial" ? "Residential" : req.body.propType;
+    let uuid = uniqid.time();
+    let url = `${req.body.TotalPrice}price-${type}-for-sale-in-${soci}-${local}-lucknow-built-up-area-${req.body.TotalArea}-square-feet-${uuid}`;
+    url = url.toLowerCase();
+    let src = uniqid() + "-" + req.files["gallery"][0].originalname;
+    await sharp(req.files["gallery"][0].buffer)
+      .resize({ width: 640, height: 360 })
+      .toFile("./public/assets/uploads/" + src);
+    galleryImage.banner["src"] = src;
+    let tinySrc = "";
+    let bigSrc = "";
+    req.files["gallery"].forEach((item) => {
+      tinySrc = uniqid() + "-" + item.originalname;
+      sharp(item.buffer)
+        .resize({ width: 400, height: 265 })
+        .toFile("./public/assets/uploads/" + tinySrc)
+        .then()
+        .catch((err) => {
+          console.log(err);
+        });
+      bigSrc = uniqid() + "-" + item.originalname;
+      sharp(item.buffer)
+        .resize({ width: 950, height: 630 })
+        .toFile("./public/assets/uploads/" + bigSrc)
+        .then()
+        .catch((err) => {
+          console.log(err);
+        });
+
+      galleryImage.gallery.push({
+        smImg: tinySrc,
+        bgImg: bigSrc,
+      });
+    });
+    let galleryImageStr = JSON.stringify(galleryImage);
+    // console.log(`tinySrc=${req.body.societyName}`);
+
+    // have to created by  owned by and order by
+    console.log(req.body);
+    PlotOrLand.create({
+      url: url,
+      socityName: req.body.societyName,
+      locality: req.body.locality,
+      plotOrLandNum: req.body.plotOrLandNum,
+      propType: req.body.propType,
+     
+      TotalArea: req.body.TotalArea,
+    
+      TotalPrice: req.body.TotalPrice,
+      priceNegotiable: req.body.priceNegotiable,
+      propDetails: req.body.propDetails,
+      gallery: galleryImageStr,
+      videoLink: req.body.videoLink,
+      uuid: uuid,
+    }).then(res.send("New Plot added."));
   } catch (err) {
     console.log("error from /createflat" + err);
     res.send("something went wrong");

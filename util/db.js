@@ -3,5 +3,18 @@ const sequelize=new  Sequelize('baafilac_realEstate' ,'baafilac_rajs01878','uxp[
 dialect:'mysql'
 });
 
+
+// const sequelize=new  Sequelize('baafilac_realEstate' ,'root','',{host:'localhost',
+// dialect:'mysql'
+// });
+
+sequelize.authenticate()
+.then(()=>{
+    console.log(`Connection`);
+}).catch(error=>{
+    console.log('Error -> '+error);
+})
+// console.log(sequelize);
+
 module.exports=sequelize;
 
