@@ -163,7 +163,7 @@ router.get("/getflatsorhousedata", async (req, res) => {
 });
 
 router.delete("/deleteProperty/:id", async (req, res) => {
-  console.log(req.params.id);
+  
   const  flatOrHouse = await FlatOrHouse.findByPk(req.params.id);
   if (flatOrHouse === null) {
     return res.status(200).send('something went wrong !');
