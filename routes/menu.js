@@ -38,6 +38,7 @@ router.get('/', (req, res)=> {
       }  
    });
 
+   
       router.get('/plots', async (req,res)=>{
     const allPlots= await PlotOrLand.findAll(
        {
@@ -67,8 +68,11 @@ router.get('/', (req, res)=> {
       }  
    });
 
-   router.get('/:id',async(req,res)=>{
+   router.get('/property-details/:id',async(req,res)=>{
     
+    const singleOne= await FlatOrHouse.findOne({where :{url : req.params['id']}});
+
+    res.render("single",{data:singleOne});
 
    });
 

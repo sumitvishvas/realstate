@@ -210,7 +210,8 @@ p {
 }
 
 .bg-title {
-    background: #2540a2
+    background: #f3f7fd;
+    padding-top: 100px;
 }
 
 .bg-1 {
@@ -9224,7 +9225,7 @@ ul.deatil_features li strong {
 
 .list-fx-features {
     margin-top: 20px;
-    justify-content: flex-start
+    justify-content: flex-end;
 }
 
 .listing-card-info-icon {
@@ -10075,7 +10076,8 @@ span.mod-close {
 
 .prt-types.sale {
     background: rgba(247, 68, 0, .1);
-    color: #f74400
+    color: #f74400;
+    float: right;
 }
 
 .prt-types.rent {
