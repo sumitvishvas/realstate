@@ -1,5 +1,6 @@
 const express = require("express");
 const { User, validateUser } = require("../models/user");
+const {ClientLead}=require("../models/clientData");
 const spaceReplacer = require("../util/usefulFunctions");
 const router = express.Router();
 var uniqid = require("uniqid");
@@ -266,5 +267,13 @@ router.delete("/deleteProperty/:id", async (req, res) => {
   console.log(x);
   res.send('1');
 });
+
+
+router.get("/leadsFromWeb", async(req,res)=>{
+  const allWebLeads= await ClientLead.findAll();
+  res.render("admin/Leadsfromwebsite",{data:allWebLeads});
+})
+
+
 
 module.exports = router;

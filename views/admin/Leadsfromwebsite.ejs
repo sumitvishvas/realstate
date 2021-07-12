@@ -1,0 +1,187 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Admin Flats or House</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Easy Admin Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<!-- Custom CSS -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Graph CSS -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- jQuery -->
+<!-- lined-icons -->
+<link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
+<!-- //lined-icons -->
+<!-- chart -->
+<script src="js/Chart.js"></script>
+<!-- //chart -->
+<!--animate-->
+<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
+  
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
+
+<!--//end-animate-->
+<!----webfonts--->
+<link href='//fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+<!---//webfonts---> 
+ <!-- Meters graphs -->
+
+<!-- Placed js at the end of the document so the pages load faster -->
+
+</head> 
+   
+ <body class="sticky-header left-side-collapsed"  onload="initMap()">
+    <section>
+    <!-- left side start-->
+	<%- include('includes/navbar.ejs') %>
+    <!-- left side end-->
+    
+    <!-- main content start-->
+		<div class="main-content main-content4">
+			<!-- header-starts -->
+			<%- include('includes/headerSection.ejs') %>
+	<!-- //header-ends -->
+			
+			<div id="page-wrapper">
+				<div class="graphs">
+					<h3 class="blank1">House or Flats Table</h3>
+					<center><h4 id="msg" class=""></h4></center>
+					 <div class="xs tabls">
+						<div class="bs-example4" data-example-id="contextual-table">
+							
+						<table class="table" id="table_id">
+						  <thead >
+							<tr>
+							  <th>#</th>
+							  <th>Lead Id</th>
+							  <th>Client Email</th>
+							  <th>Client Mobile Number</th>
+							  <th>Details</th>
+							  <th>View Property</th>
+							  <th>Status</th>
+							  <th>save</th>
+							  <th>Delete</th>
+							</tr>
+						  </thead>
+						  <tbody id="tbody_id">
+							<% data.forEach((item,index)=>{%>
+							<tr>
+								<td><%=index+1%></td>
+								<td><%= item._id%> y</td>	
+								<td><%= item.clientEmail%></td>
+								<td><%= item.clientMobileNumber%></td>
+								<td><%= item.details%></td>
+								<td><a href="/property-details/<%=item.url%>" target="_blank"> <i class="fa fa-external-link" aria-hidden="true"></i></a></td>
+								<td>
+									<select class="form-control1" name="propType" id="propType" required>
+										<option value="Commercial">pending</option>
+										<option value="Residential">attended</option>
+										
+									</select>
+								</td>
+								<td><button class="btn-success btn " onclick="saveStatus('<%=item._id%>')" >Save</button></td>
+								<td><button class="btn-success btn " onclick="deleteLead('<%=item._id%>')" >Delete</button></td>
+							</tr>
+							<% })%>
+						  </tbody>
+						  <tfoot >
+							<tr>
+								<th>#</th>
+								<th>Lead Id</th>
+								<th>Client Email</th>
+								<th>Client Mobile Number</th>
+								<th>Details</th>
+								<th>View Property</th>
+								<th>Status</th>
+								<th>save</th>
+								<th>Delete</th>
+							  </tr>
+						  </tfoot>
+
+						</table>
+					   </div>
+					 
+						
+					
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--footer section start-->
+			<footer>
+			   <p></p>
+			</footer>
+        <!--footer section end-->
+	</section>
+	<script>
+		$(document).ready( function () {
+		 	// getAllTour();
+			 $('#table_id').DataTable();
+		});
+
+	//   function getAllTour() {
+			
+
+	// 	$.post("/admin/allTour").done((data)=>{
+			
+	// 		$("#tbody_id").html("");
+	// 		let a=0;
+			
+	// 		for(let i in data){
+	// 			a++;
+				
+	// 		$("#tbody_id").append(`<tr><td>${a}</td><td>${data[i].tourtitle}</td><td>${data[i].tourPrice}</td><td>${data[i].discount}</td><td>${data[i].numberOfDays}</td><td>${data[i].numberOfNights}</td><td><button class="btn-success btn " >Edit</button></td><td><button class="btn-success btn " onclick="deleteTour('${data[i]._id}')" >Delete</button></td></tr>`);
+	// 		}
+			
+	// 		$('#table_id').DataTable();
+	// 	});
+
+		
+	//   }
+	  
+	  function deleteLead(id){
+			 
+		alert('/admin/getflatsorhousedata/'+id);
+			$.ajax({
+				type:'DELETE',
+				url: '/admin/deleteProperty/'+id,
+				
+				cache:false,
+				contentType: false,
+				processData: false,
+				success:function(data){
+					
+					if(data ==1){
+					$("#msg").html(`Deleted`).addClass("alert alert-success");
+
+					}else{	
+					$("#msg").html(`Tour not Found`).addClass("alert alert-success");
+
+					}
+				},
+				error: function(data){
+					console.log("error");
+					console.log(data);
+				}
+        	});
+		}
+	</script>
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/scripts.js"></script>
+<!-- Bootstrap Core JavaScript -->
+   <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
