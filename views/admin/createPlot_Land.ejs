@@ -344,6 +344,7 @@
 	
 	<script>
 		$(document).ready(()=>{
+			
 
 			$("#expectedPrice").on("keyup", ()=>{
 				let x= $("#expectedPrice").val();
@@ -386,6 +387,9 @@
 					
 					$("#msg").html(`${data}`).addClass("alert alert-success");
 					window.scrollTo(0,0);
+
+					
+
 				},
 					complete:function(data){
 					

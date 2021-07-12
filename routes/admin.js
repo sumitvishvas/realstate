@@ -6,6 +6,7 @@ const router = express.Router();
 var uniqid = require("uniqid");
 const trimRequest = require("trim-request"); 
      const fs  =require("fs");
+      const sequelize = require('sequelize');
 const { FlatOrHouse, validateFltasOrHouse,PlotOrLand, validatePlotsOrLand } = require("../models/adminModels");
 // const upload= require('../util/fileUpload');
 const multer = require("multer");
@@ -226,24 +227,214 @@ router.get("/getflatsorhousedata", async (req, res) => {
       "url",
     ],
   });
-
-  if (flatOrHouses === null) {
+   if (flatOrHouses === null) {
     console.log("Not found!");
   } else {
     console.log("All users:", JSON.stringify(flatOrHouses, null, 2));
-    res.render("admin/getFlatsOrHouseTable", { data: flatOrHouses });
+    res.render("admin/getFlatsOrHouseTable", { data: flatOrHouses ,tableName:'FlatOrHouse'});
     // Its primary key is 123
   }
   // console.log(users.every(user => user instanceof User)); // true
 });
+router.get("/getplotsorlanddata", async(req,res)=>{
+  res.render("admin/getPlotsOrLandTable",{tableName:'PlotOrLand'});
+})
 
-router.delete("/deleteProperty/:id", async (req, res) => {
+  router.post("/plotLandData", async(req, res) =>{
+//     console.log(req.body);
+    
+// console.log(req.body.search.value);
+var tableName=req.body.tableName;
+
+   
+        // Coming from databale itself. Limit is the visible number of data
+    var limit = parseInt(req.body.length);
+    var start = parseInt(req.body.start);
+    var order = req.body.order;
+     var search = req.body.search;
+     var search =search.value
+   
+// console.log(order);
+
+
+
+ var col = '';
+    var dir = "";
+    var o = "";
+
+    if (Array.isArray(order) && order.length) {
+      order.forEach(o=>{
+        col = o['column'];
+        dir = o['dir'];
+      })
+    }
+    if (dir !== 'asc' && dir !== 'desc') {
+      dir = 'desc';
+    }
+
+    // console.log(`${dir}`);
+
+        var columns = {
+      
+      0 : '_id',
+      1 : '_id',
+      2 :  "propType",
+      3 : "socityName",
+      4 : "locality",
+      
+      5 : "TotalArea",
+      6 :"TotalPrice",
+      7 :"url",
+     
+        }
+        console.log(columns[0]);
+
+    if (columns[col]) {
+      order = columns[col];
+    } else {
+      order = null;
+    }
+
+    // console.log(order);
+
+if( search !==''){
+  // console.log(search);
+ var plotOrLand = await PlotOrLand.findAll({
+    
+  where: {
+  [sequelize.Op.or]:{   
+     _id:{ [sequelize.Op.like]: '%' + search + '%' },
+    propType: { [sequelize.Op.like]: '%' + search + '%' },
+    socityName: { [sequelize.Op.like]: '%' + search + '%' },
+    locality: { [sequelize.Op.like]: '%' + search + '%' },
+    TotalArea: { [sequelize.Op.like]: '%' + search + '%' },
+    TotalPrice: { [sequelize.Op.like]: '%' + search + '%' },   
+  }
+  },
+   order: [
+            [order, dir],
+            
+        ],
+    offset:start,
+    limit : limit,
+
+});
+}else{
   
-  const  flatOrHouse = await FlatOrHouse.findByPk(req.params.id);
-  if (flatOrHouse === null) {
+ var plotOrLand = await PlotOrLand.findAll({
+    attributes: [
+      "_id",
+      "uuid",
+      "propType",
+      "socityName",
+      "locality",
+      
+      "TotalArea",
+      "TotalPrice",
+      "url",
+    ],
+    order: [
+            [order, dir],
+            
+        ],
+    offset:start,
+    limit : limit,
+  });
+}
+ 
+
+
+  
+ 
+var TotalData=await PlotOrLand.findAll({
+    attributes: ['_id', [sequelize.fn('count', sequelize.col('_id')), 'count']],
+    // group : ['plotOrLand._id'],
+    raw: true,
+    order: sequelize.literal('count DESC')
+  });
+  var TotalRows =TotalData[0].count;
+  console.log(`TotalDATA -> ${TotalRows}`);
+  // console.log(count[0].count);
+  var Data=[];
+  plotOrLand.forEach((data,index)=>{
+// console.log(data.locality+"  "+(index+1));
+var id=data._id;
+var uuid=data.uuid;
+var propType=data.propType;
+var socityName=data.socityName;
+var locality=data.locality;
+var TotalPrice=data.TotalPrice;
+var TotalArea=data.TotalArea;
+var url=data.url;
+
+var nestedData={
+'#':index+1,
+'id':id,
+'propType':propType,
+'socityName':socityName,
+'locality':locality,
+'TotalPrice':TotalPrice,
+'TotalArea':TotalArea,
+'view':`<td><a href="" target="_blank"> <i class="fa fa-external-link" aria-hidden="true"></i></a></td>`,
+'edit':`<td><button class="btn-success btn " onclick="editTour()" >Edit</button></td>`,
+'delete':`<td><button class="btn btn-danger" onclick="deleteProperty('${id}','${tableName}')">Delete</button></td>`
+}
+
+
+Data.push(nestedData);
+
+// Data =nestedData;
+// console.log(Data);
+
+
+ 
+  });
+//   console.log(`DATA`);
+// console.log(Data);
+  
+   var table_data = JSON.stringify({
+                        "draw": req.body.draw,
+                        "recordsFiltered": parseInt(TotalRows),
+                        "recordsTotal": parseInt(TotalRows),
+                        "data": Data
+                    });
+  res.send(table_data);
+  // console.log(table_data);
+  
+
+
+});
+
+ 
+
+
+
+router.delete("/deleteProperty/:id/:tableName", async (req, res) => {
+
+  
+  
+  // console.log(req.params);
+  // console.log(typeof(parseInt(req.params.id)));
+  const id=parseInt(req.params.id);
+  const tablename=req.params.tableName;
+    
+  if(tablename==='PlotOrLand'){
+var table = await PlotOrLand.findByPk(id);
+   const x = await PlotOrLand.destroy({ where: { _id: req.params.id } });
+  console.log(x);
+  res.send('1');
+  }
+
+  if(tablename==='FlatOrHouse'){
+var table = await FlatOrHouse.findByPk(id);
+const x = await FlatOrHouse.destroy({ where: { _id: req.params.id } });
+  console.log(x);
+  res.send('1');
+  }
+     if (table === null) {
     return res.status(200).send('something went wrong !');
   } else {
-    let imgSrc= JSON.parse(flatOrHouse.dataValues.gallery);
+    let imgSrc= JSON.parse(table.dataValues.gallery);
     console.log('in else');
      
     fs.unlink(`public/assets/uploads/${imgSrc.banner.src}`,(err)=>{
@@ -263,9 +454,10 @@ router.delete("/deleteProperty/:id", async (req, res) => {
    }
    
   }
-  const x = await FlatOrHouse.destroy({ where: { _id: req.params.id } });
-  console.log(x);
-  res.send('1');
+
+  console.log(table);
+  
+  
 });
 
 

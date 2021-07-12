@@ -8,6 +8,8 @@ dialect:'mysql'
 // dialect:'mysql'
 // });
 
+
+
 sequelize.authenticate()
 .then(()=>{
     console.log(`Connection`);

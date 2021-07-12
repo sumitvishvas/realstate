@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Admin Flats or House</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Easy Admin Panel Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script
+        type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+    <!-- Custom CSS -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+    <!-- Graph CSS -->
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- jQuery -->
+    <!-- lined-icons -->
+    <link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
+    <!-- //lined-icons -->
+    <!-- chart -->
+    <script src="js/Chart.js"></script>
+    <!-- //chart -->
+    <!--animate-->
+    <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
+
+    <script type="text/javascript" charset="utf8"
+        src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
+
+    <!--//end-animate-->
+    <!----webfonts--->
+    <link href='//fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic'
+        rel='stylesheet' type='text/css'>
+    <!---//webfonts--->
+    <!-- Meters graphs -->
+
+    <!-- Placed js at the end of the document so the pages load faster -->
+
+</head>
+
+<body class="sticky-header left-side-collapsed" >
+    <section>
+        <!-- left side start-->
+        <%- include('includes/navbar.ejs') %>
+            <!-- left side end-->
+
+            <!-- main content start-->
+            <div class="main-content main-content4">
+                <!-- header-starts -->
+                <%- include('includes/headerSection.ejs') %>
+                    <!-- //header-ends -->
+
+                    <div id="page-wrapper">
+                        <div class="graphs">
+                            <h3 class="blank1">Plots or Land Table</h3>
+                            <center>
+                                <h4 id="msg" class=""></h4>
+                            </center>
+                            <div class="xs tabls">
+                                <input type="hidden" id="tableName" value="<%- tableName%>">
+                                <div class="bs-example4" data-example-id="contextual-table">
+
+                                    <table class="table" id="table_id">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>property Id</th>
+                                                <th>Property Type</th>
+                                                <th>Socity Name</th>
+                                                <th>Locality</th>
+                                                <!-- <th>Number Of Bedrooms</th> -->
+                                                <th>Total Area</th>
+                                                <th>Total Price</th>
+                                                <th>View</th>
+                                                <th>Edit</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="tbody_id">
+                                           
+                                                
+                                                
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>property Id</th>
+                                                <th>Property Type</th>
+                                                <th>Socity Name</th>
+                                                <th>Locality</th>
+                                                <!-- <th>Number Of Bedrooms</th> -->
+                                                <th>TotalArea</th>
+                                                <th>Total Price</th>
+                                                <th>View</th>
+                                                <th>Edit</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </tfoot>
+
+                                    </table>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <!--footer section start-->
+            <footer>
+                <p></p>
+            </footer>
+            <!--footer section end-->
+    </section>
+    <script>
+        $(document).ready(function () {
+            // $('#table_id').DataTable();
+                    //    getPlotOrLand();
+                    display();
+                
+                
+            
+        });
+
+        function display() {
+            var tableName=$('#tableName').val();
+            
+                // var display = 'delivery_and_pay';
+                // console.log($('#table_id').DataTable());
+                // $.fn.dataTable.ext.errMode = 'throw';
+                $('#table_id').DataTable({
+                    "paging": true,
+                    "pageLength": 10,
+                    "processing": true,
+                    "oLanguage": {
+                        "sProcessing": "<b style='color:red;margin-top:5px;'>Data Fetching...<b>"
+                    },
+                    "serverSide": true,
+                    "ajax": {
+                        "url": "plotLandData",
+                        "dataType": "JSON",
+                        "type": "POST",
+                         "data": {
+                            tableName: tableName
+                        }
+                        
+                    },
+                    'columns':
+                        [
+                            { 'data': '#'},
+                            { 'data': 'id'  },
+                            { 'data': 'propType' },
+                            { 'data': 'socityName'},
+                            { 'data': 'locality' },
+                            { 'data': 'TotalArea'},
+                            { 'data': 'TotalPrice' },
+                            { 'data': 'view' },
+                            { 'data': 'edit' },
+                            { 'data': 'delete' },
+                        ],
+                    "columnDefs": [
+                        {
+                            "searchable": false,
+                            "orderable": false,
+                            "targets": 0
+                        }
+                    ]
+                    
+                });
+            }
+
+      
+
+    
+        function deleteProperty(id,tableName) {
+                    var confirmation = confirm("Are You Sure ?? ");
+            if (confirmation == true) {
+
+            // alert('/admin/getflatsorhousedata/' + id+tableName);
+            $.ajax({
+                type: 'DELETE',
+                url: '/admin/deleteProperty/' +id+'/'+tableName,
+                // url: '/admin/deleteProperty/' + [id,tableName],
+                // data:{tableName:tableName},
+
+                cache: false,
+                contentType: false,
+                processData: false,
+                success: function (data) {
+
+                    if (data == 1) {
+                        $("#msg").html(`Deleted`).addClass("alert alert-danger");
+                                   $('#table_id').DataTable().draw();
+                            
+
+                        
+
+                    } else {
+                        $("#msg").html(`Tour not Found`).addClass("alert alert-success");
+
+                    }
+                },
+                error: function (data) {
+                    console.log("error");
+                    console.log(data);
+                }
+            });
+        }
+        }
+    </script>
+    <script src="js/jquery.nicescroll.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
