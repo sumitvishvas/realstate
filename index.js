@@ -9,7 +9,7 @@ app.set("view engine", "ejs");
 app.set("views", "./views");
 let menuRouter=require('./routes/menu');
 const adminRouter=require('./routes/admin');
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use('/',express.static(path.join(__dirname, "public")));
 app.use('/property-details',express.static(path.join(__dirname, "public")));

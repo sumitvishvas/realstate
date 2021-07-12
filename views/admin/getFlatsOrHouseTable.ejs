@@ -90,7 +90,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<td><%= item.expectedPrice%> rs</td>
 								<td><a href="" target="_blank"> <i class="fa fa-external-link" aria-hidden="true"></i></a></td>
 								<td><button class="btn-success btn " onclick="editTour('<%=item._id%>')" >Edit</button></td>
-								<td><button class="btn-success btn " onclick="deleteProperty('<%=item._id%>')" >Delete</button></td>
+								<td><button class="btn btn-danger" onclick="deleteProperty('<%=item._id%>','<%- tableName %>')">Delete</button></td>
 							</tr>
 							<% })%>
 						  </tbody>
@@ -152,12 +152,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		
 	  }
 	  
-	  function deleteProperty(id){
-			 
-		alert('/admin/getflatsorhousedata/'+id);
+	  function deleteProperty(id, tableName) {
+
+			alert('/admin/getflatsorhousedata/' + id + tableName);
 			$.ajax({
-				type:'DELETE',
-				url: '/admin/deleteProperty/'+id,
+				type: 'DELETE',
+				url: '/admin/deleteProperty/' + id + '/' + tableName,
 				
 				cache:false,
 				contentType: false,
