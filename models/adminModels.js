@@ -91,8 +91,7 @@
     if(!validator.isEmpty(FlatOrHouse.societyName))return "Society Name required !";
     else if(!validator.isEmpty(FlatOrHouse.locality))return "Please fill locality !";
     else if(!validator.isEmpty(FlatOrHouse.flatOrHouseNum))return "Flat Or House Number required !"
-
-    return true; 
+     return true; 
  }
 
  const PlotOrLand=sequelize.define('plotOrLand', {

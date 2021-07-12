@@ -1,0 +1,320 @@
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2021-07-12T12:11:27.831Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2021-07-12T12:11:39.035Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2021-07-12T12:11:50.624Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2021-07-12T12:13:42.744Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2021-07-12T12:14:07.070Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2021-07-12T12:16:42.261Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'could not get index could not get index',
+  stack: 'Error: could not get index\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:7:9\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
+    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
+    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
+  label: 'right meow!',
+  timestamp: '2021-07-12T12:16:42.337Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2021-07-12T12:16:52.200Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'could not get index could not get index',
+  stack: 'Error: could not get index\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:7:9\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
+    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
+    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
+  label: 'right meow!',
+  timestamp: '2021-07-12T12:16:54.897Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'could not get index could not get index',
+  stack: 'Error: could not get index\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:7:9\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
+    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
+    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
+  label: 'right meow!',
+  timestamp: '2021-07-12T12:18:20.324Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right meow!',
+  timestamp: '2021-07-12T12:18:52.142Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'could not get index could not get index',
+  stack: 'Error: could not get index\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:7:9\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
+    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
+    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
+  label: 'right meow!',
+  timestamp: '2021-07-12T12:18:52.251Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'could not get index could not get index',
+  stack: 'Error: could not get index\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:7:9\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
+    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
+    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
+  label: 'right meow!',
+  timestamp: '2021-07-12T12:20:53.283Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'could not get index could not get index',
+  stack: 'Error: could not get index\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:7:9\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
+    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
+    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
+  label: 'right meow!',
+  timestamp: '2021-07-12T12:21:00.112Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-12T12:21:02.545Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'could not get index could not get index',
+  stack: 'Error: could not get index\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:7:9\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
+    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
+    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
+  label: 'right now!',
+  timestamp: '2021-07-12T12:21:02.971Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-12T12:21:41.685Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'could not get index could not get index',
+  stack: 'Error: could not get index\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:12:9\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
+    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
+    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
+  label: 'right now!',
+  timestamp: '2021-07-12T12:21:59.307Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'could not get index could not get index',
+  stack: 'Error: could not get index\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:12:9\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
+    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
+    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
+  label: 'right now!',
+  timestamp: '2021-07-12T12:23:56.261Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-12T12:23:58.939Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-12T12:24:11.146Z'
+}
+{
+  message: 'could not get index',
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-12T12:24:15.716Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-12T12:24:28.531Z'
+}
+{
+  message: 'could not get index',
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-12T12:24:28.775Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-12T12:25:55.311Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'could not get index could not get index',
+  stack: 'Error: could not get index\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:7:9\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
+    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
+    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
+  label: 'right now!',
+  timestamp: '2021-07-12T12:25:55.376Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-12T12:26:40.255Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-12T12:27:50.941Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-12T12:36:58.088Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-12T12:42:08.655Z'
+}

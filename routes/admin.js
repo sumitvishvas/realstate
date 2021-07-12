@@ -1,5 +1,6 @@
 const express = require("express");
 const { User, validateUser } = require("../models/user");
+const {ClientLead}=require("../models/clientData");
 const spaceReplacer = require("../util/usefulFunctions");
 const router = express.Router();
 var uniqid = require("uniqid");
@@ -458,5 +459,13 @@ const x = await FlatOrHouse.destroy({ where: { _id: req.params.id } });
   
   
 });
+
+
+router.get("/leadsFromWeb", async(req,res)=>{
+  const allWebLeads= await ClientLead.findAll();
+  res.render("admin/Leadsfromwebsite",{data:allWebLeads});
+})
+
+
 
 module.exports = router;
