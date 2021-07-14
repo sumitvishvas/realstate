@@ -161,6 +161,71 @@
     return true; 
  }
 
+  const Project=sequelize.define('project', {
+
+    _id:{
+        type: Sequelize.INTEGER,
+        autoIncrement:true,
+        allowNull:false,
+        primaryKey:true
+
+    },
+     projectName:{
+        type: Sequelize.STRING,
+        allowNull:false
+    },
+    url:{
+        type:Sequelize.STRING(1234),
+        allowNull:false
+    },
+     projectType:{
+        type: Sequelize.STRING,
+        allowNull:false
+    },
+    unitOption:{
+        type: Sequelize.STRING,
+        allowNull:false
+    },
+    priceOnword:{
+        type:Sequelize.STRING,
+        allowNull:false
+    },
+   
+     image:{
+        type : Sequelize.STRING(1234),
+        allowNull:false
+    },
+       video:{
+        type: Sequelize.STRING,
+        allowNull:false
+    },
+    facilites:{
+        type:Sequelize.STRING,
+        allowNull:false
+    },
+    nearByLocation:{
+        type: Sequelize.STRING,
+        allowNull:false
+    },
+    address:{
+        type:Sequelize.TEXT('tiny'),
+
+    },
+    loneAvailability:{
+        type:Sequelize.STRING(1234),
+        
+    },
+    constructionStatus:{
+        type:Sequelize.STRING,
+    },
+    uuid:{
+       type:Sequelize.STRING,
+       allowNull:false 
+    }
+    
+});
+exports.Project=Project;
+
  exports.PlotOrLand=PlotOrLand;
  exports.validatePlotsOrLand=validatePlotsOrLand;
 

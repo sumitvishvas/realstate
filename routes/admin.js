@@ -460,6 +460,10 @@ const x = await FlatOrHouse.destroy({ where: { _id: req.params.id } });
   
 });
 
+router.get("/project", async(req,res)=>{
+  res.render('admin/projects');
+})
+
 
 router.get("/leadsFromWeb", async(req,res)=>{
   const allWebLeads= await ClientLead.findAll();
