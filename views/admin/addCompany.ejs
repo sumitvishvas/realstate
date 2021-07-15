@@ -1,0 +1,544 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>add company realEstate</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Baafila" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<!-- Custom CSS -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Graph CSS -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- jQuery -->
+<!-- lined-icons -->
+<link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
+<!-- //lined-icons -->
+<!-- chart -->
+<script src="js/Chart.js"></script>
+<!-- //chart -->
+<!--animate-->
+<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+<!--//end-animate-->
+<!----webfonts--->
+<link href='//fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+<!---//webfonts---> 
+ <!-- Meters graphs -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<!-- Placed js at the end of the document so the pages load faster -->
+<style type="text/css">
+.main-content3 {
+    min-height: 1400px!important;
+}
+
+#map {
+  height: 100%;
+}
+
+
+#my-input-searchbox {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  font-size: 15px;
+  border-radius: 3px;
+  border: 0;
+  margin-top: 10px;
+  width: 270px;
+  height: 40px;
+  text-overflow: ellipsis;
+  padding: 0 1em;
+}
+</style>
+
+</head> 
+   
+ <body class="sticky-header left-side-collapsed"  >
+	
+    <section>
+    <!-- left side start-->
+		<div class="left-side sticky-left-side">
+
+			<!--logo and iconic logo start-->
+			<div class="logo">
+				<h1><a href="index.html">real <span>Admin</span></a></h1>
+			</div>
+			<div class="logo-icon text-center">
+				<a href="index.html"><i class="lnr lnr-home"></i> </a>
+			</div>
+
+			<!--logo and iconic logo end-->
+			<div class="left-side-inner">
+				
+				<!--sidebar nav start-->
+					<%- include('includes/navbar')%>
+				<!--sidebar nav end-->
+			</div>
+		</div>
+    <!-- left side end-->
+    
+    <!-- main content start-->
+		<div class="main-content main-content3">
+			<!-- header-starts -->
+			<%- include('includes/headerSection')%>
+	<!-- //header-ends -->
+
+			<div id="page-wrapper">
+				<div class="graphs">
+					<h3 class="blank1">Add Company Details</h3>
+						<div class="tab-content">
+						<div class="tab-pane active" id="horizontal-form">
+							
+							<form class="form-horizontal" id="createPlotes" method="post" enctype="multipart/form-data"  >
+								<center><h4 id="msg" class=""></h4></center>
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">Company Name *</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control1" id="CompanyName" name="CompanyName" placeholder="enter company name" required>
+									</div>
+									<div class="col-sm-2 jlkdfj1">
+										<p class="help-block"> </p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="disabledinput" class="col-sm-2 control-label">Office Address *</label>
+									<div class="col-sm-8">
+										<input type="text" id="officeAddress" name="officeAddress" class="form-control1"   placeholder="enter office address" required>
+									</div>
+								</div>
+								<div class="form-group" >
+									<label for="inputPassword"  class="col-sm-2 control-label">Contact Persons Name *</label>
+									<div class="col-sm-8">
+										<input type="text"  class="form-control1" id="cpname" name="cpname" placeholder="enter contact persons name" required>
+									</div>
+									
+								</div>
+								<div class="form-group" >
+									<label for="inputPassword"  class="col-sm-2 control-label">Contact Number</label>
+									<div class="col-sm-8">
+										<input type="text"  class="form-control1" id="conNumber" name="conNumber" placeholder="enter contact number" required>
+									</div>
+									<div class="col-sm-2 jlkdfj1">
+										<p class="help-block" id="priceAfterOff" >Mobile Number of Contact Person </p>
+									</div>
+								</div>
+								<div class="form-group" >
+									<label for="inputPassword"  class="col-sm-2 control-label">Rear Registration Number </label>
+									<div class="col-sm-8">
+										<input type="text"  class="form-control1" id="rrnumber" name="rrnumber" placeholder="Enter Rera Registration Number" required>
+									</div>
+									<div class="col-sm-2 jlkdfj1">
+										<p class="help-block" id="priceAfterOff">Its Optional</p>
+									</div>
+								</div>
+								
+
+								
+
+								<div class="form-group">
+									<label for="inputPassword"  class="col-sm-2 control-label">Type of Propertie *</label>
+									<div class="col-sm-8">
+										
+										<select class="form-control1" name="propType" id="propType" required>
+											<option value="Commercial">Commercial</option>
+											<option value="Residential">Residential</option>
+											
+										</select>
+									</div>
+									<div class="col-sm-2 jlkdfj1">
+										<p class="help-block" id="priceAfterOff" >Please Select What type of propertie want to sell</p>
+									</div>
+								</div>
+								
+								<!-- <div class="form-group" >
+									<label for="inputPassword"  class="col-sm-2 control-label">Total Floors *</label>
+									<div class="col-sm-8">
+										<input type="number"  class="form-control1" id="totalFloor" name="totalFloor" placeholder="Enter number of floors" required>
+									</div>
+									<div class="col-sm-2 jlkdfj1">
+										<p class="help-block"  >number of floors in your House,Villa or Apartment's Building </p>
+									</div>
+								</div> -->
+								
+
+								<!-- <div class="form-group">
+									<label for="inputPassword"  class="col-sm-2 control-label">No of Bedroom *</label>
+									<div class="col-sm-8">
+										<input type="number"  class="form-control1" id="bedrooms" name="bedrooms"  placeholder="Bedrooms in numbers" required>
+									</div>
+									
+                                </div> -->
+                                
+								<!-- <div class="form-group">
+									<label for="disabledinput" class="col-sm-2 control-label">Number Of Balconies *</label>
+									<div class="col-sm-8">
+										<input type="number" class="form-control1" id="balconies" name="balconies" placeholder="e.g. 1 or 2" required>
+									</div>
+                                </div> -->
+                                
+								<!-- <div class="form-group">
+									<label for="disabledinput" class="col-sm-2 control-label">Number Of Bathrooms *</label>
+									<div class="col-sm-8">
+										<input type="number"  class="form-control1" id="bathrooms" name="bathrooms" placeholder="e.g. 1 or 2" required>
+									</div>
+                                </div> -->
+                                
+								<div class="form-group">
+									<label for="disabledinput" class="col-sm-2 control-label">Total Area *</label>
+									<div class="col-sm-8">
+										<input type="number" class="form-control1" id="TotalArea" name="TotalArea" placeholder="Total area in Sqft" required>
+									</div>
+									<div class="col-sm-2 jlkdfj1">
+										<p class="help-block"  >Please Enter built up area in sqft</p>
+									</div>
+                                </div>
+                                
+								<!-- <div class="form-group">
+									<label for="disabledinput" class="col-sm-2 control-label">Other Rooms </label>
+									<div class="col-sm-8">
+										
+											<label class = "checkbox-inline">
+												<input type = "checkbox" class = "othRooms" value = "Pooja-Room">Pooja Room 
+											 </label>
+											 <label class = "checkbox-inline">
+												<input type = "checkbox" class = "othRooms" value = "Study-Room"> Study Room 
+											 </label>
+											 <label class = "checkbox-inline">
+												<input type = "checkbox" class = "othRooms" value = "Store-Room"> Store Room 
+											 </label>
+										 
+									</div>
+                                </div> -->
+                                
+								<!-- <div class="form-group">
+									<label for="disabledinput" class="col-sm-2 control-label">Furnishing *</label>
+									<div class="col-sm-8">
+										<label class = "checkbox-inline">
+											<input style = "margin-left:-20px" type = "radio" id = "" name="furnishing" value = "Furnished" required>  Furnished
+										 </label>
+										 <label class = "checkbox-inline">
+											<input type = "radio" id = "" name="furnishing" value = "Unfurnished" required>  Unfurnished
+
+										 </label>
+										 <label class = "checkbox-inline">
+											<input type = "radio" id = "" name="furnishing" value = "Semifurnished" required>  Semifurnished 
+										 </label>
+									 
+									</div>
+								</div> -->
+
+								<!-- <div class="form-group">
+									<label for="disabledinput" class="col-sm-2 control-label">Ameneties</label>
+									<div class="col-sm-8">
+										<label class = "checkbox-inline">
+											<input  type = "checkbox" class="Ameneties" id = "Air-Conditioning" value = "Air-Conditioning">  Air Conditioning
+										 </label>
+										 <label class = "checkbox-inline">
+											<input type = "checkbox" class="Ameneties" id = "Swimming-Pool"  value = "Swimming-Pool"> Swimming Pool
+
+										 </label>
+										 <label class = "checkbox-inline">
+											<input type = "checkbox" class="Ameneties" id = "Car-Parking"  value = "Car-Parking"> Car Parking
+
+										 </label>
+										 <label class = "checkbox-inline">
+											<input type = "checkbox" class="Ameneties" id = "Gym"  value = "Gym"> Gym
+
+										 </label>
+										 <label class = "checkbox-inline">
+											<input type = "checkbox" class="Ameneties" id = "Wardrobe"  value = "Wardrobe"> Wardrobe
+
+										 </label>
+										 <label class = "checkbox-inline">
+											<input type = "checkbox" class="Ameneties" id = "Geyser"  value = "Geyser"> Geyser
+
+										 </label>
+										 <label class = "checkbox-inline">
+											<input type = "checkbox" class="Ameneties" id = "Dining-Table"  value = "Dining-Table">Dining Table
+
+										 </label>
+										 <label class = "checkbox-inline">
+											<input type = "checkbox" class="Ameneties" id = "Sofa"  value = "Sofa">Sofa
+
+										 </label>
+										 
+										 
+										
+									 
+									</div>
+								</div> -->
+ 
+								<div class="form-group">
+									<label for="checkbox" class="col-sm-2 control-label">Total Price *</label>
+									<div class="col-sm-8" id="expected Price">
+										<input type="number"  class="form-control1" id="expectedPrice" name="TotalPrice" placeholder="Enter Total Price in INR" required>
+									</div>
+									<div class="col-sm-2 jlkdfj1">
+										<p id="pricePera" class="help-block"  >Expected Price</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="disabledinput" class="col-sm-2 control-label">Price Negotiable or Not *</label>
+									<div class="col-sm-8">
+										<label class = "checkbox-inline">
+											<input style = "margin-left:-20px" type = "radio" id = "priceNegotiable" name="priceNegotiable" value = "yes">  Yes
+										 </label>
+										 <label class = "checkbox-inline">
+											<input type = "radio" id = "priceNegotiable" name="priceNegotiable" value = "no" required> No
+
+										 </label>
+										
+									 
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="checkbox" class="col-sm-2 control-label">Write Some Speciality about your Property</label>
+									<div class="col-sm-8" id="complementaries">
+										<textarea   placeholder="Enter Details about Plots " id="propDetails" name="propDetails" cols="50" rows="10" class="form-control1"></textarea>
+										
+									</div>
+								</div>
+								
+
+								<!-- 1800 * 1200 -->
+
+								<div class="form-group">
+									<label for="exampleInputFile" class="col-sm-2 control-label" >Select Images for Galley *</label>
+									<div class="col-sm-8">
+									<input type="file" id="gallery" name="gallery" multiple> required
+									</div>
+									<div class="col-sm-2 jlkdfj1">
+										<p class="help-block">image size 1800 X 1200 For Best Viewing Experience</p>
+									</div>
+									
+								</div>
+
+								 <!-- <div class="form-group">
+										<label for="exampleInputFile" class="col-sm-2 control-label" >Select multiple image for banner</label>
+										<div class="col-sm-8">
+											<input type="file" id="sliderImages" multiple>
+										</div>
+								</div> -->
+
+							<!-- for youtube  videos -->
+
+							<div id="videosDiv1" class="addVideo" >
+								<div class="form-group">
+									<label  class="col-sm-2 control-label">Enter youtube video Link </label>
+									<div class="col-sm-8">
+										<input type="text"  class="form-control1 videos" name="videoLink" placeholder="Paste youtube video Link ">
+
+									</div>
+								</div>
+
+							</div>
+
+							
+							
+						  <div class="panel-footer">
+							<div class="row">
+								<div class="col-sm-8 col-sm-offset-2">
+									<button class="btn-success btn" id="my-btn"  >Submit</button>
+									<button class="btn-default btn">Cancel</button>
+									<button class="btn-inverse btn">Reset</button>
+								</div>
+							</div>
+						 </div>
+						</form>
+					  </div>
+				</div>
+			</div>
+		</div>
+		<!--footer section start-->
+			<footer>
+			   <p>&copy 2015 Easy Admin Panel. All Rights Reserved | Design by <a href="" target="_blank"></a></p>
+			</footer>
+        <!--footer section end-->
+	</section>
+	
+	<script>
+		$(document).ready(()=>{
+			
+
+			$("#expectedPrice").on("keyup", ()=>{
+				let x= $("#expectedPrice").val();
+			  $("#pricePera").html(price_in_words(x));
+			});
+			
+			
+
+			
+			$('#createPlotes').on('submit',(function(e) {
+			e.preventDefault();
+			
+			const formData = new FormData(this);
+			
+			
+			
+			
+		
+			if(validateForm()){
+
+
+				
+
+			$.ajax({
+				type:'POST',
+				url: '/admin/createPlot_Land',
+				data: formData,
+				cache:false,
+				contentType: false,
+				processData: false,
+				
+					beforeSend: function(){
+						// Show image container
+						
+						document.getElementById("my-btn").disabled = true;
+						
+					},
+				success:function(data){
+
+					
+					$("#msg").html(`${data}`).addClass("alert alert-success");
+					window.scrollTo(0,0);
+
+					
+
+				},
+					complete:function(data){
+					
+					document.getElementById("my-btn").disabled = false;
+				},	
+				
+				error: function(data){
+					console.log("error");
+					console.log(data);
+					document.getElementById("my-btn").disabled = false;
+				}
+        	});
+		}
+	
+    	}));
+
+
+			
+
+
+	});
+		function  validateForm() {
+			// alert(objfile);
+		    
+			const validImageTypes = ['image/jpg', 'image/jpeg', 'image/png'];
+		let objfile	=document.getElementById('gallery');
+		console.log(objfile);
+
+		console.log(objfile.files);
+		let len=document.getElementById('gallery').files.length;
+		console.log(len);
+		if(len==0){
+				console.log('in if');
+				$("#msg").html(`Please select images`).addClass("alert alert-success");  
+				window.scrollTo(0,0);
+				return false;}
+				else if(len<3){
+				$("#msg").html(`Please select minimum 3 images`).addClass("alert alert-success");  
+				window.scrollTo(0,0);
+				return false;
+
+				}
+			
+			for(i=0;i<len;i++){
+				 if (!validImageTypes.includes(objfile.files[i].type)) {
+				$("#msg").html(`only jpg,jpeg and png images allowed `).addClass("alert alert-success");  
+				window.scrollTo(0,0);
+				return false;
+			}
+
+			}
+			
+			return true;	
+		}
+
+		function numberWithCommas(x) {
+
+		console.log(x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));	
+    	return ;
+		}
+
+		function price_in_words(price) {
+  var sglDigit = ["Zero", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"],
+    dblDigit = ["Ten", "Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"],
+    tensPlace = ["", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"],
+    handle_tens = function(dgt, prevDgt) {
+      return 0 == dgt ? "" : " " + (1 == dgt ? dblDigit[prevDgt] : tensPlace[dgt])
+    },
+    handle_utlc = function(dgt, nxtDgt, denom) {
+      return (0 != dgt && 1 != nxtDgt ? " " + sglDigit[dgt] : "") + (0 != nxtDgt || dgt > 0 ? " " + denom : "")
+    };
+
+  var str = "",
+    digitIdx = 0,
+    digit = 0,
+    nxtDigit = 0,
+    words = [];
+  if (price += "", isNaN(parseInt(price))) str = "";
+  else if (parseInt(price) > 0 && price.length <= 10) {
+    for (digitIdx = price.length - 1; digitIdx >= 0; digitIdx--) switch (digit = price[digitIdx] - 0, nxtDigit = digitIdx > 0 ? price[digitIdx - 1] - 0 : 0, price.length - digitIdx - 1) {
+      case 0:
+        words.push(handle_utlc(digit, nxtDigit, ""));
+        break;
+      case 1:
+        words.push(handle_tens(digit, price[digitIdx + 1]));
+        break;
+      case 2:
+        words.push(0 != digit ? " " + sglDigit[digit] + " Hundred" + (0 != price[digitIdx + 1] && 0 != price[digitIdx + 2] ? " and" : "") : "");
+        break;
+      case 3:
+        words.push(handle_utlc(digit, nxtDigit, "Thousand"));
+        break;
+      case 4:
+        words.push(handle_tens(digit, price[digitIdx + 1]));
+        break;
+      case 5:
+        words.push(handle_utlc(digit, nxtDigit, "Lakh"));
+        break;
+      case 6:
+        words.push(handle_tens(digit, price[digitIdx + 1]));
+        break;
+      case 7:
+        words.push(handle_utlc(digit, nxtDigit, "Crore"));
+        break;
+      case 8:
+        words.push(handle_tens(digit, price[digitIdx + 1]));
+        break;
+      case 9:
+        words.push(0 != digit ? " " + sglDigit[digit] + " Hundred" + (0 != price[digitIdx + 1] || 0 != price[digitIdx + 2] ? " and" : " Crore") : "")
+    }
+    str = words.reverse().join("")
+  } else str = "";
+  return str
+
+}
+
+
+		
+	// GOOGLE places implimentation
+	
+
+	</script>
+
+
+
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/scripts.js"></script>
+<!-- Bootstrap Core JavaScript -->
+   <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

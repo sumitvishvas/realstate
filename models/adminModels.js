@@ -3,13 +3,13 @@
  const validator= require('validator');
 
  const FlatOrHouse = sequelize.define('flatOrHouse',{
-
+          
     _id:{
         type: Sequelize.INTEGER,
         autoIncrement:true,
         allowNull:false,
         primaryKey:true
-
+      
     },
     url:{
         type:Sequelize.STRING(1234),
@@ -161,8 +161,61 @@
     return true; 
  }
 
+ const Companies = sequelize.define('compaies',{
+    _id:{
+        type:Sequelize.INTEGER,
+        autoIncrement:true,
+        allowNull:false,
+        primaryKey:true
+    },
+    companyName:{
+        type:Sequelize.STRING,
+        allowNull:false
+    },
+    officeAddress:{
+        type:Sequelize.STRING(1234),
+        allowNull:false
+    },
+    aboutCompany:{
+        type:Sequelize.TEXT('tiny'),
+        allowNull:true
+    },
+    contactPerson:{
+        type:Sequelize.STRING,
+        allowNull:false
+    },
+    contactNumber:{
+        type:Sequelize.INTEGER,
+        allowNull:false
+    },
+    email:{
+        type:Sequelize.STRING,
+        allowNull:true
+    },
+    rearRegiNumber:{
+        type:Sequelize.STRING,
+        allowNull:true
+    },
+    websiteLink:{
+        type:Sequelize.STRING,
+        allowNull:true
+    },
+    gallery:{
+        type:Sequelize.TEXT('tiny'),
+        allowNull:true
+    },
+    location:{
+        type:Sequelize.STRING,
+        allowNull:true
+    }
+
+ });
+
+
+
  exports.PlotOrLand=PlotOrLand;
  exports.validatePlotsOrLand=validatePlotsOrLand;
 
  exports.FlatOrHouse=FlatOrHouse;
  exports.validateFltasOrHouse=validateFltasOrHouse;
+ exports.Companies=Companies;

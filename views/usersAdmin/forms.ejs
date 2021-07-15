@@ -1,0 +1,545 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Baafila</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Baafila" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel='stylesheet' type='text/css' />
+<!-- Custom CSS -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<!-- Graph CSS -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- jQuery -->
+<!-- lined-icons -->
+<link rel="stylesheet" href="css/icon-font.min.css" type='text/css' />
+<!-- //lined-icons -->
+<!-- chart -->
+<script src="js/Chart.js"></script>
+<!-- //chart -->
+<!--animate-->
+<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="js/wow.min.js"></script>
+	<script>
+		 new WOW().init();
+	</script>
+<!--//end-animate-->
+<!----webfonts--->
+<link href='//fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+<!---//webfonts---> 
+ <!-- Meters graphs -->
+<script src="js/jquery-1.10.2.min.js"></script>
+<!-- Placed js at the end of the document so the pages load faster -->
+
+</head> 
+   
+ <body class="sticky-header left-side-collapsed"  onload="initMap()">
+    <section>
+    <!-- left side start-->
+		<div class="left-side sticky-left-side">
+
+			<!--logo and iconic logo start-->
+			<div class="logo">
+				<h1><a href="index.html">Baafila <span>Admin</span></a></h1>
+			</div>
+			<div class="logo-icon text-center">
+				<a href="index.html"><i class="lnr lnr-home"></i> </a>
+			</div>
+
+			<!--logo and iconic logo end-->
+			<div class="left-side-inner">
+				
+				<!--sidebar nav start-->
+					<%- include('includes/navbar')%>
+				<!--sidebar nav end-->
+			</div>
+		</div>
+    <!-- left side end-->
+    
+    <!-- main content start-->
+		<div class="main-content main-content3">
+			<!-- header-starts -->
+			<%- include('includes/headerSection')%>
+	<!-- //header-ends -->
+			<div id="page-wrapper">
+				<div class="graphs">
+					<h3 class="blank1">Basic Forms</h3>
+						<div class="tab-content">
+						<div class="tab-pane active" id="horizontal-form">
+							
+							<form class="form-horizontal" id="createTourForm" enctype="multipart/form-data" action="/admin/saveTour" method="post" >
+								<center><h4 id="msg" class=""></h4></center>
+								<div class="form-group">
+									<label for="focusedinput" class="col-sm-2 control-label">Tour title</label>
+									<div class="col-sm-8">
+										<input type="text" class="form-control1" id="tourTitle" placeholder="Enter Tour title">
+									</div>
+									<div class="col-sm-2 jlkdfj1">
+										<p class="help-block">Please Enter SEO Friendly Name</p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="disabledinput" class="col-sm-2 control-label">Tour Price</label>
+									<div class="col-sm-8">
+										<input type="number" id="price" class="form-control1" id="tourPrice"  placeholder="Enter Tour Price">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="inputPassword"  class="col-sm-2 control-label">% Discount</label>
+									<div class="col-sm-8">
+										<input type="number" id="offonprice" class="form-control1" id="discount" placeholder="Enter Discount In Number">
+									</div>
+									<div class="col-sm-2 jlkdfj1">
+										<p class="help-block" id="priceAfterOff" > </p>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="disabledinput" class="col-sm-2 control-label">Number Of Days</label>
+									<div class="col-sm-8">
+										<input type="number" id="days" class="form-control1" id="days" placeholder="Days in number">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="disabledinput" class="col-sm-2 control-label">Number Of Nights</label>
+									<div class="col-sm-8">
+										<input type="number" id="Nigths" class="form-control1" id="nights" placeholder="Nights in number">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="disabledinput" class="col-sm-2 control-label">Tour Start From </label>
+									<div class="col-sm-8">
+										<input type="text" id="startcity" class="form-control1" id="startcity" placeholder="Enter City From Where ">
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="disabledinput" class="col-sm-2 control-label">Tour Off </label>
+									<div class="col-sm-8">
+										<input type="text"  class="form-control1" id="tourcity" placeholder="Enter Place off tour">
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="txtarea1" class="col-sm-2 control-label">Tour Details</label>
+									<div class="col-sm-8"><textarea id="tourDetails" placeholder="Enter Details about Tour" cols="50" rows="10" class="form-control1"></textarea></div>
+								</div>
+ 
+								<div class="form-group">
+									<label for="checkbox" class="col-sm-2 control-label">Price Includes	</label>
+									<div class="col-sm-8" id="priceInclude">
+										
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="checkbox" class="col-sm-2 control-label">Price Excludes</label>
+									<div class="col-sm-8" id="priceExclude">
+									
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="checkbox" class="col-sm-2 control-label">Complementaries</label>
+									<div class="col-sm-8" id="complementaries">
+										
+									</div>
+								</div>
+								<div class="form-group">
+									<label  class="col-sm-2 control-label">What to Expect</label>
+									<div class="col-sm-8"><textarea  id="expect" placeholder="Enter Details about Tour" cols="50" rows="10" class="form-control1"></textarea></div>
+								</div>
+
+
+
+
+
+								<div id="daysDiv1" class="addDays" >
+									<div class="form-group">
+										<label  class="col-sm-2 control-label">Day  </label>
+										<div class="col-sm-8">
+											<input type="text"  class="form-control1 dayTitles"  placeholder="Enter Title off Day ">
+										</div>
+									</div>
+									<div class="form-group">
+										<label  class="col-sm-2 control-label"></label>
+										<div class="col-sm-8"><textarea   placeholder="Enter Details about Day " cols="50" rows="10" class="form-control1 dayDetails"></textarea></div>
+									
+									</div>
+								</div>
+								<div class="form-group ">
+									<label  class="col-sm-5 control-label"></label>
+									<button type="button" class="btn-success btn " id="addDays" ><i class="fa fa-plus-circle" aria-hidden="true">&nbsp DAYS</i></button>
+
+								</div>
+								<!-- 1800 * 1200 -->
+								<div class="form-group">
+									<label for="exampleInputFile" class="col-sm-2 control-label" >Select single image for banner</label>
+									<div class="col-sm-8">
+									<input type="file" id="bannerImage">
+
+									</div>
+									<div class="col-sm-2 jlkdfj1">
+										<p class="help-block">image size 1800 X 1200 For Best Viewing Experience</p>
+									</div>
+									
+								</div>
+								<div class="form-group">
+									<label for="exampleInputFile" class="col-sm-2 control-label" >Select single image for tour Listing</label>
+									<div class="col-sm-8">
+									<input type="file" id="listingImage">
+									</div>
+									<div class="col-sm-2 jlkdfj1">
+										<p class="help-block">image size 250 X 291 For Best Viewing Experience</p>
+									</div>
+									
+									
+								  </div>
+
+								  <div class="form-group">
+									<label for="exampleInputFile" class="col-sm-2 control-label" >Select single image for index</label>
+									<div class="col-sm-8">
+									<input type="file" id="indexImage">
+								    </div>
+									<div class="col-sm-2 jlkdfj1">
+										<p class="help-block">image size 272 X 175 For Best Viewing Experience</p>
+									</div>
+									
+								  </div>
+
+
+								  <!-- <div class="form-group">
+										<label for="exampleInputFile" class="col-sm-2 control-label" >Select multiple image for banner</label>
+										<div class="col-sm-8">
+											<input type="file" id="sliderImages" multiple>
+										</div>
+								</div> -->
+
+							<!-- for youtube  videos -->
+
+							<div id="videosDiv1" class="addVideo" >
+								<div class="form-group">
+									<label  class="col-sm-2 control-label">Enter youtube video Link  </label>
+									<div class="col-sm-8">
+										<input type="text"  class="form-control1 videos" id="videoLink" placeholder="Paste youtube video Link ">
+
+									</div>
+								</div>
+
+							</div>
+							
+							<div class="form-group ">
+								<label  class="col-sm-5 control-label"></label>
+								<button type="button" class="btn-success btn " id="addVideos" ><i class="fa fa-plus-circle" aria-hidden="true">&nbsp Videos Link</i></button>
+
+							</div>
+							<div id="videosDiv1" class="addHotel" >
+								<div class="form-group">
+									<label  class="col-sm-2 control-label">Enter Hotel Name</label>
+									<div class="col-sm-8">
+										<input type="text"  class="form-control1 " id="hotel" placeholder="Hotel Name">
+
+									</div>
+								</div>
+								<div class="form-group">
+									<label  class="col-sm-2 control-label">Hotel Details</label>
+									<div class="col-sm-8"><textarea   placeholder="Enter Details about Hotel " id="hotelDetails" cols="50" rows="10" class="form-control1"></textarea></div>
+								
+								</div>
+
+							</div>
+						  <div class="panel-footer">
+							<div class="row">
+								<div class="col-sm-8 col-sm-offset-2">
+									<button class="btn-success btn"  >Submit</button>
+									<button class="btn-default btn">Cancel</button>
+									<button class="btn-inverse btn">Reset</button>
+								</div>
+							</div>
+						 </div>
+						</form>
+					  </div>
+				</div>
+			</div>
+		</div>
+		<!--footer section start-->
+			<footer>
+			   <p>&copy 2015 Easy Admin Panel. All Rights Reserved | Design by <a href="" target="_blank"></a></p>
+			</footer>
+        <!--footer section end-->
+	</section>
+	<script>
+		$(document).ready(()=>{
+			// $("#offonprice").keyup(alert('aqaa'));
+		$('#createTourForm').on('submit',(function(e) {
+        e.preventDefault();
+		
+		let dayTitle=[];
+			let dayDetails=[];
+			let aboutDays="";
+			let priceInclud=[];
+			let priceExcludes=[];
+			let complementaries=[];
+			let videoSrc=[];
+			let formData = new FormData(this);
+
+		$('input.dayTitles').each(function(){
+		dayTitle.push( $.trim($(this).val()));
+		
+   });
+   $('textarea.dayDetails').each(function(){
+	dayDetails.push( $.trim($(this).val()));
+
+   });
+  
+	for(var i in dayTitle) {
+		
+		item={};
+		item["dayTitle"]=dayTitle[i];
+		item["aboutDay"]=dayDetails[i];
+		aboutDays +=`${dayTitle[i]}><${dayDetails[i]}`
+		if(i<=dayTitle.length-2)
+		{
+			
+			aboutDays +='<>';	
+		}
+		
+	} 
+	
+	aboutDays= JSON.stringify(aboutDays).trim() ;
+	alert(aboutDays);
+
+	tourTitle= $('#tourTitle').val();
+	let tourUrl = tourTitle.replace(/[^A-Z0-9]/ig, "-");
+	price=$('#price').val();
+	offonprice=$("#offonprice").val();
+	numberOfDays= $("#days").val();
+	Nigths=$("#Nigths").val();
+	startcity=$("#startcity").val();
+	tourcity=$("#tourcity").val();
+	tourDetails=$("#tourDetails").val();
+
+	$("input:checkbox[class=checkboxInclude]:checked").each(function () {
+           
+			priceInclud.push($(this).val());
+        });
+
+		$("input:checkbox[class=checkboxExclude]:checked").each(function () {
+           
+			priceExcludes.push($(this).val());
+	   });
+
+	   $("input:checkbox[class=checkboxComplementaries]:checked").each(function () {
+           
+		complementaries.push($(this).val());
+	   });
+
+	   $('input.videos').each(function(){
+	// dayDetails.push( $.trim($(this).val()));
+         videoSrc.push($.trim($(this).val()));
+   });
+	//    alert(tourUrl);
+	   expect = $("#expect").val();
+
+
+       
+		let bannerObj=document.querySelector("#bannerImage").files[0];
+		let listingImage=document.querySelector("#listingImage").files[0];
+		let indexImage=document.querySelector("#indexImage").files[0];
+
+		formData.append('photo',bannerObj);	
+		formData.append('listingImage',listingImage);
+		formData.append('indexImage',indexImage);
+		formData.append('tourtitle',tourTitle);
+		formData.append('tourPrice',price);
+		formData.append('discount',offonprice);
+		formData.append('numberOfDays',numberOfDays);
+		formData.append('numberOfNights',Nigths);
+		formData.append('startCity',startcity);
+		formData.append('tourCity',tourcity);
+		formData.append('tourDetail',tourDetails);
+		formData.append('priceIncludes',priceInclud);
+		formData.append('priceExcludes',priceExcludes);
+		formData.append('complementaries',complementaries);
+		formData.append('whatToExpect',expect);
+		formData.append('aboutDays',aboutDays);
+		formData.append('hotelName',$("#hotel").val());
+		formData.append('hotelDetails',$("#hotelDetails").val());
+		formData.append('tourUrl',tourUrl);
+		formData.append('videoSrc',videoSrc);
+		
+			if(validateForm(bannerObj)){
+				
+			$.ajax({
+				type:'POST',
+				url: $(this).attr('action'),
+				data:formData,
+				cache:false,
+				contentType: false,
+				processData: false,
+				success:function(data){
+					$("#msg").html(`${data}`).addClass("alert alert-success");
+					window.scrollTo(0,0);
+				},
+				error: function(data){
+					console.log("error");
+					console.log(data);
+				}
+        	});
+		}
+    	}));
+
+				
+			getAllPriceIncludes();
+			getAllPriceExcludes();
+			getAllComplementaries();
+
+			$("#offonprice").keyup(()=>{
+				let off= $("#offonprice").val();
+					let price =	$("#price").val();
+				if(price){
+					let offprice=price-(price*off/100);
+					$("#priceAfterOff").text("Tour Price After Discount "+offprice);
+				}else{
+					alert("Enter Price first");
+					$("#price").focus();
+				}
+					
+			});
+
+			$("#price").keyup(()=>{
+				let off= $("#offonprice").val();
+				let price =	$("#price").val();
+				
+				if(!off ==""){
+					let offprice=price-(price*off/100);
+					$("#priceAfterOff").text("Tour Price After Discount "+offprice);
+				}
+			});
+
+			var y=2;
+			$("#addDays").click(()=>{
+			
+				
+				$(".addDays").append('<div id="daysDiv'+y+'"  ><div class="form-group"><label for="disabledinput" class="col-sm-2 control-label">Day  </label><div class="col-sm-8"><input type="text"  class="form-control1 dayTitles"  placeholder="Enter Title off Day "></div></div><div class="form-group"><label for="txtarea1" class="col-sm-2 control-label"></label><div class="col-sm-8"><textarea   placeholder="Enter Details about Day " cols="50" rows="10" class="form-control1 dayDetails"></textarea></div><button type="button" class="btn-success btn removeDays" onclick="removeDiv(\'daysDiv'+y+'\')"  ><i class="fa fa-minus-circle" aria-hidden="true">&nbsp DAYS</i></button></div></div>');
+				
+				y++;
+				
+
+			});
+			
+			let b=2;
+			$("#addVideos").click(()=>{
+			
+				
+			$(".addVideo").after('<div id="videosDiv'+b+'"  ><div class="form-group"><label  class="col-sm-2 control-label">Enter youtube video Link  </label><div class="col-sm-8"><input type="text"  class="form-control1 videos"  placeholder="Paste youtube video Link "></div><button type="button" class="btn-success btn removeDays" onclick="delVideoLink(\'videosDiv'+b+'\')"  ><i class="fa fa-minus-circle" aria-hidden="true">&nbsp VIDEO LINK</i></button></div></div>');
+			
+			b++;
+			
+
+		});
+
+
+		});
+		function  validateForm(objfile) {
+			// alert(objfile);
+		    
+			const validImageTypes = ['image/jpg', 'image/jpeg', 'image/png'];
+			if(typeof objfile === 'undefined'){
+				$("#msg").html(`please select image `).addClass("alert alert-success");  
+				window.scrollTo(0,0);
+				return false;
+			}else if (!validImageTypes.includes(objfile['type'])) {
+				$("#msg").html(`only jpg,jpeg and png image allowed `).addClass("alert alert-success");  
+				window.scrollTo(0,0);
+				return false;
+			}
+			return true;	
+		}
+
+	function removeDiv(daysDiv1){
+			
+			$("#"+daysDiv1).remove();
+		};
+
+		function delVideoLink(xy){
+			
+			$("#"+xy).remove();
+
+		};
+
+		function getAllPriceIncludes(){
+
+			
+			$.post("/admin/getAllPriceIncludes").done((data)=>{
+		
+			if(typeof data === 'object')
+			{
+				dataobjs =data;
+				
+				for(var i in dataobjs){
+					
+										
+				$("#priceInclude").append('<div class="checkbox-inline1"><label><input type="checkbox" class="checkboxInclude" value="'+dataobjs[i].priceInclude+'" checked> '+dataobjs[i].priceInclude+'</label></div> ');
+				
+				}
+			
+			}
+		});
+	}
+	
+	function getAllPriceExcludes(){
+
+
+$.post("/admin/getAllPriceExcludes").done((data)=>{
+	
+	if(typeof data === 'object')
+	{
+		dataobjs =data;
+		
+		for(var i in dataobjs){
+			
+	$("#priceExclude").append('<div class="checkbox-inline1"><label><input type="checkbox" class="checkboxExclude" value="'+dataobjs[i].priceExclude+'" checked> '+dataobjs[i].priceExclude+'</label></div> ');
+
+	}
+	
+	}
+	});	
+}
+
+function getAllComplementaries(){
+
+	
+	$.post("/admin/getAllComplementaries").done((data)=>{
+		
+		if(typeof data === 'object')
+		{
+				dataobjs =data;
+				
+				for(var i in dataobjs){
+					
+			$("#complementaries").append('<div class="checkbox-inline1"><label><input type="checkbox" class="checkboxComplementaries" value="'+dataobjs[i].complementaries+'" checked> '+dataobjs[i].complementaries+'</label></div> ');
+
+			}
+		
+		}
+	});
+}
+
+// function saveTour() {
+// let formdata = new formData();
+
+		
+// 	 let bannerObj  =document.querySelector("#bannerImage").files[0];
+// 	 	alert(bannerObj);
+// 		formdata.append('photo',bannerObj);
+	
+// }
+
+	</script>
+<script src="js/jquery.nicescroll.js"></script>
+<script src="js/scripts.js"></script>
+<!-- Bootstrap Core JavaScript -->
+   <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

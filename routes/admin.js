@@ -5,8 +5,8 @@ const spaceReplacer = require("../util/usefulFunctions");
 const router = express.Router();
 var uniqid = require("uniqid");
 const trimRequest = require("trim-request"); 
-     const fs  =require("fs");
-      const sequelize = require('sequelize');
+const fs =require("fs");
+const sequelize = require('sequelize');
 const { FlatOrHouse, validateFltasOrHouse,PlotOrLand, validatePlotsOrLand } = require("../models/adminModels");
 // const upload= require('../util/fileUpload');
 const multer = require("multer");
@@ -342,10 +342,6 @@ if( search !==''){
   });
 }
  
-
-
-  
- 
 var TotalData=await PlotOrLand.findAll({
     attributes: ['_id', [sequelize.fn('count', sequelize.col('_id')), 'count']],
     // group : ['plotOrLand._id'],
@@ -464,7 +460,12 @@ const x = await FlatOrHouse.destroy({ where: { _id: req.params.id } });
 router.get("/leadsFromWeb", async(req,res)=>{
   const allWebLeads= await ClientLead.findAll();
   res.render("admin/Leadsfromwebsite",{data:allWebLeads});
-})
+});
+
+router.get("/addComp",async(req,res)=>{
+res.render("admin/addCompany");
+
+});
 
 
 

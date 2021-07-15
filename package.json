@@ -23,7 +23,6 @@
     "mysql2": "^2.2.5",
     "nodemailer": "^6.6.2",
     "nodemon": "^2.0.9",
-    "s": "^1.0.0",
     "sequelize": "^6.6.2",
     "sharp": "^0.28.3",
     "trim-request": "^1.0.6",

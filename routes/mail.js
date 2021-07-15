@@ -5,6 +5,7 @@ const { ClientLead } = require('../models/clientData');
 
 
 
+
 router.post("/emailClientDetails", async (req,res)=>{
     // console.log("cool ==" ,req.body);
     
