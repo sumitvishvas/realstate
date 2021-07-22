@@ -2,876 +2,138 @@
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
-  label: 'right meow!',
-  timestamp: '2021-07-12T12:11:27.831Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right meow!',
-  timestamp: '2021-07-12T12:11:39.035Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right meow!',
-  timestamp: '2021-07-12T12:11:50.624Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right meow!',
-  timestamp: '2021-07-12T12:13:42.744Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right meow!',
-  timestamp: '2021-07-12T12:14:07.070Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right meow!',
-  timestamp: '2021-07-12T12:16:42.261Z'
-}
-{
-  service: 'user-service',
-  level: 'error',
-  message: 'could not get index could not get index',
-  stack: 'Error: could not get index\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:7:9\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
-    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
-    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
-    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
-  label: 'right meow!',
-  timestamp: '2021-07-12T12:16:42.337Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right meow!',
-  timestamp: '2021-07-12T12:16:52.200Z'
-}
-{
-  service: 'user-service',
-  level: 'error',
-  message: 'could not get index could not get index',
-  stack: 'Error: could not get index\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:7:9\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
-    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
-    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
-    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
-  label: 'right meow!',
-  timestamp: '2021-07-12T12:16:54.897Z'
-}
-{
-  service: 'user-service',
-  level: 'error',
-  message: 'could not get index could not get index',
-  stack: 'Error: could not get index\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:7:9\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
-    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
-    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
-    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
-  label: 'right meow!',
-  timestamp: '2021-07-12T12:18:20.324Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right meow!',
-  timestamp: '2021-07-12T12:18:52.142Z'
-}
-{
-  service: 'user-service',
-  level: 'error',
-  message: 'could not get index could not get index',
-  stack: 'Error: could not get index\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:7:9\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
-    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
-    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
-    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
-  label: 'right meow!',
-  timestamp: '2021-07-12T12:18:52.251Z'
-}
-{
-  service: 'user-service',
-  level: 'error',
-  message: 'could not get index could not get index',
-  stack: 'Error: could not get index\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:7:9\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
-    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
-    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
-    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
-  label: 'right meow!',
-  timestamp: '2021-07-12T12:20:53.283Z'
-}
-{
-  service: 'user-service',
-  level: 'error',
-  message: 'could not get index could not get index',
-  stack: 'Error: could not get index\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:7:9\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
-    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
-    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
-    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
-  label: 'right meow!',
-  timestamp: '2021-07-12T12:21:00.112Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-12T12:21:02.545Z'
-}
-{
-  service: 'user-service',
-  level: 'error',
-  message: 'could not get index could not get index',
-  stack: 'Error: could not get index\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:7:9\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
-    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
-    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
-    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
-  label: 'right now!',
-  timestamp: '2021-07-12T12:21:02.971Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-12T12:21:41.685Z'
-}
-{
-  service: 'user-service',
-  level: 'error',
-  message: 'could not get index could not get index',
-  stack: 'Error: could not get index\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:12:9\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
-    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
-    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
-    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
-  label: 'right now!',
-  timestamp: '2021-07-12T12:21:59.307Z'
-}
-{
-  service: 'user-service',
-  level: 'error',
-  message: 'could not get index could not get index',
-  stack: 'Error: could not get index\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:12:9\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
-    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
-    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
-    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
-  label: 'right now!',
-  timestamp: '2021-07-12T12:23:56.261Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-12T12:23:58.939Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-12T12:24:11.146Z'
-}
-{
-  message: 'could not get index',
-  level: 'error',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-12T12:24:15.716Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-12T12:24:28.531Z'
-}
-{
-  message: 'could not get index',
-  level: 'error',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-12T12:24:28.775Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-12T12:25:55.311Z'
-}
-{
-  service: 'user-service',
-  level: 'error',
-  message: 'could not get index could not get index',
-  stack: 'Error: could not get index\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:7:9\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
-    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
-    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
-    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
-  label: 'right now!',
-  timestamp: '2021-07-12T12:25:55.376Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-12T12:26:40.255Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-12T12:27:50.941Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-12T12:36:58.088Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-12T12:42:08.655Z'
-}
-{
-<<<<<<< HEAD
-=======
-  name: 'SequelizeAccessDeniedError',
-  parent: Error: Access denied for user 'baafilac_rajs01878'@'47.9.152.47' (using password: YES)
-      at Packet.asError (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/packets/packet.js:712:17)
-      at ClientHandshake.execute (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/commands/command.js:28:26)
-      at Connection.handlePacket (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:425:32)
-      at PacketParser.onPacket (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:75:12)
-      at PacketParser.executeStart (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/packet_parser.js:75:16)
-      at Socket.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:82:25)
-      at Socket.emit (events.js:375:28)
-      at addChunk (internal/streams/readable.js:290:12)
-      at readableAddChunk (internal/streams/readable.js:265:9)
-      at Socket.Readable.push (internal/streams/readable.js:204:10) {
-    code: 'ER_ACCESS_DENIED_ERROR',
-    errno: 1045,
-    sqlState: '28000',
-    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.152.47' (using password: YES)"
-  },
-  original: Error: Access denied for user 'baafilac_rajs01878'@'47.9.152.47' (using password: YES)
-      at Packet.asError (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/packets/packet.js:712:17)
-      at ClientHandshake.execute (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/commands/command.js:28:26)
-      at Connection.handlePacket (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:425:32)
-      at PacketParser.onPacket (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:75:12)
-      at PacketParser.executeStart (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/packet_parser.js:75:16)
-      at Socket.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:82:25)
-      at Socket.emit (events.js:375:28)
-      at addChunk (internal/streams/readable.js:290:12)
-      at readableAddChunk (internal/streams/readable.js:265:9)
-      at Socket.Readable.push (internal/streams/readable.js:204:10) {
-    code: 'ER_ACCESS_DENIED_ERROR',
-    errno: 1045,
-    sqlState: '28000',
-    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.152.47' (using password: YES)"
-  },
-  level: 'error',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T05:37:22.240Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T05:37:47.625Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T05:42:35.472Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T05:56:01.065Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T07:26:56.337Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T07:27:55.745Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T07:29:15.486Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T07:42:23.412Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T07:42:25.898Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T07:44:54.729Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T07:46:03.924Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T10:48:20.344Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T10:49:06.333Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T10:50:17.457Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T10:51:31.238Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T10:52:57.982Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T10:56:09.819Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T10:56:19.603Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:03:20.640Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:04:37.636Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:06:26.619Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:08:30.075Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:09:39.816Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:10:22.172Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:11:03.363Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:13:37.083Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:14:09.935Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:14:46.415Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:20:55.855Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:39:40.995Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:48:54.343Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:49:40.286Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:50:21.492Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:53:04.204Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:53:46.153Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:54:21.116Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:54:44.743Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:56:15.287Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:57:01.838Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T11:59:24.341Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T12:00:10.496Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T12:03:59.563Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T12:04:46.236Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T12:06:09.733Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T12:08:32.136Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T12:10:53.368Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T12:11:23.643Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T12:14:38.703Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T12:17:16.945Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T12:18:52.308Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T12:19:11.598Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T12:20:16.548Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T12:20:57.182Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-13T12:26:17.015Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-13T12:30:55.086Z'
+  timestamp: '2021-07-17T05:43:32.569Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-13T12:37:51.661Z'
+  timestamp: '2021-07-17T05:44:58.314Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-13T12:38:35.195Z'
+  timestamp: '2021-07-17T05:46:32.483Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-13T12:39:12.069Z'
+  timestamp: '2021-07-17T05:47:15.230Z'
 }
 {
-  message: 'i am lisening at Port 3000',
+  message: '{"gallery":[{"smImg":"43ysv5890kr7cloo8-pro2.PNG","bgImg":"43ysv5890kr7cloo9-pro2.PNG"},{"smImg":"43ysv5890kr7clooa-pro3.PNG","bgImg":"43ysv5890kr7cloob-pro3.PNG"},{"smImg":"43ysv5890kr7clooc-pro4.PNG","bgImg":"43ysv5890kr7clood-pro4.PNG"}]}',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-13T12:39:39.919Z'
+  timestamp: '2021-07-17T05:47:15.370Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-13T12:56:46.681Z'
+  timestamp: '2021-07-17T05:48:23.424Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-13T12:57:15.362Z'
+  timestamp: '2021-07-17T05:48:43.114Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-13T13:00:17.620Z'
+  timestamp: '2021-07-17T05:48:46.346Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-13T13:00:36.270Z'
+  timestamp: '2021-07-17T05:53:27.539Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-13T13:01:05.017Z'
+  timestamp: '2021-07-17T05:53:41.952Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-13T13:04:07.253Z'
+  timestamp: '2021-07-17T05:54:58.808Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-13T13:06:37.513Z'
+  timestamp: '2021-07-17T05:55:01.742Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-13T13:11:03.656Z'
+  timestamp: '2021-07-17T05:59:41.400Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-14T04:10:52.335Z'
+  timestamp: '2021-07-17T06:00:38.516Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-14T08:46:58.703Z'
+  timestamp: '2021-07-17T06:01:13.856Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-14T08:47:34.848Z'
+  timestamp: '2021-07-17T06:01:44.229Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-14T08:49:50.436Z'
+  timestamp: '2021-07-17T06:02:00.986Z'
 }
 {
->>>>>>> b4cbb8959396ad2919ce3ed5f0a23c614cc4b0b6
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-<<<<<<< HEAD
-  timestamp: '2021-07-12T13:18:10.078Z'
-=======
-  timestamp: '2021-07-14T08:51:19.524Z'
->>>>>>> b4cbb8959396ad2919ce3ed5f0a23c614cc4b0b6
+  timestamp: '2021-07-17T06:03:36.261Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-<<<<<<< HEAD
-  timestamp: '2021-07-12T13:25:09.667Z'
+  timestamp: '2021-07-17T06:03:49.246Z'
 }
 {
   name: 'SequelizeAccessDeniedError',
-  parent: Error: Access denied for user 'baafilac_rajs01878'@'103.211.19.14' (using password: YES)
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'47.9.147.195' (using password: YES)
       at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
       at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
       at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
@@ -885,9 +147,9 @@
     code: 'ER_ACCESS_DENIED_ERROR',
     errno: 1045,
     sqlState: '28000',
-    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.19.14' (using password: YES)"
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.147.195' (using password: YES)"
   },
-  original: Error: Access denied for user 'baafilac_rajs01878'@'103.211.19.14' (using password: YES)
+  original: Error: Access denied for user 'baafilac_rajs01878'@'47.9.147.195' (using password: YES)
       at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
       at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
       at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
@@ -901,148 +163,16 @@
     code: 'ER_ACCESS_DENIED_ERROR',
     errno: 1045,
     sqlState: '28000',
-    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.19.14' (using password: YES)"
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.147.195' (using password: YES)"
   },
   level: 'error',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-14T07:09:31.335Z'
-=======
-  timestamp: '2021-07-14T08:53:08.231Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T08:53:58.585Z'
->>>>>>> b4cbb8959396ad2919ce3ed5f0a23c614cc4b0b6
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-<<<<<<< HEAD
-  timestamp: '2021-07-14T07:10:58.616Z'
-}
-{
-  service: 'user-service',
-  view: View {
-    defaultEngine: 'ejs',
-    ext: '.ejs',
-    name: 'admin/usersAdmin',
-    root: './views',
-    engine: [Function],
-    path: undefined
-  },
-  level: 'error',
-  message: 'Failed to lookup view "admin/usersAdmin" in views directory "./views" Failed to lookup view "admin/usersAdmin" in views directory "./views"',
-  stack: 'Error: Failed to lookup view "admin/usersAdmin" in views directory "./views"\n' +
-    '    at Function.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:580:17)\n' +
-    '    at ServerResponse.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1012:7)\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\routes\\usersAdmin.js:4:6\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
-    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
-    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
-    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
-    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22',
-  label: 'right now!',
-  timestamp: '2021-07-14T07:11:08.856Z'
-=======
-  timestamp: '2021-07-14T08:55:03.731Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T08:55:50.463Z'
->>>>>>> b4cbb8959396ad2919ce3ed5f0a23c614cc4b0b6
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-<<<<<<< HEAD
-  timestamp: '2021-07-14T07:12:07.697Z'
-=======
-  timestamp: '2021-07-14T08:56:12.486Z'
->>>>>>> b4cbb8959396ad2919ce3ed5f0a23c614cc4b0b6
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-<<<<<<< HEAD
-  timestamp: '2021-07-14T07:12:25.168Z'
-=======
-  timestamp: '2021-07-14T08:58:28.366Z'
->>>>>>> b4cbb8959396ad2919ce3ed5f0a23c614cc4b0b6
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-<<<<<<< HEAD
-  timestamp: '2021-07-14T07:12:45.036Z'
-=======
-  timestamp: '2021-07-14T08:59:56.795Z'
->>>>>>> b4cbb8959396ad2919ce3ed5f0a23c614cc4b0b6
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-<<<<<<< HEAD
-  timestamp: '2021-07-14T07:13:08.963Z'
-=======
-  timestamp: '2021-07-14T09:00:44.929Z'
->>>>>>> b4cbb8959396ad2919ce3ed5f0a23c614cc4b0b6
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-<<<<<<< HEAD
-  timestamp: '2021-07-14T07:13:56.775Z'
-=======
-  timestamp: '2021-07-14T09:04:41.980Z'
->>>>>>> b4cbb8959396ad2919ce3ed5f0a23c614cc4b0b6
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-<<<<<<< HEAD
-  timestamp: '2021-07-14T07:14:59.205Z'
-}
-{
-  service: 'user-service',
-  level: 'error',
-  message: 'D:\\node\\realEstate\\realEstateNode\\views\\usersAdmin\\sign-in.ejs:47\n' +
-    '    45| \t\t\t\t\t<div class="sign-in-form">\r\n' +
-    '    46| \t\t\t\t\t\t<div class="sign-in-form-top">\r\n' +
-    ' >> 47| \t\t\t\t\t\t\t<%if(msg) {%>\r\n' +
-    '    48| \t\t\t\t\t\t\t<h4 class="alert alert-success"><%=msg%></h4>\r\n' +
-    '    49| \t\t\t\t\t\t\t<%}%>\r\n' +
-    '    50| \t\t\t\t\t\t\t<p><span>Sign In to</span> <a href="index.html">Admin</a></p>\r\n' +
-    '\n' +
-    'msg is not defined',
-  label: 'right now!',
-  timestamp: '2021-07-14T07:15:05.991Z'
+  timestamp: '2021-07-17T06:24:01.837Z'
 }
 {
   name: 'SequelizeAccessDeniedError',
-  parent: Error: Access denied for user 'baafilac_rajs01878'@'47.9.134.8' (using password: YES)
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'47.9.147.195' (using password: YES)
       at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
       at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
       at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
@@ -1056,9 +186,9 @@
     code: 'ER_ACCESS_DENIED_ERROR',
     errno: 1045,
     sqlState: '28000',
-    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.134.8' (using password: YES)"
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.147.195' (using password: YES)"
   },
-  original: Error: Access denied for user 'baafilac_rajs01878'@'47.9.134.8' (using password: YES)
+  original: Error: Access denied for user 'baafilac_rajs01878'@'47.9.147.195' (using password: YES)
       at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
       at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
       at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
@@ -1072,16 +202,16 @@
     code: 'ER_ACCESS_DENIED_ERROR',
     errno: 1045,
     sqlState: '28000',
-    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.134.8' (using password: YES)"
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.147.195' (using password: YES)"
   },
   level: 'error',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-14T07:16:06.936Z'
+  timestamp: '2021-07-17T06:24:04.323Z'
 }
 {
   name: 'SequelizeAccessDeniedError',
-  parent: Error: Access denied for user 'baafilac_rajs01878'@'47.9.134.8' (using password: YES)
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'47.9.147.195' (using password: YES)
       at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
       at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
       at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
@@ -1095,9 +225,9 @@
     code: 'ER_ACCESS_DENIED_ERROR',
     errno: 1045,
     sqlState: '28000',
-    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.134.8' (using password: YES)"
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.147.195' (using password: YES)"
   },
-  original: Error: Access denied for user 'baafilac_rajs01878'@'47.9.134.8' (using password: YES)
+  original: Error: Access denied for user 'baafilac_rajs01878'@'47.9.147.195' (using password: YES)
       at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
       at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
       at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
@@ -1111,16 +241,16 @@
     code: 'ER_ACCESS_DENIED_ERROR',
     errno: 1045,
     sqlState: '28000',
-    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.134.8' (using password: YES)"
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.147.195' (using password: YES)"
   },
   level: 'error',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-14T07:16:25.637Z'
+  timestamp: '2021-07-17T06:24:17.873Z'
 }
 {
   name: 'SequelizeAccessDeniedError',
-  parent: Error: Access denied for user 'baafilac_rajs01878'@'47.9.134.8' (using password: YES)
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'47.9.147.195' (using password: YES)
       at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
       at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
       at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
@@ -1134,9 +264,9 @@
     code: 'ER_ACCESS_DENIED_ERROR',
     errno: 1045,
     sqlState: '28000',
-    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.134.8' (using password: YES)"
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.147.195' (using password: YES)"
   },
-  original: Error: Access denied for user 'baafilac_rajs01878'@'47.9.134.8' (using password: YES)
+  original: Error: Access denied for user 'baafilac_rajs01878'@'47.9.147.195' (using password: YES)
       at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
       at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
       at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
@@ -1150,99 +280,16 @@
     code: 'ER_ACCESS_DENIED_ERROR',
     errno: 1045,
     sqlState: '28000',
-    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.134.8' (using password: YES)"
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.147.195' (using password: YES)"
   },
   level: 'error',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-14T07:18:07.999Z'
-=======
-  timestamp: '2021-07-14T09:06:13.981Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:06:32.708Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:07:55.388Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:09:05.939Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:12:54.555Z'
->>>>>>> b4cbb8959396ad2919ce3ed5f0a23c614cc4b0b6
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-<<<<<<< HEAD
-  timestamp: '2021-07-14T07:50:58.160Z'
-=======
-  timestamp: '2021-07-14T09:13:51.225Z'
->>>>>>> b4cbb8959396ad2919ce3ed5f0a23c614cc4b0b6
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-<<<<<<< HEAD
-  timestamp: '2021-07-14T08:07:25.960Z'
-=======
-  timestamp: '2021-07-14T09:14:57.541Z'
->>>>>>> b4cbb8959396ad2919ce3ed5f0a23c614cc4b0b6
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-<<<<<<< HEAD
-  timestamp: '2021-07-14T08:16:00.467Z'
-=======
-  timestamp: '2021-07-14T09:18:05.681Z'
->>>>>>> b4cbb8959396ad2919ce3ed5f0a23c614cc4b0b6
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-<<<<<<< HEAD
-  timestamp: '2021-07-14T08:45:21.043Z'
-=======
-  timestamp: '2021-07-14T09:18:46.753Z'
->>>>>>> b4cbb8959396ad2919ce3ed5f0a23c614cc4b0b6
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-<<<<<<< HEAD
-  timestamp: '2021-07-14T08:47:27.770Z'
+  timestamp: '2021-07-17T06:24:22.859Z'
 }
 {
   name: 'SequelizeAccessDeniedError',
-  parent: Error: Access denied for user 'baafilac_rajs01878'@'47.9.136.164' (using password: YES)
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'47.9.147.195' (using password: YES)
       at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
       at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
       at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
@@ -1256,9 +303,9 @@
     code: 'ER_ACCESS_DENIED_ERROR',
     errno: 1045,
     sqlState: '28000',
-    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.136.164' (using password: YES)"
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.147.195' (using password: YES)"
   },
-  original: Error: Access denied for user 'baafilac_rajs01878'@'47.9.136.164' (using password: YES)
+  original: Error: Access denied for user 'baafilac_rajs01878'@'47.9.147.195' (using password: YES)
       at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
       at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
       at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
@@ -1272,16 +319,16 @@
     code: 'ER_ACCESS_DENIED_ERROR',
     errno: 1045,
     sqlState: '28000',
-    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.136.164' (using password: YES)"
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.147.195' (using password: YES)"
   },
   level: 'error',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-14T08:57:49.053Z'
+  timestamp: '2021-07-17T06:24:30.561Z'
 }
 {
   name: 'SequelizeAccessDeniedError',
-  parent: Error: Access denied for user 'baafilac_rajs01878'@'47.9.136.164' (using password: YES)
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)
       at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
       at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
       at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
@@ -1295,9 +342,9 @@
     code: 'ER_ACCESS_DENIED_ERROR',
     errno: 1045,
     sqlState: '28000',
-    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.136.164' (using password: YES)"
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)"
   },
-  original: Error: Access denied for user 'baafilac_rajs01878'@'47.9.136.164' (using password: YES)
+  original: Error: Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)
       at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
       at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
       at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
@@ -1311,41 +358,16 @@
     code: 'ER_ACCESS_DENIED_ERROR',
     errno: 1045,
     sqlState: '28000',
-    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.136.164' (using password: YES)"
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)"
   },
   level: 'error',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-14T09:00:59.662Z'
-=======
-  timestamp: '2021-07-14T09:21:33.807Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:22:24.972Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:23:20.285Z'
->>>>>>> b4cbb8959396ad2919ce3ed5f0a23c614cc4b0b6
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-<<<<<<< HEAD
-  timestamp: '2021-07-14T09:03:44.427Z'
+  timestamp: '2021-07-17T06:32:42.027Z'
 }
 {
   name: 'SequelizeAccessDeniedError',
-  parent: Error: Access denied for user 'baafilac_rajs01878'@'103.211.19.39' (using password: YES)
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)
       at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
       at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
       at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
@@ -1359,9 +381,9 @@
     code: 'ER_ACCESS_DENIED_ERROR',
     errno: 1045,
     sqlState: '28000',
-    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.19.39' (using password: YES)"
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)"
   },
-  original: Error: Access denied for user 'baafilac_rajs01878'@'103.211.19.39' (using password: YES)
+  original: Error: Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)
       at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
       at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
       at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
@@ -1375,16 +397,16 @@
     code: 'ER_ACCESS_DENIED_ERROR',
     errno: 1045,
     sqlState: '28000',
-    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.19.39' (using password: YES)"
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)"
   },
   level: 'error',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-14T10:14:17.724Z'
+  timestamp: '2021-07-17T06:32:51.698Z'
 }
 {
   name: 'SequelizeAccessDeniedError',
-  parent: Error: Access denied for user 'baafilac_rajs01878'@'47.9.137.195' (using password: YES)
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)
       at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
       at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
       at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
@@ -1398,9 +420,9 @@
     code: 'ER_ACCESS_DENIED_ERROR',
     errno: 1045,
     sqlState: '28000',
-    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.137.195' (using password: YES)"
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)"
   },
-  original: Error: Access denied for user 'baafilac_rajs01878'@'47.9.137.195' (using password: YES)
+  original: Error: Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)
       at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
       at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
       at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
@@ -1414,213 +436,316 @@
     code: 'ER_ACCESS_DENIED_ERROR',
     errno: 1045,
     sqlState: '28000',
-    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.137.195' (using password: YES)"
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)"
   },
   level: 'error',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-15T06:03:48.036Z'
-=======
-  timestamp: '2021-07-14T09:25:01.594Z'
+  timestamp: '2021-07-17T06:32:53.498Z'
+}
+{
+  name: 'SequelizeAccessDeniedError',
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)"
+  },
+  original: Error: Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)"
+  },
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-17T06:34:06.728Z'
+}
+{
+  name: 'SequelizeAccessDeniedError',
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)"
+  },
+  original: Error: Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)"
+  },
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-17T07:12:18.910Z'
+}
+{
+  name: 'SequelizeAccessDeniedError',
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)"
+  },
+  original: Error: Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.19.168' (using password: YES)"
+  },
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-17T07:12:21.829Z'
+}
+{
+  name: 'SequelizeAccessDeniedError',
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'110.235.218.192' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'110.235.218.192' (using password: YES)"
+  },
+  original: Error: Access denied for user 'baafilac_rajs01878'@'110.235.218.192' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'110.235.218.192' (using password: YES)"
+  },
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T05:47:49.643Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-14T09:25:43.078Z'
+  timestamp: '2021-07-22T05:49:05.779Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-14T09:26:24.826Z'
+  timestamp: '2021-07-22T05:53:42.147Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: Error: Unknown column 'readyToMove' in 'field list'
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at Prepare.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'readyToMove' in 'field list'",
+    sql: 'INSERT INTO `projects` (`_id`,`projectName`,`url`,`projectType`,`unitOption`,`priceOnword`,`image`,`nearByLocation`,`address`,`loneAvailability`,`readyToMove`,`uuid`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?,?,?,?);',
+    parameters: [
+      'qqqqq',
+      'qqqqq',
+      'plot',
+      '1500,2000,2500',
+      '1500000',
+      '{"gallery":[{"smImg":"3un559pwkrei3qg8-pro1.PNG","bgImg":"3un559pwkrei3qhp-pro1.PNG"},{"smImg":"3un559pwkrei3qhq-pro2.PNG","bgImg":"3un559pwkrei3qhr-pro2.PNG"},{"smImg":"3un559pwkrei3qhs-pro3.PNG","bgImg":"3un559pwkrei3qht-pro3.PNG"}]}',
+      '[object Object]',
+      'nijampur',
+      'Yes',
+      'Yes',
+      'krei3qg7',
+      '2021-07-22 05:55:38',
+      '2021-07-22 05:55:38'
+    ]
+  },
+  original: Error: Unknown column 'readyToMove' in 'field list'
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at Prepare.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'readyToMove' in 'field list'",
+    sql: 'INSERT INTO `projects` (`_id`,`projectName`,`url`,`projectType`,`unitOption`,`priceOnword`,`image`,`nearByLocation`,`address`,`loneAvailability`,`readyToMove`,`uuid`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?,?,?,?);',
+    parameters: [
+      'qqqqq',
+      'qqqqq',
+      'plot',
+      '1500,2000,2500',
+      '1500000',
+      '{"gallery":[{"smImg":"3un559pwkrei3qg8-pro1.PNG","bgImg":"3un559pwkrei3qhp-pro1.PNG"},{"smImg":"3un559pwkrei3qhq-pro2.PNG","bgImg":"3un559pwkrei3qhr-pro2.PNG"},{"smImg":"3un559pwkrei3qhs-pro3.PNG","bgImg":"3un559pwkrei3qht-pro3.PNG"}]}',
+      '[object Object]',
+      'nijampur',
+      'Yes',
+      'Yes',
+      'krei3qg7',
+      '2021-07-22 05:55:38',
+      '2021-07-22 05:55:38'
+    ]
+  },
+  sql: 'INSERT INTO `projects` (`_id`,`projectName`,`url`,`projectType`,`unitOption`,`priceOnword`,`image`,`nearByLocation`,`address`,`loneAvailability`,`readyToMove`,`uuid`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?,?,?,?);',
+  parameters: [
+    'qqqqq',
+    'qqqqq',
+    'plot',
+    '1500,2000,2500',
+    '1500000',
+    '{"gallery":[{"smImg":"3un559pwkrei3qg8-pro1.PNG","bgImg":"3un559pwkrei3qhp-pro1.PNG"},{"smImg":"3un559pwkrei3qhq-pro2.PNG","bgImg":"3un559pwkrei3qhr-pro2.PNG"},{"smImg":"3un559pwkrei3qhs-pro3.PNG","bgImg":"3un559pwkrei3qht-pro3.PNG"}]}',
+    '[object Object]',
+    'nijampur',
+    'Yes',
+    'Yes',
+    'krei3qg7',
+    '2021-07-22 05:55:38',
+    '2021-07-22 05:55:38'
+  ],
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T05:55:39.065Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-14T09:26:53.849Z'
+  timestamp: '2021-07-22T05:56:14.484Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-14T09:28:39.176Z'
+  timestamp: '2021-07-22T05:59:13.497Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-14T09:29:32.397Z'
+  timestamp: '2021-07-22T05:59:26.968Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-14T09:31:26.567Z'
+  timestamp: '2021-07-22T06:10:36.751Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-14T09:32:13.332Z'
+  timestamp: '2021-07-22T06:13:56.179Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-14T09:32:21.282Z'
+  timestamp: '2021-07-22T06:14:11.070Z'
 }
 {
   message: 'i am lisening at Port 3000',
   level: 'info',
   service: 'user-service',
   label: 'right now!',
-  timestamp: '2021-07-14T09:33:18.687Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:34:50.346Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:36:34.242Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:37:31.373Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:38:34.646Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:39:31.828Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:40:41.542Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:41:26.439Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:42:53.883Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:46:58.643Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:47:40.961Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:48:47.457Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:49:19.456Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:50:19.689Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:51:21.685Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:52:28.124Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:54:30.355Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:55:45.845Z'
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-  timestamp: '2021-07-14T09:56:22.198Z'
->>>>>>> b4cbb8959396ad2919ce3ed5f0a23c614cc4b0b6
-}
-{
-  message: 'i am lisening at Port 3000',
-  level: 'info',
-  service: 'user-service',
-  label: 'right now!',
-<<<<<<< HEAD
-  timestamp: '2021-07-15T06:04:35.644Z'
-=======
-  timestamp: '2021-07-14T09:56:49.525Z'
->>>>>>> b4cbb8959396ad2919ce3ed5f0a23c614cc4b0b6
+  timestamp: '2021-07-22T06:14:13.816Z'
 }

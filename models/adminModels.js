@@ -246,14 +246,7 @@
         type : Sequelize.STRING(1234),
         allowNull:false
     },
-       video:{
-        type: Sequelize.STRING,
-        allowNull:false
-    },
-    facilites:{
-        type:Sequelize.STRING,
-        allowNull:false
-    },
+       
     nearByLocation:{
         type: Sequelize.STRING,
         allowNull:false
@@ -266,7 +259,7 @@
         type:Sequelize.STRING(1234),
         
     },
-    constructionStatus:{
+    readyToMove:{
         type:Sequelize.STRING,
     },
     uuid:{
