@@ -111,14 +111,7 @@
                                             <p class="help-block"> </p>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="disabledinput" class="col-sm-2 control-label">Locality *</label>
-                                        <div class="col-sm-8">
-                                            <input type="text" id="locality" name="locality" class="form-control1"
-                                                placeholder="please check locality after selecting socity from dropdown"
-                                                required>
-                                        </div>
-                                    </div>
+                                    
                                     
                                     <div class="form-group">
                                         <label for="inputPassword" class="col-sm-2 control-label">Type of Project
@@ -126,7 +119,8 @@
                                         <div class="col-sm-8">
 
                                             <select class="form-control1" name="propType" id="propType" required>
-                                                <option value="flat">Flats</option>
+                                               <option value="nun">Project Type</option>
+                                                <option value="flat">Flats or Houses</option>
                                                 <option value="plot">Plots</option>
 
                                             </select>
@@ -142,139 +136,70 @@
                                     <div class="col-sm-8">
                                 
                                         <label class="checkbox-inline">
-                                            <input type="checkbox" class="othRooms" value="1">1 BHK
+                                            <input type="checkbox" class="flatUnits" value="1">1 BHK
                                         </label>
                                         <label class="checkbox-inline">
-                                            <input type="checkbox" class="othRooms" value="2"> 2BHK
+                                            <input type="checkbox" class="flatUnits" value="2"> 2BHK
                                         </label>
                                         <label class="checkbox-inline">
-                                            <input type="checkbox" class="othRooms" value="3"> 3 BHK
+                                            <input type="checkbox" class="flatUnits" value="3"> 3 BHK
                                         </label>
                                         <label class="checkbox-inline">
-                                            <input type="checkbox" class="othRooms" value="4"> 4 BHK
+                                            <input type="checkbox" class="flatUnits" value="4"> 4 BHK
                                         </label>
                                         <label class="checkbox-inline">
-                                            <input type="checkbox" class="othRooms" value="5"> 5 BHK
+                                            <input type="checkbox" class="flatUnits" value="5"> 5 BHK
                                         </label>
                                         <label class="checkbox-inline">
-                                            <input type="checkbox" class="othRooms" value="6"> 6 BHK
+                                            <input type="checkbox" class="flatUnits" value="6"> 6 BHK
                                         </label>
                                 
                                     </div>
                                 </div>  
 
 
-                         
-                                    <div class="form-group plot plot_add_unit" style="display: none;" >
-                                        <label for="disabledinput" class="col-sm-2 control-label">Unit Option *</label>
-                                        <div class="col-sm-8" id="plotDiv">
-                                            <input type="text" id="plotunitOption" name="unitOption[]" class="form-control1"
-                                                placeholder="please check locality after selecting socity from dropdown" required>
+                                <div class="plot">
+                                   <div id="plotWraper">
+                                        <div id="unit1" class="addUnits" >
+                                            <div class="form-group">
+                                                <label  class="col-sm-2 control-label">Enter Plot Unit </label>
+                                                <div class="col-sm-8">
+                                                    <input type="text"  class="form-control1 plotUnits" id="unitdiv" placeholder="Enter Unit in sqft ">
+            
+                                                </div>
+                                            </div>
+            
                                         </div>
-                                                <button type="button" class="btn btn-success btn-sm" name="button" onclick="add_input()"> <i class="fa fa-plus"></i>
-                                                </button>
-                                       
+                                    </div>    
+                                    
+                                    <div class="form-group ">
+                                        <label  class="col-sm-5 control-label"></label>
+                                        <button type="button" class="btn-success btn " id="addUnit" ><i class="fa fa-plus-circle" aria-hidden="true">&nbsp Unit</i></button>
+        
                                     </div>
-                                    <div class="form-group plot_remove_unit" >
-                                                                            <label for="disabledinput" class="col-sm-2 control-label">Unit Option *</label>
- 
-                                        <div class="col-sm-8" id="plotDiv">
-                                            <input type="text" id="plotunitOption" name="unitOption[]" class="form-control1"
-                                                placeholder="please check locality after selecting socity from dropdown" required>
-                                        </div>
-                                        <button type="button" class="btn btn-danger btn-sm" name="button" onclick="remove_input(this)"> <i
-                                                class="fa fa-minus"></i>
-                                        </button>
-                                    </div>
+                                </div>
+                                    
 
+                            <div class="form-group">
+                                <label for="checkbox" class="col-sm-2 control-label">Price Onwords *</label>
+                                <div class="col-sm-8" id="expected Price">
+                                    <input type="number" class="form-control1" id="priceOnwords"
+                                        name="priceOnwords" placeholder="Enter Expected Price in INR" required>
+                                </div>
+                                <div class="col-sm-2 jlkdfj1">
+                                    <p id="pricePera" class="help-block">flat, house or plot price start from</p>
+                                </div>
+                            </div>
                                     
                                    
                                     
-                                    <div class="form-group " >
-                                        <label for="disabledinput" class="col-sm-2 control-label">Furnishing *</label>
-                                        <div class="col-sm-8">
-                                            <label class="checkbox-inline">
-                                                <input style="margin-left:-20px" type="radio" id="" name="furnishing"
-                                                    value="Furnished" required> Furnished
-                                            </label>
-                                            <label class="checkbox-inline">
-                                                <input type="radio" id="" name="furnishing" value="Unfurnished"
-                                                    required> Unfurnished
-
-                                            </label>
-                                            <label class="checkbox-inline">
-                                                <input type="radio" id="" name="furnishing" value="Semifurnished"
-                                                    required> Semifurnished
-                                            </label>
-
-                                        </div>
-                                    </div>
 
                                     <div class="form-group">
-                                        <label for="disabledinput" class="col-sm-2 control-label">Ameneties</label>
-                                        <div class="col-sm-8">
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" class="Ameneties" id="Air-Conditioning"
-                                                    value="Air-Conditioning"> Air Conditioning
-                                            </label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" class="Ameneties" id="Swimming-Pool"
-                                                    value="Swimming-Pool"> Swimming Pool
-
-                                            </label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" class="Ameneties" id="Car-Parking"
-                                                    value="Car-Parking"> Car Parking
-
-                                            </label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" class="Ameneties" id="Gym" value="Gym"> Gym
-
-                                            </label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" class="Ameneties" id="Wardrobe" value="Wardrobe">
-                                                Wardrobe
-
-                                            </label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" class="Ameneties" id="Geyser" value="Geyser">
-                                                Geyser
-
-                                            </label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" class="Ameneties" id="Dining-Table"
-                                                    value="Dining-Table">Dining Table
-
-                                            </label>
-                                            <label class="checkbox-inline">
-                                                <input type="checkbox" class="Ameneties" id="Sofa" value="Sofa">Sofa
-
-                                            </label>
-
-
-
-
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label for="checkbox" class="col-sm-2 control-label">Price Onwords *</label>
-                                        <div class="col-sm-8" id="expected Price">
-                                            <input type="number" class="form-control1" id="priceOnwords"
-                                                name="priceOnwords" placeholder="Enter Expected Price in INR" required>
-                                        </div>
-                                        <div class="col-sm-2 jlkdfj1">
-                                            <p id="pricePera" class="help-block">Expected Price</p>
-                                        </div>
-                                    </div>
-                                    
-
-                                    <div class="form-group">
-                                        <label for="checkbox" class="col-sm-2 control-label">Address
+                                        <label for="checkbox" class="col-sm-2 control-label">Project Location
                                            </label>
-                                        <div class="col-sm-8" id="complementaries">
+                                        <div class="col-sm-8" id="projLocation">
                                             <textarea placeholder="Enter Full Address" id="address"
-                                                name="address" cols="50" rows="10" class="form-control1"></textarea>
+                                                name="projAddress" cols="50" rows="10" class="form-control1"></textarea>
 
                                         </div>
                                     </div>
@@ -302,27 +227,75 @@
 								</div> -->
 
                                     <!-- for youtube  videos -->
-
-                                    <div id="videosDiv1" class="addVideo">
+                                <div id="wraper">
+                                    <div id="nearBy" class="addVideo">
                                         <div class="form-group">
-                                            <label class="col-sm-2 control-label">Enter youtube video Link </label>
-                                            <div class="col-sm-8">
-                                                <input type="text" class="form-control1 videos" name="videoLink"
-                                                    placeholder="Paste youtube video Link ">
+                                            <label class="col-sm-2 control-label">Facility</label>
+                                            <div class="col-sm-3">
+                                                <input type="text" class="form-control1 facility" name="facility"
+                                                    placeholder="e.g. Hospital, School ">
 
+                                            </div>
+                                            <label class="col-sm-2 control-label">Distance</label>
+                                            <div class="col-sm-3">
+                                                <input type="text" class="form-control1 faciDis" name="faciDis"
+                                                    placeholder="Facility Distance From project in KM">
+
+                                            </div>
+                                            <div class="col-sm-2 jlkdfj1">
+                                                <p class="help-block">Facilities Like School,Hospital,Metro.Distance means </p>
                                             </div>
                                         </div>
 
                                     </div>
+                                </div>    
+                                    <div class="form-group ">
+                                        <label  class="col-sm-5 control-label"></label>
+                                        <button type="button" class="btn-success btn " id="addFacility" ><i class="fa fa-plus-circle" aria-hidden="true">&nbsp Facility</i></button>
+        
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="disabledinput" class="col-sm-2 control-label">Ready To Move</label>
+                                        <div class="col-sm-8">
+                                            <label class="checkbox-inline">
+                                                <input type="radio" name="ready" value="Yes"> Yes
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input type="radio" name="ready" value="No"> No
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-2 jlkdfj1">
+                                            <p class="help-block">For Plots if ready for posation .
+                                                For Flat and Houses if Ready to move. 
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="disabledinput" class="col-sm-2 control-label">Loan Availability</label>
+                                        <div class="col-sm-8">
+                                            <label class="checkbox-inline">
+                                                <input type="radio" name="loan" value="Yes"> Yes
+                                            </label>
+                                            <label class="checkbox-inline">
+                                                <input type="radio" name="loan" value="No"> No
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-2 jlkdfj1">
+                                            <p class="help-block">Yes if loan is Available for this project. 
+                                            </p>
+                                        </div>
+                                    </div>
+                                
 
 
 
                                     <div class="panel-footer">
                                         <div class="row">
                                             <div class="col-sm-8 col-sm-offset-2">
-                                                <button class="btn-success btn" id="my-btn">Submit</button>
-                                                <button class="btn-default btn">Cancel</button>
-                                                <button class="btn-inverse btn">Reset</button>
+                                             <center> <button class="btn-success btn" id="my-btn">Submit</button></center>
+                                                
                                             </div>
                                         </div>
                                     </div>
@@ -339,30 +312,81 @@
     </section>
 
     <script>
-        $(document).ready(() => {
-            
 
+
+
+       function delUnit(xy){
+			
+			$("#"+xy).remove();
+
+		};
+        function delFaci(xyz){
+            $("#"+xyz).remove();
+           }
+        $(document).ready(() => {
+            let b=2;
+            $("#addUnit").click(()=>{
+			
+				
+			$("#plotWraper").append('<div id="unit'+b+'"  ><div class="form-group"><label  class="col-sm-2 control-label">Enter Plot Unit </label><div class="col-sm-8"><input type="text"  class="form-control1 plotUnits"  placeholder="Enter Unit in sqft "></div><button type="button" class="btn-success btn removeDays" onclick="delUnit(\'unit'+b+'\')"  ><i class="fa fa-minus-circle" aria-hidden="true">&nbsp unit</i></button></div></div>');
+			
+			b++;
+			
+
+		    });
             
-            
+            $(".plot").hide();
+            $(".flat").hide();
            
             $('#propType').on('change', function () {
-                // alert(this.value);
+                
                 if(this.value==='flat'){
-                    $('.' + this.value).show();
+                    $('.' + this.value).slideDown();
                     $('.plot').slideUp();
 
-                }
-                if (this.value === 'plot') {
-                    $('.' + this.value).show();
+                }else if (this.value === 'plot') {
+                    $('.' + this.value).slideDown();
                     $('.flat').slideUp();
+                }else{
+                    $('.plot').slideUp();
+                    $('.flat').slideUp();
+
                 }
-            
-                
+
                 // $('.'+this.value).slideUp();
 
             });
-            console.log(optarray);
+            let x=2;
+            $("#addFacility").click(()=>{
+			
+            var myvar = '<div id="nearBy'+x+'" >'+
+'                                        <div class="form-group">'+
+'                                            <label class="col-sm-2 control-label">Facility</label>'+
+'                                            <div class="col-sm-3">'+
+'                                                <input type="text" class="form-control1 facility" name="facility"'+
+'                                                    placeholder="e.g. Hospital, School ">'+
+''+
+'                                            </div>'+
+'                                            <label class="col-sm-2 control-label">Distance</label>'+
+'                                            <div class="col-sm-3">'+
+'                                                <input type="text" class="form-control1 faciDis" name="faciDis"'+
+'                                                    placeholder="Facility Distance From project in KM">'+
+''+
+'                                            </div>'+
+'                                            <div class="col-sm-2 jlkdfj1">'+
+'                                                <button type="button" class="btn-success btn removeDays" onclick="delFaci(\'nearBy'+x+'\')"  ><i class="fa fa-minus-circle" aria-hidden="true">&nbsp Facility</i></button>'+
+'                                            </div>'+
+'                                        </div>'+
+''+
+'                                    </div>';
+			$("#wraper").append(myvar);
+			
+			x++;
+			
 
+		    });
+
+          
             $("#priceOnwords").on("keyup", () => {
                 let x = $("#priceOnwords").val();
                 $("#pricePera").html(price_in_words(x));
@@ -371,31 +395,52 @@
 
 
 
-            $('#createFlates').on('submit', (function (e) {
+            $('#createProjects').on('submit', (function (e) {
                 e.preventDefault();
-                let ameneties = [];
-                let othRooms = [];
+                let unit=[];
+                let facilities={
+                    facilityDetail:[]
+                };
+                let facility=[];
+                let faciDis=[];
+                
                 const formData = new FormData(this);
-
-                $("input:checkbox[class='Ameneties']:checked").each(function () {
-                    ameneties.push($(this).val());
+                if(formData.getAll("propType")=='flat'){
+                    $("input:checkbox[class='flatUnits']:checked").each(function () {
+                    unit.push($(this).val());
                 });
-
-                $("input:checkbox[class='othRooms']:checked").each(function () {
-                    othRooms.push($(this).val());
+                }else{
+                    $('input.plotUnits').each(function(){
+                        unit.push($.trim($(this).val()));
+                        
+                     });
+                }
+                
+                $('input.facility').each(function(){
+                    
+                    facility.push($.trim($(this).val()));
                 });
-                console.log(othRooms);
-                console.log(ameneties);
-                formData.append('otherRooms', othRooms);
-                formData.append('ameneties', ameneties);
+                $('input.faciDis').each(function(){
+                    faciDis.push($.trim($(this).val()));
+                });
+                
+                for(let i in facility)
+                {
+                    facilities.facilityDetail.push({
+                       facility:facility[i],
+                       faciDis:faciDis[i]
+                   })
+                }
+                
+                
+               facilities=JSON.stringify(facilities);
+              
+                formData.append('unit', unit);
+                formData.append('facilityDetail', facilities);
                 if (validateForm()) {
-
-
-
-
-                    $.ajax({
+                 $.ajax({
                         type: 'POST',
-                        url: '/admin/createFlat',
+                        url: '/admin/createProject',
                         data: formData,
                         cache: false,
                         contentType: false,
@@ -412,6 +457,7 @@
 
                             $("#msg").html(`${data}`).addClass("alert alert-success");
                             window.scrollTo(0, 0);
+                            document.getElementById("createProjects").reset();
                         },
                         complete: function (data) {
 
@@ -421,7 +467,7 @@
                         error: function (data) {
                             console.log("error");
                             console.log(data);
-                            document.getElementById("my-btn").disabled = false;
+                            document.getElementById("my-btn").disabled = true;
                         }
                     });
                 }
@@ -433,18 +479,10 @@
 
 
         });
-         function remove_input(outcomeElem) {
-                alert(outcomeElem);
-                jQuery(outcomeElem).parent().parent().remove();
-            }
+         
 
-            function add_input() {
-                var blank_outcome = $('.plot_remove_unit').html();
-                
-                    // $('.plot_remove_unit').append(blank_outcome);
-                    $('.plot_add_unit').append(blank_outcome);
 
-                }
+
         function validateForm() {
             // alert(objfile);
 

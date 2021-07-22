@@ -7,12 +7,13 @@ var uniqid = require("uniqid");
 const trimRequest = require("trim-request"); 
 const fs =require("fs");
 const sequelize = require('sequelize');
-const { FlatOrHouse, validateFltasOrHouse,PlotOrLand, validatePlotsOrLand } = require("../models/adminModels");
+const { FlatOrHouse, validateFltasOrHouse,PlotOrLand, validatePlotsOrLand,Project } = require("../models/adminModels");
 // const upload= require('../util/fileUpload');
 const multer = require("multer");
 const sharp = require("sharp");
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
+const logger = require('../util/logger')
 
 router.get("/realAdmin", (req, res) => {
   res.redirect("/admin/dashboard");
@@ -34,7 +35,7 @@ router.get("/registerUser", (req, res) => {
 router.post("/registerUser", async (req, res) => {
   let flag = validateUser(req.body);
   if (flag !== "1") {
-    console.log(flag);
+    
     return res.redirect("/admin/registerUser");
   }
 
@@ -85,7 +86,11 @@ router.post("/createFlat", uploads, trimRequest.all, async (req, res) => {
     let src = uniqid() + "-" + req.files["gallery"][0].originalname;
     await sharp(req.files["gallery"][0].buffer)
       .resize({ width: 640, height: 360 })
-      .toFile("./public/assets/uploads/" + src);
+      .toFile("./public/assets/uploads/" + src)
+      .then()
+        .catch((err) => {
+          logger.error(err);
+        });
     galleryImage.banner["src"] = src;
     let tinySrc = "";
     let bigSrc = "";
@@ -96,7 +101,7 @@ router.post("/createFlat", uploads, trimRequest.all, async (req, res) => {
         .toFile("./public/assets/uploads/" + tinySrc)
         .then()
         .catch((err) => {
-          console.log(err);
+          logger.error(err);
         });
       bigSrc = uniqid() + "-" + item.originalname;
       sharp(item.buffer)
@@ -104,7 +109,7 @@ router.post("/createFlat", uploads, trimRequest.all, async (req, res) => {
         .toFile("./public/assets/uploads/" + bigSrc)
         .then()
         .catch((err) => {
-          console.log(err);
+          logger.error(err);
         });
 
       galleryImage.gallery.push({
@@ -208,7 +213,7 @@ router.post("/createPlot_Land", uploads, trimRequest.all, async (req, res) => {
       uuid: uuid,
     }).then(res.send("New Plot added."));
   } catch (err) {
-    console.log("error from /createflat" + err);
+    logger.error("error from /createflat" + err);
     res.send("something went wrong");
   }
 });
@@ -469,6 +474,70 @@ router.get("/leadsFromWeb", async(req,res)=>{
 router.get("/addComp",async(req,res)=>{
 res.render("admin/addCompany");
 
+});
+
+router.post("/createProject",uploads, trimRequest.all,async(req,res)=>{
+
+  console.log("cool",req.body.projectName);
+  
+  try {
+  
+  let galleryImage = {
+    gallery: []
+  };
+  let uuid = uniqid.time();
+    let tinySrc = "";
+    let bigSrc = "";
+    url="";
+    req.files["gallery"].forEach((item) => {
+      tinySrc = uniqid() + "-" + item.originalname;
+      sharp(item.buffer)
+        .resize({ width: 400, height: 265 })
+        .toFile("./public/assets/uploads/" + tinySrc)
+        .then()
+        .catch((err) => {
+          logger.error(err);
+        });
+      bigSrc = uniqid() + "-" + item.originalname;
+      sharp(item.buffer)
+        .resize({ width: 950, height: 630 })
+        .toFile("./public/assets/uploads/" + bigSrc)
+        .then()
+        .catch((err) => {
+          logger.error(err);
+        });
+
+      galleryImage.gallery.push({
+        smImg: tinySrc,
+        bgImg: bigSrc,
+      });
+    });
+     let galleryImageStr = JSON.stringify(galleryImage);
+
+    const project =await Project.create({
+      projectName:req.body.projectName,
+      url:req.body.projectName,
+      projectType:req.body.propType,
+      unitOption:req.body.unit,
+      priceOnword:req.body.priceOnwords,
+      image:galleryImageStr,
+      nearByLocation:req.body.facilityDetail,
+      address:req.body.projAddress,
+      loneAvailability:req.body.loan,
+      readyToMove:req.body.ready,
+      uuid:uuid
+
+    });
+ if(project._options.isNewRecord = true){
+  res.send("New project Added.");
+ }else{
+   res.send("something goes wrong");
+ }
+     
+  } catch (error) {
+    logger.error(error);
+    res.send("something goes wrong");
+  }
 });
 
 
