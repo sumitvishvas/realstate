@@ -200,9 +200,9 @@
         type:Sequelize.STRING,
         allowNull:true
     },
-    gallery:{
-        type:Sequelize.TEXT('tiny'),
-        allowNull:true
+    logos:{
+         type : Sequelize.STRING(1234),
+        allowNull:false
     },
     location:{
         type:Sequelize.STRING,

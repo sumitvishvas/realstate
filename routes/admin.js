@@ -7,8 +7,8 @@ var uniqid = require("uniqid");
 const trimRequest = require("trim-request"); 
 const fs =require("fs");
 const sequelize = require('sequelize');
-const { FlatOrHouse, validateFltasOrHouse,PlotOrLand, validatePlotsOrLand,Project } = require("../models/adminModels");
-// const upload= require('../util/fileUpload');
+const { FlatOrHouse, validateFltasOrHouse,PlotOrLand, validatePlotsOrLand,Project,Companies } = require("../models/adminModels");
+
 const multer = require("multer");
 const sharp = require("sharp");
 const storage = multer.memoryStorage();
@@ -536,9 +536,72 @@ router.post("/createProject",uploads, trimRequest.all,async(req,res)=>{
      
   } catch (error) {
     logger.error(error);
-    res.send("something goes wrong");
+    res.send("something goes wrong2");
   }
 });
+const logouplod = upload.fields([{ name: "logo", maxCount: 1 }]);
+router.post('/createComp',logouplod, async(req,res)=>{
+  
+try {
+  
+  let logoImage = {
+    logos: []
+  };
+  // let uuid = uniqid.time();
+    let tinySrc = "";
+    let bigSrc = "";
+    // url="";
+    req.files["logo"].forEach((item) => {
+      tinySrc = uniqid() + "-" + item.originalname;
+      sharp(item.buffer)
+        .resize({ width: 400, height: 265 })
+        .toFile("./public/assets/uploads/" + tinySrc)
+        .then()
+        .catch((err) => {
+          logger.error(err);
+        });
+      bigSrc = uniqid() + "-" + item.originalname;
+      sharp(item.buffer)
+        .resize({ width: 950, height: 630 })
+        .toFile("./public/assets/uploads/" + bigSrc)
+        .then()
+        .catch((err) => {
+          logger.error(err);
+        });
+
+      logoImage.logos.push({
+        smLogo: tinySrc,
+        bgLogo: bigSrc,
+      });
+    });
+     let logoImageStr = JSON.stringify(logoImage);
+
+    const company =await Companies.create({
+      companyName:req.body.CompanyName,
+      location:req.body.location,
+     
+      officeAddress:req.body.officeAddress,
+      contactPerson:req.body.cpname,
+      contactNumber:req.body.conNumber,
+      logos:logoImageStr,
+      rearRegiNumber:req.body.rrnumber,
+      email:req.body.email,
+      aboutCompany:req.body.aboutCompany,
+      websiteLink:req.body.websiteLink,
+      
+    });
+ if(company._options.isNewRecord = true){
+  res.send("New Company Added.");
+ }else{
+   res.send("something goes wrong");
+ }
+     
+  } catch (error) {
+    logger.error(error);
+    res.send("something goes wrong2");
+  }
+
+})
 
 
 

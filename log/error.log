@@ -902,3 +902,930 @@
   label: 'right now!',
   timestamp: '2021-07-21T11:44:05.215Z'
 }
+{
+  name: 'SequelizeConnectionRefusedError',
+  parent: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1141:16) {
+    errno: 'ECONNREFUSED',
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 3306,
+    fatal: true
+  },
+  original: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1141:16) {
+    errno: 'ECONNREFUSED',
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 3306,
+    fatal: true
+  },
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T06:50:03.883Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T09:42:31.204Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: Error: Unknown column 'readyToMove' in 'field list'
+      at Packet.asError (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/packets/packet.js:712:17)
+      at Prepare.execute (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/commands/command.js:28:26)
+      at Connection.handlePacket (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:425:32)
+      at PacketParser.onPacket (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:75:12)
+      at PacketParser.executeStart (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:82:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:295:12)
+      at readableAddChunk (_stream_readable.js:271:9)
+      at Socket.Readable.push (_stream_readable.js:212:10) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'readyToMove' in 'field list'",
+    sql: 'INSERT INTO `projects` (`_id`,`projectName`,`url`,`projectType`,`unitOption`,`priceOnword`,`image`,`nearByLocation`,`address`,`loneAvailability`,`readyToMove`,`uuid`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?,?,?,?);',
+    parameters: [
+      'sumit',
+      'sumit',
+      'plot',
+      '2000,4000,1000',
+      '2444444',
+      '{"gallery":[{"smImg":"tdfdlvkreqf946-Screenshot from 2021-02-20 15-14-47.png","bgImg":"tdfdlvkreqf94y-Screenshot from 2021-02-20 15-14-47.png"},{"smImg":"tdfdlvkreqf94z-Screenshot from 2021-01-23 12-07-42.png","bgImg":"tdfdlvkreqf950-Screenshot from 2021-01-23 12-07-42.png"},{"smImg":"tdfdlvkreqf951-Screenshot from 2021-01-17 20-23-23.png","bgImg":"tdfdlvkreqf952-Screenshot from 2021-01-17 20-23-23.png"},{"smImg":"tdfdlvkreqf953-Screenshot from 2020-12-20 15-37-22.png","bgImg":"tdfdlvkreqf954-Screenshot from 2020-12-20 15-37-22.png"}]}',
+      '{"facilityDetail":[{"facility":"school","faciDis":"2"},{"facility":"hospital","faciDis":"1.5"}]}',
+      'fdfxcvx',
+      'Yes',
+      'Yes',
+      'kreqf945',
+      '2021-07-22 09:48:33',
+      '2021-07-22 09:48:33'
+    ]
+  },
+  original: Error: Unknown column 'readyToMove' in 'field list'
+      at Packet.asError (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/packets/packet.js:712:17)
+      at Prepare.execute (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/commands/command.js:28:26)
+      at Connection.handlePacket (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:425:32)
+      at PacketParser.onPacket (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:75:12)
+      at PacketParser.executeStart (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:82:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:295:12)
+      at readableAddChunk (_stream_readable.js:271:9)
+      at Socket.Readable.push (_stream_readable.js:212:10) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'readyToMove' in 'field list'",
+    sql: 'INSERT INTO `projects` (`_id`,`projectName`,`url`,`projectType`,`unitOption`,`priceOnword`,`image`,`nearByLocation`,`address`,`loneAvailability`,`readyToMove`,`uuid`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?,?,?,?);',
+    parameters: [
+      'sumit',
+      'sumit',
+      'plot',
+      '2000,4000,1000',
+      '2444444',
+      '{"gallery":[{"smImg":"tdfdlvkreqf946-Screenshot from 2021-02-20 15-14-47.png","bgImg":"tdfdlvkreqf94y-Screenshot from 2021-02-20 15-14-47.png"},{"smImg":"tdfdlvkreqf94z-Screenshot from 2021-01-23 12-07-42.png","bgImg":"tdfdlvkreqf950-Screenshot from 2021-01-23 12-07-42.png"},{"smImg":"tdfdlvkreqf951-Screenshot from 2021-01-17 20-23-23.png","bgImg":"tdfdlvkreqf952-Screenshot from 2021-01-17 20-23-23.png"},{"smImg":"tdfdlvkreqf953-Screenshot from 2020-12-20 15-37-22.png","bgImg":"tdfdlvkreqf954-Screenshot from 2020-12-20 15-37-22.png"}]}',
+      '{"facilityDetail":[{"facility":"school","faciDis":"2"},{"facility":"hospital","faciDis":"1.5"}]}',
+      'fdfxcvx',
+      'Yes',
+      'Yes',
+      'kreqf945',
+      '2021-07-22 09:48:33',
+      '2021-07-22 09:48:33'
+    ]
+  },
+  sql: 'INSERT INTO `projects` (`_id`,`projectName`,`url`,`projectType`,`unitOption`,`priceOnword`,`image`,`nearByLocation`,`address`,`loneAvailability`,`readyToMove`,`uuid`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?,?,?,?);',
+  parameters: [
+    'sumit',
+    'sumit',
+    'plot',
+    '2000,4000,1000',
+    '2444444',
+    '{"gallery":[{"smImg":"tdfdlvkreqf946-Screenshot from 2021-02-20 15-14-47.png","bgImg":"tdfdlvkreqf94y-Screenshot from 2021-02-20 15-14-47.png"},{"smImg":"tdfdlvkreqf94z-Screenshot from 2021-01-23 12-07-42.png","bgImg":"tdfdlvkreqf950-Screenshot from 2021-01-23 12-07-42.png"},{"smImg":"tdfdlvkreqf951-Screenshot from 2021-01-17 20-23-23.png","bgImg":"tdfdlvkreqf952-Screenshot from 2021-01-17 20-23-23.png"},{"smImg":"tdfdlvkreqf953-Screenshot from 2020-12-20 15-37-22.png","bgImg":"tdfdlvkreqf954-Screenshot from 2020-12-20 15-37-22.png"}]}',
+    '{"facilityDetail":[{"facility":"school","faciDis":"2"},{"facility":"hospital","faciDis":"1.5"}]}',
+    'fdfxcvx',
+    'Yes',
+    'Yes',
+    'kreqf945',
+    '2021-07-22 09:48:33',
+    '2021-07-22 09:48:33'
+  ],
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T09:48:34.265Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: Error: Unknown column 'readyToMove' in 'field list'
+      at Packet.asError (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/packets/packet.js:712:17)
+      at Prepare.execute (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/commands/command.js:28:26)
+      at Connection.handlePacket (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:425:32)
+      at PacketParser.onPacket (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:75:12)
+      at PacketParser.executeStart (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:82:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:295:12)
+      at readableAddChunk (_stream_readable.js:271:9)
+      at Socket.Readable.push (_stream_readable.js:212:10) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'readyToMove' in 'field list'",
+    sql: 'INSERT INTO `projects` (`_id`,`projectName`,`url`,`projectType`,`unitOption`,`priceOnword`,`image`,`nearByLocation`,`address`,`loneAvailability`,`readyToMove`,`uuid`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?,?,?,?);',
+    parameters: [
+      'sumit',
+      'sumit',
+      'plot',
+      '2000,1000,900',
+      '45000000',
+      '{"gallery":[{"smImg":"tdfdlvkreqjkyp-Screenshot from 2021-02-20 15-14-47.png","bgImg":"tdfdlvkreqjkyw-Screenshot from 2021-02-20 15-14-47.png"},{"smImg":"tdfdlvkreqjkyx-Screenshot from 2021-01-23 12-07-42.png","bgImg":"tdfdlvkreqjkzf-Screenshot from 2021-01-23 12-07-42.png"},{"smImg":"tdfdlvkreqjkzg-Screenshot from 2021-01-17 20-23-23.png","bgImg":"tdfdlvkreqjkzh-Screenshot from 2021-01-17 20-23-23.png"},{"smImg":"tdfdlvkreqjkzi-Screenshot from 2021-01-17 20-22-31.png","bgImg":"tdfdlvkreqjkzj-Screenshot from 2021-01-17 20-22-31.png"}]}',
+      '{"facilityDetail":[{"facility":"school","faciDis":"2"},{"facility":"hospital","faciDis":"2"}]}',
+      'lucknow',
+      'Yes',
+      'Yes',
+      'kreqjkyo',
+      '2021-07-22 09:51:55',
+      '2021-07-22 09:51:55'
+    ]
+  },
+  original: Error: Unknown column 'readyToMove' in 'field list'
+      at Packet.asError (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/packets/packet.js:712:17)
+      at Prepare.execute (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/commands/command.js:28:26)
+      at Connection.handlePacket (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:425:32)
+      at PacketParser.onPacket (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:75:12)
+      at PacketParser.executeStart (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:82:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:295:12)
+      at readableAddChunk (_stream_readable.js:271:9)
+      at Socket.Readable.push (_stream_readable.js:212:10) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'readyToMove' in 'field list'",
+    sql: 'INSERT INTO `projects` (`_id`,`projectName`,`url`,`projectType`,`unitOption`,`priceOnword`,`image`,`nearByLocation`,`address`,`loneAvailability`,`readyToMove`,`uuid`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?,?,?,?);',
+    parameters: [
+      'sumit',
+      'sumit',
+      'plot',
+      '2000,1000,900',
+      '45000000',
+      '{"gallery":[{"smImg":"tdfdlvkreqjkyp-Screenshot from 2021-02-20 15-14-47.png","bgImg":"tdfdlvkreqjkyw-Screenshot from 2021-02-20 15-14-47.png"},{"smImg":"tdfdlvkreqjkyx-Screenshot from 2021-01-23 12-07-42.png","bgImg":"tdfdlvkreqjkzf-Screenshot from 2021-01-23 12-07-42.png"},{"smImg":"tdfdlvkreqjkzg-Screenshot from 2021-01-17 20-23-23.png","bgImg":"tdfdlvkreqjkzh-Screenshot from 2021-01-17 20-23-23.png"},{"smImg":"tdfdlvkreqjkzi-Screenshot from 2021-01-17 20-22-31.png","bgImg":"tdfdlvkreqjkzj-Screenshot from 2021-01-17 20-22-31.png"}]}',
+      '{"facilityDetail":[{"facility":"school","faciDis":"2"},{"facility":"hospital","faciDis":"2"}]}',
+      'lucknow',
+      'Yes',
+      'Yes',
+      'kreqjkyo',
+      '2021-07-22 09:51:55',
+      '2021-07-22 09:51:55'
+    ]
+  },
+  sql: 'INSERT INTO `projects` (`_id`,`projectName`,`url`,`projectType`,`unitOption`,`priceOnword`,`image`,`nearByLocation`,`address`,`loneAvailability`,`readyToMove`,`uuid`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?,?,?,?);',
+  parameters: [
+    'sumit',
+    'sumit',
+    'plot',
+    '2000,1000,900',
+    '45000000',
+    '{"gallery":[{"smImg":"tdfdlvkreqjkyp-Screenshot from 2021-02-20 15-14-47.png","bgImg":"tdfdlvkreqjkyw-Screenshot from 2021-02-20 15-14-47.png"},{"smImg":"tdfdlvkreqjkyx-Screenshot from 2021-01-23 12-07-42.png","bgImg":"tdfdlvkreqjkzf-Screenshot from 2021-01-23 12-07-42.png"},{"smImg":"tdfdlvkreqjkzg-Screenshot from 2021-01-17 20-23-23.png","bgImg":"tdfdlvkreqjkzh-Screenshot from 2021-01-17 20-23-23.png"},{"smImg":"tdfdlvkreqjkzi-Screenshot from 2021-01-17 20-22-31.png","bgImg":"tdfdlvkreqjkzj-Screenshot from 2021-01-17 20-22-31.png"}]}',
+    '{"facilityDetail":[{"facility":"school","faciDis":"2"},{"facility":"hospital","faciDis":"2"}]}',
+    'lucknow',
+    'Yes',
+    'Yes',
+    'kreqjkyo',
+    '2021-07-22 09:51:55',
+    '2021-07-22 09:51:55'
+  ],
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T09:51:56.168Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T09:55:52.628Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: Error: Unknown column 'readyToMove' in 'field list'
+      at Packet.asError (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/packets/packet.js:712:17)
+      at Prepare.execute (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/commands/command.js:28:26)
+      at Connection.handlePacket (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:425:32)
+      at PacketParser.onPacket (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:75:12)
+      at PacketParser.executeStart (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:82:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:295:12)
+      at readableAddChunk (_stream_readable.js:271:9)
+      at Socket.Readable.push (_stream_readable.js:212:10) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'readyToMove' in 'field list'",
+    sql: 'INSERT INTO `projects` (`_id`,`projectName`,`url`,`projectType`,`unitOption`,`priceOnword`,`image`,`nearByLocation`,`address`,`loneAvailability`,`readyToMove`,`uuid`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?,?,?,?);',
+    parameters: [
+      'sumit',
+      'sumit',
+      'plot',
+      '2000,1000,900',
+      '45000000',
+      '{"gallery":[{"smImg":"tdfeb0kreqqcpy-Screenshot from 2021-02-20 15-14-47.png","bgImg":"tdfeb0kreqqcq1-Screenshot from 2021-02-20 15-14-47.png"},{"smImg":"tdfeb0kreqqcq2-Screenshot from 2021-01-23 12-07-42.png","bgImg":"tdfeb0kreqqcq3-Screenshot from 2021-01-23 12-07-42.png"},{"smImg":"tdfeb0kreqqcq4-Screenshot from 2021-01-17 20-23-23.png","bgImg":"tdfeb0kreqqcq5-Screenshot from 2021-01-17 20-23-23.png"},{"smImg":"tdfeb0kreqqcq6-Screenshot from 2021-01-17 20-22-31.png","bgImg":"tdfeb0kreqqcq7-Screenshot from 2021-01-17 20-22-31.png"}]}',
+      '{"facilityDetail":[{"facility":"school","faciDis":"2"},{"facility":"hospitaal","faciDis":"1.5"}]}',
+      'lko',
+      'Yes',
+      'Yes',
+      'kreqqcpx',
+      '2021-07-22 09:57:11',
+      '2021-07-22 09:57:11'
+    ]
+  },
+  original: Error: Unknown column 'readyToMove' in 'field list'
+      at Packet.asError (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/packets/packet.js:712:17)
+      at Prepare.execute (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/commands/command.js:28:26)
+      at Connection.handlePacket (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:425:32)
+      at PacketParser.onPacket (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:75:12)
+      at PacketParser.executeStart (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:82:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:295:12)
+      at readableAddChunk (_stream_readable.js:271:9)
+      at Socket.Readable.push (_stream_readable.js:212:10) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'readyToMove' in 'field list'",
+    sql: 'INSERT INTO `projects` (`_id`,`projectName`,`url`,`projectType`,`unitOption`,`priceOnword`,`image`,`nearByLocation`,`address`,`loneAvailability`,`readyToMove`,`uuid`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?,?,?,?);',
+    parameters: [
+      'sumit',
+      'sumit',
+      'plot',
+      '2000,1000,900',
+      '45000000',
+      '{"gallery":[{"smImg":"tdfeb0kreqqcpy-Screenshot from 2021-02-20 15-14-47.png","bgImg":"tdfeb0kreqqcq1-Screenshot from 2021-02-20 15-14-47.png"},{"smImg":"tdfeb0kreqqcq2-Screenshot from 2021-01-23 12-07-42.png","bgImg":"tdfeb0kreqqcq3-Screenshot from 2021-01-23 12-07-42.png"},{"smImg":"tdfeb0kreqqcq4-Screenshot from 2021-01-17 20-23-23.png","bgImg":"tdfeb0kreqqcq5-Screenshot from 2021-01-17 20-23-23.png"},{"smImg":"tdfeb0kreqqcq6-Screenshot from 2021-01-17 20-22-31.png","bgImg":"tdfeb0kreqqcq7-Screenshot from 2021-01-17 20-22-31.png"}]}',
+      '{"facilityDetail":[{"facility":"school","faciDis":"2"},{"facility":"hospitaal","faciDis":"1.5"}]}',
+      'lko',
+      'Yes',
+      'Yes',
+      'kreqqcpx',
+      '2021-07-22 09:57:11',
+      '2021-07-22 09:57:11'
+    ]
+  },
+  sql: 'INSERT INTO `projects` (`_id`,`projectName`,`url`,`projectType`,`unitOption`,`priceOnword`,`image`,`nearByLocation`,`address`,`loneAvailability`,`readyToMove`,`uuid`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?,?,?,?);',
+  parameters: [
+    'sumit',
+    'sumit',
+    'plot',
+    '2000,1000,900',
+    '45000000',
+    '{"gallery":[{"smImg":"tdfeb0kreqqcpy-Screenshot from 2021-02-20 15-14-47.png","bgImg":"tdfeb0kreqqcq1-Screenshot from 2021-02-20 15-14-47.png"},{"smImg":"tdfeb0kreqqcq2-Screenshot from 2021-01-23 12-07-42.png","bgImg":"tdfeb0kreqqcq3-Screenshot from 2021-01-23 12-07-42.png"},{"smImg":"tdfeb0kreqqcq4-Screenshot from 2021-01-17 20-23-23.png","bgImg":"tdfeb0kreqqcq5-Screenshot from 2021-01-17 20-23-23.png"},{"smImg":"tdfeb0kreqqcq6-Screenshot from 2021-01-17 20-22-31.png","bgImg":"tdfeb0kreqqcq7-Screenshot from 2021-01-17 20-22-31.png"}]}',
+    '{"facilityDetail":[{"facility":"school","faciDis":"2"},{"facility":"hospitaal","faciDis":"1.5"}]}',
+    'lko',
+    'Yes',
+    'Yes',
+    'kreqqcpx',
+    '2021-07-22 09:57:11',
+    '2021-07-22 09:57:11'
+  ],
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T09:57:11.886Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:00:57.161Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:06:01.510Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:10:46.285Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:14:10.754Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:17:50.797Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:18:46.062Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:21:08.778Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:21:23.555Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:24:07.293Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:25:43.580Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:26:01.099Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:26:24.740Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:31:47.924Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:32:33.344Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:35:50.554Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:38:09.065Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:38:27.616Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:41:56.364Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:42:04.217Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:42:29.113Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:43:08.765Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:44:02.491Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:52:37.080Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:53:04.180Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:55:12.129Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:56:14.128Z'
+}
+{
+  name: 'SequelizeDatabaseError',
+  parent: Error: Data too long for column 'gallery' at row 1
+      at Packet.asError (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/packets/packet.js:712:17)
+      at Execute.execute (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/commands/command.js:28:26)
+      at Connection.handlePacket (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:425:32)
+      at PacketParser.onPacket (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:75:12)
+      at PacketParser.executeStart (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:82:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:295:12)
+      at readableAddChunk (_stream_readable.js:271:9)
+      at Socket.Readable.push (_stream_readable.js:212:10) {
+    code: 'ER_DATA_TOO_LONG',
+    errno: 1406,
+    sqlState: '22001',
+    sqlMessage: "Data too long for column 'gallery' at row 1",
+    sql: 'INSERT INTO `compaies` (`_id`,`companyName`,`officeAddress`,`aboutCompany`,`contactPerson`,`contactNumber`,`email`,`rearRegiNumber`,`websiteLink`,`gallery`,`location`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?,?,?);',
+    parameters: [
+      'ANSAL',
+      'LUCKNOW',
+      'dsfsddfvs sdfsfsdfc',
+      'Sumit',
+      '54354445',
+      'babloom417@gmail.com',
+      'vcv44445vc',
+      'sdsafcsdvc fdsfsdfsd.com',
+      '{"gallery":[{"smImg":"tdfg03kresvfyw-Screenshot from 2021-01-23 12-07-42.png","bgImg":"tdfg03kresvg0a-Screenshot from 2021-01-23 12-07-42.png"},{"smImg":"tdfg03kresvg0b-Screenshot from 2021-01-17 20-23-23.png","bgImg":"tdfg03kresvg0c-Screenshot from 2021-01-17 20-23-23.png"},{"smImg":"tdfg03kresvg0d-Screenshot from 2021-01-17 20-22-31.png","bgImg":"tdfg03kresvg0e-Screenshot from 2021-01-17 20-22-31.png"},{"smImg":"tdfg03kresvg0f-Screenshot from 2020-12-19 21-59-18.png","bgImg":"tdfg03kresvg0g-Screenshot from 2020-12-19 21-59-18.png"}]}',
+      'LKO',
+      '2021-07-22 10:57:07',
+      '2021-07-22 10:57:07'
+    ]
+  },
+  original: Error: Data too long for column 'gallery' at row 1
+      at Packet.asError (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/packets/packet.js:712:17)
+      at Execute.execute (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/commands/command.js:28:26)
+      at Connection.handlePacket (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:425:32)
+      at PacketParser.onPacket (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:75:12)
+      at PacketParser.executeStart (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/packet_parser.js:75:16)
+      at Socket.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/mysql2/lib/connection.js:82:25)
+      at Socket.emit (events.js:315:20)
+      at addChunk (_stream_readable.js:295:12)
+      at readableAddChunk (_stream_readable.js:271:9)
+      at Socket.Readable.push (_stream_readable.js:212:10) {
+    code: 'ER_DATA_TOO_LONG',
+    errno: 1406,
+    sqlState: '22001',
+    sqlMessage: "Data too long for column 'gallery' at row 1",
+    sql: 'INSERT INTO `compaies` (`_id`,`companyName`,`officeAddress`,`aboutCompany`,`contactPerson`,`contactNumber`,`email`,`rearRegiNumber`,`websiteLink`,`gallery`,`location`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?,?,?);',
+    parameters: [
+      'ANSAL',
+      'LUCKNOW',
+      'dsfsddfvs sdfsfsdfc',
+      'Sumit',
+      '54354445',
+      'babloom417@gmail.com',
+      'vcv44445vc',
+      'sdsafcsdvc fdsfsdfsd.com',
+      '{"gallery":[{"smImg":"tdfg03kresvfyw-Screenshot from 2021-01-23 12-07-42.png","bgImg":"tdfg03kresvg0a-Screenshot from 2021-01-23 12-07-42.png"},{"smImg":"tdfg03kresvg0b-Screenshot from 2021-01-17 20-23-23.png","bgImg":"tdfg03kresvg0c-Screenshot from 2021-01-17 20-23-23.png"},{"smImg":"tdfg03kresvg0d-Screenshot from 2021-01-17 20-22-31.png","bgImg":"tdfg03kresvg0e-Screenshot from 2021-01-17 20-22-31.png"},{"smImg":"tdfg03kresvg0f-Screenshot from 2020-12-19 21-59-18.png","bgImg":"tdfg03kresvg0g-Screenshot from 2020-12-19 21-59-18.png"}]}',
+      'LKO',
+      '2021-07-22 10:57:07',
+      '2021-07-22 10:57:07'
+    ]
+  },
+  sql: 'INSERT INTO `compaies` (`_id`,`companyName`,`officeAddress`,`aboutCompany`,`contactPerson`,`contactNumber`,`email`,`rearRegiNumber`,`websiteLink`,`gallery`,`location`,`createdAt`,`updatedAt`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?,?,?,?);',
+  parameters: [
+    'ANSAL',
+    'LUCKNOW',
+    'dsfsddfvs sdfsfsdfc',
+    'Sumit',
+    '54354445',
+    'babloom417@gmail.com',
+    'vcv44445vc',
+    'sdsafcsdvc fdsfsdfsd.com',
+    '{"gallery":[{"smImg":"tdfg03kresvfyw-Screenshot from 2021-01-23 12-07-42.png","bgImg":"tdfg03kresvg0a-Screenshot from 2021-01-23 12-07-42.png"},{"smImg":"tdfg03kresvg0b-Screenshot from 2021-01-17 20-23-23.png","bgImg":"tdfg03kresvg0c-Screenshot from 2021-01-17 20-23-23.png"},{"smImg":"tdfg03kresvg0d-Screenshot from 2021-01-17 20-22-31.png","bgImg":"tdfg03kresvg0e-Screenshot from 2021-01-17 20-22-31.png"},{"smImg":"tdfg03kresvg0f-Screenshot from 2020-12-19 21-59-18.png","bgImg":"tdfg03kresvg0g-Screenshot from 2020-12-19 21-59-18.png"}]}',
+    'LKO',
+    '2021-07-22 10:57:07',
+    '2021-07-22 10:57:07'
+  ],
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:57:08.671Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:59:01.515Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T10:59:25.470Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:06:43.393Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:08:37.807Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:11:10.342Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:12:49.247Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:14:12.503Z'
+}
+{
+  service: 'user-service',
+  name: 'MulterError',
+  message: 'Unexpected field Unexpected field',
+  code: 'LIMIT_UNEXPECTED_FILE',
+  field: 'logo',
+  storageErrors: [],
+  level: 'error',
+  stack: 'MulterError: Unexpected field\n' +
+    '    at wrappedFileFilter (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/multer/index.js:40:19)\n' +
+    '    at Busboy.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/multer/lib/make-middleware.js:114:7)\n' +
+    '    at Busboy.emit (events.js:315:20)\n' +
+    '    at Busboy.emit (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/busboy/lib/main.js:38:33)\n' +
+    '    at PartStream.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/busboy/lib/types/multipart.js:213:13)\n' +
+    '    at PartStream.emit (events.js:315:20)\n' +
+    '    at HeaderParser.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/dicer/lib/Dicer.js:51:16)\n' +
+    '    at HeaderParser.emit (events.js:315:20)\n' +
+    '    at HeaderParser._finish (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/dicer/lib/HeaderParser.js:68:8)\n' +
+    '    at SBMH.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/dicer/lib/HeaderParser.js:40:12)',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:14:48.606Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:15:30.193Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:19:00.987Z'
+}
+{
+  service: 'user-service',
+  name: 'MulterError',
+  message: 'Unexpected field Unexpected field',
+  code: 'LIMIT_UNEXPECTED_FILE',
+  field: 'logo',
+  storageErrors: [],
+  level: 'error',
+  stack: 'MulterError: Unexpected field\n' +
+    '    at wrappedFileFilter (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/multer/index.js:40:19)\n' +
+    '    at Busboy.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/multer/lib/make-middleware.js:114:7)\n' +
+    '    at Busboy.emit (events.js:315:20)\n' +
+    '    at Busboy.emit (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/busboy/lib/main.js:38:33)\n' +
+    '    at PartStream.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/busboy/lib/types/multipart.js:213:13)\n' +
+    '    at PartStream.emit (events.js:315:20)\n' +
+    '    at HeaderParser.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/dicer/lib/Dicer.js:51:16)\n' +
+    '    at HeaderParser.emit (events.js:315:20)\n' +
+    '    at HeaderParser._finish (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/dicer/lib/HeaderParser.js:68:8)\n' +
+    '    at SBMH.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/dicer/lib/HeaderParser.js:40:12)',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:19:57.551Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:21:51.276Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:22:41.242Z'
+}
+{
+  service: 'user-service',
+  name: 'MulterError',
+  message: 'Unexpected field Unexpected field',
+  code: 'LIMIT_UNEXPECTED_FILE',
+  field: 'logo',
+  storageErrors: [],
+  level: 'error',
+  stack: 'MulterError: Unexpected field\n' +
+    '    at wrappedFileFilter (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/multer/index.js:40:19)\n' +
+    '    at Busboy.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/multer/lib/make-middleware.js:114:7)\n' +
+    '    at Busboy.emit (events.js:315:20)\n' +
+    '    at Busboy.emit (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/busboy/lib/main.js:38:33)\n' +
+    '    at PartStream.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/busboy/lib/types/multipart.js:213:13)\n' +
+    '    at PartStream.emit (events.js:315:20)\n' +
+    '    at HeaderParser.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/dicer/lib/Dicer.js:51:16)\n' +
+    '    at HeaderParser.emit (events.js:315:20)\n' +
+    '    at HeaderParser._finish (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/dicer/lib/HeaderParser.js:68:8)\n' +
+    '    at SBMH.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/dicer/lib/HeaderParser.js:40:12)',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:22:44.408Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:23:17.924Z'
+}
+{
+  service: 'user-service',
+  name: 'MulterError',
+  message: 'Unexpected field Unexpected field',
+  code: 'LIMIT_UNEXPECTED_FILE',
+  field: 'logo',
+  storageErrors: [],
+  level: 'error',
+  stack: 'MulterError: Unexpected field\n' +
+    '    at wrappedFileFilter (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/multer/index.js:40:19)\n' +
+    '    at Busboy.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/multer/lib/make-middleware.js:114:7)\n' +
+    '    at Busboy.emit (events.js:315:20)\n' +
+    '    at Busboy.emit (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/busboy/lib/main.js:38:33)\n' +
+    '    at PartStream.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/busboy/lib/types/multipart.js:213:13)\n' +
+    '    at PartStream.emit (events.js:315:20)\n' +
+    '    at HeaderParser.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/dicer/lib/Dicer.js:51:16)\n' +
+    '    at HeaderParser.emit (events.js:315:20)\n' +
+    '    at HeaderParser._finish (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/dicer/lib/HeaderParser.js:68:8)\n' +
+    '    at SBMH.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/dicer/lib/HeaderParser.js:40:12)',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:23:18.634Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:23:42.344Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:23:49.870Z'
+}
+{
+  service: 'user-service',
+  name: 'MulterError',
+  message: 'Unexpected field Unexpected field',
+  code: 'LIMIT_UNEXPECTED_FILE',
+  field: 'logo',
+  storageErrors: [],
+  level: 'error',
+  stack: 'MulterError: Unexpected field\n' +
+    '    at wrappedFileFilter (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/multer/index.js:40:19)\n' +
+    '    at Busboy.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/multer/lib/make-middleware.js:114:7)\n' +
+    '    at Busboy.emit (events.js:315:20)\n' +
+    '    at Busboy.emit (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/busboy/lib/main.js:38:33)\n' +
+    '    at PartStream.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/busboy/lib/types/multipart.js:213:13)\n' +
+    '    at PartStream.emit (events.js:315:20)\n' +
+    '    at HeaderParser.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/dicer/lib/Dicer.js:51:16)\n' +
+    '    at HeaderParser.emit (events.js:315:20)\n' +
+    '    at HeaderParser._finish (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/dicer/lib/HeaderParser.js:68:8)\n' +
+    '    at SBMH.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/dicer/lib/HeaderParser.js:40:12)',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:23:52.537Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:24:50.784Z'
+}
+{
+  service: 'user-service',
+  name: 'MulterError',
+  message: 'Unexpected field Unexpected field',
+  code: 'LIMIT_UNEXPECTED_FILE',
+  field: 'logo',
+  storageErrors: [],
+  level: 'error',
+  stack: 'MulterError: Unexpected field\n' +
+    '    at wrappedFileFilter (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/multer/index.js:40:19)\n' +
+    '    at Busboy.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/multer/lib/make-middleware.js:114:7)\n' +
+    '    at Busboy.emit (events.js:315:20)\n' +
+    '    at Busboy.emit (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/busboy/lib/main.js:38:33)\n' +
+    '    at PartStream.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/busboy/lib/types/multipart.js:213:13)\n' +
+    '    at PartStream.emit (events.js:315:20)\n' +
+    '    at HeaderParser.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/dicer/lib/Dicer.js:51:16)\n' +
+    '    at HeaderParser.emit (events.js:315:20)\n' +
+    '    at HeaderParser._finish (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/dicer/lib/HeaderParser.js:68:8)\n' +
+    '    at SBMH.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/dicer/lib/HeaderParser.js:40:12)',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:24:52.102Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:25:36.607Z'
+}
+{
+  service: 'user-service',
+  name: 'MulterError',
+  message: 'Unexpected field Unexpected field',
+  code: 'LIMIT_UNEXPECTED_FILE',
+  field: 'logo',
+  storageErrors: [],
+  level: 'error',
+  stack: 'MulterError: Unexpected field\n' +
+    '    at wrappedFileFilter (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/multer/index.js:40:19)\n' +
+    '    at Busboy.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/multer/lib/make-middleware.js:114:7)\n' +
+    '    at Busboy.emit (events.js:315:20)\n' +
+    '    at Busboy.emit (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/busboy/lib/main.js:38:33)\n' +
+    '    at PartStream.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/busboy/lib/types/multipart.js:213:13)\n' +
+    '    at PartStream.emit (events.js:315:20)\n' +
+    '    at HeaderParser.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/dicer/lib/Dicer.js:51:16)\n' +
+    '    at HeaderParser.emit (events.js:315:20)\n' +
+    '    at HeaderParser._finish (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/dicer/lib/HeaderParser.js:68:8)\n' +
+    '    at SBMH.<anonymous> (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/dicer/lib/HeaderParser.js:40:12)',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:25:38.965Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:28:55.095Z'
+}
+{
+  name: 'SequelizeValidationError',
+  errors: [
+    ValidationErrorItem {
+      message: 'compaies.logos cannot be null',
+      type: 'notNull Violation',
+      path: 'logos',
+      value: null,
+      origin: 'CORE',
+      instance: compaies {
+        dataValues: {
+          _id: null,
+          companyName: 'sa',
+          location: 'LKO',
+          officeAddress: 'LUCKNOW',
+          contactPerson: 'Sumit',
+          contactNumber: '54354445',
+          rearRegiNumber: 'vcv44445vc',
+          email: 'warehouse@gmail.com',
+          aboutCompany: 'gchgfh',
+          websiteLink: 'sdsafcsdvc fdsfsdfsd.com',
+          updatedAt: 2021-07-22T11:28:59.418Z,
+          createdAt: 2021-07-22T11:28:59.418Z
+        },
+        _previousDataValues: {
+          companyName: undefined,
+          location: undefined,
+          officeAddress: undefined,
+          contactPerson: undefined,
+          contactNumber: undefined,
+          rearRegiNumber: undefined,
+          email: undefined,
+          aboutCompany: undefined,
+          websiteLink: undefined
+        },
+        _changed: Set {
+          'companyName',
+          'location',
+          'officeAddress',
+          'contactPerson',
+          'contactNumber',
+          'rearRegiNumber',
+          'email',
+          'aboutCompany',
+          'websiteLink'
+        },
+        _options: {
+          isNewRecord: true,
+          _schema: null,
+          _schemaDelimiter: '',
+          attributes: undefined,
+          include: undefined,
+          raw: undefined,
+          silent: undefined
+        },
+        isNewRecord: true
+      },
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ],
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:28:59.421Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:30:14.290Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:32:00.159Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:32:10.522Z'
+}
