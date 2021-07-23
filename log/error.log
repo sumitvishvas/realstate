@@ -1829,3 +1829,869 @@
   label: 'right now!',
   timestamp: '2021-07-22T11:32:10.522Z'
 }
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:44:10.747Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:50:56.473Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:51:52.328Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:51:57.758Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:53:21.103Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:54:21.911Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:57:33.068Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T11:58:18.362Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T12:02:08.790Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'Invalid regular expression flags in /home/sumit_vishvas/live_node_proects/real_state_project/views/plots.ejs while compiling ejs\n' +
+    '\n' +
+    'If the above error is not helpful, you may want to try EJS-Lint:\n' +
+    'https://github.com/RyanZim/EJS-Lint\n' +
+    'Or, if you meant to create an async function, pass `async: true` as an option. Invalid regular expression flags in /home/sumit_vishvas/live_node_proects/real_state_project/views/plots.ejs while compiling ejs\n' +
+    '\n' +
+    'If the above error is not helpful, you may want to try EJS-Lint:\n' +
+    'https://github.com/RyanZim/EJS-Lint\n' +
+    'Or, if you meant to create an async function, pass `async: true` as an option.',
+  stack: 'SyntaxError: Invalid regular expression flags in /home/sumit_vishvas/live_node_proects/real_state_project/views/plots.ejs while compiling ejs\n' +
+    '\n' +
+    'If the above error is not helpful, you may want to try EJS-Lint:\n' +
+    'https://github.com/RyanZim/EJS-Lint\n' +
+    'Or, if you meant to create an async function, pass `async: true` as an option.\n' +
+    '    at new Function (<anonymous>)\n' +
+    '    at Template.compile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:662:12)\n' +
+    '    at Object.compile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:396:16)\n' +
+    '    at handleCache (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:233:18)\n' +
+    '    at tryHandleCache (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:272:16)\n' +
+    '    at View.exports.renderFile [as engine] (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:489:10)\n' +
+    '    at View.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/view.js:135:8)\n' +
+    '    at tryRender (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:640:10)\n' +
+    '    at Function.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:592:3)\n' +
+    '    at ServerResponse.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/response.js:1012:7)',
+  label: 'right now!',
+  timestamp: '2021-07-22T12:02:25.625Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'Invalid regular expression flags in /home/sumit_vishvas/live_node_proects/real_state_project/views/plots.ejs while compiling ejs\n' +
+    '\n' +
+    'If the above error is not helpful, you may want to try EJS-Lint:\n' +
+    'https://github.com/RyanZim/EJS-Lint\n' +
+    'Or, if you meant to create an async function, pass `async: true` as an option. Invalid regular expression flags in /home/sumit_vishvas/live_node_proects/real_state_project/views/plots.ejs while compiling ejs\n' +
+    '\n' +
+    'If the above error is not helpful, you may want to try EJS-Lint:\n' +
+    'https://github.com/RyanZim/EJS-Lint\n' +
+    'Or, if you meant to create an async function, pass `async: true` as an option.',
+  stack: 'SyntaxError: Invalid regular expression flags in /home/sumit_vishvas/live_node_proects/real_state_project/views/plots.ejs while compiling ejs\n' +
+    '\n' +
+    'If the above error is not helpful, you may want to try EJS-Lint:\n' +
+    'https://github.com/RyanZim/EJS-Lint\n' +
+    'Or, if you meant to create an async function, pass `async: true` as an option.\n' +
+    '    at new Function (<anonymous>)\n' +
+    '    at Template.compile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:662:12)\n' +
+    '    at Object.compile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:396:16)\n' +
+    '    at handleCache (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:233:18)\n' +
+    '    at tryHandleCache (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:272:16)\n' +
+    '    at View.exports.renderFile [as engine] (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:489:10)\n' +
+    '    at View.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/view.js:135:8)\n' +
+    '    at tryRender (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:640:10)\n' +
+    '    at Function.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:592:3)\n' +
+    '    at ServerResponse.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/response.js:1012:7)',
+  label: 'right now!',
+  timestamp: '2021-07-22T12:02:46.294Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T12:04:12.638Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'Invalid regular expression flags in /home/sumit_vishvas/live_node_proects/real_state_project/views/plots.ejs while compiling ejs\n' +
+    '\n' +
+    'If the above error is not helpful, you may want to try EJS-Lint:\n' +
+    'https://github.com/RyanZim/EJS-Lint\n' +
+    'Or, if you meant to create an async function, pass `async: true` as an option. Invalid regular expression flags in /home/sumit_vishvas/live_node_proects/real_state_project/views/plots.ejs while compiling ejs\n' +
+    '\n' +
+    'If the above error is not helpful, you may want to try EJS-Lint:\n' +
+    'https://github.com/RyanZim/EJS-Lint\n' +
+    'Or, if you meant to create an async function, pass `async: true` as an option.',
+  stack: 'SyntaxError: Invalid regular expression flags in /home/sumit_vishvas/live_node_proects/real_state_project/views/plots.ejs while compiling ejs\n' +
+    '\n' +
+    'If the above error is not helpful, you may want to try EJS-Lint:\n' +
+    'https://github.com/RyanZim/EJS-Lint\n' +
+    'Or, if you meant to create an async function, pass `async: true` as an option.\n' +
+    '    at new Function (<anonymous>)\n' +
+    '    at Template.compile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:662:12)\n' +
+    '    at Object.compile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:396:16)\n' +
+    '    at handleCache (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:233:18)\n' +
+    '    at tryHandleCache (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:272:16)\n' +
+    '    at View.exports.renderFile [as engine] (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:489:10)\n' +
+    '    at View.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/view.js:135:8)\n' +
+    '    at tryRender (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:640:10)\n' +
+    '    at Function.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:592:3)\n' +
+    '    at ServerResponse.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/response.js:1012:7)',
+  label: 'right now!',
+  timestamp: '2021-07-22T12:04:25.155Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'Invalid regular expression flags in /home/sumit_vishvas/live_node_proects/real_state_project/views/plots.ejs while compiling ejs\n' +
+    '\n' +
+    'If the above error is not helpful, you may want to try EJS-Lint:\n' +
+    'https://github.com/RyanZim/EJS-Lint\n' +
+    'Or, if you meant to create an async function, pass `async: true` as an option. Invalid regular expression flags in /home/sumit_vishvas/live_node_proects/real_state_project/views/plots.ejs while compiling ejs\n' +
+    '\n' +
+    'If the above error is not helpful, you may want to try EJS-Lint:\n' +
+    'https://github.com/RyanZim/EJS-Lint\n' +
+    'Or, if you meant to create an async function, pass `async: true` as an option.',
+  stack: 'SyntaxError: Invalid regular expression flags in /home/sumit_vishvas/live_node_proects/real_state_project/views/plots.ejs while compiling ejs\n' +
+    '\n' +
+    'If the above error is not helpful, you may want to try EJS-Lint:\n' +
+    'https://github.com/RyanZim/EJS-Lint\n' +
+    'Or, if you meant to create an async function, pass `async: true` as an option.\n' +
+    '    at new Function (<anonymous>)\n' +
+    '    at Template.compile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:662:12)\n' +
+    '    at Object.compile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:396:16)\n' +
+    '    at handleCache (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:233:18)\n' +
+    '    at tryHandleCache (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:272:16)\n' +
+    '    at View.exports.renderFile [as engine] (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:489:10)\n' +
+    '    at View.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/view.js:135:8)\n' +
+    '    at tryRender (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:640:10)\n' +
+    '    at Function.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:592:3)\n' +
+    '    at ServerResponse.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/response.js:1012:7)',
+  label: 'right now!',
+  timestamp: '2021-07-22T12:05:34.559Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T12:05:45.011Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T12:06:41.141Z'
+}
+{
+  service: 'user-service',
+  path: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs',
+  level: 'error',
+  message: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:30\n' +
+    '    28|         }\n' +
+    '    29| \n' +
+    ` >> 30|         %><li><strong>Fireplace:</strong>Yes</li><li><strong>Free WiFi:</strong>No</li></ul></div></div></div>< !-- Single Block Wrap --><div class="property_block_wrap style-2"><div class="property_block_wrap_header"><a data-bs-toggle="collapse"data-parent="#dsrp"data-bs-target="#clTwo"aria-controls="clTwo"href="javascript:void(0);"aria-expanded="true"><h4 class="property_block_title">Description</h4></a></div><div id="clTwo"class="panel-collapse collapse show"><div class="block-body"><p><%=data.propDetails%></p></div></div></div>< !-- Single Block Wrap --><div class="property_block_wrap style-2"><div class="property_block_wrap_header"><a data-bs-toggle="collapse"data-parent="#amen"data-bs-target="#clThree"aria-controls="clThree"href="javascript:void(0);"aria-expanded="true"><h4 class="property_block_title">Ameneties</h4></a></div><div id="clThree"class="panel-collapse collapse show"><div class="block-body"><ul class="avl-features third color"><% let arrAmin=data.ameneties.split(',')%><% arrAmin.forEach((i)=> {\n` +
+    '    31|                 %> <li><%=i%></li> <%\n' +
+    '    32|             }\n' +
+    '    33| \n' +
+    '\n' +
+    "Cannot read property 'split' of undefined /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:30\n" +
+    '    28|         }\n' +
+    '    29| \n' +
+    ` >> 30|         %><li><strong>Fireplace:</strong>Yes</li><li><strong>Free WiFi:</strong>No</li></ul></div></div></div>< !-- Single Block Wrap --><div class="property_block_wrap style-2"><div class="property_block_wrap_header"><a data-bs-toggle="collapse"data-parent="#dsrp"data-bs-target="#clTwo"aria-controls="clTwo"href="javascript:void(0);"aria-expanded="true"><h4 class="property_block_title">Description</h4></a></div><div id="clTwo"class="panel-collapse collapse show"><div class="block-body"><p><%=data.propDetails%></p></div></div></div>< !-- Single Block Wrap --><div class="property_block_wrap style-2"><div class="property_block_wrap_header"><a data-bs-toggle="collapse"data-parent="#amen"data-bs-target="#clThree"aria-controls="clThree"href="javascript:void(0);"aria-expanded="true"><h4 class="property_block_title">Ameneties</h4></a></div><div id="clThree"class="panel-collapse collapse show"><div class="block-body"><ul class="avl-features third color"><% let arrAmin=data.ameneties.split(',')%><% arrAmin.forEach((i)=> {\n` +
+    '    31|                 %> <li><%=i%></li> <%\n' +
+    '    32|             }\n' +
+    '    33| \n' +
+    '\n' +
+    "Cannot read property 'split' of undefined",
+  stack: 'TypeError: /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:30\n' +
+    '    28|         }\n' +
+    '    29| \n' +
+    ` >> 30|         %><li><strong>Fireplace:</strong>Yes</li><li><strong>Free WiFi:</strong>No</li></ul></div></div></div>< !-- Single Block Wrap --><div class="property_block_wrap style-2"><div class="property_block_wrap_header"><a data-bs-toggle="collapse"data-parent="#dsrp"data-bs-target="#clTwo"aria-controls="clTwo"href="javascript:void(0);"aria-expanded="true"><h4 class="property_block_title">Description</h4></a></div><div id="clTwo"class="panel-collapse collapse show"><div class="block-body"><p><%=data.propDetails%></p></div></div></div>< !-- Single Block Wrap --><div class="property_block_wrap style-2"><div class="property_block_wrap_header"><a data-bs-toggle="collapse"data-parent="#amen"data-bs-target="#clThree"aria-controls="clThree"href="javascript:void(0);"aria-expanded="true"><h4 class="property_block_title">Ameneties</h4></a></div><div id="clThree"class="panel-collapse collapse show"><div class="block-body"><ul class="avl-features third color"><% let arrAmin=data.ameneties.split(',')%><% arrAmin.forEach((i)=> {\n` +
+    '    31|                 %> <li><%=i%></li> <%\n' +
+    '    32|             }\n' +
+    '    33| \n' +
+    '\n' +
+    "Cannot read property 'split' of undefined\n" +
+    '    at eval (eval at compile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:662:12), <anonymous>:68:35)\n' +
+    '    at single2 (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:692:17)\n' +
+    '    at tryHandleCache (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:272:36)\n' +
+    '    at View.exports.renderFile [as engine] (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:489:10)\n' +
+    '    at View.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/view.js:135:8)\n' +
+    '    at tryRender (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:640:10)\n' +
+    '    at Function.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:592:3)\n' +
+    '    at ServerResponse.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/response.js:1012:7)\n' +
+    '    at /home/sumit_vishvas/live_node_proects/real_state_project/routes/menu.js:106:7\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-07-22T12:06:54.843Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T12:17:00.060Z'
+}
+{
+  service: 'user-service',
+  path: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs',
+  level: 'error',
+  message: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:47\n' +
+    '    45|         }\n' +
+    '    46| \n' +
+    ` >> 47|         %><li><strong>Fireplace:</strong>Yes</li><li><strong>Free WiFi:</strong>No</li></ul></div></div></div>< !-- Single Block Wrap --><div class="property_block_wrap style-2"><div class="property_block_wrap_header"><a data-bs-toggle="collapse"data-parent="#dsrp"data-bs-target="#clTwo"aria-controls="clTwo"href="javascript:void(0);"aria-expanded="true"><h4 class="property_block_title">Description</h4></a></div><div id="clTwo"class="panel-collapse collapse show"><div class="block-body"><p><%=data.propDetails%></p></div></div></div>< !-- Single Block Wrap --><div class="property_block_wrap style-2"><div class="property_block_wrap_header"><a data-bs-toggle="collapse"data-parent="#amen"data-bs-target="#clThree"aria-controls="clThree"href="javascript:void(0);"aria-expanded="true"><h4 class="property_block_title">Ameneties</h4></a></div><div id="clThree"class="panel-collapse collapse show"><div class="block-body"><ul class="avl-features third color"><% let arrAmin=data.ameneties.split(',')%><% arrAmin.forEach((i)=> {\n` +
+    '    48|                 %> <li><%=i%></li> <%\n' +
+    '    49|             }\n' +
+    '    50| \n' +
+    '\n' +
+    "Cannot read property 'split' of undefined /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:47\n" +
+    '    45|         }\n' +
+    '    46| \n' +
+    ` >> 47|         %><li><strong>Fireplace:</strong>Yes</li><li><strong>Free WiFi:</strong>No</li></ul></div></div></div>< !-- Single Block Wrap --><div class="property_block_wrap style-2"><div class="property_block_wrap_header"><a data-bs-toggle="collapse"data-parent="#dsrp"data-bs-target="#clTwo"aria-controls="clTwo"href="javascript:void(0);"aria-expanded="true"><h4 class="property_block_title">Description</h4></a></div><div id="clTwo"class="panel-collapse collapse show"><div class="block-body"><p><%=data.propDetails%></p></div></div></div>< !-- Single Block Wrap --><div class="property_block_wrap style-2"><div class="property_block_wrap_header"><a data-bs-toggle="collapse"data-parent="#amen"data-bs-target="#clThree"aria-controls="clThree"href="javascript:void(0);"aria-expanded="true"><h4 class="property_block_title">Ameneties</h4></a></div><div id="clThree"class="panel-collapse collapse show"><div class="block-body"><ul class="avl-features third color"><% let arrAmin=data.ameneties.split(',')%><% arrAmin.forEach((i)=> {\n` +
+    '    48|                 %> <li><%=i%></li> <%\n' +
+    '    49|             }\n' +
+    '    50| \n' +
+    '\n' +
+    "Cannot read property 'split' of undefined",
+  stack: 'TypeError: /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:47\n' +
+    '    45|         }\n' +
+    '    46| \n' +
+    ` >> 47|         %><li><strong>Fireplace:</strong>Yes</li><li><strong>Free WiFi:</strong>No</li></ul></div></div></div>< !-- Single Block Wrap --><div class="property_block_wrap style-2"><div class="property_block_wrap_header"><a data-bs-toggle="collapse"data-parent="#dsrp"data-bs-target="#clTwo"aria-controls="clTwo"href="javascript:void(0);"aria-expanded="true"><h4 class="property_block_title">Description</h4></a></div><div id="clTwo"class="panel-collapse collapse show"><div class="block-body"><p><%=data.propDetails%></p></div></div></div>< !-- Single Block Wrap --><div class="property_block_wrap style-2"><div class="property_block_wrap_header"><a data-bs-toggle="collapse"data-parent="#amen"data-bs-target="#clThree"aria-controls="clThree"href="javascript:void(0);"aria-expanded="true"><h4 class="property_block_title">Ameneties</h4></a></div><div id="clThree"class="panel-collapse collapse show"><div class="block-body"><ul class="avl-features third color"><% let arrAmin=data.ameneties.split(',')%><% arrAmin.forEach((i)=> {\n` +
+    '    48|                 %> <li><%=i%></li> <%\n' +
+    '    49|             }\n' +
+    '    50| \n' +
+    '\n' +
+    "Cannot read property 'split' of undefined\n" +
+    '    at eval (eval at compile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:662:12), <anonymous>:70:35)\n' +
+    '    at single2 (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:692:17)\n' +
+    '    at tryHandleCache (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:272:36)\n' +
+    '    at View.exports.renderFile [as engine] (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:489:10)\n' +
+    '    at View.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/view.js:135:8)\n' +
+    '    at tryRender (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:640:10)\n' +
+    '    at Function.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:592:3)\n' +
+    '    at ServerResponse.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/response.js:1012:7)\n' +
+    '    at /home/sumit_vishvas/live_node_proects/real_state_project/routes/menu.js:106:7\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-07-22T12:17:10.093Z'
+}
+{
+  service: 'user-service',
+  path: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs',
+  level: 'error',
+  message: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:47\n' +
+    '    45|         }\n' +
+    '    46| \n' +
+    ` >> 47|         %><li><strong>Fireplace:</strong>Yes</li><li><strong>Free WiFi:</strong>No</li></ul></div></div></div>< !-- Single Block Wrap --><div class="property_block_wrap style-2"><div class="property_block_wrap_header"><a data-bs-toggle="collapse"data-parent="#dsrp"data-bs-target="#clTwo"aria-controls="clTwo"href="javascript:void(0);"aria-expanded="true"><h4 class="property_block_title">Description</h4></a></div><div id="clTwo"class="panel-collapse collapse show"><div class="block-body"><p><%=data.propDetails%></p></div></div></div>< !-- Single Block Wrap --><div class="property_block_wrap style-2"><div class="property_block_wrap_header"><a data-bs-toggle="collapse"data-parent="#amen"data-bs-target="#clThree"aria-controls="clThree"href="javascript:void(0);"aria-expanded="true"><h4 class="property_block_title">Ameneties</h4></a></div><div id="clThree"class="panel-collapse collapse show"><div class="block-body"><ul class="avl-features third color"><% let arrAmin=data.ameneties.split(',')%><% arrAmin.forEach((i)=> {\n` +
+    '    48|                 %> <li><%=i%></li> <%\n' +
+    '    49|             }\n' +
+    '    50| \n' +
+    '\n' +
+    "Cannot read property 'split' of undefined /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:47\n" +
+    '    45|         }\n' +
+    '    46| \n' +
+    ` >> 47|         %><li><strong>Fireplace:</strong>Yes</li><li><strong>Free WiFi:</strong>No</li></ul></div></div></div>< !-- Single Block Wrap --><div class="property_block_wrap style-2"><div class="property_block_wrap_header"><a data-bs-toggle="collapse"data-parent="#dsrp"data-bs-target="#clTwo"aria-controls="clTwo"href="javascript:void(0);"aria-expanded="true"><h4 class="property_block_title">Description</h4></a></div><div id="clTwo"class="panel-collapse collapse show"><div class="block-body"><p><%=data.propDetails%></p></div></div></div>< !-- Single Block Wrap --><div class="property_block_wrap style-2"><div class="property_block_wrap_header"><a data-bs-toggle="collapse"data-parent="#amen"data-bs-target="#clThree"aria-controls="clThree"href="javascript:void(0);"aria-expanded="true"><h4 class="property_block_title">Ameneties</h4></a></div><div id="clThree"class="panel-collapse collapse show"><div class="block-body"><ul class="avl-features third color"><% let arrAmin=data.ameneties.split(',')%><% arrAmin.forEach((i)=> {\n` +
+    '    48|                 %> <li><%=i%></li> <%\n' +
+    '    49|             }\n' +
+    '    50| \n' +
+    '\n' +
+    "Cannot read property 'split' of undefined",
+  stack: 'TypeError: /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:47\n' +
+    '    45|         }\n' +
+    '    46| \n' +
+    ` >> 47|         %><li><strong>Fireplace:</strong>Yes</li><li><strong>Free WiFi:</strong>No</li></ul></div></div></div>< !-- Single Block Wrap --><div class="property_block_wrap style-2"><div class="property_block_wrap_header"><a data-bs-toggle="collapse"data-parent="#dsrp"data-bs-target="#clTwo"aria-controls="clTwo"href="javascript:void(0);"aria-expanded="true"><h4 class="property_block_title">Description</h4></a></div><div id="clTwo"class="panel-collapse collapse show"><div class="block-body"><p><%=data.propDetails%></p></div></div></div>< !-- Single Block Wrap --><div class="property_block_wrap style-2"><div class="property_block_wrap_header"><a data-bs-toggle="collapse"data-parent="#amen"data-bs-target="#clThree"aria-controls="clThree"href="javascript:void(0);"aria-expanded="true"><h4 class="property_block_title">Ameneties</h4></a></div><div id="clThree"class="panel-collapse collapse show"><div class="block-body"><ul class="avl-features third color"><% let arrAmin=data.ameneties.split(',')%><% arrAmin.forEach((i)=> {\n` +
+    '    48|                 %> <li><%=i%></li> <%\n' +
+    '    49|             }\n' +
+    '    50| \n' +
+    '\n' +
+    "Cannot read property 'split' of undefined\n" +
+    '    at eval (eval at compile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:662:12), <anonymous>:70:35)\n' +
+    '    at single2 (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:692:17)\n' +
+    '    at tryHandleCache (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:272:36)\n' +
+    '    at View.exports.renderFile [as engine] (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:489:10)\n' +
+    '    at View.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/view.js:135:8)\n' +
+    '    at tryRender (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:640:10)\n' +
+    '    at Function.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:592:3)\n' +
+    '    at ServerResponse.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/response.js:1012:7)\n' +
+    '    at /home/sumit_vishvas/live_node_proects/real_state_project/routes/menu.js:106:7\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-07-22T12:19:10.074Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T12:20:04.402Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T13:15:18.660Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T13:23:44.961Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T13:24:14.713Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T13:25:33.874Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T13:26:42.164Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T13:29:29.624Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T13:30:18.178Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T13:32:52.026Z'
+}
+{
+  service: 'user-service',
+  path: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs',
+  level: 'error',
+  message: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:41\n' +
+    '    39|         <!-- ============================================================== -->\n' +
+    '    40|         <!-- Start Navigation -->\n' +
+    " >> 41|         <%-include('includes /nav.ejs') %>\n" +
+    '    42|             <!-- End Navigation -->\n' +
+    '    43|             <div class="clearfix"></div>\n' +
+    '    44|             <!-- ============================================================== -->\n' +
+    '\n' +
+    'Could not find the include file "includes /nav.ejs" /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:41\n' +
+    '    39|         <!-- ============================================================== -->\n' +
+    '    40|         <!-- Start Navigation -->\n' +
+    " >> 41|         <%-include('includes /nav.ejs') %>\n" +
+    '    42|             <!-- End Navigation -->\n' +
+    '    43|             <div class="clearfix"></div>\n' +
+    '    44|             <!-- ============================================================== -->\n' +
+    '\n' +
+    'Could not find the include file "includes /nav.ejs"',
+  stack: 'Error: /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:41\n' +
+    '    39|         <!-- ============================================================== -->\n' +
+    '    40|         <!-- Start Navigation -->\n' +
+    " >> 41|         <%-include('includes /nav.ejs') %>\n" +
+    '    42|             <!-- End Navigation -->\n' +
+    '    43|             <div class="clearfix"></div>\n' +
+    '    44|             <!-- ============================================================== -->\n' +
+    '\n' +
+    'Could not find the include file "includes /nav.ejs"\n' +
+    '    at getIncludePath (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:183:13)\n' +
+    '    at includeFile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:309:19)\n' +
+    '    at include (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:690:16)\n' +
+    '    at eval (eval at compile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:662:12), <anonymous>:10:16)\n' +
+    '    at single2 (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:692:17)\n' +
+    '    at tryHandleCache (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:272:36)\n' +
+    '    at View.exports.renderFile [as engine] (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:489:10)\n' +
+    '    at View.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/view.js:135:8)\n' +
+    '    at tryRender (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:640:10)\n' +
+    '    at Function.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:592:3)',
+  label: 'right now!',
+  timestamp: '2021-07-22T13:32:53.381Z'
+}
+{
+  service: 'user-service',
+  path: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs',
+  level: 'error',
+  message: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:41\n' +
+    '    39|         <!-- ============================================================== -->\n' +
+    '    40|         <!-- Start Navigation -->\n' +
+    " >> 41|         <%-include('includes /nav.ejs') %>\n" +
+    '    42|             <!-- End Navigation -->\n' +
+    '    43|             <div class="clearfix"></div>\n' +
+    '    44|             <!-- ============================================================== -->\n' +
+    '\n' +
+    'Could not find the include file "includes /nav.ejs" /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:41\n' +
+    '    39|         <!-- ============================================================== -->\n' +
+    '    40|         <!-- Start Navigation -->\n' +
+    " >> 41|         <%-include('includes /nav.ejs') %>\n" +
+    '    42|             <!-- End Navigation -->\n' +
+    '    43|             <div class="clearfix"></div>\n' +
+    '    44|             <!-- ============================================================== -->\n' +
+    '\n' +
+    'Could not find the include file "includes /nav.ejs"',
+  stack: 'Error: /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:41\n' +
+    '    39|         <!-- ============================================================== -->\n' +
+    '    40|         <!-- Start Navigation -->\n' +
+    " >> 41|         <%-include('includes /nav.ejs') %>\n" +
+    '    42|             <!-- End Navigation -->\n' +
+    '    43|             <div class="clearfix"></div>\n' +
+    '    44|             <!-- ============================================================== -->\n' +
+    '\n' +
+    'Could not find the include file "includes /nav.ejs"\n' +
+    '    at getIncludePath (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:183:13)\n' +
+    '    at includeFile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:309:19)\n' +
+    '    at include (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:690:16)\n' +
+    '    at eval (eval at compile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:662:12), <anonymous>:10:16)\n' +
+    '    at single2 (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:692:17)\n' +
+    '    at tryHandleCache (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:272:36)\n' +
+    '    at View.exports.renderFile [as engine] (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:489:10)\n' +
+    '    at View.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/view.js:135:8)\n' +
+    '    at tryRender (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:640:10)\n' +
+    '    at Function.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:592:3)',
+  label: 'right now!',
+  timestamp: '2021-07-22T13:33:08.650Z'
+}
+{
+  service: 'user-service',
+  path: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs',
+  level: 'error',
+  message: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:41\n' +
+    '    39|         <!-- ============================================================== -->\n' +
+    '    40|         <!-- Start Navigation -->\n' +
+    " >> 41|         <%-include('includes /nav.ejs') %>\n" +
+    '    42|             <!-- End Navigation -->\n' +
+    '    43|             <div class="clearfix"></div>\n' +
+    '    44|             <!-- ============================================================== -->\n' +
+    '\n' +
+    'Could not find the include file "includes /nav.ejs" /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:41\n' +
+    '    39|         <!-- ============================================================== -->\n' +
+    '    40|         <!-- Start Navigation -->\n' +
+    " >> 41|         <%-include('includes /nav.ejs') %>\n" +
+    '    42|             <!-- End Navigation -->\n' +
+    '    43|             <div class="clearfix"></div>\n' +
+    '    44|             <!-- ============================================================== -->\n' +
+    '\n' +
+    'Could not find the include file "includes /nav.ejs"',
+  stack: 'Error: /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:41\n' +
+    '    39|         <!-- ============================================================== -->\n' +
+    '    40|         <!-- Start Navigation -->\n' +
+    " >> 41|         <%-include('includes /nav.ejs') %>\n" +
+    '    42|             <!-- End Navigation -->\n' +
+    '    43|             <div class="clearfix"></div>\n' +
+    '    44|             <!-- ============================================================== -->\n' +
+    '\n' +
+    'Could not find the include file "includes /nav.ejs"\n' +
+    '    at getIncludePath (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:183:13)\n' +
+    '    at includeFile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:309:19)\n' +
+    '    at include (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:690:16)\n' +
+    '    at eval (eval at compile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:662:12), <anonymous>:10:16)\n' +
+    '    at single2 (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:692:17)\n' +
+    '    at tryHandleCache (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:272:36)\n' +
+    '    at View.exports.renderFile [as engine] (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:489:10)\n' +
+    '    at View.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/view.js:135:8)\n' +
+    '    at tryRender (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:640:10)\n' +
+    '    at Function.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:592:3)',
+  label: 'right now!',
+  timestamp: '2021-07-22T13:35:08.655Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T13:35:14.588Z'
+}
+{
+  service: 'user-service',
+  path: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs',
+  level: 'error',
+  message: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:206\n' +
+    '    204|                                     <div class="block-body">\n' +
+    '    205|                                         <ul class="avl-features third color">\n' +
+    " >> 206|                                             <% let arrAmin=data.ameneties.split(',')%>\n" +
+    '    207|                                                 <% arrAmin.forEach((i)=>{%>\n' +
+    '    208| \n' +
+    '    209|                                                     <li>\n' +
+    '\n' +
+    "Cannot read property 'split' of undefined /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:206\n" +
+    '    204|                                     <div class="block-body">\n' +
+    '    205|                                         <ul class="avl-features third color">\n' +
+    " >> 206|                                             <% let arrAmin=data.ameneties.split(',')%>\n" +
+    '    207|                                                 <% arrAmin.forEach((i)=>{%>\n' +
+    '    208| \n' +
+    '    209|                                                     <li>\n' +
+    '\n' +
+    "Cannot read property 'split' of undefined",
+  stack: 'TypeError: /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:206\n' +
+    '    204|                                     <div class="block-body">\n' +
+    '    205|                                         <ul class="avl-features third color">\n' +
+    " >> 206|                                             <% let arrAmin=data.ameneties.split(',')%>\n" +
+    '    207|                                                 <% arrAmin.forEach((i)=>{%>\n' +
+    '    208| \n' +
+    '    209|                                                     <li>\n' +
+    '\n' +
+    "Cannot read property 'split' of undefined\n" +
+    '    at eval (eval at compile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:662:12), <anonymous>:73:35)\n' +
+    '    at single2 (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:692:17)\n' +
+    '    at tryHandleCache (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:272:36)\n' +
+    '    at View.exports.renderFile [as engine] (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:489:10)\n' +
+    '    at View.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/view.js:135:8)\n' +
+    '    at tryRender (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:640:10)\n' +
+    '    at Function.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:592:3)\n' +
+    '    at ServerResponse.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/response.js:1012:7)\n' +
+    '    at /home/sumit_vishvas/live_node_proects/real_state_project/routes/menu.js:106:7\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-07-22T13:35:14.896Z'
+}
+{
+  service: 'user-service',
+  path: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs',
+  level: 'error',
+  message: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:206\n' +
+    '    204|                                     <div class="block-body">\n' +
+    '    205|                                         <ul class="avl-features third color">\n' +
+    " >> 206|                                             <% let arrAmin=data.ameneties.split(',')%>\n" +
+    '    207|                                                 <% arrAmin.forEach((i)=>{%>\n' +
+    '    208| \n' +
+    '    209|                                                     <li>\n' +
+    '\n' +
+    "Cannot read property 'split' of undefined /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:206\n" +
+    '    204|                                     <div class="block-body">\n' +
+    '    205|                                         <ul class="avl-features third color">\n' +
+    " >> 206|                                             <% let arrAmin=data.ameneties.split(',')%>\n" +
+    '    207|                                                 <% arrAmin.forEach((i)=>{%>\n' +
+    '    208| \n' +
+    '    209|                                                     <li>\n' +
+    '\n' +
+    "Cannot read property 'split' of undefined",
+  stack: 'TypeError: /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:206\n' +
+    '    204|                                     <div class="block-body">\n' +
+    '    205|                                         <ul class="avl-features third color">\n' +
+    " >> 206|                                             <% let arrAmin=data.ameneties.split(',')%>\n" +
+    '    207|                                                 <% arrAmin.forEach((i)=>{%>\n' +
+    '    208| \n' +
+    '    209|                                                     <li>\n' +
+    '\n' +
+    "Cannot read property 'split' of undefined\n" +
+    '    at eval (eval at compile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:662:12), <anonymous>:73:35)\n' +
+    '    at single2 (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:692:17)\n' +
+    '    at tryHandleCache (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:272:36)\n' +
+    '    at View.exports.renderFile [as engine] (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:489:10)\n' +
+    '    at View.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/view.js:135:8)\n' +
+    '    at tryRender (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:640:10)\n' +
+    '    at Function.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:592:3)\n' +
+    '    at ServerResponse.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/response.js:1012:7)\n' +
+    '    at /home/sumit_vishvas/live_node_proects/real_state_project/routes/menu.js:106:7\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-07-22T13:35:18.744Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T13:36:29.930Z'
+}
+{
+  service: 'user-service',
+  path: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs',
+  level: 'error',
+  message: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:651\n' +
+    '    649| \n' +
+    '    650|             <!-- ============================ Footer Start ================================== -->\n' +
+    " >> 651|             <%-include('includes /footer.ejs')%>\n" +
+    '    652|                 <!-- ============================ Footer End ================================== -->\n' +
+    '    653| \n' +
+    '    654|                 <!-- Log In Modal -->\n' +
+    '\n' +
+    'Could not find the include file "includes /footer.ejs" /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:651\n' +
+    '    649| \n' +
+    '    650|             <!-- ============================ Footer Start ================================== -->\n' +
+    " >> 651|             <%-include('includes /footer.ejs')%>\n" +
+    '    652|                 <!-- ============================ Footer End ================================== -->\n' +
+    '    653| \n' +
+    '    654|                 <!-- Log In Modal -->\n' +
+    '\n' +
+    'Could not find the include file "includes /footer.ejs"',
+  stack: 'Error: /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:651\n' +
+    '    649| \n' +
+    '    650|             <!-- ============================ Footer Start ================================== -->\n' +
+    " >> 651|             <%-include('includes /footer.ejs')%>\n" +
+    '    652|                 <!-- ============================ Footer End ================================== -->\n' +
+    '    653| \n' +
+    '    654|                 <!-- Log In Modal -->\n' +
+    '\n' +
+    'Could not find the include file "includes /footer.ejs"\n' +
+    '    at getIncludePath (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:183:13)\n' +
+    '    at includeFile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:309:19)\n' +
+    '    at include (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:690:16)\n' +
+    '    at eval (eval at compile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:662:12), <anonymous>:88:16)\n' +
+    '    at single2 (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:692:17)\n' +
+    '    at tryHandleCache (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:272:36)\n' +
+    '    at View.exports.renderFile [as engine] (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:489:10)\n' +
+    '    at View.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/view.js:135:8)\n' +
+    '    at tryRender (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:640:10)\n' +
+    '    at Function.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:592:3)',
+  label: 'right now!',
+  timestamp: '2021-07-22T13:36:30.056Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T13:36:46.577Z'
+}
+{
+  service: 'user-service',
+  path: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs',
+  level: 'error',
+  message: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:651\n' +
+    '    649| \n' +
+    '    650|             <!-- ============================ Footer Start ================================== -->\n' +
+    " >> 651|             <%-include('includes /footer.ejs')%>\n" +
+    '    652|                 <!-- ============================ Footer End ================================== -->\n' +
+    '    653| \n' +
+    '    654|                 <!-- Log In Modal -->\n' +
+    '\n' +
+    'Could not find the include file "includes /footer.ejs" /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:651\n' +
+    '    649| \n' +
+    '    650|             <!-- ============================ Footer Start ================================== -->\n' +
+    " >> 651|             <%-include('includes /footer.ejs')%>\n" +
+    '    652|                 <!-- ============================ Footer End ================================== -->\n' +
+    '    653| \n' +
+    '    654|                 <!-- Log In Modal -->\n' +
+    '\n' +
+    'Could not find the include file "includes /footer.ejs"',
+  stack: 'Error: /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:651\n' +
+    '    649| \n' +
+    '    650|             <!-- ============================ Footer Start ================================== -->\n' +
+    " >> 651|             <%-include('includes /footer.ejs')%>\n" +
+    '    652|                 <!-- ============================ Footer End ================================== -->\n' +
+    '    653| \n' +
+    '    654|                 <!-- Log In Modal -->\n' +
+    '\n' +
+    'Could not find the include file "includes /footer.ejs"\n' +
+    '    at getIncludePath (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:183:13)\n' +
+    '    at includeFile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:309:19)\n' +
+    '    at include (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:690:16)\n' +
+    '    at eval (eval at compile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:662:12), <anonymous>:88:16)\n' +
+    '    at single2 (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:692:17)\n' +
+    '    at tryHandleCache (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:272:36)\n' +
+    '    at View.exports.renderFile [as engine] (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:489:10)\n' +
+    '    at View.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/view.js:135:8)\n' +
+    '    at tryRender (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:640:10)\n' +
+    '    at Function.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:592:3)',
+  label: 'right now!',
+  timestamp: '2021-07-22T13:36:47.145Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T13:37:45.322Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-22T13:44:03.136Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-23T04:45:04.415Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-23T04:52:23.613Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-23T04:53:17.424Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-23T04:58:36.842Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-23T05:49:24.275Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-23T05:54:14.481Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-23T05:58:18.186Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-23T05:59:22.844Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-23T06:03:50.264Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-23T06:04:38.047Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-23T06:08:07.704Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-23T06:09:29.555Z'
+}
+{
+  service: 'user-service',
+  path: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs',
+  level: 'error',
+  message: '/home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:61\n' +
+    '    59|                                     <span class="prt-types sale">For Sale</span>\n' +
+    '    60|                                     <h3>\n' +
+    ' >> 61|                                         <%=data.TotalArea%>Sqft <%=data.propType%> in <%=data.locality%>\n' +
+    '    62|                                     </h3>\n' +
+    '    63| \n' +
+    '    64|                                     <span><i class="lni-map-marker"></i>\n' +
+    '\n' +
+    "Cannot read property 'TotalArea' of null /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:61\n" +
+    '    59|                                     <span class="prt-types sale">For Sale</span>\n' +
+    '    60|                                     <h3>\n' +
+    ' >> 61|                                         <%=data.TotalArea%>Sqft <%=data.propType%> in <%=data.locality%>\n' +
+    '    62|                                     </h3>\n' +
+    '    63| \n' +
+    '    64|                                     <span><i class="lni-map-marker"></i>\n' +
+    '\n' +
+    "Cannot read property 'TotalArea' of null",
+  stack: 'TypeError: /home/sumit_vishvas/live_node_proects/real_state_project/views/single2.ejs:61\n' +
+    '    59|                                     <span class="prt-types sale">For Sale</span>\n' +
+    '    60|                                     <h3>\n' +
+    ' >> 61|                                         <%=data.TotalArea%>Sqft <%=data.propType%> in <%=data.locality%>\n' +
+    '    62|                                     </h3>\n' +
+    '    63| \n' +
+    '    64|                                     <span><i class="lni-map-marker"></i>\n' +
+    '\n' +
+    "Cannot read property 'TotalArea' of null\n" +
+    '    at eval (eval at compile (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:662:12), <anonymous>:15:30)\n' +
+    '    at single2 (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:692:17)\n' +
+    '    at tryHandleCache (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:272:36)\n' +
+    '    at View.exports.renderFile [as engine] (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/ejs/lib/ejs.js:489:10)\n' +
+    '    at View.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/view.js:135:8)\n' +
+    '    at tryRender (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:640:10)\n' +
+    '    at Function.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/application.js:592:3)\n' +
+    '    at ServerResponse.render (/home/sumit_vishvas/live_node_proects/real_state_project/node_modules/express/lib/response.js:1012:7)\n' +
+    '    at /home/sumit_vishvas/live_node_proects/real_state_project/routes/menu.js:106:7\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:95:5)',
+  label: 'right now!',
+  timestamp: '2021-07-23T06:10:49.581Z'
+}

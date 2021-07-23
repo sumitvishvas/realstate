@@ -24,6 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use('/',express.static(path.join(__dirname, "public")));
 app.use('/property-details',express.static(path.join(__dirname, "public")));
+app.use('/plot-details',express.static(path.join(__dirname, "public")));
 app.use('/admin', express.static(path.join(__dirname, 'adminPublic')));
 app.use('/users', express.static(path.join(__dirname, 'adminPublic')));
 

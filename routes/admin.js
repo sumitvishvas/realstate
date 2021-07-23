@@ -540,7 +540,7 @@ router.post("/createProject",uploads, trimRequest.all,async(req,res)=>{
   }
 });
 const logouplod = upload.fields([{ name: "logo", maxCount: 1 }]);
-router.post('/createComp',logouplod, async(req,res)=>{
+router.post('/createComp',logouplod,trimRequest.all, async(req,res)=>{
   
 try {
   
