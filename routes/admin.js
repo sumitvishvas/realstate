@@ -8,7 +8,7 @@ const trimRequest = require("trim-request");
 const fs =require("fs");
 const sequelize = require('sequelize');
 const { FlatOrHouse, validateFltasOrHouse,PlotOrLand, validatePlotsOrLand,Project,Companies } = require("../models/adminModels");
-
+const{unLinkFiles1}=require('../util/fileUnlink');
 const multer = require("multer");
 const sharp = require("sharp");
 const storage = multer.memoryStorage();
@@ -420,41 +420,23 @@ router.delete("/deleteProperty/:id/:tableName", async (req, res) => {
   const tablename=req.params.tableName;
     
   if(tablename==='PlotOrLand'){
+      
 var table = await PlotOrLand.findByPk(id);
+unLinkFiles1(table);
    const x = await PlotOrLand.destroy({ where: { _id: req.params.id } });
   console.log(x);
   res.send('1');
   }
 
   if(tablename==='FlatOrHouse'){
+     
 var table = await FlatOrHouse.findByPk(id);
+unLinkFiles1(table);
 const x = await FlatOrHouse.destroy({ where: { _id: req.params.id } });
   console.log(x);
   res.send('1');
   }
-     if (table === null) {
-    return res.status(200).send('something went wrong !');
-  } else {
-    let imgSrc= JSON.parse(table.dataValues.gallery);
-    console.log('in else');
-     
-    fs.unlink(`public/assets/uploads/${imgSrc.banner.src}`,(err)=>{
-   if(err) return res.send('something went wrong !');
    
-   });
-  
-   for(let i in imgSrc.gallery){
-    console.log(`${imgSrc.gallery[i].smImg} === ${imgSrc.gallery[i].bgImg}`);
-    fs.unlink(`public/assets/uploads/${imgSrc.gallery[i].smImg}`,(err)=>{
-      if(err) return res.send('something went wrong !');
-      });
-      fs.unlink(`public/assets/uploads/${imgSrc.gallery[i].bgImg}`,(err)=>{
-        if(err) return res.send('something went wrong !');
-        });
-
-   }
-   
-  }
 
   console.log(table);
   
