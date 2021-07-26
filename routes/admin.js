@@ -488,7 +488,9 @@ router.post("/createProject",uploads, trimRequest.all,async(req,res)=>{
   let uuid = uniqid.time();
     let tinySrc = "";
     let bigSrc = "";
-    url="";
+   let proName = spaceReplacer(req.body.projectName);
+   let projAddr=spaceReplacer(req.body.projAddress);
+    url=`${proName}-in-${projAddr}-lucknow-${uuid}`;
     req.files["gallery"].forEach((item) => {
       tinySrc = uniqid() + "-" + item.originalname;
       sharp(item.buffer)
@@ -513,10 +515,9 @@ router.post("/createProject",uploads, trimRequest.all,async(req,res)=>{
       });
     });
      let galleryImageStr = JSON.stringify(galleryImage);
-
     const project =await Project.create({
       projectName:req.body.projectName,
-      url:req.body.projectName,
+      url:url,
       projectType:req.body.propType,
       unitOption:req.body.unit,
       priceOnword:req.body.priceOnwords,
@@ -525,7 +526,8 @@ router.post("/createProject",uploads, trimRequest.all,async(req,res)=>{
       address:req.body.projAddress,
       loneAvailability:req.body.loan,
       readyToMove:req.body.ready,
-      uuid:uuid
+      uuid:uuid,
+      projectDetails:req.body.projectDetails
 
     });
  if(project._options.isNewRecord = true){
@@ -539,6 +541,10 @@ router.post("/createProject",uploads, trimRequest.all,async(req,res)=>{
     res.send("something goes wrong");
   }
 });
+
+
+
+
 
 
 

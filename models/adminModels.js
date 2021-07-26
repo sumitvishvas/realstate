@@ -161,7 +161,7 @@
     return true; 
  }
 
- const Companies = sequelize.define('compaies',{
+ const Companies = sequelize.define('companies',{
     _id:{
         type:Sequelize.INTEGER,
         autoIncrement:true,
@@ -253,18 +253,25 @@
     },
     address:{
         type:Sequelize.TEXT('tiny'),
+        allowNull:false
 
     },
     loneAvailability:{
         type:Sequelize.STRING(1234),
+        allowNull:false
         
     },
     readyToMove:{
         type:Sequelize.STRING,
+        allowNull:false
     },
     uuid:{
        type:Sequelize.STRING,
        allowNull:false 
+    },
+    projectDetails:{
+        type:Sequelize.STRING,
+        allowNull:false
     }
     
 });

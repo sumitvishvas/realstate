@@ -1,8 +1,9 @@
+<% let Domain="http://localhost:3000/"%>
 <div class="header header-transparent dark">
     <div class="container">
         <nav id="navigation" class="navigation navigation-landscape">
             <div class="nav-header">
-                <a class="nav-brand" href="#">
+                <a class="nav-brand" href="<%=Domain%>">
                     <img src="assets/img/logo.png" class="logo" alt="" />
                 </a>
                 <div class="nav-toggle"></div>
@@ -10,10 +11,10 @@
             <div class="nav-menus-wrapper" style="transition-property: none;">
                 <ul class="nav-menu">
                 
-                    <li><a href="/">Home<span class="submenu-indicator"></span></a>
+                    <li><a href="<%=Domain%>">Home<span class="submenu-indicator"></span></a>
                     </li>
                     
-                    <li><a href="/flats">flats<span class="submenu-indicator"></span></a>
+                    <li><a href="<%=Domain%>flats-in-lucknow">Flats<span class="submenu-indicator"></span></a>
                        
                     </li>
                     
@@ -21,8 +22,11 @@
                         
                     </li>
                     
-                    <li><a href="/plots">Plots<span class="submenu-indicator"></span></a>
+                    <li><a href="<%=Domain%>plots-in-lucknow">Plots<span class="submenu-indicator"></span></a>
                         
+                    </li>
+                    <li>
+                        <a href="<%=Domain%>real-estate-projects-in-lucknow">Projects<span class="submenu-indicator"></span></a>
                     </li>
                     
                     <li><a href="JavaScript:Void(0);" data-bs-toggle="modal" data-bs-target="#signup">Sign Up</a></li>

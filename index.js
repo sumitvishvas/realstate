@@ -24,10 +24,9 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use('/',express.static(path.join(__dirname, "public")));
 app.use('/property-details',express.static(path.join(__dirname, "public")));
+app.use('/project-details',express.static(path.join(__dirname, "public")));
 app.use('/admin', express.static(path.join(__dirname, 'adminPublic')));
 app.use('/users', express.static(path.join(__dirname, 'adminPublic')));
-
-
 app.use('/', menuRouter);
 app.use("/admin",adminRouter);
 app.use('/mail',mailRouter);

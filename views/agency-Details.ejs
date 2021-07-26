@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zxx">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+        <title>Resido - Residence & Real Estate HTML Template</title>
+		
+        <!-- Custom CSS -->
+        <link href="assets/css/styles.css" rel="stylesheet">
+		
+		<!-- Custom Color Option -->
+		<link href="assets/css/colors.css" rel="stylesheet">
+		
+    </head>
+	
+    <body class="blue-skin">
+        <!-- ============================================================== -->
+        <!-- Preloader - style you can find in spinners.css -->
+        <!-- ============================================================== -->
+        <div id="preloader"><div class="preloader"><span></span><span></span></div></div>
+		
+        <!-- ============================================================== -->
+        <!-- Main wrapper - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <div id="main-wrapper">
+		
+            <!-- ============================================================== -->
+            <!-- Top header  -->
+            <!-- ============================================================== -->
+            <!-- Start Navigation -->
+			
+			<%-include('includes/nav.ejs')%>
+			
+			<!-- End Navigation -->
+			<div class="clearfix"></div>
+			<!-- ============================================================== -->
+			<!-- Top header  -->
+			<!-- ============================================================== -->
+			
+			<!-- ============================ Page Title Start================================== -->
+			<div class="image-cover page-title">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- ============================ Page Title End ================================== -->
+			
+			<!-- ============================ Agency Name Start================================== -->
+			<section class="agent-page p-0 gray-simple">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+							<div class="agency agency-list overlio-40">
+							
+								<div class="agency-avatar">
+									<img src="assets/uploads/<%=JSON.parse(data.image).gallery[0].smImg%>" alt="">
+								</div>
+								<h1></h1>
+								
+								<div class="agency-content">
+									<div class="agency-name">
+										<h4><a href="agency-page.html"><%=data.projectName%></a></h4>
+										<span><i class="lni-map-marker"></i><%=data.address%></span>
+									</div>
+									
+									<div class="agency-desc">
+									<p>Project Type : <%=data.projectType%>s</p>
+									</div>
+									
+									<div class="prt-detio">
+										
+										<%
+										let unit = data.unitOption.split(",");
+
+										if(data.projectType=="plot"){
+									
+										for(let x in unit){%>
+											<span><%=unit[x]%> sqft </span>	
+										<%}}else{
+										for(let x in unit){%>
+										<span><%=unit[x]%> bhk </span>	
+										<%}}
+										
+										%>
+										
+									</div>
+									
+									
+									<div class="clearfix"></div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ============================ Agency Name ================================== -->
+			
+			<!-- ============================ About Agency ================================== -->
+			<section class="gray">
+				<div class="container">
+					<div class="row">
+					
+						<!-- property main detail -->
+						<div class="col-lg-8 col-md-12 col-sm-12">
+							
+							<!-- Single Block Wrap -->
+							<div class="block-wrap">
+								
+								<div class="block-header ags">
+									<h4 class="block-title">Project Details</h4>
+									
+								</div>
+								
+								<div class="block-body">
+								<p><%=data.projectDetails%></p>
+								</div>
+								
+							</div>
+							<div class="block-wrap">
+								
+								<div class="block-header ">
+									<% if(data.projectType=="plot"){%>
+										<h3 class="block-title"><span>Ready For Possession: <%=data.readyToMove%></span></h3>
+									<%}else{%>
+										<h3 class="block-title"><span>Ready To Move: <%=data.readyToMove%></span></h3>
+
+									<%}%>
+								</div>
+								
+								<div class="block-header ">
+									<h3 class="block-title">Loan Availability : <%=data.loneAvailability%></h3>
+								</div>
+								
+							</div>
+							
+							<!-- Single Block Wrap -->
+							<div class="block-wraps">
+								<div class="block-wraps-header">
+								
+									<div class="block-header">
+										<ul class="nav nav-tabs customize-tab" id="myTab" role="tablist">
+										  <li class="nav-item" role="presentation">
+											<a class="nav-link active" id="agent-tab" data-bs-toggle="tab" href="#agent" role="tab" aria-controls="agent" aria-selected="true">Gallery</a>
+										  </li>
+										  <li class="nav-item" role="presentation">
+											<a class="nav-link" id="property-tab" data-bs-toggle="tab" href="#property" role="tab" aria-controls="property" aria-selected="false">Property</a>
+										  </li>
+										</ul>
+									</div>
+								
+									<div class="block-body">
+										<div class="tab-content" id="myTabContent">
+										
+											<div class="tab-pane fade show active" id="agent" role="tabpanel" aria-labelledby="agent-tab">
+												
+												<div class="row">
+													<!-- Single Agent -->
+													<%  JSON.parse(data.image).gallery.forEach((item)=>{%>
+													<div class="col-lg-6 col-md-6 col-sm-12">
+														<div id="clSev" class="panel-collapse collapse show">
+															<div class="block-body">
+																<ul class="list-gallery-inline">
+																	
+																	<li>
+																		<a href="assets/uploads/<%=item.bgImg %>" class="mfp-gallery"><img src="assets/uploads/<%=item.bgImg %>" class="img-fluid mx-auto" alt="" /></a>
+																	</li>
+																	
+																	
+																</ul>
+															</div>
+														</div>
+													</div>
+													<% })%>
+													
+														
+												</div>
+												
+											
+						
+											</div>
+											
+											<div class="tab-pane fade" id="property" role="tabpanel" aria-labelledby="sale-tab">
+											
+												<!-- row -->
+												<div class="row">
+													<!-- Single Property -->
+													<div class="col-lg-6 col-md-6 col-sm-12">
+														<div class="property-listing property-2">
+															
+															<div class="listing-img-wrapper">
+																<div class="list-img-slide">
+																	<div class="clicks">
+																		<div><img src="assets/img/p-1.jpg" class="img-fluid mx-auto" alt="" /></div>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="listing-detail-wrapper">
+																<div class="listing-short-detail-wrap">
+																	<div class="listing-short-detail">
+																		<span class="property-type">For Rent</span>
+																		<h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">Found Property Group</a></h4>
+																	</div>
+																	<div class="listing-short-detail-flex">
+																		<h6 class="listing-card-info-price">$2,850</h6>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="price-features-wrapper">
+																<div class="list-fx-features">
+																	<div class="listing-card-info-icon">
+																		<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>3 Beds
+																	</div>
+																	<div class="listing-card-info-icon">
+																		<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>1 Bath
+																	</div>
+																	<div class="listing-card-info-icon">
+																		<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>800 sqft
+																	</div>
+																</div>
+															</div>
+															
+															<div class="listing-detail-footer">
+																<div class="footer-first">
+																	<div class="foot-location"><img src="assets/img/pin.svg" width="18" alt="" />210 Zirak Road, Canada</div>
+																</div>
+																<div class="footer-flex">
+																	<a href="property-detail.html" class="prt-view">View</a>
+																</div>
+															</div>
+															
+														</div>
+													</div>
+													<!-- End Single Property -->
+													
+													<!-- Single Property -->
+													<div class="col-lg-6 col-md-6 col-sm-12">
+														<div class="property-listing property-2">
+															
+															<div class="listing-img-wrapper">
+																<div class="list-img-slide">
+																	<div class="clicks">
+																		<div><img src="assets/img/p-2.jpg" class="img-fluid mx-auto" alt="" /></div>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="listing-detail-wrapper">
+																<div class="listing-short-detail-wrap">
+																	<div class="listing-short-detail">
+																		<span class="property-type">For Rent</span>
+																		<h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">Strive Partners Realty</a></h4>
+																	</div>
+																	<div class="listing-short-detail-flex">
+																		<h6 class="listing-card-info-price">$8,100</h6>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="price-features-wrapper">
+																<div class="list-fx-features">
+																	<div class="listing-card-info-icon">
+																		<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>3 Beds
+																	</div>
+																	<div class="listing-card-info-icon">
+																		<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>1 Bath
+																	</div>
+																	<div class="listing-card-info-icon">
+																		<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>800 sqft
+																	</div>
+																</div>
+															</div>
+															
+															<div class="listing-detail-footer">
+																<div class="footer-first">
+																	<div class="foot-location"><img src="assets/img/pin.svg" width="18" alt="" />210 Zirak Road, Canada</div>
+																</div>
+																<div class="footer-flex">
+																	<a href="property-detail.html" class="prt-view">View</a>
+																</div>
+															</div>
+															
+														</div>
+													</div>
+													<!-- End Single Property -->
+													
+													<!-- Single Property -->
+													<div class="col-lg-6 col-md-6 col-sm-12">
+														<div class="property-listing property-2">
+															
+															<div class="listing-img-wrapper">
+																<div class="list-img-slide">
+																	<div class="clicks">
+																		<div><img src="assets/img/p-3.jpg" class="img-fluid mx-auto" alt="" /></div>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="listing-detail-wrapper">
+																<div class="listing-short-detail-wrap">
+																	<div class="listing-short-detail">
+																		<span class="property-type">For Rent</span>
+																		<h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">Beacon Homes LLC</a></h4>
+																	</div>
+																	<div class="listing-short-detail-flex">
+																		<h6 class="listing-card-info-price">$9,200</h6>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="price-features-wrapper">
+																<div class="list-fx-features">
+																	<div class="listing-card-info-icon">
+																		<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>3 Beds
+																	</div>
+																	<div class="listing-card-info-icon">
+																		<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>1 Bath
+																	</div>
+																	<div class="listing-card-info-icon">
+																		<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>800 sqft
+																	</div>
+																</div>
+															</div>
+															
+															<div class="listing-detail-footer">
+																<div class="footer-first">
+																	<div class="foot-location"><img src="assets/img/pin.svg" width="18" alt="" />210 Zirak Road, Canada</div>
+																</div>
+																<div class="footer-flex">
+																	<a href="property-detail.html" class="prt-view">View</a>
+																</div>
+															</div>
+															
+														</div>
+													</div>
+													<!-- End Single Property -->
+													
+													<!-- Single Property -->
+													<div class="col-lg-6 col-md-6 col-sm-12">
+														<div class="property-listing property-2">
+															
+															<div class="listing-img-wrapper">
+																<div class="list-img-slide">
+																	<div class="clicks">
+																		<div><img src="assets/img/p-4.jpg" class="img-fluid mx-auto" alt="" /></div>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="listing-detail-wrapper">
+																<div class="listing-short-detail-wrap">
+																	<div class="listing-short-detail">
+																		<span class="property-type">For Rent</span>
+																		<h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">Bluebell Real Estate</a></h4>
+																	</div>
+																	<div class="listing-short-detail-flex">
+																		<h6 class="listing-card-info-price">$6,500</h6>
+																	</div>
+																</div>
+															</div>
+															
+															<div class="price-features-wrapper">
+																<div class="list-fx-features">
+																	<div class="listing-card-info-icon">
+																		<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>3 Beds
+																	</div>
+																	<div class="listing-card-info-icon">
+																		<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>1 Bath
+																	</div>
+																	<div class="listing-card-info-icon">
+																		<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>800 sqft
+																	</div>
+																</div>
+															</div>
+															
+															<div class="listing-detail-footer">
+																<div class="footer-first">
+																	<div class="foot-location"><img src="assets/img/pin.svg" width="18" alt="" />210 Zirak Road, Canada</div>
+																</div>
+																<div class="footer-flex">
+																	<a href="property-detail.html" class="prt-view">View</a>
+																</div>
+															</div>
+															
+														</div>
+													</div>
+													<!-- End Single Property -->
+						
+												</div>
+												<!-- // row -->
+												
+												<div class="row">
+													<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+														<a href="listings-list-with-sidebar.html" class="btn btn-theme-light-2 rounded">Explore More Property</a>
+													</div>
+												</div>
+												
+											</div>
+											
+										</div>
+									</div>
+								
+								</div>
+							</div>
+							
+						</div>
+						
+						<!-- property Sidebar -->
+						<div class="col-lg-4 col-md-12 col-sm-12">
+							<div class="details-sidebar">
+						
+								<!-- Agent Detail -->
+								<%-include('includes/mail.ejs')%>
+								
+								<!-- Featured Property -->
+								<div class="sidebar-widgets">
+									
+									<h4>Featured Property</h4>
+									
+									<div class="sidebar_featured_property">
+										
+										<!-- List Sibar Property -->
+										<div class="sides_list_property">
+											<div class="sides_list_property_thumb">
+												<img src="assets/img/p-1.jpg" class="img-fluid" alt="">
+											</div>
+											<div class="sides_list_property_detail">
+												<h4><a href="single-property-1.html">Loss vengel New Apartment</a></h4>
+												<span><i class="ti-location-pin"></i>Sans Fransico</span>
+												<div class="lists_property_price">
+													<div class="lists_property_types">
+														<div class="property_types_vlix sale">For Sale</div>
+													</div>
+													<div class="lists_property_price_value">
+														<h4>$4,240</h4>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<!-- List Sibar Property -->
+										<div class="sides_list_property">
+											<div class="sides_list_property_thumb">
+												<img src="assets/img/p-4.jpg" class="img-fluid" alt="">
+											</div>
+											<div class="sides_list_property_detail">
+												<h4><a href="single-property-1.html">Montreal Quriqe Apartment</a></h4>
+												<span><i class="ti-location-pin"></i>Liverpool, London</span>
+												<div class="lists_property_price">
+													<div class="lists_property_types">
+														<div class="property_types_vlix">For Rent</div>
+													</div>
+													<div class="lists_property_price_value">
+														<h4>$7,380</h4>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<!-- List Sibar Property -->
+										<div class="sides_list_property">
+											<div class="sides_list_property_thumb">
+												<img src="assets/img/p-7.jpg" class="img-fluid" alt="">
+											</div>
+											<div class="sides_list_property_detail">
+												<h4><a href="single-property-1.html">Curmic Studio For Office</a></h4>
+												<span><i class="ti-location-pin"></i>Montreal, Canada</span>
+												<div class="lists_property_price">
+													<div class="lists_property_types">
+														<div class="property_types_vlix buy">For Buy</div>
+													</div>
+													<div class="lists_property_price_value">
+														<h4>$8,730</h4>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+										<!-- List Sibar Property -->
+										<div class="sides_list_property">
+											<div class="sides_list_property_thumb">
+												<img src="assets/img/p-5.jpg" class="img-fluid" alt="">
+											</div>
+											<div class="sides_list_property_detail">
+												<h4><a href="single-property-1.html">Montreal Quebec City</a></h4>
+												<span><i class="ti-location-pin"></i>Sreek View, New York</span>
+												<div class="lists_property_price">
+													<div class="lists_property_types">
+														<div class="property_types_vlix">For Rent</div>
+													</div>
+													<div class="lists_property_price_value">
+														<h4>$6,240</h4>
+													</div>
+												</div>
+											</div>
+										</div>
+										
+									</div>
+									
+								</div>
+							
+							</div>
+						</div>
+					
+					</div>					
+				</div>	
+			</section>
+			<!-- ============================ About Agency End ================================== -->
+			
+			<!-- ============================ Call To Action ================================== -->
+			<section class="theme-bg call-to-act-wrap">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							
+							<div class="call-to-act">
+								<div class="call-to-act-head">
+									<h3>Want to Become a Real Estate Agent?</h3>
+									<span>We'll help you to grow your career and growth.</span>
+								</div>
+								<a href="#" class="btn btn-call-to-act">SignUp Today</a>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ============================ Call To Action End ================================== -->
+			
+			<!-- ============================ Footer Start ================================== -->
+			<%-include('includes/footer.ejs')%>
+			<!-- ============================ Footer End ================================== -->
+			
+			<!-- Log In Modal -->
+			<%-include('includes/login.ejs')%>
+			<!-- End Modal -->
+			
+			<!-- Sign Up Modal -->
+			<%-include('includes/signup.ejs')%>
+			<!-- End Modal -->
+			
+			<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
+			
+
+		</div>
+		<!-- ============================================================== -->
+		<!-- End Wrapper -->
+		<!-- ============================================================== -->
+		
+
+		<!-- ============================================================== -->
+		<!-- All Jquery -->
+		<!-- ============================================================== -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/popper.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/rangeslider.js"></script>
+		<script src="assets/js/select2.min.js"></script>
+		<script src="assets/js/jquery.magnific-popup.min.js"></script>
+		<script src="assets/js/slick.js"></script>
+		<script src="assets/js/slider-bg.js"></script>
+		<script src="assets/js/lightbox.js"></script> 
+		<script src="assets/js/imagesloaded.js"></script>
+		 
+		<script src="assets/js/custom.js"></script>
+		<!-- ============================================================== -->
+		<!-- This page plugins -->
+		<!-- ============================================================== -->
+		<script>
+			$(document).ready(()=>{
+				
+		$("#url").val(""+window.location.href);
+
+			});
+		</script>
+
+	</body>
+</html>

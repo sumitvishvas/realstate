@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="zxx">
+	<head>
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+        <title>Resido - Residence & Real Estate HTML Template</title>
+        <!-- Custom CSS -->
+        <link href="assets/css/styles.css" rel="stylesheet">
+		
+		<!-- Custom Color Option -->
+		<link href="assets/css/colors.css" rel="stylesheet">
+		
+    </head>
+	
+    <body class="blue-skin">
+        <!-- ============================================================== -->
+        <!-- Preloader - style you can find in spinners.css -->
+        <!-- ============================================================== -->
+        <div id="preloader"><div class="preloader"><span></span><span></span></div></div>
+		
+        <!-- ============================================================== -->
+        <!-- Main wrapper - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <div id="main-wrapper">
+		
+            <!-- ============================================================== -->
+            <!-- Top header  -->
+            <!-- ============================================================== -->
+            <!-- Start Navigation -->
+			<%-include('includes/nav.ejs') %>
+			<!-- End Navigation -->
+			<div class="clearfix"></div>
+			<!-- ============================================================== -->
+			<!-- Top header  -->
+			<!-- ============================================================== -->
+			
+			<!-- ============================ Page Title Start================================== -->
+			<div class="page-title">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+						
+							<center><h2 class="ipt-title">All Agency</h2>
+								<span class="ipn-subtitle">Lists of our all Popular agencies</span> </center>	
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- ============================ Page Title End ================================== -->
+			
+			<!-- ============================ Search Form End ================================== -->
+			
+			<!-- ============================ Search Form End ================================== -->
+			
+			<!-- ============================ Agent List Start ================================== -->
+			<section class="bg-light">
+			
+				<div class="container">
+					<div class="row">
+						
+						<!-- Single Agent -->
+						<% data.forEach((i,index)=>{%>
+							
+						<div class="col-lg-4 col-md-6 col-sm-12">
+							<div class="agents-grid">
+								
+								<div class="agents-grid-wrap">
+									
+									<div class="fr-grid-thumb">
+										<a href="/project-details/<%=i.url%>">
+											<img src="assets/uploads/<%=JSON.parse(i.image).gallery[0].smImg%>" class="img-fluid mx-auto" alt="" />
+										</a>
+									</div>
+									
+									<div class="fr-grid-deatil">
+										<div class="fr-grid-deatil-flex">
+											<h5 class="fr-can-name"><a href="/project-details/<%=i.url%>"><%=i.projectName%></a></h5>
+											<span class="agent-property"><%=i.projectType.toUpperCase()%>S</span>
+										</div>
+										<div class="fr-grid-deatil-flex-right">
+											<div class="agent-email"><a href="#"><i class="ti-email"></i></a></div>
+										</div>
+									</div>
+									
+								</div>
+								<div class="fr-grid-info">
+								
+									<ul>
+										<div class="prt-detio">
+											<li>
+
+											<%
+											if(i.projectType=="plot"){
+											let unit = i.unitOption.split(",");
+											for(let x in unit){%>
+												<span><%=unit[x]%>sqft </span>	
+											<%}}else{
+												let unit = i.unitOption.split(",");
+											for(let x in unit){%>
+											<span><%=unit[x]%>bhk </span>	
+											<%}}
+											
+											%>
+
+											
+											</li>
+										</div>
+										<li>
+											
+											<div class="fr-can-rating">
+												<% if(i.projectType=="plot"){%>
+													<span class="reviews_text">Ready For Possession: <%=i.readyToMove%></span>
+												<%}else{%>
+													<span class="reviews_text">Ready To Move: <%=i.readyToMove%></span>
+
+												<%}%>
+											</div>
+										</li>
+									</ul>
+								
+							</div>
+								
+								<div class="fr-grid-footer">
+									<div class="fr-grid-footer-flex">
+										<span class="fr-position"><i class="lni-map-marker"></i>3599 Huntz Lane</span>
+									</div>
+									<div class="fr-grid-footer-flex-right">
+										<a href="/project-details/<%=i.url%>" class="prt-view" tabindex="0">View</a>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						<%})%>
+						<!-- Single Agent -->
+						<div class="col-lg-4 col-md-6 col-sm-12">
+							<div class="agents-grid">
+								
+								<div class="agents-grid-wrap">
+									
+									<div class="fr-grid-thumb">
+										<a href="freelancer-detail.html">
+											<img src="assets/img/ag-2.png" class="img-fluid mx-auto" alt="" />
+										</a>
+									</div>
+									
+									<div class="fr-grid-deatil">
+										<div class="fr-grid-deatil-flex">
+											<h5 class="fr-can-name"><a href="#">Blue Sky Realty</a></h5>
+											<span class="agent-property">302 Properties</span>
+										</div>
+										<div class="fr-grid-deatil-flex-right">
+											<div class="agent-email"><a href="#"><i class="ti-email"></i></a></div>
+										</div>
+									</div>
+									
+								</div>
+								
+								<div class="fr-grid-info">
+									<ul>
+										<li><strong>Call:</strong>91 123 456 7859</li>
+										
+										<li>
+											<div class="fr-can-rating">
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star"></i>
+												<span class="reviews_text">(42 Reviews)</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+								
+								<div class="fr-grid-footer">
+									<div class="fr-grid-footer-flex">
+										<span class="fr-position"><i class="lni-map-marker"></i>3599 Huntz Lane</span>
+									</div>
+									<div class="fr-grid-footer-flex-right">
+										<a href="agent-page.html" class="prt-view" tabindex="0">View</a>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+						<!-- Single Agent -->
+						<div class="col-lg-4 col-md-6 col-sm-12">
+							<div class="agents-grid">
+								
+								<div class="agents-grid-wrap">
+									
+									<div class="fr-grid-thumb">
+										<a href="freelancer-detail.html">
+											<img src="assets/img/ag-3.png" class="img-fluid mx-auto" alt="" />
+										</a>
+									</div>
+									
+									<div class="fr-grid-deatil">
+										<div class="fr-grid-deatil-flex">
+											<h5 class="fr-can-name"><a href="#">Nestled Real Estate</a></h5>
+											<span class="agent-property">302 Properties</span>
+										</div>
+										<div class="fr-grid-deatil-flex-right">
+											<div class="agent-email"><a href="#"><i class="ti-email"></i></a></div>
+										</div>
+									</div>
+									
+								</div>
+								
+								<div class="fr-grid-info">
+									<ul>
+										<li><strong>Call:</strong>91 123 456 7859</li>
+										
+										<li>
+											<div class="fr-can-rating">
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star"></i>
+												<span class="reviews_text">(42 Reviews)</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+								
+								<div class="fr-grid-footer">
+									<div class="fr-grid-footer-flex">
+										<span class="fr-position"><i class="lni-map-marker"></i>3599 Huntz Lane</span>
+									</div>
+									<div class="fr-grid-footer-flex-right">
+										<a href="agent-page.html" class="prt-view" tabindex="0">View</a>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+						<!-- Single Agent -->
+						<div class="col-lg-4 col-md-6 col-sm-12">
+							<div class="agents-grid">
+								
+								<div class="agents-grid-wrap">
+									
+									<div class="fr-grid-thumb">
+										<a href="freelancer-detail.html">
+											<img src="assets/img/ag-4.png" class="img-fluid mx-auto" alt="" />
+										</a>
+									</div>
+									
+									<div class="fr-grid-deatil">
+										<div class="fr-grid-deatil-flex">
+											<h5 class="fr-can-name"><a href="#">Found Property Group</a></h5>
+											<span class="agent-property">302 Properties</span>
+										</div>
+										<div class="fr-grid-deatil-flex-right">
+											<div class="agent-email"><a href="#"><i class="ti-email"></i></a></div>
+										</div>
+									</div>
+									
+								</div>
+								
+								<div class="fr-grid-info">
+									<ul>
+										<li><strong>Call:</strong>91 123 456 7859</li>
+										
+										<li>
+											<div class="fr-can-rating">
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star"></i>
+												<span class="reviews_text">(42 Reviews)</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+								
+								<div class="fr-grid-footer">
+									<div class="fr-grid-footer-flex">
+										<span class="fr-position"><i class="lni-map-marker"></i>3599 Huntz Lane</span>
+									</div>
+									<div class="fr-grid-footer-flex-right">
+										<a href="agent-page.html" class="prt-view" tabindex="0">View</a>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+						<!-- Single Agent -->
+						<div class="col-lg-4 col-md-6 col-sm-12">
+							<div class="agents-grid">
+								
+								<div class="agents-grid-wrap">
+									
+									<div class="fr-grid-thumb">
+										<a href="freelancer-detail.html">
+											<img src="assets/img/ag-5.png" class="img-fluid mx-auto" alt="" />
+										</a>
+									</div>
+									
+									<div class="fr-grid-deatil">
+										<div class="fr-grid-deatil-flex">
+											<h5 class="fr-can-name"><a href="#">Bottom Line Realty</a></h5>
+											<span class="agent-property">302 Properties</span>
+										</div>
+										<div class="fr-grid-deatil-flex-right">
+											<div class="agent-email"><a href="#"><i class="ti-email"></i></a></div>
+										</div>
+									</div>
+									
+								</div>
+								
+								<div class="fr-grid-info">
+									<ul>
+										<li><strong>Call:</strong>91 123 456 7859</li>
+										
+										<li>
+											<div class="fr-can-rating">
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star"></i>
+												<span class="reviews_text">(42 Reviews)</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+								
+								<div class="fr-grid-footer">
+									<div class="fr-grid-footer-flex">
+										<span class="fr-position"><i class="lni-map-marker"></i>3599 Huntz Lane</span>
+									</div>
+									<div class="fr-grid-footer-flex-right">
+										<a href="agent-page.html" class="prt-view" tabindex="0">View</a>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+						<!-- Single Agent -->
+						<div class="col-lg-4 col-md-6 col-sm-12">
+							<div class="agents-grid">
+								
+								<div class="agents-grid-wrap">
+									
+									<div class="fr-grid-thumb">
+										<a href="freelancer-detail.html">
+											<img src="assets/img/ag-6.png" class="img-fluid mx-auto" alt="" />
+										</a>
+									</div>
+									
+									<div class="fr-grid-deatil">
+										<div class="fr-grid-deatil-flex">
+											<h5 class="fr-can-name"><a href="#">Pilot Property Group</a></h5>
+											<span class="agent-property">302 Properties</span>
+										</div>
+										<div class="fr-grid-deatil-flex-right">
+											<div class="agent-email"><a href="#"><i class="ti-email"></i></a></div>
+										</div>
+									</div>
+									
+								</div>
+								
+								<div class="fr-grid-info">
+									<ul>
+										<li><strong>Call:</strong>91 123 456 7859</li>
+										
+										<li>
+											<div class="fr-can-rating">
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star"></i>
+												<span class="reviews_text">(42 Reviews)</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+								
+								<div class="fr-grid-footer">
+									<div class="fr-grid-footer-flex">
+										<span class="fr-position"><i class="lni-map-marker"></i>3599 Huntz Lane</span>
+									</div>
+									<div class="fr-grid-footer-flex-right">
+										<a href="agent-page.html" class="prt-view" tabindex="0">View</a>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+						<!-- Single Agent -->
+						<div class="col-lg-4 col-md-6 col-sm-12">
+							<div class="agents-grid">
+								
+								<div class="agents-grid-wrap">
+									
+									<div class="fr-grid-thumb">
+										<a href="freelancer-detail.html">
+											<img src="assets/img/ag-7.png" class="img-fluid mx-auto" alt="" />
+										</a>
+									</div>
+									
+									<div class="fr-grid-deatil">
+										<div class="fr-grid-deatil-flex">
+											<h5 class="fr-can-name"><a href="#">Axis Group Real Estate</a></h5>
+											<span class="agent-property">302 Properties</span>
+										</div>
+										<div class="fr-grid-deatil-flex-right">
+											<div class="agent-email"><a href="#"><i class="ti-email"></i></a></div>
+										</div>
+									</div>
+									
+								</div>
+								
+								<div class="fr-grid-info">
+									<ul>
+										<li><strong>Call:</strong>91 123 456 7859</li>
+										
+										<li>
+											<div class="fr-can-rating">
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star"></i>
+												<span class="reviews_text">(42 Reviews)</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+								
+								<div class="fr-grid-footer">
+									<div class="fr-grid-footer-flex">
+										<span class="fr-position"><i class="lni-map-marker"></i>3599 Huntz Lane</span>
+									</div>
+									<div class="fr-grid-footer-flex-right">
+										<a href="agent-page.html" class="prt-view" tabindex="0">View</a>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+						<!-- Single Agent -->
+						<div class="col-lg-4 col-md-6 col-sm-12">
+							<div class="agents-grid">
+								
+								<div class="agents-grid-wrap">
+									
+									<div class="fr-grid-thumb">
+										<a href="freelancer-detail.html">
+											<img src="assets/img/ag-8.png" class="img-fluid mx-auto" alt="" />
+										</a>
+									</div>
+									
+									<div class="fr-grid-deatil">
+										<div class="fr-grid-deatil-flex">
+											<h5 class="fr-can-name"><a href="#">Sovereign Realty</a></h5>
+											<span class="agent-property">302 Properties</span>
+										</div>
+										<div class="fr-grid-deatil-flex-right">
+											<div class="agent-email"><a href="#"><i class="ti-email"></i></a></div>
+										</div>
+									</div>
+									
+								</div>
+								
+								<div class="fr-grid-info">
+									<ul>
+										<li><strong>Call:</strong>91 123 456 7859</li>
+										
+										<li>
+											<div class="fr-can-rating">
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star"></i>
+												<span class="reviews_text">(42 Reviews)</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+								
+								<div class="fr-grid-footer">
+									<div class="fr-grid-footer-flex">
+										<span class="fr-position"><i class="lni-map-marker"></i>3599 Huntz Lane</span>
+									</div>
+									<div class="fr-grid-footer-flex-right">
+										<a href="agent-page.html" class="prt-view" tabindex="0">View</a>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+						<!-- Single Agent -->
+						<div class="col-lg-4 col-md-6 col-sm-12">
+							<div class="agents-grid">
+								
+								<div class="agents-grid-wrap">
+									
+									<div class="fr-grid-thumb">
+										<a href="freelancer-detail.html">
+											<img src="assets/img/ag-1.png" class="img-fluid mx-auto" alt="" />
+										</a>
+									</div>
+									
+									<div class="fr-grid-deatil">
+										<div class="fr-grid-deatil-flex">
+											<h5 class="fr-can-name"><a href="#">Fox Run Real Estate</a></h5>
+											<span class="agent-property">302 Properties</span>
+										</div>
+										<div class="fr-grid-deatil-flex-right">
+											<div class="agent-email"><a href="#"><i class="ti-email"></i></a></div>
+										</div>
+									</div>
+									
+								</div>
+								
+								<div class="fr-grid-info">
+									<ul>
+										<li><strong>Call:</strong>91 123 456 7859</li>
+										
+										<li>
+											<div class="fr-can-rating">
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star filled"></i>
+												<i class="fas fa-star"></i>
+												<span class="reviews_text">(42 Reviews)</span>
+											</div>
+										</li>
+									</ul>
+								</div>
+								
+								<div class="fr-grid-footer">
+									<div class="fr-grid-footer-flex">
+										<span class="fr-position"><i class="lni-map-marker"></i>3599 Huntz Lane</span>
+									</div>
+									<div class="fr-grid-footer-flex-right">
+										<a href="agent-page.html" class="prt-view" tabindex="0">View</a>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+						
+					</div>
+					
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+							<a href="listings-list-with-sidebar.html" class="btn btn-theme-light-2 rounded">Load More Agents</a>
+						</div>
+					</div>
+					
+				</div>	
+			</section>
+			<!-- ============================ Agent List End ================================== -->
+			
+			<!-- ============================ Call To Action ================================== -->
+			<section class="theme-bg call-to-act-wrap">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-12">
+							
+							<div class="call-to-act">
+								<div class="call-to-act-head">
+									<h3>Want to Become a Real Estate Agent?</h3>
+									<span>We'll help you to grow your career and growth.</span>
+								</div>
+								<a href="#" class="btn btn-call-to-act">SignUp Today</a>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ============================ Call To Action End ================================== -->
+			
+			<!-- ============================ Footer Start ================================== -->
+			<%-include('includes/footer.ejs')%>
+			<!-- ============================ Footer End ================================== -->
+			
+			<!-- Log In Modal -->
+			<%-include('includes/login.ejs')%>
+			<!-- End Modal -->
+			
+			<!-- Sign Up Modal -->
+			<%-include('includes/signup.ejs')%>
+			<!-- End Modal -->
+			<a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
+			
+
+		</div>
+		<!-- ============================================================== -->
+		<!-- End Wrapper -->
+		<!-- ============================================================== -->
+		
+
+		<!-- ============================================================== -->
+		<!-- All Jquery -->
+		<!-- ============================================================== -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/popper.min.js"></script>
+		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="assets/js/rangeslider.js"></script>
+		<script src="assets/js/select2.min.js"></script>
+		<script src="assets/js/jquery.magnific-popup.min.js"></script>
+		<script src="assets/js/slick.js"></script>
+		<script src="assets/js/slider-bg.js"></script>
+		<script src="assets/js/lightbox.js"></script> 
+		<script src="assets/js/imagesloaded.js"></script>
+		 
+		<script src="assets/js/custom.js"></script>
+		<!-- ============================================================== -->
+		<!-- This page plugins -->
+		<!-- ============================================================== -->
+
+	</body>
+</html>
