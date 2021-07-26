@@ -1,6 +1,7 @@
 node_modules/
-uploads/
-log/
+public/uploads/
+.vscode/
+log/error.log/
 
 
 

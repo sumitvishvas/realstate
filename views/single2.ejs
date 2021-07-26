@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Resido - Residence & Real Estate HTML Template</title>
+
+    <!-- Custom CSS -->
+    <link href="assets/css/styles.css
+    
+    " rel="stylesheet">
+
+    <!-- Custom Color Option -->
+    <link href="assets/css/colors.css" rel="stylesheet">
+    <style>
+        section {
+            padding: 10px 0 0px;
+        }
+    </style>
+
+</head>
+
+<body class="blue-skin">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div id="preloader">
+        <div class="preloader"><span></span><span></span></div>
+    </div>
+
+
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+
+        <!-- ============================================================== -->
+        <!-- Top header  -->
+        <!-- ============================================================== -->
+        <!-- Start Navigation -->
+        <%-include('includes/nav.ejs') %>
+            <!-- End Navigation -->
+            <div class="clearfix"></div>
+            <!-- ============================================================== -->
+            <!-- Top header  -->
+            <!-- ============================================================== -->
+
+
+            <!-- ============================ Property Header Info Start================================== -->
+            <section class="bg-title">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+
+                            <div class="property_block_wrap style-2 p-4">
+                                <div class="prt-detail-title-desc">
+                                    <span class="prt-types sale">For Sale</span>
+                                    <h3>
+                                        <%=data.TotalArea%>Sqft <%=data.propType%> in <%=data.locality%>
+                                    </h3>
+
+                                    <span><i class="lni-map-marker"></i>
+                                        <%=data.socityName%>, <%=data.locality%>, Lucknow
+                                    </span>
+                                    <% let x=Math.round(data.TotalPrice / data.TotalArea) %>
+                                        <h3 class="prt-price-fix">₹ <%=x%><sub>/sqft</sub></h3>
+                                        <h3 class="prt-price-fix"> <a href="#">abc pvt ltd</a></sub></h3>
+                                        <div class="list-fx-features">
+                                            <!-- <div class="listing-card-info-icon">
+                                                <div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13"
+                                                        alt=""></div>
+                                                <%=data.propType%> Beds
+                                            </div> -->
+                                            <div class="listing-card-info-icon">
+                                                <div class="inc-fleat-icon"><img src="https://image.flaticon.com/icons/png/512/980/980578.png" width="13"
+                                                        alt=""></div>
+                                                <%=data.TotalPrice%> Price
+                                            </div>
+                                            <div class="listing-card-info-icon">
+                                                <div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13"
+                                                        alt=""></div>
+                                                <%=data.TotalArea%> sqft
+                                            </div>
+                                        </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </section>
+            <!-- ============================ Property Header Info Start================================== -->
+
+            <!-- ============================ Property Detail Start ================================== -->
+            <section class="gray-simple">
+                <div class="container">
+                    <div class="row">
+
+                        <!-- property main detail -->
+                        <div class="col-lg-8 col-md-12 col-sm-12">
+
+
+                            <div class="property_block_wrap style-2">
+
+                                <div class="property_block_wrap_header">
+                                    <a data-bs-toggle="collapse" data-parent="#clSev" data-bs-target="#clSev"
+                                        aria-controls="clOne" href="javascript:void(0);" aria-expanded="true"
+                                        class="collapsed">
+                                        <h4 class="property_block_title">Gallery</h4>
+                                    </a>
+                                </div>
+
+                                <div id="clSev" class="panel-collapse collapse show">
+                                    <div class="block-body">
+                                        <ul class="list-gallery-inline">
+                                            <% JSON.parse(data.gallery).gallery.forEach((item)=>{%>
+                                                <li>
+                                                    <a href="assets/uploads/<%=item.bgImg %>" class="mfp-gallery"><img
+                                                            src="assets/uploads/<%=item.bgImg %>"
+                                                            class="img-fluid mx-auto" alt="" /></a>
+                                                </li>
+                                                <% })%>
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <!-- Single Block Wrap -->
+                            <div class="property_block_wrap style-2">
+
+                                <div class="property_block_wrap_header">
+                                    <a data-bs-toggle="collapse" data-parent="#features" data-bs-target="#clOne"
+                                        aria-controls="clOne" href="javascript:void(0);" aria-expanded="false">
+                                        <h4 class="property_block_title">Detail & Features</h4>
+                                    </a>
+                                </div>
+                                <div id="clOne" class="panel-collapse collapse show" aria-labelledby="clOne">
+                                    <div class="block-body">
+                                        <ul class="deatil_features">
+                                            <li><strong>propType:</strong>
+                                                <%=data.propType%> Beds
+                                            </li>
+                                            <li><strong>Bathrooms:</strong>
+                                                <%=data.bathrooms%> Bath
+                                            </li>
+                                            <li><strong>Areas:</strong>
+                                                <%=data.TotalArea%> sq ft
+                                            </li>
+                                            <li><strong>Property Type:</strong>
+                                                <%=data.propType%>
+                                            </li>
+                                            <li><strong>Heating Type:</strong>Forced Air</li>
+                                            <li><strong>Kitchen Features:</strong>Kitchen Facilities</li>
+                                            <li><strong>Exterior:</strong>FinishBrick</li>
+                                            <% if(data.propType!='House' ){%>
+                                                <li><strong>Elevetor:</strong>Yes</li>
+
+                                                <%}%>
+                                                    <li><strong>Fireplace:</strong>Yes</li>
+                                                    <li><strong>Free WiFi:</strong>No</li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Single Block Wrap -->
+                            <div class="property_block_wrap style-2">
+
+                                <div class="property_block_wrap_header">
+                                    <a data-bs-toggle="collapse" data-parent="#dsrp" data-bs-target="#clTwo"
+                                        aria-controls="clTwo" href="javascript:void(0);" aria-expanded="true">
+                                        <h4 class="property_block_title">Description</h4>
+                                    </a>
+                                </div>
+                                <div id="clTwo" class="panel-collapse collapse show">
+                                    <div class="block-body">
+                                        <p>
+                                            <%=data.propDetails%>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Single Block Wrap -->
+                            <div class="property_block_wrap style-2">
+
+                                <div class="property_block_wrap_header">
+                                    <a data-bs-toggle="collapse" data-parent="#amen" data-bs-target="#clThree"
+                                        aria-controls="clThree" href="javascript:void(0);" aria-expanded="true">
+                                        <h4 class="property_block_title">Ameneties</h4>
+                                    </a>
+                                </div>
+
+                                <div id="clThree" class="panel-collapse collapse show">
+                                    <div class="block-body">
+                                        <ul class="avl-features third color">
+                                           
+
+                                                    <li>
+                                                       fgdgfd
+                                                    </li>
+                                                   
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Single Block Wrap -->
+                            <div class="property_block_wrap style-2">
+
+                                <div class="property_block_wrap_header">
+                                    <a data-bs-toggle="collapse" data-parent="#vid" data-bs-target="#clFour"
+                                        aria-controls="clFour" href="javascript:void(0);" aria-expanded="true"
+                                        class="collapsed">
+                                        <h4 class="property_block_title">Property video</h4>
+                                    </a>
+                                </div>
+
+                                <div id="clFour" class="panel-collapse collapse show">
+                                    <div class="block-body">
+                                        <div class="property_video">
+                                            <div class="thumb">
+                                                <img class="pro_img img-fluid w100" src="assets/img/pl-6.jpg"
+                                                    alt="7.jpg">
+                                                <div class="overlay_icon">
+                                                    <div class="bb-video-box">
+                                                        <div class="bb-video-box-inner">
+                                                            <div class="bb-video-box-innerup">
+                                                                <a href="<%=data.videoLink%>" data-bs-toggle="modal"
+                                                                    data-bs-target="#popup-video" class="theme-cl"><i
+                                                                        class="ti-control-play"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Single Block Wrap -->
+
+
+                            <!-- Single Block Wrap -->
+                            <div class="property_block_wrap style-2">
+
+                                <div class="property_block_wrap_header">
+                                    <a data-bs-toggle="collapse" data-parent="#loca" data-bs-target="#clSix"
+                                        aria-controls="clSix" href="javascript:void(0);" aria-expanded="true"
+                                        class="collapsed">
+                                        <h4 class="property_block_title">Location</h4>
+                                    </a>
+                                </div>
+
+                                <div id="clSix" class="panel-collapse collapse">
+                                    <div class="block-body">
+                                        <div class="map-container">
+                                            <div id="singleMap" data-latitude="40.7427837"
+                                                data-longitude="-73.11445617675781" data-mapTitle="Our Location"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Single Block Wrap -->
+
+
+                            <!-- All over Review -->
+
+                            <!-- All over Review -->
+
+                            <!-- Single Reviews Block -->
+
+
+                            <!-- Single Block Wrap -->
+                            <div class="property_block_wrap style-2">
+
+                                <div class="property_block_wrap_header">
+                                    <a data-bs-toggle="collapse" data-parent="#nearby" data-bs-target="#clNine"
+                                        aria-controls="clNine" href="javascript:void(0);" aria-expanded="true">
+                                        <h4 class="property_block_title">Nearby</h4>
+                                    </a>
+                                </div>
+
+                                <div id="clNine" class="panel-collapse collapse show">
+                                    <div class="block-body">
+
+                                        <!-- Schools -->
+                                        <div class="nearby-wrap">
+                                            <div class="nearby_header">
+                                                <div class="nearby_header_first">
+                                                    <h5>Schools Around</h5>
+                                                </div>
+                                                <div class="nearby_header_last">
+                                                    <div class="nearby_powerd">
+                                                        Powerd by <img src="assets/img/edu.png" class="img-fluid"
+                                                            alt="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="neary_section_list">
+
+                                                <div class="neary_section">
+                                                    <div class="neary_section_first">
+                                                        <h4 class="nearby_place_title">Green Iseland School<small>(3.52
+                                                                mi)</small></h4>
+                                                    </div>
+                                                    <div class="neary_section_last">
+                                                        <div class="nearby_place_rate">
+                                                            <i class="fa fa-star filled"></i>
+                                                            <i class="fa fa-star filled"></i>
+                                                            <i class="fa fa-star filled"></i>
+                                                            <i class="fa fa-star filled"></i>
+                                                            <i class="fa fa-star"></i>
+                                                        </div>
+                                                        <small class="reviews-count">(421 Reviews)</small>
+                                                    </div>
+                                                </div>
+
+                                                <div class="neary_section">
+                                                    <div class="neary_section_first">
+                                                        <h4 class="nearby_place_title">Ragni Intermediate
+                                                            College<small>(0.52 mi)</small></h4>
+                                                    </div>
+                                                    <div class="neary_section_last">
+                                                        <div class="nearby_place_rate">
+                                                            <i class="fa fa-star filled"></i>
+                                                            <i class="fa fa-star filled"></i>
+                                                            <i class="fa fa-star filled"></i>
+                                                            <i class="fa fa-star filled"></i>
+                                                            <i class="fa fa-star-half filled"></i>
+                                                        </div>
+                                                        <small class="reviews-count">(470 Reviews)</small>
+                                                    </div>
+                                                </div>
+
+                                                <div class="neary_section">
+                                                    <div class="neary_section_first">
+                                                        <h4 class="nearby_place_title">Rose Wood Primary
+                                                            Scool<small>(0.47 mi)</small></h4>
+                                                    </div>
+                                                    <div class="neary_section_last">
+                                                        <div class="nearby_place_rate">
+                                                            <i class="fa fa-star filled"></i>
+                                                            <i class="fa fa-star filled"></i>
+                                                            <i class="fa fa-star filled"></i>
+                                                            <i class="fa fa-star filled"></i>
+                                                            <i class="fa fa-star"></i>
+                                                        </div>
+                                                        <small class="reviews-count">(204 Reviews)</small>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <!-- Hotel & Restaurant -->
+                                        <div class="nearby-wrap">
+                                            <div class="nearby_header">
+                                                <div class="nearby_header_first">
+                                                    <h5>Food Around</h5>
+                                                </div>
+                                                <div class="nearby_header_last">
+                                                    <div class="nearby_powerd">
+                                                        Powerd by <img src="assets/img/food.png" class="img-fluid"
+                                                            alt="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="neary_section_list">
+
+                                                <div class="neary_section">
+                                                    <div class="neary_section_first">
+                                                        <h4 class="nearby_place_title">The Rise hotel<small>(2.42
+                                                                mi)</small></h4>
+                                                    </div>
+                                                    <div class="neary_section_last">
+                                                        <div class="nearby_place_rate">
+                                                            <i class="fa fa-star filled"></i>
+                                                            <i class="fa fa-star filled"></i>
+                                                            <i class="fa fa-star filled"></i>
+                                                            <i class="fa fa-star filled"></i>
+                                                            <i class="fa fa-star filled"></i>
+                                                        </div>
+                                                        <small class="reviews-count">(105 Reviews)</small>
+                                                    </div>
+                                                </div>
+
+                                                <div class="neary_section">
+                                                    <div class="neary_section_first">
+                                                        <h4 class="nearby_place_title">Blue Ocean Bar &
+                                                            Restaurant<small>(1.52 mi)</small></h4>
+                                                    </div>
+                                                    <div class="neary_section_last">
+                                                        <div class="nearby_place_rate">
+                                                            <i class="fa fa-star filled"></i>
+                                                            <i class="fa fa-star filled"></i>
+                                                            <i class="fa fa-star filled"></i>
+                                                            <i class="fa fa-star filled"></i>
+                                                            <i class="fa fa-star"></i>
+                                                        </div>
+                                                        <small class="reviews-count">(40 Reviews)</small>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Single Write a Review -->
+
+
+                        </div>
+
+                        <!-- property Sidebar -->
+                        <div class="col-lg-4 col-md-12 col-sm-12">
+
+                            <!-- Like And Share -->
+                            <div class="like_share_wrap b-0">
+                                <ul class="like_share_list">
+                                    <li><a href="JavaScript:Void(0);" class="btn btn-likes" data-toggle="tooltip"
+                                            data-original-title="Share"><i class="fas fa-share"></i>Share</a></li>
+                                    <li><a href="JavaScript:Void(0);" class="btn btn-likes" data-toggle="tooltip"
+                                            data-original-title="Save"><i class="fas fa-heart"></i>Save</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="details-sidebar">
+
+                                <!-- Agent Detail -->
+                                <div class="sides-widget">
+                                    <div class="sides-widget-header">
+                                        <div class="agent-photo"><img src="assets/img/user-6.jpg" alt=""></div>
+                                        <div class="sides-widget-details">
+                                            <h4><a href="#">Shivangi Preet</a></h4>
+                                            <span><i class="lni-phone-handset"></i>(91) 123 456 7895</span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+
+                                    <div class="sides-widget-body simple-form">
+
+                                        <% if(msg){%>
+                                            <h5 id="msg" class="alert alert-success">
+                                                <%=msg.message%>
+                                            </h5>
+                                            <% }%>
+                                                <form method="POST" action="/mail/emailClientDetails">
+                                                    <div class="form-group">
+                                                        <label>Email</label>
+                                                        <input type="text" name="email" class="form-control"
+                                                            placeholder="Your Email">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Phone No.</label>
+                                                        <input type="text" name="monumber" class="form-control"
+                                                            placeholder="Your Phone">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Description</label>
+                                                        <textarea class="form-control"
+                                                            name="details">I'm interested in this property.</textarea>
+                                                    </div>
+                                                    <input type="hidden" name="url" value="<%=data.url%>">
+                                                    <button type="submit"
+                                                        class="btn btn-black btn-md rounded full-width">Send
+                                                        Message</button>
+                                                </form>
+                                    </div>
+                                </div>
+
+                                <!-- Mortgage Calculator -->
+                                <div class="sides-widget">
+
+                                    <div class="sides-widget-header">
+                                        <div class="sides-widget-details">
+                                            <h4><a href="#">Shivangi Preet</a></h4>
+                                            <span>View your Interest Rate</span>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </div>
+
+                                    <div class="sides-widget-body simple-form">
+                                        <div class="form-group">
+                                            <div class="input-with-icon">
+                                                <input type="text" class="form-control" placeholder="Sale Price">
+                                                <i class="ti-money"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="input-with-icon">
+                                                <input type="text" class="form-control" placeholder="Down Payment">
+                                                <i class="ti-money"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="input-with-icon">
+                                                <input type="text" class="form-control" placeholder="Loan Term (Years)">
+                                                <i class="ti-calendar"></i>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="input-with-icon">
+                                                <input type="text" class="form-control" placeholder="Interest Rate">
+                                                <i class="fa fa-percent"></i>
+                                            </div>
+                                        </div>
+
+                                        <button class="btn btn-black btn-md rounded full-width">Calculate</button>
+
+                                    </div>
+                                </div>
+
+                                <!-- Featured Property -->
+                                <div class="sidebar-widgets">
+
+                                    <h4>Featured Property</h4>
+
+                                    <div class="sidebar_featured_property">
+
+                                        <!-- List Sibar Property -->
+                                        <div class="sides_list_property">
+                                            <div class="sides_list_property_thumb">
+                                                <img src="assets/img/p-1.jpg" class="img-fluid" alt="">
+                                            </div>
+                                            <div class="sides_list_property_detail">
+                                                <h4><a href="single-property-1.html">Loss vengel New Apartment</a></h4>
+                                                <span><i class="ti-location-pin"></i>Sans Fransico</span>
+                                                <div class="lists_property_price">
+                                                    <div class="lists_property_types">
+                                                        <div class="property_types_vlix sale">For Sale</div>
+                                                    </div>
+                                                    <div class="lists_property_price_value">
+                                                        <h4>$4,240</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- List Sibar Property -->
+                                        <div class="sides_list_property">
+                                            <div class="sides_list_property_thumb">
+                                                <img src="assets/img/p-4.jpg" class="img-fluid" alt="">
+                                            </div>
+                                            <div class="sides_list_property_detail">
+                                                <h4><a href="single-property-1.html">Montreal Quriqe Apartment</a></h4>
+                                                <span><i class="ti-location-pin"></i>Liverpool, London</span>
+                                                <div class="lists_property_price">
+                                                    <div class="lists_property_types">
+                                                        <div class="property_types_vlix">For Rent</div>
+                                                    </div>
+                                                    <div class="lists_property_price_value">
+                                                        <h4>$7,380</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- List Sibar Property -->
+                                        <div class="sides_list_property">
+                                            <div class="sides_list_property_thumb">
+                                                <img src="assets/img/p-7.jpg" class="img-fluid" alt="">
+                                            </div>
+                                            <div class="sides_list_property_detail">
+                                                <h4><a href="single-property-1.html">Curmic Studio For Office</a></h4>
+                                                <span><i class="ti-location-pin"></i>Montreal, Canada</span>
+                                                <div class="lists_property_price">
+                                                    <div class="lists_property_types">
+                                                        <div class="property_types_vlix buy">For Buy</div>
+                                                    </div>
+                                                    <div class="lists_property_price_value">
+                                                        <h4>$8,730</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- List Sibar Property -->
+                                        <div class="sides_list_property">
+                                            <div class="sides_list_property_thumb">
+                                                <img src="assets/img/p-5.jpg" class="img-fluid" alt="">
+                                            </div>
+                                            <div class="sides_list_property_detail">
+                                                <h4><a href="single-property-1.html">Montreal Quebec City</a></h4>
+                                                <span><i class="ti-location-pin"></i>Sreek View, New York</span>
+                                                <div class="lists_property_price">
+                                                    <div class="lists_property_types">
+                                                        <div class="property_types_vlix">For Rent</div>
+                                                    </div>
+                                                    <div class="lists_property_price_value">
+                                                        <h4>$6,240</h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <!-- ============================ Property Detail End ================================== -->
+
+            <!-- ============================ Call To Action ================================== -->
+            <section class="theme-bg call-to-act-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+
+                            <div class="call-to-act">
+                                <div class="call-to-act-head">
+                                    <h3>Want to Become a Real Estate Agent?</h3>
+                                    <span>We'll help you to grow your career and growth.</span>
+                                </div>
+                                <a href="#" class="btn btn-call-to-act">SignUp Today</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- ============================ Call To Action End ================================== -->
+
+            <!-- ============================ Footer Start ================================== -->
+            <%-include('includes/footer.ejs')%>
+                <!-- ============================ Footer End ================================== -->
+
+                <!-- Log In Modal -->
+                <%-include('includes/login.ejs')%>
+                    <!-- End Modal -->
+
+                    <!-- Sign Up Modal -->
+                    <%-include('includes/signup.ejs')%>
+                        <!-- End Modal -->
+
+                        <a id="back2Top" class="top-scroll" title="Back to top" href="#"><i class="ti-arrow-up"></i></a>
+
+
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+
+
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/rangeslider.js"></script>
+    <script src="assets/js/select2.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/slider-bg.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/imagesloaded.js"></script>
+
+    <script src="assets/js/custom.js"></script>
+
+    <!-- Map -->
+    <script src="https://maps.google.com/maps/api/js?key="></script>
+    <script src="assets/js/map_infobox.js"></script>
+    <script src="assets/js/markerclusterer.js"></script>
+    <script src="assets/js/map.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+
+
+
+</body>
+
+<!-- Mirrored from themezhub.net/resido-live/resido/single-property-3.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Mar 2021 09:41:16 GMT -->
+
+</html>

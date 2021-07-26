@@ -100,6 +100,25 @@ router.get('/real-estate-projects-in-lucknow',async (req,res)=>{
 router.get("/project-details/:id", async (req, res) => {
   let msg = req.flash("notify");
   
+router.get("/property-details/:id", async (req, res) => {
+  let msg = req.flash("notify");
+  console.log("heee heee",msg);
+  if (msg.length > 0) {
+    msg = msg[0];
+  } else {
+    msg = null;
+  }
+
+  const singleOne = await FlatOrHouse.findOne({
+    where: { url: req.params["id"] },
+  });
+
+  res.render("single", { data: singleOne, msg:msg });
+});
+
+router.get("/plot-details/:id", async (req, res) => {
+  let msg = req.flash("notify");
+  console.log("heee heee",msg);
   if (msg.length > 0) {
     msg = msg[0];
   } else {
@@ -114,6 +133,12 @@ router.get("/project-details/:id", async (req, res) => {
   res.render("agency-Details", { data: projectDetails, msg:msg });
 });
 
+  const singleOne = await PlotOrLand.findOne({
+    where: { url: req.params["id"] },
+  });
+
+  res.render("single2", { data: singleOne, msg:msg });
+});
 
 
 module.exports = router;
