@@ -16,7 +16,7 @@ router.post("/emailClientDetails", async (req,res)=>{
       secure: true,
       auth: {
         user: 'rs802381@gmail.com',
-        pass: '8957805207'
+        pass: '8957805207Rp'
       }
     });
     
@@ -43,7 +43,7 @@ router.post("/emailClientDetails", async (req,res)=>{
           details:req.body.details
         });
        
-        return res.redirect('/property-details/'+req.body.url);
+        return res.redirect(''+req.body.url);
       
       }
     });

@@ -69,6 +69,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							  <th>Client Email</th>
 							  <th>Client Mobile Number</th>
 							  <th>Details</th>
+							  <th>Created At</th>
 							  <th>View Property</th>
 							  <th>Status</th>
 							  <th>save</th>
@@ -83,7 +84,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<td><%= item.clientEmail%></td>
 								<td><%= item.clientMobileNumber%></td>
 								<td><%= item.details%></td>
-								<td><a href="/property-details/<%=item.url%>" target="_blank"> <i class="fa fa-external-link" aria-hidden="true"></i></a></td>
+								<% let x=String(item.createdAt).split("GMT+0530")  %>
+								<td><%=x[0]%></td>
+								
+								<td><a href="<%=item.url%>" target="_blank"> <i class="fa fa-external-link" aria-hidden="true"></i></a></td>
 								<td>
 									<select class="form-control1" name="propType" id="propType" required>
 										<option value="Commercial">pending</option>
@@ -103,6 +107,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<th>Client Email</th>
 								<th>Client Mobile Number</th>
 								<th>Details</th>
+								<th>Created At</th>
 								<th>View Property</th>
 								<th>Status</th>
 								<th>save</th>
