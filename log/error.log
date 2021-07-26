@@ -3493,3 +3493,35 @@
   label: 'right now!',
   timestamp: '2021-07-25T06:20:27.971Z'
 }
+{
+  name: 'SequelizeConnectionRefusedError',
+  parent: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16) {
+    errno: 'ECONNREFUSED',
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 3306,
+    fatal: true
+  },
+  original: Error: connect ECONNREFUSED 127.0.0.1:3306
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16) {
+    errno: 'ECONNREFUSED',
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 3306,
+    fatal: true
+  },
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-26T06:59:14.023Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-26T07:02:09.792Z'
+}
