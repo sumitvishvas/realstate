@@ -159,7 +159,7 @@ router.post("/createPlot_Land", uploads, trimRequest.all, async (req, res) => {
     let type =
       req.body.propType === "Commercial" ? "Residential" : req.body.propType;
     let uuid = uniqid.time();
-    let url = `${req.body.TotalPrice}price-${type}-for-sale-in-${soci}-${local}-lucknow-built-up-area-${req.body.TotalArea}-square-feet-${uuid}`;
+    let url = `${type}-Plots-for-sale-in-${soci}-${local}-lucknow-built-up-area-${req.body.TotalArea}-square-feet-offered-price-${req.body.TotalPrice}-rs-${uuid}`;
     url = url.toLowerCase();
     let src = uniqid() + "-" + req.files["gallery"][0].originalname;
     await sharp(req.files["gallery"][0].buffer)
