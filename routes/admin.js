@@ -531,6 +531,7 @@ try {
   let logoImage = {
     logos: []
   };
+  url=`${req.body.CompanyName}-in-${req.body.officeAddress}-lucknow-${req.body.websiteLink}-${req.body.aboutCompany}`;
   // let uuid = uniqid.time();
     let tinySrc = "";
     let bigSrc = "";
@@ -562,7 +563,8 @@ try {
 
     const company =await Companies.create({
       companyName:req.body.CompanyName,
-      location:req.body.location,
+      url:url,
+      location:req.body.location, 
      
       officeAddress:req.body.officeAddress,
       contactPerson:req.body.cpname,

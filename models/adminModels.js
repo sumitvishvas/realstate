@@ -172,6 +172,10 @@
         type:Sequelize.STRING,
         allowNull:false
     },
+    url:{
+        type:Sequelize.STRING(1234),
+        allowNull:true
+    },
     officeAddress:{
         type:Sequelize.STRING(1234),
         allowNull:false
@@ -185,7 +189,7 @@
         allowNull:false
     },
     contactNumber:{
-        type:Sequelize.INTEGER,
+        type:Sequelize.STRING,
         allowNull:false
     },
     email:{
@@ -208,6 +212,7 @@
         type:Sequelize.STRING,
         allowNull:true
     }
+   
 
  });
 
