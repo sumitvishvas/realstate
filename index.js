@@ -1,3 +1,4 @@
+require('dotenv').config();
 require('express-async-errors');
 let express = require('express');
 const path = require("path");

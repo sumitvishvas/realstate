@@ -8,6 +8,13 @@ router.get("/", (req, res) => {
   res.render("index");
 });
 
+router.post("/register",(req,res)=>{
+  console.log('hello');
+  res.send('HElllo');
+  
+  console.log(req.body);
+})
+
 router.get("/flats-in-lucknow", async (req, res) => {
   const allFlats = await FlatOrHouse.findAll({
     attributes: [
