@@ -23,10 +23,56 @@ router.get("/dashboard", (req, res) => {
   res.render("admin/index");
 });
 
-router.get("/login", (req, res) => {
+router.get("/login", async(req, res) => {
   let msg = "";
+  if(req.session.email){
+    var result=await User.findOne({where:{_id:req.session._id}});
+    res.render("admin/user-profile",{result,message:req.flash('message'),msg_alert:req.flash('msg_alert')});
+ }else{
+           req.flash("message","Please Login");
+
+  
   res.render("admin/sign-in", { msg: msg });
+ }
+  
 });
+
+router.post("/login",async(req,res)=>{
+  // res.send(req.body);
+  const email=req.body.email;
+  const user = await User.findOne({ where: {email} });
+  if (user){
+    if(user.password===req.body.password){
+      req.flash("msg_alert"," alert alert-success");
+      req.flash("message","Login Succesfully");
+console.log('LOGIN Successfully');
+
+      sess =req.session;
+      sess._id=user._id;
+      sess.name=user.fullname;
+      sess.email=user.email;
+      res.redirect('/admin/login');
+    }else{
+      req.flash("message","Invalaid password");
+
+            res.redirect('/admin/login');
+    }
+
+  }
+
+})
+
+router.get('/logout',(req,res)=>{
+  req.session.destroy((error)=>{
+    if(error){
+        console.log(error);
+    }
+   
+    res.redirect('/admin/login');
+
+})
+
+})
 
 router.get("/registerUser", (req, res) => {
   res.render("admin/createUser");
@@ -34,6 +80,8 @@ router.get("/registerUser", (req, res) => {
 
 router.post("/registerUser", async (req, res) => {
   let flag = validateUser(req.body);
+  console.log(flag);
+  
   if (flag !== "1") {
     
     return res.redirect("/admin/registerUser");
@@ -47,7 +95,7 @@ router.post("/registerUser", async (req, res) => {
 
   req.body.fullname = req.body.fname + " " + req.body.lname;
 
-  User.create({
+   await User.create({
     email: req.body.email,
     fullname: req.body.fullname,
     password: req.body.password,
@@ -55,6 +103,7 @@ router.post("/registerUser", async (req, res) => {
   })
     .then((result) => {
       console.log("created ");
+     return res.redirect("/admin/login");
     })
     .catch((err) => {
       console.log(err);

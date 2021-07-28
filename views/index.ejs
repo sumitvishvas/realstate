@@ -1419,68 +1419,6 @@
 		<script src="assets/js/imagesloaded.js"></script>
 		 
 		<script src="assets/js/custom.js"></script>
-		<script >
-			$(document).ready(()=>{
-				$('#register').on('submit',(function(e) {
-		e.preventDefault();
-		
-		// alert();
-		const formData = new FormData(this);
-
-		formData.append("key", "value");
-// console.log(formdata);
-		console.log(formData);
-		
-		
-	
-	
-
-
-			
-
-		$.ajax({
-			type:'POST',
-			url: '/register',
-			data:formData,
-			cache:false,
-			contentType: false,
-			processData: false,
-			
-				beforeSend: function(){
-					// Show image container
-					
-					// document.getElementById("my-btn").disabled = true;
-					
-				},
-			success:function(data){
-
-				console.log('hello');
-				console.log(data);
-				
-				
-				// $("#msg").html(`${data}`).addClass("alert alert-success");
-				window.scrollTo(0,0);
-
-				
-
-			},
-				complete:function(data){
-				
-				// document.getElementById("my-btn").disabled = false;
-			},	
-			
-			error: function(data){
-				console.log("error");
-				console.log(data);
-				// document.getElementById("my-btn").disabled = false;
-			}
-		});
-	
-
-	}));
-
-			});
-		</script>
 		<!-- ============================================================== -->
 		<!-- This page plugins -->
 		<!-- ============================================================== -->
