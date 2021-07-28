@@ -1,9 +1,11 @@
 const express = require("express");
+
 const { User, validateUser } = require("../models/user");
 const {ClientLead}=require("../models/clientData");
 const spaceReplacer = require("../util/usefulFunctions");
 const router = express.Router();
 var uniqid = require("uniqid");
+const bcrypt=require("bcrypt");
 const trimRequest = require("trim-request"); 
 const fs =require("fs");
 const sequelize = require('sequelize');
@@ -42,7 +44,8 @@ router.post("/login",async(req,res)=>{
   const email=req.body.email;
   const user = await User.findOne({ where: {email} });
   if (user){
-    if(user.password===req.body.password){
+    var check =await bcrypt.compare(req.body.password,user.password);
+        if(check){
       req.flash("msg_alert"," alert alert-success");
       req.flash("message","Login Succesfully");
 console.log('LOGIN Successfully');
@@ -92,13 +95,14 @@ router.post("/registerUser", async (req, res) => {
     console.log("in f");
     return res.redirect("/admin/registerUser");
   }
-
+  var salt =bcrypt.genSaltSync(10);
+  const hash =bcrypt.hashSync(req.body.password,salt);
   req.body.fullname = req.body.fname + " " + req.body.lname;
 
    await User.create({
     email: req.body.email,
     fullname: req.body.fullname,
-    password: req.body.password,
+    password: hash,
     createdBy: "Raj",
   })
     .then((result) => {
