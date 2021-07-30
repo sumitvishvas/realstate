@@ -1,21 +1,16 @@
 const express = require("express");
+
 const { User, validateUser } = require("../models/user");
 const { ClientLead } = require("../models/clientData");
 const spaceReplacer = require("../util/usefulFunctions");
 const router = express.Router();
 var uniqid = require("uniqid");
-const trimRequest = require("trim-request");
-const fs = require("fs");
-const sequelize = require("sequelize");
-const {
-  FlatOrHouse,
-  validateFltasOrHouse,
-  PlotOrLand,
-  validatePlotsOrLand,
-  Project,
-  Companies,
-} = require("../models/adminModels");
-const { unLinkFiles1 } = require("../util/fileUnlink");
+const bcrypt=require("bcrypt");
+const trimRequest = require("trim-request"); 
+const fs =require("fs");
+const sequelize = require('sequelize');
+const { FlatOrHouse, validateFltasOrHouse,PlotOrLand, validatePlotsOrLand,Project,Companies } = require("../models/adminModels");
+const{unLinkFiles1}=require('../util/fileUnlink');
 const multer = require("multer");
 const sharp = require("sharp");
 const storage = multer.memoryStorage();
@@ -30,10 +25,57 @@ router.get("/dashboard", (req, res) => {
   res.render("admin/index");
 });
 
-router.get("/login", (req, res) => {
+router.get("/login", async(req, res) => {
   let msg = "";
+  if(req.session.email){
+    var result=await User.findOne({where:{_id:req.session._id}});
+    res.render("admin/user-profile",{result,message:req.flash('message'),msg_alert:req.flash('msg_alert')});
+ }else{
+           req.flash("message","Please Login");
+
+  
   res.render("admin/sign-in", { msg: msg });
+ }
+  
 });
+
+router.post("/login",async(req,res)=>{
+  // res.send(req.body);
+  const email=req.body.email;
+  const user = await User.findOne({ where: {email} });
+  if (user){
+    var check =await bcrypt.compare(req.body.password,user.password);
+        if(check){
+      req.flash("msg_alert"," alert alert-success");
+      req.flash("message","Login Succesfully");
+console.log('LOGIN Successfully');
+
+      sess =req.session;
+      sess._id=user._id;
+      sess.name=user.fullname;
+      sess.email=user.email;
+      res.redirect('/admin/login');
+    }else{
+      req.flash("message","Invalaid password");
+
+            res.redirect('/admin/login');
+    }
+
+  }
+
+})
+
+router.get('/logout',(req,res)=>{
+  req.session.destroy((error)=>{
+    if(error){
+        console.log(error);
+    }
+   
+    res.redirect('/admin/login');
+
+})
+
+})
 
 router.get("/registerUser", (req, res) => {
   res.render("admin/createUser");
@@ -41,6 +83,8 @@ router.get("/registerUser", (req, res) => {
 
 router.post("/registerUser", async (req, res) => {
   let flag = validateUser(req.body);
+  console.log(flag);
+  
   if (flag !== "1") {
     return res.redirect("/admin/registerUser");
   }
@@ -50,17 +94,19 @@ router.post("/registerUser", async (req, res) => {
     console.log("in f");
     return res.redirect("/admin/registerUser");
   }
-
+  var salt =bcrypt.genSaltSync(10);
+  const hash =bcrypt.hashSync(req.body.password,salt);
   req.body.fullname = req.body.fname + " " + req.body.lname;
 
-  User.create({
+   await User.create({
     email: req.body.email,
     fullname: req.body.fullname,
-    password: req.body.password,
+    password: hash,
     createdBy: "Raj",
   })
     .then((result) => {
       console.log("created ");
+     return res.redirect("/admin/login");
     })
     .catch((err) => {
       console.log(err);
@@ -494,12 +540,15 @@ router.post("/createProject", uploads, trimRequest.all, async (req, res) => {
   }
 });
 const logouplod = upload.fields([{ name: "logo", maxCount: 1 }]);
-router.post("/createComp", logouplod, trimRequest.all, async (req, res) => {
-  try {
-    let logoImage = {
-      logos: [],
-    };
-    // let uuid = uniqid.time();
+router.post('/createComp',logouplod,trimRequest.all, async(req,res)=>{
+  
+try {
+  
+  let logoImage = {
+    logos: []
+  };
+  url=`${req.body.CompanyName}-in-${req.body.officeAddress}-lucknow-${req.body.websiteLink}-${req.body.aboutCompany}`;
+  // let uuid = uniqid.time();
     let tinySrc = "";
     let bigSrc = "";
     // url="";
@@ -526,20 +575,22 @@ router.post("/createComp", logouplod, trimRequest.all, async (req, res) => {
         bgLogo: bigSrc,
       });
     });
-    let logoImageStr = JSON.stringify(logoImage);
+     let logoImageStr = JSON.stringify(logoImage);
 
-    const company = await Companies.create({
-      companyName: req.body.CompanyName,
-      location: req.body.location,
-
-      officeAddress: req.body.officeAddress,
-      contactPerson: req.body.cpname,
-      contactNumber: req.body.conNumber,
-      logos: logoImageStr,
-      rearRegiNumber: req.body.rrnumber,
-      email: req.body.email,
-      aboutCompany: req.body.aboutCompany,
-      websiteLink: req.body.websiteLink,
+    const company =await Companies.create({
+      companyName:req.body.CompanyName,
+      url:url,
+      location:req.body.location, 
+     
+      officeAddress:req.body.officeAddress,
+      contactPerson:req.body.cpname,
+      contactNumber:req.body.conNumber,
+      logos:logoImageStr,
+      rearRegiNumber:req.body.rrnumber,
+      email:req.body.email,
+      aboutCompany:req.body.aboutCompany,
+      websiteLink:req.body.websiteLink,
+      
     });
     if ((company._options.isNewRecord = true)) {
       res.send("New Company Added.");

@@ -608,4 +608,6 @@ $(function() {
 		});
 	}
 	
+	// User Registration 
+	
 });

@@ -1,12 +1,14 @@
 const express = require("express");
 const { where } = require("sequelize");
-const { FlatOrHouse, PlotOrLand,Project } = require("../models/adminModels");
+const { FlatOrHouse, PlotOrLand,Project,Companies } = require("../models/adminModels");
 const router = express.Router();
 const logger = require("../util/logger");
 
 router.get("/", (req, res) => {
   res.render("index");
 });
+
+
 
 router.get("/flats-in-lucknow", async (req, res) => {
   const allFlats = await FlatOrHouse.findAll({
@@ -99,7 +101,7 @@ router.get("/property-details/:id", async (req, res) => {
     where: { url: req.params["id"] },
   });
 
-  res.render("single", { data: singleOne, msg:msg });
+  res.render("flat-details", { data: singleOne, msg:msg });
 });
 
 router.get('/real-estate-projects-in-lucknow',async (req,res)=>{
@@ -125,6 +127,31 @@ router.get('/real-estate-projects-in-lucknow',async (req,res)=>{
   
 });
 
+router.get('/real-estate-company-in-lucknow',async (req,res)=>{
+  const company = await Companies.findAll({
+    attributes:[
+      "_id",
+      "companyName",
+      "url",
+      "location",
+      "contactNumber",
+      "officeAddress",
+      "logos",
+      "contactPerson",
+      "aboutCompany",
+      "websiteLink",
+      "email"
+    ]
+  })
+    if(company[0]._options.raw === true){
+      res.render("companies",{data:company});
+    }else{
+      logger.info("data not found from project table or real-estate-company-in-lucknow Url ");
+  
+    }
+  
+});
+
 router.get("/project-details/:id", async (req, res) => {
 
   let msg = req.flash("notify");
@@ -139,6 +166,21 @@ router.get("/project-details/:id", async (req, res) => {
   });
   // console.log(projectDetails);
   res.render("agency-Details", { data: projectDetails, msg:msg });
+});
+router.get("/company-details/:id", async (req, res) => {
+
+  let msg = req.flash("notify");
+  if (msg.length > 0) {
+    msg = msg[0];
+  } else {
+    msg = null;
+  }
+  const companyDetails = await Companies.findOne({
+    
+    where: { url: req.params["id"] }
+  });
+  console.log(companyDetails);
+  res.render("companies-Details", { data: companyDetails, msg:msg });
 });
   
 router.get("/property-details/:id", async (req, res) => {
@@ -169,7 +211,7 @@ router.get("/plot-details/:id", async (req, res) => {
     where: { url: req.params["id"] },
   });
 
-  res.render("single2", { data: singleOne, msg:msg });
+  res.render("plot-details", { data: singleOne, msg:msg });
 });
 
 

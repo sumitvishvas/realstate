@@ -5,14 +5,14 @@
             <div class="modal-body">
                 <h4 class="modal-header-title">Sign Up</h4>
                 <div class="login-form">
-                    <form>
+                    <form method="post" id="register" enctype="multipart/form-data">
                         
                         <div class="row">
                             
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
                                     <div class="input-with-icon">
-                                        <input type="text" class="form-control" placeholder="Full Name">
+                                        <input type="text" class="form-control" name="name" placeholder="Full Name">
                                         <i class="ti-user"></i>
                                     </div>
                                 </div>
@@ -21,7 +21,7 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
                                     <div class="input-with-icon">
-                                        <input type="email" class="form-control" placeholder="Email">
+                                        <input type="email" class="form-control" name="email" placeholder="Email">
                                         <i class="ti-email"></i>
                                     </div>
                                 </div>
@@ -30,7 +30,7 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
                                     <div class="input-with-icon">
-                                        <input type="text" class="form-control" placeholder="Username">
+                                        <input type="text" class="form-control" name="username" placeholder="Username">
                                         <i class="ti-user"></i>
                                     </div>
                                 </div>
@@ -39,7 +39,7 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
                                     <div class="input-with-icon">
-                                        <input type="password" class="form-control" placeholder="*******">
+                                        <input type="password" class="form-control" name="password" placeholder="*******">
                                         <i class="ti-unlock"></i>
                                     </div>
                                 </div>
@@ -48,7 +48,7 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
                                     <div class="input-with-icon">
-                                        <input type="password" class="form-control" placeholder="123 546 5847">
+                                        <input type="text" class="form-control"  placeholder="123 546 5847">
                                         <i class="lni-phone-handset"></i>
                                     </div>
                                 </div>
@@ -57,10 +57,10 @@
                             <div class="col-lg-6 col-md-6">
                                 <div class="form-group">
                                     <div class="input-with-icon">
-                                        <select class="form-control">
-                                            <option>As a Customer</option>
-                                            <option>As a Agent</option>
-                                            <option>As a Agency</option>
+                                        <select class="form-control" name="user_type" >
+                                            <option value="1">As a Customer</option>
+                                            <option value="2">As a Agent</option>
+                                            <option value="3">As a Agency</option>
                                         </select>
                                         <i class="ti-briefcase"></i>
                                     </div>
@@ -70,7 +70,7 @@
                         </div>
                         
                         <div class="form-group">
-                            <button type="submit" class="btn btn-md full-width btn-theme-light-2 rounded">Sign Up</button>
+                            <button  class="btn btn-md full-width btn-theme-light-2 rounded">Sign Up</button>
                         </div>
                     
                     </form>

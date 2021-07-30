@@ -1,0 +1,23 @@
+
+
+
+ <div class="container-fluid">
+    
+    <div class="container d-flex justify-content-center align-items-center">
+        <% if(message!='' ){ %>
+            <div class="<%= msg_alert %>">
+                <%= message %>
+            </div>
+            <% } %>
+        <div>
+            <h1 class="text-primary"> Home Page </h1>
+        </div>
+        <a href="logout" class="btn btn-danger">Logout</a>
+        </div>
+    
+</div>
+
+<div class="container">
+    <h2 >Welcome<p class="text-success"> <%- result.fullname %></p></h2>
+</div>
+
