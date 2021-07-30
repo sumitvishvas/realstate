@@ -23,8 +23,35 @@ router.get("/flats-in-lucknow", async (req, res) => {
       "url",
     ],
     where: {
+      propType: "Apartment",
+    },
+    limit: 10
+  });
+  if (allFlats === null) {
+    console.log("Not found!");
+  } else {
+    
+    res.render("flats", { data: allFlats });
+  }
+});
+router.get("/houses-in-lucknow", async (req, res) => {
+  const allFlats = await FlatOrHouse.findAll({
+    attributes: [
+      "_id",
+      "bedrooms",
+      "propType",
+      "locality",
+      "socityName",
+      "bathrooms",
+      "BuiltUpArea",
+      "expectedPrice",
+      "gallery",
+      "url",
+    ],
+    where: {
       propType: "House",
     },
+    limit: 10
   });
   if (allFlats === null) {
     console.log("Not found!");
@@ -86,7 +113,8 @@ router.get('/real-estate-projects-in-lucknow',async (req,res)=>{
       "address",
       "image",
       "readyToMove"
-    ]
+    ],
+    limit: 6,
   })
     if(project[0]._options.raw === true){
       res.render("agencies",{data:project});
@@ -109,7 +137,7 @@ router.get("/project-details/:id", async (req, res) => {
     
     where: { url: req.params["id"] }
   });
-  console.log(projectDetails);
+  // console.log(projectDetails);
   res.render("agency-Details", { data: projectDetails, msg:msg });
 });
   

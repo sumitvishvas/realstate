@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		
-        <title>Resido - Residence & Real Estate HTML Template</title>
+        <title><%=data.url%></title>
 		
         <!-- Custom CSS -->
         <link href="assets/css/styles.css" rel="stylesheet">
@@ -55,9 +55,10 @@
 										<span class="prt-types sale">For Sale</span>
 										<h3><%=data.bedrooms%>BHK <%=data.propType%> in <%=data.locality%></h3>
 										
-										<span><i class="lni-map-marker"></i><%=data.socityName%>, <%=data.locality%>, Lucknow</span>
+										<span><i class="lni-map-marker"></i>&nbsp;<%=data.socityName%>, <%=data.locality%>, Lucknow</span>
 										<% let x = Math.round(data.expectedPrice / data.BuiltUpArea)  %>
 										<h3 class="prt-price-fix">₹ <%=x%><sub>/sqft</sub></h3>
+										<h3 class="prt-price-fix">Price :  <%=data.expectedPrice%> ₹</h3>
 										<h3 class="prt-price-fix"> <a href="#">abc pvt ltd</a></sub></h3>
 										<div class="list-fx-features">
 											<div class="listing-card-info-icon">
@@ -123,6 +124,8 @@
 								<div id="clOne" class="panel-collapse collapse show" aria-labelledby="clOne">
 									<div class="block-body">
 										<ul class="deatil_features">
+											<li><strong>Furnishing:</strong><%=data.furnishing%></li>
+											<li><strong>balconies:</strong><%=data.balconies%> Balcs</li>
 											<li><strong>Bedrooms:</strong><%=data.bedrooms%> Beds</li>
 											<li><strong>Bathrooms:</strong><%=data.bathrooms%> Bath</li>
 											<li><strong>Areas:</strong><%=data.BuiltUpArea%> sq ft</li>
@@ -134,9 +137,12 @@
 											<li><strong>Elevetor:</strong>Yes</li>
 												
 											<%}%>
-											<li><strong>Fireplace:</strong>Yes</li>
-											<li><strong>Free WiFi:</strong>No</li>
-											
+											<%
+											let room=(data.otherRooms).split(",");
+											for(let i in room){%>
+												<li><strong><%=room[i]%>:</strong>Yes</li>
+											<%}
+											%>
 										</ul>
 									</div>
 								</div>

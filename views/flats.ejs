@@ -43,7 +43,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-lg-12 col-md-12">
-							
+									
 						<center>   <h2 class="ipt-title">List Of flats</h2></center>	
 							
 							
@@ -461,7 +461,7 @@
 								</div>
 							</div>
 							
-							<div class="row">
+							<div class="row" id="load_data">
 
 								<!-- Single Property Start -->
 								<%  data.forEach((item,index)=>{%>
@@ -830,29 +830,10 @@
 							
 							<!-- Pagination -->
 							<div class="row">
-								<div class="col-lg-12 col-md-12 col-sm-12">
-									<ul class="pagination p-center">
-										<li class="page-item">
-										  <a class="page-link" href="#" aria-label="Previous">
-											<span class="ti-arrow-left"></span>
-											<span class="sr-only">Previous</span>
-										  </a>
-										</li>
-										<li class="page-item"><a class="page-link" href="#">1</a></li>
-										<li class="page-item"><a class="page-link" href="#">2</a></li>
-										<li class="page-item active"><a class="page-link" href="#">3</a></li>
-										<li class="page-item"><a class="page-link" href="#">...</a></li>
-										<li class="page-item"><a class="page-link" href="#">18</a></li>
-										<li class="page-item">
-										  <a class="page-link" href="#" aria-label="Next">
-											<span class="ti-arrow-right"></span>
-											<span class="sr-only">Next</span>
-										  </a>
-										</li>
-									</ul>
+								<div class="col-lg-12 col-md-12 col-sm-12 text-center" id="load_data1">
+									<a href="listings-list-with-sidebar.html" class="btn btn-theme-light-2 rounded">Please Wait...</a>
 								</div>
 							</div>
-					
 						</div>
 						
 					</div>
@@ -927,7 +908,57 @@
 			function closeFilterSearch() {
 				document.getElementById("filter_search").style.display = "none";
 			}
-		</script>
+		
+
+	$(document).ready(function(){
+	
+		var limit = 10;
+		var start = 0;
+		var action = 'inactive';
+		function load_country_data(limit, start)
+		{
+			$.ajax({
+				url:"/admin//loadMoreFlatOrHouse",
+				method:"POST",
+				data:{limit:limit, start:start , whr:'flat'},
+				cache:false,
+				success:function(data)
+				{
+					$('#load_data').append(data);
+					if(data == '')
+					{
+						$('#load_data_message').html("<button type='button' class='btn btn-info'>No Data Found</button>");
+						action = 'active';
+					}
+					else
+					{
+						$('#load_data_message').html("<button type='button' class='btn btn-warning'>Please Wait....</button>");
+						action = "inactive";
+					}
+				}
+			});
+		}
+	
+		// if(action == 'inactive')
+		// {
+		// 	action = 'active';
+		// 	load_country_data(limit, start);
+		// }
+		$(window).scroll(function(){
+			
+			if($(window).scrollTop() + $(window).height() > $("#load_data").height() && action == 'inactive')
+			{
+				
+				action = 'active';
+				start = start + limit;
+				setTimeout(function(){
+					load_country_data(limit, start);
+				}, 1000);
+			}
+		});
+		
+	});
+	</script>
 		
 
 	</body>
