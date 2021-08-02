@@ -32,7 +32,6 @@ router.post("/emailClientDetails", async (req,res)=>{
         // winston.error(error);
          console.log("err",error);
       } else {
-        
          succ= {"message":"Thank you for contacting Us – we will get back to you soon!", "status":"success"}
         // winston.info('Email sent: ' + info.response)
         req.flash("notify", succ);

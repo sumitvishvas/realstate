@@ -4,6 +4,9 @@ const { User, validateUser } = require("../models/user");
 const {ClientLead}=require("../models/clientData");
 const spaceReplacer = require("../util/usefulFunctions");
 const router = express.Router();
+const jwt =require('jsonwebtoken');
+const url = require('url');
+const nodemailer = require('nodemailer');
 var uniqid = require("uniqid");
 const bcrypt=require("bcrypt");
 const trimRequest = require("trim-request"); 
@@ -31,10 +34,10 @@ router.get("/login", async(req, res) => {
     var result=await User.findOne({where:{_id:req.session._id}});
     res.render("admin/user-profile",{result,message:req.flash('message'),msg_alert:req.flash('msg_alert')});
  }else{
-           req.flash("message","Please Login");
+          //  req.flash("msg","Please Login");
 
   
-  res.render("admin/sign-in", { msg: msg });
+  res.render("admin/sign-in", {msg:req.flash('msg')});
  }
   
 });
@@ -48,7 +51,7 @@ router.post("/login",async(req,res)=>{
         if(check){
       req.flash("msg_alert"," alert alert-success");
       req.flash("message","Login Succesfully");
-console.log('LOGIN Successfully');
+        console.log('LOGIN Successfully');
 
       sess =req.session;
       sess._id=user._id;
@@ -63,6 +66,165 @@ console.log('LOGIN Successfully');
 
   }
 
+})
+router.get('/forget-password',(req,res)=>{
+  let msg="";
+  let alert_class="";
+  if(msg=req.flash('msg') , alert_class=req.flash('alert_class')){
+    
+  }
+  
+console.log(req.flash('msg')[0]);
+console.log(msg);
+
+
+  
+ 
+  res.render('admin/forget-password',{msg,alert_class});
+  
+
+  
+})
+router.post('/forget-password',async(req,res)=>{
+  
+  const Email=req.body.email;
+  // console.log(email);
+  // const sess=req.session;
+   req.session.email=Email;
+   console.log("email"+Email);
+
+  //  if(Email=="Enter Email" || Email=="Email address:"){
+  //    res.send('0')
+  //  }else{
+    
+  //  }
+   res.send('1');
+ 
+  
+})
+
+router.get('/reset-password/:_id/:token',async(req,res,next)=>{
+  
+const {_id,token}=req.params;
+  const user = await User.findOne({ where: {_id} });
+  if(user){
+    const secret=process.env.JWT_SECRET+user.password;
+    try {
+      const payload=jwt.verify(token,secret);
+      console.log(payload);
+      req.flash('msg','Please Passward reset.');
+      res.render('admin/password-reset',{email:user.email,_id,msg:req.flash('msg')});
+    } catch (error) {
+      console.log(error.message);
+      req.flash('alert_class','alert alert-danger');
+      req.flash('msg','Link are already used or Expire');
+      res.redirect('../../forget-password');
+      
+    }
+
+  }
+
+  console.log(user);
+  
+ 
+})
+
+router.post('/reset-password/:_id/:token',async(req,res,next)=>{
+  
+  const {_id,token}=req.params;
+  const {password}=req.body;
+  console.log(password);
+  
+  var salt =bcrypt.genSaltSync(10);
+  const hash =bcrypt.hashSync(password,salt);
+    const user = await User.findOne({ where: {_id} });
+
+    if(user){
+      
+      const secret=process.env.JWT_SECRET+user.password;
+      try {
+        const payload=jwt.verify(token,secret);
+        console.log(payload);
+        User.update({password:hash}, { where: {_id}, });
+        req.flash('msg','Password updated.');
+         res.redirect('../../login');
+        
+        // res.render('admin/password-reset',{msg:req.flash('message')});
+      } catch (error) {
+        console.log(error.message);
+        res.send(error.message)
+        
+      }
+    }
+  
+    
+  
+    console.log(user);
+    
+   
+  })
+
+router.post('/forgetPassword-linkSend',async(req,res)=>{
+  
+  console.log('EMAIL'+req.body.email);
+  const email=req.body.email;
+  const user = await User.findOne({ where: {email} });
+
+  const secret=process.env.JWT_SECRET+user.password;
+  const payload={
+    email:user.email,
+    id:user._id
+  }
+const token =jwt.sign(payload,secret,{expiresIn:'10m'});
+const link =`http://localhost:3000/admin/reset-password/${user._id}/${token}`;
+console.log(link);
+  var transporter = nodemailer.createTransport({
+      
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: {
+      user: 'sumitvishvasphp@gmail.com',
+      pass: 'chooja@333'
+    }
+  });
+  let msg=`<h3>Welcome <i>${user.fullname}</i>iyour password link below</h3><br/>Reset link is <a href="${link}">Click Here</a><br/>`
+  var mailOptions = {
+    from: 'sumitvishvasphp@gmail.com',
+    to: email,
+    subject: 'Paassword  Reset',
+    html:msg
+    
+  };
+  
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      // winston.error(error);
+       console.log("err",error);
+    } else {
+       succ= {"message":"Thank you for contacting Us â€“ we will get back to you soon!", "status":"success"}
+      // winston.info('Email sent: ' + info.response)
+      req.flash("msg", 'Password Reset link send your mail. This expire 10 min.');
+      
+     
+      return res.redirect('login');
+    
+    }
+  });
+
+ 
+})
+
+router.post('/forgetPasswordEmailValidatior',async(req,res)=>{
+  const email=req.body.email;
+  const user = await User.findOne({ where: {email} });
+
+  if(user){
+    res.send('true');
+  }else{
+    res.send('false');
+  }
+  
 })
 
 router.get('/logout',(req,res)=>{
