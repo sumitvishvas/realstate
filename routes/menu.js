@@ -1,11 +1,17 @@
 const express = require("express");
 const { where } = require("sequelize");
-const { FlatOrHouse, PlotOrLand,Project,Companies } = require("../models/adminModels");
+const { FlatOrHouse, PlotOrLand,Project,Companies,Locality } = require("../models/adminModels");
 const router = express.Router();
 const logger = require("../util/logger");
 
-router.get("/", (req, res) => {
-  res.render("index");
+router.get('/favicon.ico',async (req,res)=>{
+  res.render("404");
+ });
+ 
+router.get("/", async(req, res) => {
+    const loc=await Locality.findAll();
+   
+  res.render("index",{data:loc});
 });
 
 
@@ -36,7 +42,7 @@ router.get("/flats-in-lucknow", async (req, res) => {
     res.render("flats", { data: allFlats });
   }
 });
-router.get("/houses-in-lucknow", async (req, res) => {
+router.get("/house-for-sale-in-lucknow", async (req, res) => {
   const allFlats = await FlatOrHouse.findAll({
     attributes: [
       "_id",
@@ -74,11 +80,7 @@ router.get("/plots-in-lucknow", async (req, res) => {
       "TotalPrice",
       "gallery",
       "url",
-    ],
-    // where:{
-    //     propType:"Pl"
-
-    // }
+    ]
   });
   if (allPlots === null) {
     console.log("Not found!");
@@ -118,7 +120,7 @@ router.get('/real-estate-projects-in-lucknow',async (req,res)=>{
     ],
     limit: 6,
   })
-    if(project[0]._options.raw === true){
+    if(project.length !== true){
       res.render("agencies",{data:project});
     }else{
       logger.info("data not found from project table or real-estate-projects-in-lucknow Url ");
@@ -127,7 +129,7 @@ router.get('/real-estate-projects-in-lucknow',async (req,res)=>{
   
 });
 
-router.get('/real-estate-company-in-lucknow',async (req,res)=>{
+router.get('/real-estate-companies-in-lucknow',async (req,res)=>{
   const company = await Companies.findAll({
     attributes:[
       "_id",
@@ -143,7 +145,8 @@ router.get('/real-estate-company-in-lucknow',async (req,res)=>{
       "email"
     ]
   })
-    if(company[0]._options.raw === true){
+  console.log("ram",company.length);
+    if(company.length !== 0){
       res.render("companies",{data:company});
     }else{
       logger.info("data not found from project table or real-estate-company-in-lucknow Url ");
@@ -201,7 +204,6 @@ router.get("/property-details/:id", async (req, res) => {
 
 router.get("/plot-details/:id", async (req, res) => {
   let msg = req.flash("notify");
-  console.log("heee heee",msg);
   if (msg.length > 0) {
     msg = msg[0];
   } else {
@@ -213,6 +215,90 @@ router.get("/plot-details/:id", async (req, res) => {
 
   res.render("plot-details", { data: singleOne, msg:msg });
 });
+
+router.get("/:id",async (req,res)=>{
+  const url=req.params.id;
+   let x=url.split("-in-");
+   if(x.length==2){
+  let y=x[1];
+  y=y.split("-lucknow",1);
+  
+  let type=x[0];
+  let locality=y[0].replace('-'," ");
+  if(type =="houses" ){
+     let result = await FlatOrHouse.findAll({
+      attributes: [
+        "_id",
+        "bedrooms",
+        "propType",
+        "locality",
+        "socityName",
+        "bathrooms",
+        "BuiltUpArea",
+        "expectedPrice",
+        "gallery",
+        "url",
+      ],
+      where: {
+        propType: "House",
+        locality:locality
+      }
+    });
+    console.log(result);
+    res.locals.data=result;
+  }else if(type =="flats"){
+    let result = await FlatOrHouse.findAll({
+      attributes: [
+        "_id",
+        "bedrooms",
+        "propType",
+        "locality",
+        "socityName",
+        "bathrooms",
+        "BuiltUpArea",
+        "expectedPrice",
+        "gallery",
+        "url",
+      ],
+      where: {
+        propType: "Apartment",
+        locality:locality
+      }
+    });
+    console.log(result);
+
+    res.locals.data=result;
+  }else if(type =="plots"){
+    const allPlots = await PlotOrLand.findAll({
+      attributes: [
+        "_id",
+        "propType",
+        "locality",
+        "socityName",
+        "TotalArea",
+        "TotalPrice",
+        "gallery",
+        "url",
+      ],
+      where:{
+        locality:locality
+      }
+    });
+    res.render('plots',{data:allPlots});
+    return(0);
+  }else{
+    res.redirect("/favicon.ico");
+  }
+  
+  console.log("innnnnn");
+  res.render("flats");
+   }else{
+    res.redirect("/favicon.ico");
+   }
+  
+});
+
+
 
 
 module.exports = router;

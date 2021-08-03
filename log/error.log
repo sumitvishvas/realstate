@@ -839,3 +839,3533 @@
   label: 'right now!',
   timestamp: '2021-07-29T12:33:59.838Z'
 }
+{
+  name: 'SequelizeAccessDeniedError',
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'47.9.69.15' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.69.15' (using password: YES)"
+  },
+  original: Error: Access denied for user 'baafilac_rajs01878'@'47.9.69.15' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.69.15' (using password: YES)"
+  },
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T04:49:28.152Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T04:54:57.324Z'
+}
+{
+  service: 'user-service',
+  name: 'SequelizeDatabaseError',
+  parent: Error: Unknown column 'url' in 'field list'
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at Query.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'url' in 'field list'",
+    sql: 'SELECT `_id`, `companyName`, `url`, `location`, `contactNumber`, `officeAddress`, `logos`, `contactPerson`, `aboutCompany`, `websiteLink`, `email` FROM `companies` AS `companies`;',
+    parameters: undefined
+  },
+  original: Error: Unknown column 'url' in 'field list'
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at Query.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'url' in 'field list'",
+    sql: 'SELECT `_id`, `companyName`, `url`, `location`, `contactNumber`, `officeAddress`, `logos`, `contactPerson`, `aboutCompany`, `websiteLink`, `email` FROM `companies` AS `companies`;',
+    parameters: undefined
+  },
+  sql: 'SELECT `_id`, `companyName`, `url`, `location`, `contactNumber`, `officeAddress`, `logos`, `contactPerson`, `aboutCompany`, `websiteLink`, `email` FROM `companies` AS `companies`;',
+  parameters: undefined,
+  level: 'error',
+  message: "Unknown column 'url' in 'field list' Unknown column 'url' in 'field list'",
+  stack: "SequelizeDatabaseError: Unknown column 'url' in 'field list'\n" +
+    '    at Query.formatError (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\mysql\\query.js:265:16)\n' +
+    '    at Query.run (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\mysql\\query.js:77:18)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-07-31T04:56:10.427Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T05:33:16.059Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T05:33:27.598Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T05:39:18.974Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T05:40:45.534Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T05:44:21.423Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T05:50:18.875Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T05:50:32.159Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'Expected a string but received a undefined Expected a string but received a undefined',
+  stack: 'TypeError: Expected a string but received a undefined\n' +
+    '    at assertString (D:\\node\\realEstate\\realEstateNode\\node_modules\\validator\\lib\\util\\assertString.js:17:11)\n' +
+    '    at Object.isEmpty (D:\\node\\realEstate\\realEstateNode\\node_modules\\validator\\lib\\isEmpty.js:19:29)\n' +
+    '    at validateLocality (D:\\node\\realEstate\\realEstateNode\\models\\adminModels.js:297:19)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\admin.js:661:21\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
+    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)',
+  label: 'right now!',
+  timestamp: '2021-07-31T05:51:27.351Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T05:52:10.325Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T05:52:20.903Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'alert is not defined alert is not defined',
+  stack: 'ReferenceError: alert is not defined\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\admin.js:661:3\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
+    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
+    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
+  label: 'right now!',
+  timestamp: '2021-07-31T05:52:27.184Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'alert is not defined alert is not defined',
+  stack: 'ReferenceError: alert is not defined\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\admin.js:661:3\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
+    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
+    '    at Function.process_params (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:335:12)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:275:10)',
+  label: 'right now!',
+  timestamp: '2021-07-31T05:52:51.544Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T05:53:07.106Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'Expected a string but received a undefined Expected a string but received a undefined',
+  stack: 'TypeError: Expected a string but received a undefined\n' +
+    '    at assertString (D:\\node\\realEstate\\realEstateNode\\node_modules\\validator\\lib\\util\\assertString.js:17:11)\n' +
+    '    at Object.isEmpty (D:\\node\\realEstate\\realEstateNode\\node_modules\\validator\\lib\\isEmpty.js:19:29)\n' +
+    '    at validateLocality (D:\\node\\realEstate\\realEstateNode\\models\\adminModels.js:297:19)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\admin.js:662:21\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
+    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)',
+  label: 'right now!',
+  timestamp: '2021-07-31T05:53:11.917Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T05:53:54.499Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T05:53:58.453Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T05:54:36.729Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T05:54:47.505Z'
+}
+{
+  service: 'user-service',
+  name: 'SequelizeValidationError',
+  errors: [
+    ValidationErrorItem {
+      message: 'locality.localityName cannot be null',
+      type: 'notNull Violation',
+      path: 'localityName',
+      value: null,
+      origin: 'CORE',
+      instance: locality {
+        dataValues: {
+          _id: null,
+          updatedAt: 2021-07-31T05:54:54.388Z,
+          createdAt: 2021-07-31T05:54:54.388Z
+        },
+        _previousDataValues: {},
+        _changed: Set {},
+        _options: {
+          isNewRecord: true,
+          _schema: null,
+          _schemaDelimiter: '',
+          attributes: undefined,
+          include: undefined,
+          raw: undefined,
+          silent: undefined
+        },
+        isNewRecord: true
+      },
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ],
+  level: 'error',
+  message: 'notNull Violation: locality.localityName cannot be null notNull Violation: locality.localityName cannot be null',
+  stack: 'SequelizeValidationError: notNull Violation: locality.localityName cannot be null\n' +
+    '    at InstanceValidator._validate (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\instance-validator.js:78:13)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async InstanceValidator._validateAndRunHooks (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\instance-validator.js:111:7)\n' +
+    '    at async InstanceValidator.validate (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\instance-validator.js:93:12)\n' +
+    '    at async model.save (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\model.js:3877:7)\n' +
+    '    at async Function.create (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\model.js:2207:12)\n' +
+    '    at async D:\\node\\realEstate\\realEstateNode\\routes\\admin.js:670:15',
+  label: 'right now!',
+  timestamp: '2021-07-31T05:54:54.390Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T05:59:43.389Z'
+}
+{
+  service: 'user-service',
+  name: 'SequelizeValidationError',
+  errors: [
+    ValidationErrorItem {
+      message: 'locality.localityName cannot be null',
+      type: 'notNull Violation',
+      path: 'localityName',
+      value: null,
+      origin: 'CORE',
+      instance: locality {
+        dataValues: {
+          _id: null,
+          updatedAt: 2021-07-31T05:59:53.986Z,
+          createdAt: 2021-07-31T05:59:53.986Z
+        },
+        _previousDataValues: {},
+        _changed: Set {},
+        _options: {
+          isNewRecord: true,
+          _schema: null,
+          _schemaDelimiter: '',
+          attributes: undefined,
+          include: undefined,
+          raw: undefined,
+          silent: undefined
+        },
+        isNewRecord: true
+      },
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ],
+  level: 'error',
+  message: 'notNull Violation: locality.localityName cannot be null notNull Violation: locality.localityName cannot be null',
+  stack: 'SequelizeValidationError: notNull Violation: locality.localityName cannot be null\n' +
+    '    at InstanceValidator._validate (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\instance-validator.js:78:13)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async InstanceValidator._validateAndRunHooks (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\instance-validator.js:111:7)\n' +
+    '    at async InstanceValidator.validate (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\instance-validator.js:93:12)\n' +
+    '    at async model.save (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\model.js:3877:7)\n' +
+    '    at async Function.create (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\model.js:2207:12)\n' +
+    '    at async D:\\node\\realEstate\\realEstateNode\\routes\\admin.js:671:15',
+  label: 'right now!',
+  timestamp: '2021-07-31T05:59:53.989Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:03:19.860Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:06:08.465Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:07:10.994Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:08:18.437Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:09:07.564Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:10:11.934Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:10:36.138Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:11:00.543Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:11:26.123Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:11:51.806Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:11:55.057Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:12:59.974Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:13:37.966Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:14:17.490Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:14:53.612Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:15:16.680Z'
+}
+{
+  service: 'user-service',
+  name: 'SequelizeValidationError',
+  errors: [
+    ValidationErrorItem {
+      message: 'locality.localityName cannot be null',
+      type: 'notNull Violation',
+      path: 'localityName',
+      value: null,
+      origin: 'CORE',
+      instance: locality {
+        dataValues: {
+          _id: null,
+          updatedAt: 2021-07-31T06:15:25.051Z,
+          createdAt: 2021-07-31T06:15:25.051Z
+        },
+        _previousDataValues: {},
+        _changed: Set {},
+        _options: {
+          isNewRecord: true,
+          _schema: null,
+          _schemaDelimiter: '',
+          attributes: undefined,
+          include: undefined,
+          raw: undefined,
+          silent: undefined
+        },
+        isNewRecord: true
+      },
+      validatorKey: 'is_null',
+      validatorName: null,
+      validatorArgs: []
+    }
+  ],
+  level: 'error',
+  message: 'notNull Violation: locality.localityName cannot be null notNull Violation: locality.localityName cannot be null',
+  stack: 'SequelizeValidationError: notNull Violation: locality.localityName cannot be null\n' +
+    '    at InstanceValidator._validate (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\instance-validator.js:78:13)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)\n' +
+    '    at async InstanceValidator._validateAndRunHooks (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\instance-validator.js:111:7)\n' +
+    '    at async InstanceValidator.validate (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\instance-validator.js:93:12)\n' +
+    '    at async model.save (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\model.js:3877:7)\n' +
+    '    at async Function.create (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\model.js:2207:12)\n' +
+    '    at async D:\\node\\realEstate\\realEstateNode\\routes\\admin.js:673:15',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:15:25.053Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:16:28.259Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:17:46.328Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:18:37.551Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:19:15.691Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'priceInclde is not defined priceInclde is not defined',
+  stack: 'ReferenceError: priceInclde is not defined\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\admin.js:686:21\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:19:30.364Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'priceInclde is not defined priceInclde is not defined',
+  stack: 'ReferenceError: priceInclde is not defined\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\admin.js:686:21\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:19:32.428Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'priceInclde is not defined priceInclde is not defined',
+  stack: 'ReferenceError: priceInclde is not defined\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\admin.js:686:21\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:20:05.499Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'priceInclde is not defined priceInclde is not defined',
+  stack: 'ReferenceError: priceInclde is not defined\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\admin.js:686:21\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:20:47.726Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:20:50.554Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:32:36.303Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:35:55.206Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:35:59.160Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:36:52.987Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'WHERE parameter "localityName" has invalid "undefined" value WHERE parameter "localityName" has invalid "undefined" value',
+  stack: 'Error: WHERE parameter "localityName" has invalid "undefined" value\n' +
+    '    at MySQLQueryGenerator.whereItemQuery (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-generator.js:2269:13)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-generator.js:2258:25\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at MySQLQueryGenerator.whereItemsQuery (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-generator.js:2256:35)\n' +
+    '    at MySQLQueryGenerator.getWhereConditions (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-generator.js:2674:19)\n' +
+    '    at MySQLQueryGenerator.deleteQuery (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\mysql\\query-generator.js:307:18)\n' +
+    '    at MySQLQueryInterface.bulkDelete (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:945:27)\n' +
+    '    at Function.destroy (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\model.js:2922:42)\n' +
+    '    at async D:\\node\\realEstate\\realEstateNode\\routes\\admin.js:692:18',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:37:03.086Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'WHERE parameter "localityName" has invalid "undefined" value WHERE parameter "localityName" has invalid "undefined" value',
+  stack: 'Error: WHERE parameter "localityName" has invalid "undefined" value\n' +
+    '    at MySQLQueryGenerator.whereItemQuery (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-generator.js:2269:13)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-generator.js:2258:25\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at MySQLQueryGenerator.whereItemsQuery (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-generator.js:2256:35)\n' +
+    '    at MySQLQueryGenerator.getWhereConditions (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-generator.js:2674:19)\n' +
+    '    at MySQLQueryGenerator.deleteQuery (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\mysql\\query-generator.js:307:18)\n' +
+    '    at MySQLQueryInterface.bulkDelete (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:945:27)\n' +
+    '    at Function.destroy (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\model.js:2922:42)\n' +
+    '    at async D:\\node\\realEstate\\realEstateNode\\routes\\admin.js:692:18',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:38:31.536Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:39:21.784Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'WHERE parameter "localityName" has invalid "undefined" value WHERE parameter "localityName" has invalid "undefined" value',
+  stack: 'Error: WHERE parameter "localityName" has invalid "undefined" value\n' +
+    '    at MySQLQueryGenerator.whereItemQuery (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-generator.js:2269:13)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-generator.js:2258:25\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at MySQLQueryGenerator.whereItemsQuery (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-generator.js:2256:35)\n' +
+    '    at MySQLQueryGenerator.getWhereConditions (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-generator.js:2674:19)\n' +
+    '    at MySQLQueryGenerator.deleteQuery (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\mysql\\query-generator.js:307:18)\n' +
+    '    at MySQLQueryInterface.bulkDelete (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:945:27)\n' +
+    '    at Function.destroy (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\model.js:2922:42)\n' +
+    '    at async D:\\node\\realEstate\\realEstateNode\\routes\\admin.js:692:18',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:39:56.240Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'WHERE parameter "localityName" has invalid "undefined" value WHERE parameter "localityName" has invalid "undefined" value',
+  stack: 'Error: WHERE parameter "localityName" has invalid "undefined" value\n' +
+    '    at MySQLQueryGenerator.whereItemQuery (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-generator.js:2269:13)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-generator.js:2258:25\n' +
+    '    at Array.forEach (<anonymous>)\n' +
+    '    at MySQLQueryGenerator.whereItemsQuery (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-generator.js:2256:35)\n' +
+    '    at MySQLQueryGenerator.getWhereConditions (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-generator.js:2674:19)\n' +
+    '    at MySQLQueryGenerator.deleteQuery (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\mysql\\query-generator.js:307:18)\n' +
+    '    at MySQLQueryInterface.bulkDelete (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\abstract\\query-interface.js:945:27)\n' +
+    '    at Function.destroy (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\model.js:2922:42)\n' +
+    '    at async D:\\node\\realEstate\\realEstateNode\\routes\\admin.js:692:18',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:40:20.982Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:41:49.679Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T06:42:15.943Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T07:33:25.148Z'
+}
+{
+  name: 'SequelizeAccessDeniedError',
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'103.211.19.58' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.19.58' (using password: YES)"
+  },
+  original: Error: Access denied for user 'baafilac_rajs01878'@'103.211.19.58' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.19.58' (using password: YES)"
+  },
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T10:24:56.366Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T10:26:14.858Z'
+}
+{
+  service: 'user-service',
+  name: 'SequelizeDatabaseError',
+  parent: Error: Unknown column 'url' in 'field list'
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at Query.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'url' in 'field list'",
+    sql: 'SELECT `_id`, `companyName`, `url`, `location`, `contactNumber`, `officeAddress`, `logos`, `contactPerson`, `aboutCompany`, `websiteLink`, `email` FROM `companies` AS `companies`;',
+    parameters: undefined
+  },
+  original: Error: Unknown column 'url' in 'field list'
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at Query.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'url' in 'field list'",
+    sql: 'SELECT `_id`, `companyName`, `url`, `location`, `contactNumber`, `officeAddress`, `logos`, `contactPerson`, `aboutCompany`, `websiteLink`, `email` FROM `companies` AS `companies`;',
+    parameters: undefined
+  },
+  sql: 'SELECT `_id`, `companyName`, `url`, `location`, `contactNumber`, `officeAddress`, `logos`, `contactPerson`, `aboutCompany`, `websiteLink`, `email` FROM `companies` AS `companies`;',
+  parameters: undefined,
+  level: 'error',
+  message: "Unknown column 'url' in 'field list' Unknown column 'url' in 'field list'",
+  stack: "SequelizeDatabaseError: Unknown column 'url' in 'field list'\n" +
+    '    at Query.formatError (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\mysql\\query.js:265:16)\n' +
+    '    at Query.run (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\mysql\\query.js:77:18)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-07-31T10:26:43.260Z'
+}
+{
+  name: 'SequelizeAccessDeniedError',
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'47.9.73.128' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.73.128' (using password: YES)"
+  },
+  original: Error: Access denied for user 'baafilac_rajs01878'@'47.9.73.128' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.73.128' (using password: YES)"
+  },
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T10:42:10.139Z'
+}
+{
+  name: 'SequelizeAccessDeniedError',
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'47.9.73.128' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.73.128' (using password: YES)"
+  },
+  original: Error: Access denied for user 'baafilac_rajs01878'@'47.9.73.128' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.73.128' (using password: YES)"
+  },
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T10:43:13.292Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T10:44:52.124Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T10:46:34.773Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T10:49:30.830Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T10:49:54.134Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T10:50:00.209Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T11:01:01.307Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T11:01:22.920Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T11:05:05.555Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T11:05:41.981Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T11:09:54.095Z'
+}
+{
+  service: 'user-service',
+  name: 'SequelizeAccessDeniedError',
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'103.211.53.46' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.53.46' (using password: YES)"
+  },
+  original: Error: Access denied for user 'baafilac_rajs01878'@'103.211.53.46' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.53.46' (using password: YES)"
+  },
+  level: 'error',
+  message: "Access denied for user 'baafilac_rajs01878'@'103.211.53.46' (using password: YES) Access denied for user 'baafilac_rajs01878'@'103.211.53.46' (using password: YES)",
+  stack: "SequelizeAccessDeniedError: Access denied for user 'baafilac_rajs01878'@'103.211.53.46' (using password: YES)\n" +
+    '    at ConnectionManager.connect (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\mysql\\connection-manager.js:118:17)\n' +
+    '    at runMicrotasks (<anonymous>)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-07-31T11:32:29.442Z'
+}
+{
+  service: 'user-service',
+  name: 'SequelizeAccessDeniedError',
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'103.211.53.46' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.53.46' (using password: YES)"
+  },
+  original: Error: Access denied for user 'baafilac_rajs01878'@'103.211.53.46' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.53.46' (using password: YES)"
+  },
+  level: 'error',
+  message: "Access denied for user 'baafilac_rajs01878'@'103.211.53.46' (using password: YES) Access denied for user 'baafilac_rajs01878'@'103.211.53.46' (using password: YES)",
+  stack: "SequelizeAccessDeniedError: Access denied for user 'baafilac_rajs01878'@'103.211.53.46' (using password: YES)\n" +
+    '    at ConnectionManager.connect (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\mysql\\connection-manager.js:118:17)\n' +
+    '    at runMicrotasks (<anonymous>)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-07-31T11:33:07.925Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T11:33:32.471Z'
+}
+{
+  service: 'user-service',
+  path: 'D:\\node\\realEstate\\realEstateNode\\views\\index.ejs',
+  level: 'error',
+  message: 'D:\\node\\realEstate\\realEstateNode\\views\\index.ejs:1432\n' +
+    '    1430| \t\t\t$( function() {\r\n' +
+    '    1431| \t\t\t\t\r\n' +
+    ` >> 1432| \t\t\t  var availableTags ='<%=d.split(",")%>';\r\n` +
+    '    1433| \t\t\t  alert(availableTags);\r\n' +
+    '    1434| \t\t\t  $( "#searchBar" ).autocomplete({\r\n' +
+    '    1435| \t\t\t\tsource: availableTags\r\n' +
+    '\n' +
+    'd.split is not a function D:\\node\\realEstate\\realEstateNode\\views\\index.ejs:1432\n' +
+    '    1430| \t\t\t$( function() {\r\n' +
+    '    1431| \t\t\t\t\r\n' +
+    ` >> 1432| \t\t\t  var availableTags ='<%=d.split(",")%>';\r\n` +
+    '    1433| \t\t\t  alert(availableTags);\r\n' +
+    '    1434| \t\t\t  $( "#searchBar" ).autocomplete({\r\n' +
+    '    1435| \t\t\t\tsource: availableTags\r\n' +
+    '\n' +
+    'd.split is not a function',
+  stack: 'TypeError: D:\\node\\realEstate\\realEstateNode\\views\\index.ejs:1432\n' +
+    '    1430| \t\t\t$( function() {\r\n' +
+    '    1431| \t\t\t\t\r\n' +
+    ` >> 1432| \t\t\t  var availableTags ='<%=d.split(",")%>';\r\n` +
+    '    1433| \t\t\t  alert(availableTags);\r\n' +
+    '    1434| \t\t\t  $( "#searchBar" ).autocomplete({\r\n' +
+    '    1435| \t\t\t\tsource: availableTags\r\n' +
+    '\n' +
+    'd.split is not a function\n' +
+    '    at eval (eval at compile (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:662:12), <anonymous>:32:27)\n' +
+    '    at index (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:692:17)\n' +
+    '    at tryHandleCache (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:272:36)\n' +
+    '    at View.exports.renderFile [as engine] (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:489:10)\n' +
+    '    at View.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\view.js:135:8)\n' +
+    '    at tryRender (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:640:10)\n' +
+    '    at Function.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:592:3)\n' +
+    '    at ServerResponse.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1012:7)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:10:7\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-07-31T11:33:32.657Z'
+}
+{
+  service: 'user-service',
+  path: 'D:\\node\\realEstate\\realEstateNode\\views\\index.ejs',
+  level: 'error',
+  message: 'D:\\node\\realEstate\\realEstateNode\\views\\index.ejs:1432\n' +
+    '    1430| \t\t\t$( function() {\r\n' +
+    '    1431| \t\t\t\t\r\n' +
+    ` >> 1432| \t\t\t  var availableTags ='<%=d.split(",")%>';\r\n` +
+    '    1433| \t\t\t  alert(availableTags);\r\n' +
+    '    1434| \t\t\t  $( "#searchBar" ).autocomplete({\r\n' +
+    '    1435| \t\t\t\tsource: availableTags\r\n' +
+    '\n' +
+    'd.split is not a function D:\\node\\realEstate\\realEstateNode\\views\\index.ejs:1432\n' +
+    '    1430| \t\t\t$( function() {\r\n' +
+    '    1431| \t\t\t\t\r\n' +
+    ` >> 1432| \t\t\t  var availableTags ='<%=d.split(",")%>';\r\n` +
+    '    1433| \t\t\t  alert(availableTags);\r\n' +
+    '    1434| \t\t\t  $( "#searchBar" ).autocomplete({\r\n' +
+    '    1435| \t\t\t\tsource: availableTags\r\n' +
+    '\n' +
+    'd.split is not a function',
+  stack: 'TypeError: D:\\node\\realEstate\\realEstateNode\\views\\index.ejs:1432\n' +
+    '    1430| \t\t\t$( function() {\r\n' +
+    '    1431| \t\t\t\t\r\n' +
+    ` >> 1432| \t\t\t  var availableTags ='<%=d.split(",")%>';\r\n` +
+    '    1433| \t\t\t  alert(availableTags);\r\n' +
+    '    1434| \t\t\t  $( "#searchBar" ).autocomplete({\r\n' +
+    '    1435| \t\t\t\tsource: availableTags\r\n' +
+    '\n' +
+    'd.split is not a function\n' +
+    '    at eval (eval at compile (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:662:12), <anonymous>:32:27)\n' +
+    '    at index (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:692:17)\n' +
+    '    at tryHandleCache (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:272:36)\n' +
+    '    at View.exports.renderFile [as engine] (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:489:10)\n' +
+    '    at View.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\view.js:135:8)\n' +
+    '    at tryRender (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:640:10)\n' +
+    '    at Function.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:592:3)\n' +
+    '    at ServerResponse.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1012:7)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:10:7\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-07-31T11:33:34.385Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T11:51:12.899Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T11:52:00.444Z'
+}
+{
+  service: 'user-service',
+  path: 'D:\\node\\realEstate\\realEstateNode\\views\\index.ejs',
+  level: 'error',
+  message: 'D:\\node\\realEstate\\realEstateNode\\views\\index.ejs:1422\n' +
+    '    1420| \t\t \r\n' +
+    '    1421| \t\t<script src="assets/js/custom.js"></script>\r\n' +
+    ' >> 1422| \t\t<%\r\n' +
+    '    1423| \t\tvar d=[]\r\n' +
+    '    1424| \t\tfor(let i in data){\r\n' +
+    '    1425| \t\td.push(data[i].localityName);\r\n' +
+    '\n' +
+    'data is not defined D:\\node\\realEstate\\realEstateNode\\views\\index.ejs:1422\n' +
+    '    1420| \t\t \r\n' +
+    '    1421| \t\t<script src="assets/js/custom.js"></script>\r\n' +
+    ' >> 1422| \t\t<%\r\n' +
+    '    1423| \t\tvar d=[]\r\n' +
+    '    1424| \t\tfor(let i in data){\r\n' +
+    '    1425| \t\td.push(data[i].localityName);\r\n' +
+    '\n' +
+    'data is not defined',
+  stack: 'ReferenceError: D:\\node\\realEstate\\realEstateNode\\views\\index.ejs:1422\n' +
+    '    1420| \t\t \r\n' +
+    '    1421| \t\t<script src="assets/js/custom.js"></script>\r\n' +
+    ' >> 1422| \t\t<%\r\n' +
+    '    1423| \t\tvar d=[]\r\n' +
+    '    1424| \t\tfor(let i in data){\r\n' +
+    '    1425| \t\td.push(data[i].localityName);\r\n' +
+    '\n' +
+    'data is not defined\n' +
+    '    at eval (eval at compile (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:662:12), <anonymous>:24:16)\n' +
+    '    at index (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:692:17)\n' +
+    '    at tryHandleCache (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:272:36)\n' +
+    '    at View.exports.renderFile [as engine] (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:489:10)\n' +
+    '    at View.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\view.js:135:8)\n' +
+    '    at tryRender (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:640:10)\n' +
+    '    at Function.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:592:3)\n' +
+    '    at ServerResponse.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1012:7)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:219:6\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)',
+  label: 'right now!',
+  timestamp: '2021-07-31T11:52:05.329Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T11:53:38.845Z'
+}
+{
+  service: 'user-service',
+  view: View {
+    defaultEngine: 'ejs',
+    ext: '.ejs',
+    name: 'y',
+    root: './views',
+    engine: [Function],
+    path: undefined
+  },
+  level: 'error',
+  message: 'Failed to lookup view "y" in views directory "./views" Failed to lookup view "y" in views directory "./views"',
+  stack: 'Error: Failed to lookup view "y" in views directory "./views"\n' +
+    '    at Function.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:580:17)\n' +
+    '    at ServerResponse.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1012:7)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:219:6\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
+    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22',
+  label: 'right now!',
+  timestamp: '2021-07-31T11:53:39.094Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T12:26:22.924Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T12:27:04.129Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T12:27:11.477Z'
+}
+{
+  name: 'SequelizeConnectionError',
+  parent: Error: connect ENETUNREACH 103.224.247.222:3306
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16) {
+    errno: 'ENETUNREACH',
+    code: 'ENETUNREACH',
+    syscall: 'connect',
+    address: '103.224.247.222',
+    port: 3306,
+    fatal: true
+  },
+  original: Error: connect ENETUNREACH 103.224.247.222:3306
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1144:16) {
+    errno: 'ENETUNREACH',
+    code: 'ENETUNREACH',
+    syscall: 'connect',
+    address: '103.224.247.222',
+    port: 3306,
+    fatal: true
+  },
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-07-31T12:30:23.548Z'
+}
+{
+  name: 'SequelizeAccessDeniedError',
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'47.9.91.56' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.91.56' (using password: YES)"
+  },
+  original: Error: Access denied for user 'baafilac_rajs01878'@'47.9.91.56' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.91.56' (using password: YES)"
+  },
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T05:41:11.875Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T05:42:17.172Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T05:45:19.514Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T05:45:53.464Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T05:51:15.379Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T05:51:32.377Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T05:57:19.811Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T05:57:36.997Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T06:00:40.437Z'
+}
+{
+  name: 'SequelizeAccessDeniedError',
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'47.9.67.221' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.67.221' (using password: YES)"
+  },
+  original: Error: Access denied for user 'baafilac_rajs01878'@'47.9.67.221' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.9.67.221' (using password: YES)"
+  },
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T15:09:05.926Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T15:10:41.947Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T15:13:20.981Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T15:13:30.592Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T15:13:55.781Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T15:14:02.601Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T15:14:39.481Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T15:15:05.207Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T15:15:21.936Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T15:19:18.106Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T15:20:25.225Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T15:20:44.082Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T15:20:56.411Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T15:21:06.827Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T15:29:25.417Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T15:36:51.697Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T15:39:16.247Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T15:39:45.175Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T15:51:52.258Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T15:51:54.954Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T15:52:00.166Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-01T17:33:12.884Z'
+}
+{
+  name: 'SequelizeAccessDeniedError',
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'103.211.53.47' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.53.47' (using password: YES)"
+  },
+  original: Error: Access denied for user 'baafilac_rajs01878'@'103.211.53.47' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.53.47' (using password: YES)"
+  },
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:02:56.917Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:04:16.382Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:11:27.650Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:16:15.450Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:19:38.517Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:21:00.939Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:21:15.306Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:23:16.915Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:23:29.685Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:23:41.066Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:25:32.419Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:26:06.543Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:26:13.077Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:26:41.248Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:27:17.977Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:27:47.887Z'
+}
+{
+  service: 'user-service',
+  name: 'SequelizeDatabaseError',
+  parent: Error: Unknown column 'url' in 'field list'
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at Query.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'url' in 'field list'",
+    sql: 'SELECT `_id`, `companyName`, `url`, `location`, `contactNumber`, `officeAddress`, `logos`, `contactPerson`, `aboutCompany`, `websiteLink`, `email` FROM `companies` AS `companies`;',
+    parameters: undefined
+  },
+  original: Error: Unknown column 'url' in 'field list'
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at Query.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'url' in 'field list'",
+    sql: 'SELECT `_id`, `companyName`, `url`, `location`, `contactNumber`, `officeAddress`, `logos`, `contactPerson`, `aboutCompany`, `websiteLink`, `email` FROM `companies` AS `companies`;',
+    parameters: undefined
+  },
+  sql: 'SELECT `_id`, `companyName`, `url`, `location`, `contactNumber`, `officeAddress`, `logos`, `contactPerson`, `aboutCompany`, `websiteLink`, `email` FROM `companies` AS `companies`;',
+  parameters: undefined,
+  level: 'error',
+  message: "Unknown column 'url' in 'field list' Unknown column 'url' in 'field list'",
+  stack: "SequelizeDatabaseError: Unknown column 'url' in 'field list'\n" +
+    '    at Query.formatError (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\mysql\\query.js:265:16)\n' +
+    '    at Query.run (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\mysql\\query.js:77:18)\n' +
+    '    at runMicrotasks (<anonymous>)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:28:18.029Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:36:24.595Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:36:58.385Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:38:50.280Z'
+}
+{
+  service: 'user-service',
+  name: 'SequelizeDatabaseError',
+  parent: Error: Unknown column 'url' in 'field list'
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at Query.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'url' in 'field list'",
+    sql: 'SELECT `_id`, `companyName`, `url`, `location`, `contactNumber`, `officeAddress`, `logos`, `contactPerson`, `aboutCompany`, `websiteLink`, `email` FROM `companies` AS `companies`;',
+    parameters: undefined
+  },
+  original: Error: Unknown column 'url' in 'field list'
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at Query.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'url' in 'field list'",
+    sql: 'SELECT `_id`, `companyName`, `url`, `location`, `contactNumber`, `officeAddress`, `logos`, `contactPerson`, `aboutCompany`, `websiteLink`, `email` FROM `companies` AS `companies`;',
+    parameters: undefined
+  },
+  sql: 'SELECT `_id`, `companyName`, `url`, `location`, `contactNumber`, `officeAddress`, `logos`, `contactPerson`, `aboutCompany`, `websiteLink`, `email` FROM `companies` AS `companies`;',
+  parameters: undefined,
+  level: 'error',
+  message: "Unknown column 'url' in 'field list' Unknown column 'url' in 'field list'",
+  stack: "SequelizeDatabaseError: Unknown column 'url' in 'field list'\n" +
+    '    at Query.formatError (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\mysql\\query.js:265:16)\n' +
+    '    at Query.run (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\mysql\\query.js:77:18)\n' +
+    '    at runMicrotasks (<anonymous>)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:45:19.970Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:46:27.028Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T06:50:04.968Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:00:44.256Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:02:00.137Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:07:00.190Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:07:04.308Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:07:40.340Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:08:38.889Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:09:07.548Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:09:13.084Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:09:49.568Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:11:49.684Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:12:38.402Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:13:40.950Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:14:09.773Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:14:35.252Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:15:07.659Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:19:11.662Z'
+}
+{
+  name: 'SequelizeConnectionError',
+  parent: Error: connect ETIMEDOUT
+      at Connection._handleTimeoutError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:178:17)
+      at listOnTimeout (internal/timers.js:554:17)
+      at processTimers (internal/timers.js:497:7) {
+    errorno: 'ETIMEDOUT',
+    code: 'ETIMEDOUT',
+    syscall: 'connect',
+    fatal: true
+  },
+  original: Error: connect ETIMEDOUT
+      at Connection._handleTimeoutError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:178:17)
+      at listOnTimeout (internal/timers.js:554:17)
+      at processTimers (internal/timers.js:497:7) {
+    errorno: 'ETIMEDOUT',
+    code: 'ETIMEDOUT',
+    syscall: 'connect',
+    fatal: true
+  },
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:21:57.817Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:22:10.094Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:23:17.461Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: '[0].replace is not a function [0].replace is not a function',
+  stack: 'TypeError: [0].replace is not a function\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:229:20\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
+    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
+    '    at param (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:354:14)\n' +
+    '    at param (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:365:14)',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:23:24.901Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:24:04.351Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:32:02.739Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: "Cannot read property 'split' of undefined Cannot read property 'split' of undefined",
+  stack: "TypeError: Cannot read property 'split' of undefined\n" +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:226:8\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
+    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
+    '    at param (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:354:14)\n' +
+    '    at param (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:365:14)',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:35:51.716Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:37:55.475Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: "Cannot read property 'split' of undefined Cannot read property 'split' of undefined",
+  stack: "TypeError: Cannot read property 'split' of undefined\n" +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:227:8\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at next (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:137:13)\n' +
+    '    at Route.dispatch (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\route.js:112:3)\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)\n' +
+    '    at Layer.handle [as handle_request] (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\layer.js:95:5)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:281:22\n' +
+    '    at param (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:354:14)\n' +
+    '    at param (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\router\\index.js:365:14)',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:38:09.252Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:39:14.713Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:42:23.082Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:43:24.494Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:43:44.410Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:44:40.548Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:44:57.830Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:45:44.280Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:46:58.401Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:47:06.228Z'
+}
+{
+  service: 'user-service',
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'error',
+  message: 'Cannot set headers after they are sent to the client Cannot set headers after they are sent to the client',
+  stack: 'Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n' +
+    '    at ServerResponse.setHeader (_http_outgoing.js:530:11)\n' +
+    '    at ServerResponse.header (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:771:10)\n' +
+    '    at ServerResponse.send (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:170:12)\n' +
+    '    at done (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1008:10)\n' +
+    '    at tryHandleCache (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:278:5)\n' +
+    '    at View.exports.renderFile [as engine] (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:489:10)\n' +
+    '    at View.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\view.js:135:8)\n' +
+    '    at tryRender (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:640:10)\n' +
+    '    at Function.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:592:3)\n' +
+    '    at ServerResponse.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1012:7)',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:47:18.434Z'
+}
+{
+  service: 'user-service',
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'error',
+  message: 'Cannot set headers after they are sent to the client Cannot set headers after they are sent to the client',
+  stack: 'Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n' +
+    '    at ServerResponse.setHeader (_http_outgoing.js:530:11)\n' +
+    '    at ServerResponse.header (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:771:10)\n' +
+    '    at ServerResponse.contentType (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:599:15)\n' +
+    '    at ServerResponse.send (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:145:14)\n' +
+    '    at done (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1008:10)\n' +
+    '    at tryHandleCache (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:278:5)\n' +
+    '    at View.exports.renderFile [as engine] (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:489:10)\n' +
+    '    at View.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\view.js:135:8)\n' +
+    '    at tryRender (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:640:10)\n' +
+    '    at Function.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:592:3)',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:47:45.401Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:56:29.583Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:56:47.598Z'
+}
+{
+  service: 'user-service',
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'error',
+  message: 'Cannot set headers after they are sent to the client Cannot set headers after they are sent to the client',
+  stack: 'Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n' +
+    '    at ServerResponse.setHeader (_http_outgoing.js:530:11)\n' +
+    '    at ServerResponse.header (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:771:10)\n' +
+    '    at ServerResponse.send (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:170:12)\n' +
+    '    at done (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1008:10)\n' +
+    '    at tryHandleCache (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:278:5)\n' +
+    '    at View.exports.renderFile [as engine] (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:489:10)\n' +
+    '    at View.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\view.js:135:8)\n' +
+    '    at tryRender (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:640:10)\n' +
+    '    at Function.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:592:3)\n' +
+    '    at ServerResponse.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1012:7)',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:57:54.265Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:58:27.510Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:59:17.222Z'
+}
+{
+  service: 'user-service',
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'error',
+  message: 'Cannot set headers after they are sent to the client Cannot set headers after they are sent to the client',
+  stack: 'Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n' +
+    '    at ServerResponse.setHeader (_http_outgoing.js:530:11)\n' +
+    '    at ServerResponse.header (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:771:10)\n' +
+    '    at ServerResponse.send (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:170:12)\n' +
+    '    at done (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1008:10)\n' +
+    '    at tryHandleCache (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:278:5)\n' +
+    '    at View.exports.renderFile [as engine] (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:489:10)\n' +
+    '    at View.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\view.js:135:8)\n' +
+    '    at tryRender (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:640:10)\n' +
+    '    at Function.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:592:3)\n' +
+    '    at ServerResponse.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1012:7)',
+  label: 'right now!',
+  timestamp: '2021-08-02T07:59:24.583Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T08:00:30.567Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T08:01:05.268Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T08:01:10.894Z'
+}
+{
+  service: 'user-service',
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'error',
+  message: 'Cannot set headers after they are sent to the client Cannot set headers after they are sent to the client',
+  stack: 'Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n' +
+    '    at ServerResponse.setHeader (_http_outgoing.js:530:11)\n' +
+    '    at ServerResponse.header (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:771:10)\n' +
+    '    at ServerResponse.send (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:170:12)\n' +
+    '    at done (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1008:10)\n' +
+    '    at tryHandleCache (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:278:5)\n' +
+    '    at View.exports.renderFile [as engine] (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:489:10)\n' +
+    '    at View.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\view.js:135:8)\n' +
+    '    at tryRender (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:640:10)\n' +
+    '    at Function.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:592:3)\n' +
+    '    at ServerResponse.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1012:7)',
+  label: 'right now!',
+  timestamp: '2021-08-02T08:01:22.340Z'
+}
+{
+  service: 'user-service',
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'error',
+  message: 'Cannot set headers after they are sent to the client Cannot set headers after they are sent to the client',
+  stack: 'Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n' +
+    '    at ServerResponse.setHeader (_http_outgoing.js:530:11)\n' +
+    '    at ServerResponse.header (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:771:10)\n' +
+    '    at ServerResponse.send (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:170:12)\n' +
+    '    at done (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1008:10)\n' +
+    '    at tryHandleCache (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:278:5)\n' +
+    '    at View.exports.renderFile [as engine] (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:489:10)\n' +
+    '    at View.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\view.js:135:8)\n' +
+    '    at tryRender (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:640:10)\n' +
+    '    at Function.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:592:3)\n' +
+    '    at ServerResponse.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1012:7)',
+  label: 'right now!',
+  timestamp: '2021-08-02T08:02:53.663Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T08:04:36.948Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T08:13:10.933Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T08:13:25.652Z'
+}
+{
+  service: 'user-service',
+  code: 'ERR_HTTP_HEADERS_SENT',
+  level: 'error',
+  message: 'Cannot set headers after they are sent to the client Cannot set headers after they are sent to the client',
+  stack: 'Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client\n' +
+    '    at ServerResponse.setHeader (_http_outgoing.js:530:11)\n' +
+    '    at ServerResponse.header (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:771:10)\n' +
+    '    at ServerResponse.send (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:170:12)\n' +
+    '    at done (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1008:10)\n' +
+    '    at tryHandleCache (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:278:5)\n' +
+    '    at View.exports.renderFile [as engine] (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:489:10)\n' +
+    '    at View.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\view.js:135:8)\n' +
+    '    at tryRender (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:640:10)\n' +
+    '    at Function.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:592:3)\n' +
+    '    at ServerResponse.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1012:7)',
+  label: 'right now!',
+  timestamp: '2021-08-02T08:13:57.314Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T08:14:33.819Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T08:14:42.952Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T08:28:48.189Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T08:31:17.907Z'
+}
+{
+  name: 'SequelizeAccessDeniedError',
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'47.15.11.210' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.15.11.210' (using password: YES)"
+  },
+  original: Error: Access denied for user 'baafilac_rajs01878'@'47.15.11.210' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.15.11.210' (using password: YES)"
+  },
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T09:00:56.984Z'
+}
+{
+  name: 'SequelizeAccessDeniedError',
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'47.15.13.131' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.15.13.131' (using password: YES)"
+  },
+  original: Error: Access denied for user 'baafilac_rajs01878'@'47.15.13.131' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'47.15.13.131' (using password: YES)"
+  },
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:02:37.692Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:04:37.845Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:09:10.285Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:09:33.308Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'res.render is not a function res.render is not a function',
+  stack: 'TypeError: res.render is not a function\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:249:9\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:09:47.904Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:10:25.181Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'res.render is not a function res.render is not a function',
+  stack: 'TypeError: res.render is not a function\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:249:9\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:10:43.282Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:12:08.175Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:12:23.889Z'
+}
+{
+  service: 'user-service',
+  path: 'D:\\node\\realEstate\\realEstateNode\\views\\searchList.ejs',
+  level: 'error',
+  message: 'D:\\node\\realEstate\\realEstateNode\\views\\searchList.ejs:467\n' +
+    '    465| \r\n' +
+    '    466| \t\t\t\t\t\t\t\t<!-- Single Property Start -->\r\n' +
+    ' >> 467| \t\t\t\t\t\t\t\t<%  data.forEach((item,index)=>{%>\r\n' +
+    '    468| \t\t\t\t\t\t\t\t<div class="col-lg-12 col-md-12">\r\n' +
+    '    469| \t\t\t\t\t\t\t\t\t<div class="property-listing property-1">\r\n' +
+    '    470| \t\t\t\t\t\t\t\t\t\t<div class="listing-img-wrapper">\r\n' +
+    '\n' +
+    'data.forEach is not a function D:\\node\\realEstate\\realEstateNode\\views\\searchList.ejs:467\n' +
+    '    465| \r\n' +
+    '    466| \t\t\t\t\t\t\t\t<!-- Single Property Start -->\r\n' +
+    ' >> 467| \t\t\t\t\t\t\t\t<%  data.forEach((item,index)=>{%>\r\n' +
+    '    468| \t\t\t\t\t\t\t\t<div class="col-lg-12 col-md-12">\r\n' +
+    '    469| \t\t\t\t\t\t\t\t\t<div class="property-listing property-1">\r\n' +
+    '    470| \t\t\t\t\t\t\t\t\t\t<div class="listing-img-wrapper">\r\n' +
+    '\n' +
+    'data.forEach is not a function',
+  stack: 'TypeError: D:\\node\\realEstate\\realEstateNode\\views\\searchList.ejs:467\n' +
+    '    465| \r\n' +
+    '    466| \t\t\t\t\t\t\t\t<!-- Single Property Start -->\r\n' +
+    ' >> 467| \t\t\t\t\t\t\t\t<%  data.forEach((item,index)=>{%>\r\n' +
+    '    468| \t\t\t\t\t\t\t\t<div class="col-lg-12 col-md-12">\r\n' +
+    '    469| \t\t\t\t\t\t\t\t\t<div class="property-listing property-1">\r\n' +
+    '    470| \t\t\t\t\t\t\t\t\t\t<div class="listing-img-wrapper">\r\n' +
+    '\n' +
+    'data.forEach is not a function\n' +
+    '    at eval (eval at compile (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:662:12), <anonymous>:13:14)\n' +
+    '    at searchList (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:692:17)\n' +
+    '    at tryHandleCache (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:272:36)\n' +
+    '    at View.exports.renderFile [as engine] (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:489:10)\n' +
+    '    at View.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\view.js:135:8)\n' +
+    '    at tryRender (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:640:10)\n' +
+    '    at Function.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:592:3)\n' +
+    '    at ServerResponse.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1012:7)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:253:7\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:12:35.279Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:13:08.865Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:13:53.078Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:13:57.470Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: 'res.render is not a function res.render is not a function',
+  stack: 'TypeError: res.render is not a function\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:247:9\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:14:14.244Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:20:08.697Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:20:26.732Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:20:31.608Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:21:10.072Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: "Cannot set property 'data' of undefined Cannot set property 'data' of undefined",
+  stack: "TypeError: Cannot set property 'data' of undefined\n" +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:250:20\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:21:15.843Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: "Cannot set property 'data' of undefined Cannot set property 'data' of undefined",
+  stack: "TypeError: Cannot set property 'data' of undefined\n" +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:250:20\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:23:16.142Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: "Cannot set property 'data' of undefined Cannot set property 'data' of undefined",
+  stack: "TypeError: Cannot set property 'data' of undefined\n" +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:250:20\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:24:00.555Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:25:29.002Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:25:38.382Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:28:35.513Z'
+}
+{
+  service: 'user-service',
+  view: View {
+    defaultEngine: 'ejs',
+    ext: '.ejs',
+    name: 'flat',
+    root: './views',
+    engine: [Function],
+    path: undefined
+  },
+  level: 'error',
+  message: 'Failed to lookup view "flat" in views directory "./views" Failed to lookup view "flat" in views directory "./views"',
+  stack: 'Error: Failed to lookup view "flat" in views directory "./views"\n' +
+    '    at Function.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:580:17)\n' +
+    '    at ServerResponse.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1012:7)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:258:7\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:28:36.518Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:28:54.238Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:30:36.498Z'
+}
+{
+  service: 'user-service',
+  path: 'D:\\node\\realEstate\\realEstateNode\\views\\flats.ejs',
+  level: 'error',
+  message: 'D:\\node\\realEstate\\realEstateNode\\views\\flats.ejs:467\n' +
+    '    465| \r\n' +
+    '    466| \t\t\t\t\t\t\t\t<!-- Single Property Start -->\r\n' +
+    ' >> 467| \t\t\t\t\t\t\t\t<%  data.forEach((item,index)=>{%>\r\n' +
+    '    468| \t\t\t\t\t\t\t\t<div class="col-lg-12 col-md-12">\r\n' +
+    '    469| \t\t\t\t\t\t\t\t\t<div class="property-listing property-1">\r\n' +
+    '    470| \t\t\t\t\t\t\t\t\t\t<div class="listing-img-wrapper">\r\n' +
+    '\n' +
+    'data is not defined D:\\node\\realEstate\\realEstateNode\\views\\flats.ejs:467\n' +
+    '    465| \r\n' +
+    '    466| \t\t\t\t\t\t\t\t<!-- Single Property Start -->\r\n' +
+    ' >> 467| \t\t\t\t\t\t\t\t<%  data.forEach((item,index)=>{%>\r\n' +
+    '    468| \t\t\t\t\t\t\t\t<div class="col-lg-12 col-md-12">\r\n' +
+    '    469| \t\t\t\t\t\t\t\t\t<div class="property-listing property-1">\r\n' +
+    '    470| \t\t\t\t\t\t\t\t\t\t<div class="listing-img-wrapper">\r\n' +
+    '\n' +
+    'data is not defined',
+  stack: 'ReferenceError: D:\\node\\realEstate\\realEstateNode\\views\\flats.ejs:467\n' +
+    '    465| \r\n' +
+    '    466| \t\t\t\t\t\t\t\t<!-- Single Property Start -->\r\n' +
+    ' >> 467| \t\t\t\t\t\t\t\t<%  data.forEach((item,index)=>{%>\r\n' +
+    '    468| \t\t\t\t\t\t\t\t<div class="col-lg-12 col-md-12">\r\n' +
+    '    469| \t\t\t\t\t\t\t\t\t<div class="property-listing property-1">\r\n' +
+    '    470| \t\t\t\t\t\t\t\t\t\t<div class="listing-img-wrapper">\r\n' +
+    '\n' +
+    'data is not defined\n' +
+    '    at eval (eval at compile (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:662:12), <anonymous>:13:9)\n' +
+    '    at flats (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:692:17)\n' +
+    '    at tryHandleCache (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:272:36)\n' +
+    '    at View.exports.renderFile [as engine] (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:489:10)\n' +
+    '    at View.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\view.js:135:8)\n' +
+    '    at tryRender (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:640:10)\n' +
+    '    at Function.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:592:3)\n' +
+    '    at ServerResponse.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1012:7)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:259:7\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:30:54.648Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:31:48.688Z'
+}
+{
+  service: 'user-service',
+  path: 'D:\\node\\realEstate\\realEstateNode\\views\\flats.ejs',
+  level: 'error',
+  message: 'D:\\node\\realEstate\\realEstateNode\\views\\flats.ejs:467\n' +
+    '    465| \r\n' +
+    '    466| \t\t\t\t\t\t\t\t<!-- Single Property Start -->\r\n' +
+    ' >> 467| \t\t\t\t\t\t\t\t<%  data.forEach((item,index)=>{%>\r\n' +
+    '    468| \t\t\t\t\t\t\t\t<div class="col-lg-12 col-md-12">\r\n' +
+    '    469| \t\t\t\t\t\t\t\t\t<div class="property-listing property-1">\r\n' +
+    '    470| \t\t\t\t\t\t\t\t\t\t<div class="listing-img-wrapper">\r\n' +
+    '\n' +
+    'data is not defined D:\\node\\realEstate\\realEstateNode\\views\\flats.ejs:467\n' +
+    '    465| \r\n' +
+    '    466| \t\t\t\t\t\t\t\t<!-- Single Property Start -->\r\n' +
+    ' >> 467| \t\t\t\t\t\t\t\t<%  data.forEach((item,index)=>{%>\r\n' +
+    '    468| \t\t\t\t\t\t\t\t<div class="col-lg-12 col-md-12">\r\n' +
+    '    469| \t\t\t\t\t\t\t\t\t<div class="property-listing property-1">\r\n' +
+    '    470| \t\t\t\t\t\t\t\t\t\t<div class="listing-img-wrapper">\r\n' +
+    '\n' +
+    'data is not defined',
+  stack: 'ReferenceError: D:\\node\\realEstate\\realEstateNode\\views\\flats.ejs:467\n' +
+    '    465| \r\n' +
+    '    466| \t\t\t\t\t\t\t\t<!-- Single Property Start -->\r\n' +
+    ' >> 467| \t\t\t\t\t\t\t\t<%  data.forEach((item,index)=>{%>\r\n' +
+    '    468| \t\t\t\t\t\t\t\t<div class="col-lg-12 col-md-12">\r\n' +
+    '    469| \t\t\t\t\t\t\t\t\t<div class="property-listing property-1">\r\n' +
+    '    470| \t\t\t\t\t\t\t\t\t\t<div class="listing-img-wrapper">\r\n' +
+    '\n' +
+    'data is not defined\n' +
+    '    at eval (eval at compile (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:662:12), <anonymous>:13:9)\n' +
+    '    at flats (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:692:17)\n' +
+    '    at tryHandleCache (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:272:36)\n' +
+    '    at View.exports.renderFile [as engine] (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:489:10)\n' +
+    '    at View.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\view.js:135:8)\n' +
+    '    at tryRender (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:640:10)\n' +
+    '    at Function.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:592:3)\n' +
+    '    at ServerResponse.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1012:7)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:259:7\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:31:52.867Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:32:40.099Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:51:23.038Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:51:32.932Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:52:59.025Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:53:24.392Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:54:15.150Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:54:23.529Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:54:38.575Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T16:56:12.392Z'
+}
+{
+  service: 'user-service',
+  name: 'SequelizeAccessDeniedError',
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'103.211.53.240' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.53.240' (using password: YES)"
+  },
+  original: Error: Access denied for user 'baafilac_rajs01878'@'103.211.53.240' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'103.211.53.240' (using password: YES)"
+  },
+  level: 'error',
+  message: "Access denied for user 'baafilac_rajs01878'@'103.211.53.240' (using password: YES) Access denied for user 'baafilac_rajs01878'@'103.211.53.240' (using password: YES)",
+  stack: "SequelizeAccessDeniedError: Access denied for user 'baafilac_rajs01878'@'103.211.53.240' (using password: YES)\n" +
+    '    at ConnectionManager.connect (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\mysql\\connection-manager.js:118:17)\n' +
+    '    at runMicrotasks (<anonymous>)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-08-02T17:10:02.360Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T17:11:07.022Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T17:27:11.765Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T17:29:32.810Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T17:29:46.372Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T17:30:39.411Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T17:30:42.649Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T17:30:48.751Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T17:32:11.965Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T17:32:18.533Z'
+}
+{
+  service: 'user-service',
+  path: 'D:\\node\\realEstate\\realEstateNode\\views\\plots.ejs',
+  level: 'error',
+  message: 'D:\\node\\realEstate\\realEstateNode\\views\\plots.ejs:623\n' +
+    '    621| \r\n' +
+    '    622|                                 <!-- Single Property Start -->\r\n' +
+    ' >> 623|                                 <% data.forEach((item,index)=>{%>\r\n' +
+    '    624|                                     <div class="col-lg-12 col-md-12">\r\n' +
+    '    625|                                         <div class="property-listing property-1">\r\n' +
+    '    626|                                             <div class="listing-img-wrapper">\r\n' +
+    '\n' +
+    'data.forEach is not a function D:\\node\\realEstate\\realEstateNode\\views\\plots.ejs:623\n' +
+    '    621| \r\n' +
+    '    622|                                 <!-- Single Property Start -->\r\n' +
+    ' >> 623|                                 <% data.forEach((item,index)=>{%>\r\n' +
+    '    624|                                     <div class="col-lg-12 col-md-12">\r\n' +
+    '    625|                                         <div class="property-listing property-1">\r\n' +
+    '    626|                                             <div class="listing-img-wrapper">\r\n' +
+    '\n' +
+    'data.forEach is not a function',
+  stack: 'TypeError: D:\\node\\realEstate\\realEstateNode\\views\\plots.ejs:623\n' +
+    '    621| \r\n' +
+    '    622|                                 <!-- Single Property Start -->\r\n' +
+    ' >> 623|                                 <% data.forEach((item,index)=>{%>\r\n' +
+    '    624|                                     <div class="col-lg-12 col-md-12">\r\n' +
+    '    625|                                         <div class="property-listing property-1">\r\n' +
+    '    626|                                             <div class="listing-img-wrapper">\r\n' +
+    '\n' +
+    'data.forEach is not a function\n' +
+    '    at eval (eval at compile (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:662:12), <anonymous>:13:13)\n' +
+    '    at plots (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:692:17)\n' +
+    '    at tryHandleCache (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:272:36)\n' +
+    '    at View.exports.renderFile [as engine] (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:489:10)\n' +
+    '    at View.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\view.js:135:8)\n' +
+    '    at tryRender (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:640:10)\n' +
+    '    at Function.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:592:3)\n' +
+    '    at ServerResponse.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1012:7)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:259:9\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-08-02T17:32:34.017Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-02T17:33:57.159Z'
+}
+{
+  name: 'SequelizeAccessDeniedError',
+  parent: Error: Access denied for user 'baafilac_rajs01878'@'110.235.218.206' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'110.235.218.206' (using password: YES)"
+  },
+  original: Error: Access denied for user 'baafilac_rajs01878'@'110.235.218.206' (using password: YES)
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at ClientHandshake.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_ACCESS_DENIED_ERROR',
+    errno: 1045,
+    sqlState: '28000',
+    sqlMessage: "Access denied for user 'baafilac_rajs01878'@'110.235.218.206' (using password: YES)"
+  },
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T04:43:06.736Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T04:44:57.905Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T04:50:11.076Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T04:51:45.609Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T04:56:17.275Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:02:36.780Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:07:06.719Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:11:50.927Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:12:03.837Z'
+}
+{
+  service: 'user-service',
+  name: 'SequelizeDatabaseError',
+  parent: Error: Unknown column 'url' in 'field list'
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at Query.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'url' in 'field list'",
+    sql: 'SELECT `_id`, `companyName`, `url`, `location`, `contactNumber`, `officeAddress`, `logos`, `contactPerson`, `aboutCompany`, `websiteLink`, `email` FROM `companies` AS `companies`;',
+    parameters: undefined
+  },
+  original: Error: Unknown column 'url' in 'field list'
+      at Packet.asError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packets\packet.js:712:17)
+      at Query.execute (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\commands\command.js:28:26)
+      at Connection.handlePacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:425:32)
+      at PacketParser.onPacket (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:75:12)
+      at PacketParser.executeStart (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\packet_parser.js:75:16)
+      at Socket.<anonymous> (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:82:25)
+      at Socket.emit (events.js:314:20)
+      at addChunk (_stream_readable.js:297:12)
+      at readableAddChunk (_stream_readable.js:272:9)
+      at Socket.Readable.push (_stream_readable.js:213:10) {
+    code: 'ER_BAD_FIELD_ERROR',
+    errno: 1054,
+    sqlState: '42S22',
+    sqlMessage: "Unknown column 'url' in 'field list'",
+    sql: 'SELECT `_id`, `companyName`, `url`, `location`, `contactNumber`, `officeAddress`, `logos`, `contactPerson`, `aboutCompany`, `websiteLink`, `email` FROM `companies` AS `companies`;',
+    parameters: undefined
+  },
+  sql: 'SELECT `_id`, `companyName`, `url`, `location`, `contactNumber`, `officeAddress`, `logos`, `contactPerson`, `aboutCompany`, `websiteLink`, `email` FROM `companies` AS `companies`;',
+  parameters: undefined,
+  level: 'error',
+  message: "Unknown column 'url' in 'field list' Unknown column 'url' in 'field list'",
+  stack: "SequelizeDatabaseError: Unknown column 'url' in 'field list'\n" +
+    '    at Query.formatError (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\mysql\\query.js:265:16)\n' +
+    '    at Query.run (D:\\node\\realEstate\\realEstateNode\\node_modules\\sequelize\\lib\\dialects\\mysql\\query.js:77:18)\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:16:44.935Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:22:00.362Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:25:30.740Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:27:25.168Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:27:37.655Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: "Cannot read property '_options' of undefined Cannot read property '_options' of undefined",
+  stack: "TypeError: Cannot read property '_options' of undefined\n" +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:148:19\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:27:45.933Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: "Cannot read property '_options' of undefined Cannot read property '_options' of undefined",
+  stack: "TypeError: Cannot read property '_options' of undefined\n" +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:148:19\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:27:46.494Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: "Cannot read property '_options' of undefined Cannot read property '_options' of undefined",
+  stack: "TypeError: Cannot read property '_options' of undefined\n" +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:148:19\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:30:11.493Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:30:13.682Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: "Cannot read property '_options' of undefined Cannot read property '_options' of undefined",
+  stack: "TypeError: Cannot read property '_options' of undefined\n" +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:149:19\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:30:13.794Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: "Cannot read property '_options' of undefined Cannot read property '_options' of undefined",
+  stack: "TypeError: Cannot read property '_options' of undefined\n" +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:149:19\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:30:28.524Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:30:56.755Z'
+}
+{
+  service: 'user-service',
+  level: 'error',
+  message: "Cannot read property '_options' of undefined Cannot read property '_options' of undefined",
+  stack: "TypeError: Cannot read property '_options' of undefined\n" +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\menu.js:149:19\n' +
+    '    at processTicksAndRejections (internal/process/task_queues.js:97:5)',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:30:57.409Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:31:12.641Z'
+}
+{
+  message: 'data not found from project table or real-estate-company-in-lucknow Url ',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:35:04.370Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:35:45.547Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:40:51.945Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:40:55.934Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:42:22.436Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:44:42.737Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:47:38.813Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:55:21.995Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:56:53.231Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:58:42.139Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T05:59:36.442Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T06:00:24.848Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T06:00:49.832Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T06:05:39.097Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T06:06:55.565Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T06:07:01.840Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T06:10:22.759Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T06:11:11.823Z'
+}
+{
+  service: 'user-service',
+  path: 'D:\\node\\realEstate\\realEstateNode\\views\\admin\\createFlate.ejs',
+  level: 'error',
+  message: 'D:\\node\\realEstate\\realEstateNode\\views\\admin\\createFlate.ejs:339\n' +
+    '    337|         <!--footer section end-->\r\n' +
+    '    338| \t</section>\r\n' +
+    ' >> 339| \t<%\r\n' +
+    '    340| \t\tvar d=[]\r\n' +
+    '    341| \t\tfor(let i in data){\r\n' +
+    '    342| \t\td.push(data[i].localityName);\r\n' +
+    '\n' +
+    'data is not defined D:\\node\\realEstate\\realEstateNode\\views\\admin\\createFlate.ejs:339\n' +
+    '    337|         <!--footer section end-->\r\n' +
+    '    338| \t</section>\r\n' +
+    ' >> 339| \t<%\r\n' +
+    '    340| \t\tvar d=[]\r\n' +
+    '    341| \t\tfor(let i in data){\r\n' +
+    '    342| \t\td.push(data[i].localityName);\r\n' +
+    '\n' +
+    'data is not defined',
+  stack: 'ReferenceError: D:\\node\\realEstate\\realEstateNode\\views\\admin\\createFlate.ejs:339\n' +
+    '    337|         <!--footer section end-->\r\n' +
+    '    338| \t</section>\r\n' +
+    ' >> 339| \t<%\r\n' +
+    '    340| \t\tvar d=[]\r\n' +
+    '    341| \t\tfor(let i in data){\r\n' +
+    '    342| \t\td.push(data[i].localityName);\r\n' +
+    '\n' +
+    'data is not defined\n' +
+    '    at eval (eval at compile (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:662:12), <anonymous>:18:16)\n' +
+    '    at createFlate (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:692:17)\n' +
+    '    at tryHandleCache (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:272:36)\n' +
+    '    at View.exports.renderFile [as engine] (D:\\node\\realEstate\\realEstateNode\\node_modules\\ejs\\lib\\ejs.js:489:10)\n' +
+    '    at View.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\view.js:135:8)\n' +
+    '    at tryRender (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:640:10)\n' +
+    '    at Function.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\application.js:592:3)\n' +
+    '    at ServerResponse.render (D:\\node\\realEstate\\realEstateNode\\node_modules\\express\\lib\\response.js:1012:7)\n' +
+    '    at D:\\node\\realEstate\\realEstateNode\\routes\\admin.js:117:7\n' +
+    '    at newFn (D:\\node\\realEstate\\realEstateNode\\node_modules\\express-async-errors\\index.js:16:20)',
+  label: 'right now!',
+  timestamp: '2021-08-03T06:28:47.058Z'
+}
+{
+  name: 'SequelizeConnectionError',
+  parent: Error: connect ETIMEDOUT
+      at Connection._handleTimeoutError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:178:17)
+      at listOnTimeout (internal/timers.js:554:17)
+      at processTimers (internal/timers.js:497:7) {
+    errorno: 'ETIMEDOUT',
+    code: 'ETIMEDOUT',
+    syscall: 'connect',
+    fatal: true
+  },
+  original: Error: connect ETIMEDOUT
+      at Connection._handleTimeoutError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:178:17)
+      at listOnTimeout (internal/timers.js:554:17)
+      at processTimers (internal/timers.js:497:7) {
+    errorno: 'ETIMEDOUT',
+    code: 'ETIMEDOUT',
+    syscall: 'connect',
+    fatal: true
+  },
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T06:29:49.468Z'
+}
+{
+  name: 'SequelizeConnectionError',
+  parent: Error: connect ETIMEDOUT
+      at Connection._handleTimeoutError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:178:17)
+      at listOnTimeout (internal/timers.js:554:17)
+      at processTimers (internal/timers.js:497:7) {
+    errorno: 'ETIMEDOUT',
+    code: 'ETIMEDOUT',
+    syscall: 'connect',
+    fatal: true
+  },
+  original: Error: connect ETIMEDOUT
+      at Connection._handleTimeoutError (D:\node\realEstate\realEstateNode\node_modules\mysql2\lib\connection.js:178:17)
+      at listOnTimeout (internal/timers.js:554:17)
+      at processTimers (internal/timers.js:497:7) {
+    errorno: 'ETIMEDOUT',
+    code: 'ETIMEDOUT',
+    syscall: 'connect',
+    fatal: true
+  },
+  level: 'error',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T06:30:10.917Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T06:30:50.048Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T06:31:58.575Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T06:48:52.630Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T06:49:05.928Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T06:53:24.575Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T06:53:32.952Z'
+}
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-03T06:54:27.355Z'
+}

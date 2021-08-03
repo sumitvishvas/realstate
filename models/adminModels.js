@@ -72,7 +72,7 @@
         allowNull:false
     },
     propDetails:{
-        type:Sequelize.TEXT('tiny'),
+        type:Sequelize.TEXT,
 
     },
     gallery:{
@@ -136,7 +136,7 @@
         allowNull:false
     },
     propDetails:{
-        type:Sequelize.TEXT('tiny'),
+        type:Sequelize.TEXT,
 
     },
     gallery:{
@@ -151,7 +151,7 @@
        allowNull:false 
     }
     
-});
+ });
 
  const validatePlotsOrLand = (PlotOrLand) => {
     if(!validator.isEmpty(PlotOrLand.societyName))return "Society Name required !";
@@ -174,14 +174,14 @@
     },
     url:{
         type:Sequelize.STRING(1234),
-        allowNull:true
+        allowNull:false
     },
     officeAddress:{
         type:Sequelize.STRING(1234),
         allowNull:false
     },
     aboutCompany:{
-        type:Sequelize.TEXT('tiny'),
+        type:Sequelize.TEXT,
         allowNull:true
     },
     contactPerson:{
@@ -257,7 +257,7 @@
         allowNull:false
     },
     address:{
-        type:Sequelize.TEXT('tiny'),
+        type:Sequelize.TEXT,
         allowNull:false
 
     },
@@ -280,6 +280,25 @@
     }
     
 });
+const Locality = sequelize.define('locality',{
+    _id:{
+        type: Sequelize.INTEGER,
+        autoIncrement:true,
+        allowNull:false,
+        primaryKey:true
+
+    },
+    localityName:{
+        type: Sequelize.STRING,
+        allowNull:false
+    },
+});
+const validateLocality = (Locality) => {
+    
+    if(validator.isEmpty(Locality.locality))return "Please Enter Locality !";
+    
+     return true; 
+ }
 exports.Project=Project;
 
  exports.PlotOrLand=PlotOrLand;
@@ -288,3 +307,5 @@ exports.Project=Project;
  exports.FlatOrHouse=FlatOrHouse;
  exports.validateFltasOrHouse=validateFltasOrHouse;
  exports.Companies=Companies;
+ exports.Locality=Locality;
+ exports.validateLocality=validateLocality;

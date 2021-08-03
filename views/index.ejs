@@ -8,9 +8,10 @@
 		
         <!-- Custom CSS -->
         <link href="assets/css/styles.css" rel="stylesheet">
-		
+		<link rel="shortcut icon" href="/favicon.ico">
 		<!-- Custom Color Option -->
 		<link href="assets/css/colors.css" rel="stylesheet">
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 		
     </head>
 	
@@ -49,45 +50,47 @@
 							</div>
 							<div class="full-search-2 eclip-search italian-search hero-search-radius shadow-hard mt-5">
 								<div class="hero-search-content">
-									<div class="row">
-									
-										<div class="col-lg-4 col-md-4 col-sm-12 b-r">
-											<div class="form-group">
-												<div class="choose-propert-type">
-													<ul>
-														<li>
-															<input id="cp-1" class="checkbox-custom" name="cpt" type="radio" checked>
-															<label for="cp-1" class="checkbox-custom-label">Buy</label>
-														</li>
-														<li>
-															<input id="cp-2" class="checkbox-custom" name="cpt" type="radio">
-															<label for="cp-2" class="checkbox-custom-label">Rent</label>
-														</li>
-														<li>
-															<input id="cp-3" class="checkbox-custom" name="cpt" type="radio">
-															<label for="cp-3" class="checkbox-custom-label">Sold</label>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-										
-										<div class="col-lg-6 col-md-5 col-sm-12 p-0 elio">
-											<div class="form-group">
-												<div class="input-with-icon">
-													<input type="text" class="form-control" placeholder="Search for a location">
-													<img src="assets/img/pin.svg" width="20"></i>
-												</div>
-											</div>
-										</div>
-										
-										<div class="col-lg-2 col-md-3 col-sm-12">
-											<div class="form-group">
-												<a href="#" class="btn search-btn black">Search</a>
-											</div>
-										</div>
+									<form  >
+										<div class="row">
+											<div class="col-lg-4 col-md-4 col-sm-12 b-r">
 												
-									</div>
+												<div class="form-group">
+													<div class="choose-propert-type">
+														<ul>
+															<li>
+																<input id="cp-1" class="checkbox-custom" name="PropType" type="radio" value="plots" checked>
+																<label for="cp-1" class="checkbox-custom-label">Plots</label>
+															</li>
+															<li>
+																<input id="cp-2" class="checkbox-custom" name="PropType" value="flats" type="radio">
+																<label for="cp-2" class="checkbox-custom-label">Flats</label>
+															</li>
+															<li>
+																<input id="cp-3" class="checkbox-custom" name="PropType" value="houses" type="radio">
+																<label for="cp-3" class="checkbox-custom-label">Houses</label>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="col-lg-6 col-md-5 col-sm-12 p-0 elio">
+												<div class="form-group">
+													<div class="input-with-icon">
+														<input type="text" id="searchBar" class="form-control" placeholder="Search for Location in Lucknow. eg: Gomti Nagar..." required="true">
+														<img src="assets/img/pin.svg" width="20"></i>
+													</div>
+												</div>
+											</div>
+											
+											<div class="col-lg-2 col-md-3 col-sm-12">
+												<div class="form-group">
+													<a   id="search-btn" class="btn search-btn black">Search</a>
+
+												</div>
+											</div>
+													
+										</div>
+									</form>	
 								</div>
 							</div>
 							
@@ -106,6 +109,8 @@
 							<div class="sec-heading center">
 								<h2>Explore Good places</h2>
 								<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
+								<a href="#"  id="anc-btn" ></a>
+
 							</div>
 						</div>
 					</div>
@@ -1417,8 +1422,51 @@
 		<script src="assets/js/slider-bg.js"></script>
 		<script src="assets/js/lightbox.js"></script> 
 		<script src="assets/js/imagesloaded.js"></script>
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 		 
 		<script src="assets/js/custom.js"></script>
+		<%
+		var d=[]
+		for(let i in data){
+		d.push(data[i].localityName);
+		
+		}
+		%>
+		<script>
+			const spaceReplacer=(str)=>{
+				str = str.trim().replace(/\s+/g, "-");
+				return str;
+			}
+			$(function() {
+				
+				let x = '<%=d%>'
+				var availableTags =x.split(",");
+				$( "#searchBar" ).autocomplete({
+					source: availableTags
+				});
+
+				$("#search-btn").click(()=>{
+
+					let prop=$("input[name='PropType']:checked").val().trim();
+					
+					let ser =$("#searchBar").val();
+					if(ser==""){
+						$("#searchBar").css("background-color", "pink");
+					}else{
+						ser=spaceReplacer(ser);
+						let strul=`${prop}-in-${ser}-Lucknow`.toLowerCase().trim();
+				   		document.getElementById("anc-btn").href = strul;
+					$("#anc-btn")[0].click();
+					}
+						
+			
+
+				})		
+
+			});
+
+	
+			</script>
 		<!-- ============================================================== -->
 		<!-- This page plugins -->
 		<!-- ============================================================== -->

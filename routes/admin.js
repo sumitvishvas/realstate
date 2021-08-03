@@ -9,7 +9,7 @@ const bcrypt=require("bcrypt");
 const trimRequest = require("trim-request"); 
 const fs =require("fs");
 const sequelize = require('sequelize');
-const { FlatOrHouse, validateFltasOrHouse,PlotOrLand, validatePlotsOrLand,Project,Companies } = require("../models/adminModels");
+const { FlatOrHouse, validateFltasOrHouse,PlotOrLand, validatePlotsOrLand,Project,Companies,Locality,validateLocality } = require("../models/adminModels");
 const{unLinkFiles1}=require('../util/fileUnlink');
 const multer = require("multer");
 const sharp = require("sharp");
@@ -113,8 +113,9 @@ router.post("/registerUser", async (req, res) => {
     });
 });
 
-router.get("/createFlate", (req, res) => {
-  res.render("admin/createFlate");
+router.get("/createFlate",async (req, res) => {
+  const loc=await Locality.findAll();
+  res.render("admin/createFlate",{data:loc});
 });
 
 router.get("/createPlot_Land", (req, res) => {
@@ -130,11 +131,15 @@ router.post("/createFlat", uploads, trimRequest.all, async (req, res) => {
     };
     let soci = spaceReplacer(req.body.societyName);
     let local = spaceReplacer(req.body.locality);
-    let type =
-      req.body.propType === "Apartment" ? "flat-Apartment" : req.body.propType;
+    let type =req.body.propType === "Apartment" ? "flat-Apartment" : req.body.propType;
     let uuid = uniqid.time();
     let url = `${req.body.bedrooms}bhk-${type}-for-sale-in-${soci}-${local}-lucknow-built-up-area-${req.body.BuiltUpArea}-square-feet-${uuid}`;
     url = url.toLowerCase();
+    let pd= req.body.propDetails.trim();
+    if(pd == ""){
+      pd= req.body.BuiltUpArea+' Square feet '+req.body.propType+' for sale in '+req.body.locality+', Lucknow.  This '+req.body.propType+' is available at a price of Rs '+req.body.expectedPrice+'. The average price per sqft is Rs '+Math.round(req.body.expectedPrice/req.body.BuiltUpArea)+'. The name of the project is Arsha Madhav Greens Plots. '
+      // console.log(pd);
+    }
     let src = uniqid() + "-" + req.files["gallery"][0].originalname;
     await sharp(req.files["gallery"][0].buffer)
       .resize({ width: 640, height: 360 })
@@ -189,7 +194,7 @@ router.post("/createFlat", uploads, trimRequest.all, async (req, res) => {
       ameneties: req.body.ameneties,
       expectedPrice: req.body.expectedPrice,
       priceNegotiable: req.body.priceNegotiable,
-      propDetails: req.body.propDetails,
+      propDetails: pd,
       gallery: galleryImageStr,
       videoLink: req.body.videoLink,
       uuid: uuid,
@@ -208,8 +213,7 @@ router.post("/createPlot_Land", uploads, trimRequest.all, async (req, res) => {
     };
     let soci = spaceReplacer(req.body.societyName);
     let local = spaceReplacer(req.body.locality);
-    let type =
-      req.body.propType === "Commercial" ? "Residential" : req.body.propType;
+    let type = req.body.propType === "Commercial" ? "Residential" : req.body.propType;
     let uuid = uniqid.time();
     let url = `${type}-Plots-for-sale-in-${soci}-${local}-lucknow-built-up-area-${req.body.TotalArea}-square-feet-offered-price-${req.body.TotalPrice}-rs-${uuid}`;
     url = url.toLowerCase();
@@ -651,5 +655,55 @@ router.post("/loadMoreProject", async(req, res) => {
   });
   res.send(x);
 });
+
+
+router.get("/addLocalities", (req, res) => {
+  res.render("admin/addLocality");
+});
+
+router.post("/saveLocality", async (req, res) => {
+  
+  const a = validateLocality(req.body);
+   console.log(a);
+  if (a != true) {
+    return res.status(200).send(a);
+  }
+  const locality = await Locality.findOne({
+     where: { localityName: req.body.locality } 
+    
+  });
+   console.log(locality);
+  if (locality !== null) return res.status(200).send("already exist");
+  const loc = await Locality.create({
+    localityName: req.body.locality,
+  });
+  if ((loc._options.isNewRecord = true)) {
+    res.send("New locality Added.");
+  }
+  
+});
+
+router.post("/getAllLocality", async (req, res) => {
+  const loca = await Locality.findAll();
+
+  if (loca) {
+    return res.send(loca);
+  }else{
+    return res.send("Nothing Found");
+  }
+});
+router.post("/deletingLocality", async (req, res) => {
+  const result = await Locality.destroy({
+    where: { localityName: req.body.locality }
+  });
+ 
+  if (result.n) {
+    return res.status(200).send("1");
+  } else {
+    return res.status(200).send("0");
+  }
+});
+
+
 
 module.exports = router;

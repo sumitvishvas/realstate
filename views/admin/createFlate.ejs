@@ -336,9 +336,23 @@
 			</footer>
         <!--footer section end-->
 	</section>
-	
+	<%
+		var d=[]
+		for(let i in data){
+		d.push(data[i].localityName);
+		
+		}
+		%>
 	<script>
 		$(document).ready(()=>{
+
+			let x = '<%=d%>'
+				var availableTags =x.split(",");
+				alert(availableTags);
+				$( "#locality" ).autocomplete({
+					source: availableTags
+				});
+
 
 			$("#expectedPrice").on("keyup", ()=>{
 				let x= $("#expectedPrice").val();
@@ -381,7 +395,7 @@
 					beforeSend: function(){
 						// Show image container
 						
-						document.getElementById("my-btn").disabled = true;
+						// document.getElementById("my-btn").disabled = true;
 						
 					},
 				success:function(data){
