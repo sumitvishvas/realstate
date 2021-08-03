@@ -74,8 +74,8 @@ router.get('/forget-password',(req,res)=>{
     
   }
   
-console.log(req.flash('msg')[0]);
-console.log(msg);
+// console.log(req.flash('msg')[0]);
+// console.log(msg);
 
 
   
@@ -111,20 +111,26 @@ const {_id,token}=req.params;
     const secret=process.env.JWT_SECRET+user.password;
     try {
       const payload=jwt.verify(token,secret);
-      console.log(payload);
+      // console.log(payload);
       req.flash('msg','Please Passward reset.');
       res.render('admin/password-reset',{email:user.email,_id,msg:req.flash('msg')});
     } catch (error) {
       console.log(error.message);
       req.flash('alert_class','alert alert-danger');
-      req.flash('msg','Link are already used or Expire');
+      if(error.message=="jwt expired"){
+        req.flash('msg','Link are  Expired !');
+      }
+      if(error.message=="invalid signature"){
+        req.flash('msg','Link will be already used !');
+      }
+      
       res.redirect('../../forget-password');
       
     }
 
   }
 
-  console.log(user);
+  // console.log(user);
   
  
 })
