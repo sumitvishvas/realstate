@@ -244,7 +244,7 @@ router.get("/:id",async (req,res)=>{
         locality:locality
       }
     });
-    console.log(result);
+    
     res.locals.data=result;
   }else if(type =="flats"){
     let result = await FlatOrHouse.findAll({
@@ -290,7 +290,7 @@ router.get("/:id",async (req,res)=>{
     res.redirect("/favicon.ico");
   }
   
-  console.log("innnnnn");
+  
   res.render("flats");
    }else{
     res.redirect("/favicon.ico");

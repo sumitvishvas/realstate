@@ -29,7 +29,12 @@ router.get("/dashboard", (req, res) => {
 });
 
 router.get("/login", async(req, res) => {
-  let msg = "";
+  let msg = req.flash("notify");
+  if (msg.length > 0) {
+    msg = msg[0];
+  } else {
+    msg = null;
+  }
   if(req.session.email){
     var result=await User.findOne({where:{_id:req.session._id}});
     res.render("admin/user-profile",{result,message:req.flash('message'),msg_alert:req.flash('msg_alert')});
@@ -37,7 +42,7 @@ router.get("/login", async(req, res) => {
           //  req.flash("msg","Please Login");
 
   
-  res.render("admin/sign-in", {msg:req.flash('msg')});
+  res.render("admin/sign-in", {msg:msg});
  }
   
 });
@@ -306,7 +311,7 @@ router.post("/createFlat", uploads, trimRequest.all, async (req, res) => {
     let pd= req.body.propDetails.trim();
     if(pd == ""){
       pd= req.body.BuiltUpArea+' Square feet '+req.body.propType+' for sale in '+req.body.locality+', Lucknow.  This '+req.body.propType+' is available at a price of Rs '+req.body.expectedPrice+'. The average price per sqft is Rs '+Math.round(req.body.expectedPrice/req.body.BuiltUpArea)+'. The name of the project is Arsha Madhav Greens Plots. '
-      // console.log(pd);
+      
     }
     let src = uniqid() + "-" + req.files["gallery"][0].originalname;
     await sharp(req.files["gallery"][0].buffer)
