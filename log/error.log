@@ -9336,3 +9336,10 @@
   label: 'right now!',
   timestamp: '2021-08-08T17:05:55.463Z'
 }
+{
+  message: 'i am lisening at Port 3000',
+  level: 'info',
+  service: 'user-service',
+  label: 'right now!',
+  timestamp: '2021-08-08T17:07:02.665Z'
+}
