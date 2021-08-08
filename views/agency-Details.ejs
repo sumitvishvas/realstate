@@ -15,6 +15,7 @@
     </head>
 	
     <body class="blue-skin">
+		
         <!-- ============================================================== -->
         <!-- Preloader - style you can find in spinners.css -->
         <!-- ============================================================== -->
@@ -60,11 +61,11 @@
 								<div class="agency-avatar">
 									<img src="assets/uploads/<%=JSON.parse(data.image).gallery[0].smImg%>" alt="">
 								</div>
-								<h1></h1>
+								
 								
 								<div class="agency-content">
 									<div class="agency-name">
-										<h4><a href="agency-page.html"><%=data.projectName%></a></h4>
+										<h4><a href="#"><%=data.projectName%></a></h4>
 										<span><i class="lni-map-marker"></i><%=data.address%></span>
 									</div>
 									
@@ -119,6 +120,25 @@
 								
 								<div class="block-body">
 								<p><%=data.projectDetails%></p>
+								</div>
+								
+							</div>
+							<div class="block-wrap">
+								
+								<div class="block-header ags">
+									<h4 class="block-title"><a href="<%=domain%>company-details/<%= data.curl %> ">Company Name: <%=data.companyName%></a></h4>	
+									
+								</div>
+								
+								
+
+								<div class="block-header ags">
+									<h4 class="block-title">About Company</h4>
+									
+								</div>
+								
+								<div class="block-body">
+								<p><%=data.aboutCompany%>  ggggggggggggggggggg</p>
 								</div>
 								
 							</div>
@@ -417,7 +437,40 @@
 							<div class="details-sidebar">
 						
 								<!-- Agent Detail -->
-								<%-include('includes/mail.ejs')%>
+								<div class="sides-widget">
+									<div class="sides-widget-header">
+										<div class="agent-photo"><a href="<%=domain%>company-details/<%= data.curl %> "><img src="assets/uploads/<%=JSON.parse(data.logos).logos[0].smLogo%>" alt=""></a></div>
+										<div class="sides-widget-details">
+											<h4><a href="#"><%=data.contactPerson%></a></h4>
+											<span><i class="lni-phone-handset"></i><%=data.contactNumber%></span>
+										</div>
+										<div class="clearfix"></div>
+									</div>
+									
+									<div class="sides-widget-body simple-form">
+										
+										<% if(msg){%>
+									<h5 id="msg" class="alert alert-success"><%=msg.message%></h5>
+									<%  }%>
+										<form method="POST" action="/mail/emailClientDetails">
+										<div class="form-group">
+											<label>Email</label>
+											<input type="text" name="email" class="form-control" placeholder="Your Email">
+										</div>
+										<div class="form-group">
+											<label>Phone No.</label>
+											<input type="text" name="monumber" class="form-control" placeholder="Your Phone">
+										</div>
+										<div class="form-group">
+											<label>Description</label>
+											<textarea class="form-control" name="details" >I'm interested in this property.</textarea>
+										</div>
+										
+										<input type="hidden" name="url" id="url" />
+										<button type="submit" class="btn btn-black btn-md rounded full-width">Send Message</button>
+									</form>
+									</div>
+								</div>
 								
 								<!-- Featured Property -->
 								<div class="sidebar-widgets">

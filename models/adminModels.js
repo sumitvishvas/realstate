@@ -85,7 +85,16 @@
     uuid:{
        type:Sequelize.STRING,
        allowNull:false 
+    },
+    projectId:{
+        type:Sequelize.STRING,
+        allowNull:false
+    },
+    createdBy:{
+        type:Sequelize.STRING,
+        allowNull:false
     }
+
  });
  const validateFltasOrHouse = (FlatOrHouse) => {
     if(!validator.isEmpty(FlatOrHouse.societyName))return "Society Name required !";
@@ -149,6 +158,14 @@
     uuid:{
        type:Sequelize.STRING,
        allowNull:false 
+    },
+    projectId:{
+        type:Sequelize.STRING,
+        allowNull:false
+    },
+    createdBy:{
+        type:Sequelize.STRING,
+        allowNull:false
     }
     
  });
@@ -225,6 +242,14 @@
         allowNull:false,
         primaryKey:true
 
+    },
+    locality:{
+       type:Sequelize.STRING,
+       allowNull:false 
+    },
+    companyId:{
+        type:Sequelize.INTEGER,
+        allowNull:false
     },
      projectName:{
         type: Sequelize.STRING,

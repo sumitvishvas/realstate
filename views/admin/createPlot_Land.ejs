@@ -29,9 +29,10 @@
 <!--//end-animate-->
 <!----webfonts--->
 <link href='//fonts.googleapis.com/css?family=Cabin:400,400italic,500,500italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 <!---//webfonts---> 
  <!-- Meters graphs -->
-<script src="js/jquery-1.10.2.min.js"></script>
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <!-- Placed js at the end of the document so the pages load faster -->
 <style type="text/css">
 .main-content3 {
@@ -109,6 +110,13 @@
 									<label for="disabledinput" class="col-sm-2 control-label">Locality *</label>
 									<div class="col-sm-8">
 										<input type="text" id="locality" name="locality" class="form-control1"   placeholder="please check locality after selecting socity from dropdown" required>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="disabledinput" class="col-sm-2 control-label">Project *</label>
+									<div class="col-sm-8">
+										<input type="hidden" id="projId" name="projId" />
+										<input type="text" id="projectName" name="projectName" class="form-control1"   placeholder="select project name of the property" required>
 									</div>
 								</div>
 								<div class="form-group" >
@@ -341,28 +349,68 @@
 			</footer>
         <!--footer section end-->
 	</section>
-	
+	<%
+		var d=[]
+		for(let i in data){
+		d.push(data[i].localityName);
+		 
+		}
+		var str=""
+		for(let i in proj){
+			
+			str+=proj[i]._id+","+proj[i].projectName+"!!";
+
+		}
+		console.log(str);
+		
+		%>
 	<script>
 		$(document).ready(()=>{
 			
+			let x = '<%=d%>'
+			let y='<%=str%>';
+					
+				var availableTags =x.split(",");
+			     let arr =y.split("!!");
+				 
+				let subs={};
+				let arrs=[]
+				for(let i in arr){
+					subs={}
+					let a  =arr[i].split(",");
+
+					subs["id"]=(a[0]);
+					subs["value"]=(a[1]);
+					arrs.push(subs);
+				}
+				
+				$( "#locality" ).autocomplete({
+					source: availableTags
+				});
+				
+				
+				$("#projectName").autocomplete({
+					source:arrs,
+					
+					select: function (event, ui) {	
+						event.preventDefault();
+      			 $("#projectName").val(ui.item.value); // display the selected text
+       			 $("#projId").val(ui.item.id); // save selected id to hidden input
+    			}
+				});
+
+
 
 			$("#expectedPrice").on("keyup", ()=>{
 				let x= $("#expectedPrice").val();
 			  $("#pricePera").html(price_in_words(x));
 			});
 			
-			
-
-			
 			$('#createPlotes').on('submit',(function(e) {
 			e.preventDefault();
 			
 			const formData = new FormData(this);
 			
-			
-			
-			
-		
 			if(validateForm()){
 
 
@@ -519,6 +567,7 @@
 <script src="js/scripts.js"></script>
 <!-- Bootstrap Core JavaScript -->
    <script src="js/bootstrap.min.js"></script>
+   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 </body>
 </html>

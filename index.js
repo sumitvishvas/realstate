@@ -35,6 +35,7 @@ app.use("/admin",adminRouter);
 app.use('/mail',mailRouter);
 app.use('/users',users);
 app.use(errors);
+app.locals.domain="http://localhost:3000/"
 sequelize.sync().then(result=>{
   const port = process.env.PORT || 3000;
   app.listen(port, () => {

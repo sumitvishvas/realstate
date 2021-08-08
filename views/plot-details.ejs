@@ -53,7 +53,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col">
-
+                            
                             <div class="property_block_wrap style-2 p-4">
                                 <div class="prt-detail-title-desc">
                                     <span class="prt-types sale">For Sale</span>
@@ -66,7 +66,9 @@
                                     </span>
                                     <% let x=Math.round(data.TotalPrice / data.TotalArea) %>
                                         <h3 class="prt-price-fix">₹ <%=x%><sub>/sqft</sub></h3>
-                                        <h3 class="prt-price-fix"> <a href="#">abc pvt ltd</a></sub></h3>
+                                        <h3 class="prt-price-fix"> <u><a href="<%=domain%>project-details/<%=proj.url%>">Project: <%=proj.projectName%></a></u></h3>
+										<h3 class="prt-price-fix"><u> <a href="<%=domain%>company-details/<%=proj.curl%>">Company: <%=proj.companyName%></a></u></h3>
+										
                                         <div class="list-fx-features">
                                             <!-- <div class="listing-card-info-icon">
                                                 <div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13"
@@ -76,7 +78,7 @@
                                             <div class="listing-card-info-icon">
                                                 <div class="inc-fleat-icon"><img src="https://image.flaticon.com/icons/png/512/980/980578.png" width="13"
                                                         alt=""></div>
-                                                <%=data.TotalPrice%> Price
+                                                <%=data.TotalPrice %> ₹ 
                                             </div>
                                             <div class="listing-card-info-icon">
                                                 <div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13"

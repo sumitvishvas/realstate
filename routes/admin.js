@@ -78,17 +78,8 @@ router.get('/forget-password',(req,res)=>{
   if(msg=req.flash('msg') , alert_class=req.flash('alert_class')){
     
   }
-  
-// console.log(req.flash('msg')[0]);
-// console.log(msg);
-
-
-  
- 
   res.render('admin/forget-password',{msg,alert_class});
-  
-
-  
+ 
 })
 router.post('/forget-password',async(req,res)=>{
   
@@ -278,7 +269,7 @@ router.post("/registerUser", async (req, res) => {
     createdBy: "Raj",
   })
     .then((result) => {
-      console.log("created ");
+      
      return res.redirect("/admin/login");
     })
     .catch((err) => {
@@ -288,11 +279,24 @@ router.post("/registerUser", async (req, res) => {
 
 router.get("/createFlate",async (req, res) => {
   const loc=await Locality.findAll();
-  res.render("admin/createFlate",{data:loc});
+  const proj=await Project.findAll({
+    attributes: [
+      "_id",
+      "projectName"
+     ]
+  });
+  res.render("admin/createFlate",{data:loc,proj:proj});
 });
 
-router.get("/createPlot_Land", (req, res) => {
-  res.render("admin/createPlot_Land");
+router.get("/createPlot_Land",async (req, res) => {
+  const loc=await Locality.findAll();
+  const proj=await Project.findAll({
+    attributes: [
+      "_id",
+      "projectName"
+     ]
+  });
+  res.render("admin/createPlot_Land",{data:loc,proj:proj});
 });
 
 const uploads = upload.fields([{ name: "gallery", maxCount: 6 }]);
@@ -307,10 +311,11 @@ router.post("/createFlat", uploads, trimRequest.all, async (req, res) => {
     let type =req.body.propType === "Apartment" ? "flat-Apartment" : req.body.propType;
     let uuid = uniqid.time();
     let url = `${req.body.bedrooms}bhk-${type}-for-sale-in-${soci}-${local}-lucknow-built-up-area-${req.body.BuiltUpArea}-square-feet-${uuid}`;
+    
     url = url.toLowerCase();
     let pd= req.body.propDetails.trim();
     if(pd == ""){
-      pd= req.body.BuiltUpArea+' Square feet '+req.body.propType+' for sale in '+req.body.locality+', Lucknow.  This '+req.body.propType+' is available at a price of Rs '+req.body.expectedPrice+'. The average price per sqft is Rs '+Math.round(req.body.expectedPrice/req.body.BuiltUpArea)+'. The name of the project is Arsha Madhav Greens Plots. '
+      pd= req.body.BuiltUpArea+' Square feet Area '+req.body.propType+' for sale in '+req.body.locality+', Lucknow.  This '+req.body.propType+' is available at a price of Rs '+req.body.expectedPrice+'. The average price per sqft is Rs '+Math.round(req.body.expectedPrice/req.body.BuiltUpArea)+'. The name of the project is Arsha Madhav Greens Plots. '
       
     }
     let src = uniqid() + "-" + req.files["gallery"][0].originalname;
@@ -371,6 +376,8 @@ router.post("/createFlat", uploads, trimRequest.all, async (req, res) => {
       gallery: galleryImageStr,
       videoLink: req.body.videoLink,
       uuid: uuid,
+      projectId:req.body.projId,
+      createdBy:"1"
     }).then(res.send("new property added."));
   } catch (err) {
     console.log("error from /createflat" + err);
@@ -384,6 +391,10 @@ router.post("/createPlot_Land", uploads, trimRequest.all, async (req, res) => {
       banner: {},
       gallery: [],
     };
+    let propd=req.body.propDetails.trim();
+    if(propd ==""){
+      propd=req.body.TotalArea+' Square feet  '+req.body.propType+' plot for sale in '+req.body.locality+', Lucknow.  This '+req.body.propType+' is available at a price of Rs '+req.body.TotalPrice+'. The plot price in sqft is Rs '+Math.round(req.body.TotalPrice/req.body.TotalArea)+'. The name of the project is '+req.body.projectName+' Plots.'
+    }
     let soci = spaceReplacer(req.body.societyName);
     let local = spaceReplacer(req.body.locality);
     let type = req.body.propType === "Commercial" ? "Residential" : req.body.propType;
@@ -436,10 +447,12 @@ router.post("/createPlot_Land", uploads, trimRequest.all, async (req, res) => {
 
       TotalPrice: req.body.TotalPrice,
       priceNegotiable: req.body.priceNegotiable,
-      propDetails: req.body.propDetails,
+      propDetails: propd,
       gallery: galleryImageStr,
       videoLink: req.body.videoLink,
       uuid: uuid,
+      projectId:req.body.projId,
+      createdBy:"1"
     }).then(res.send("New Plot added."));
   } catch (err) {
     logger.error("error from /createflat" + err);
@@ -643,7 +656,15 @@ router.delete("/deleteProperty/:id/:tableName", async (req, res) => {
 });
 
 router.get("/project", async (req, res) => {
-  res.render("admin/projects");
+
+  const loc=await Locality.findAll();
+  const comp=await Companies.findAll({
+    attributes: [
+      "_id",
+      "companyName"
+     ]
+  });
+  res.render("admin/projects",{data:loc,comp:comp});
 });
 
 router.get("/leadsFromWeb", async (req, res) => {
@@ -656,8 +677,6 @@ router.get("/addComp", async (req, res) => {
 });
 
 router.post("/createProject", uploads, trimRequest.all, async (req, res) => {
-  console.log("cool", req.body.projectName);
-
   try {
     let galleryImage = {
       gallery: [],
@@ -666,8 +685,14 @@ router.post("/createProject", uploads, trimRequest.all, async (req, res) => {
     let tinySrc = "";
     let bigSrc = "";
     let proName = spaceReplacer(req.body.projectName);
-    let projAddr = spaceReplacer(req.body.projAddress);
-    url = `${proName}-in-${projAddr}-lucknow-${uuid}`;
+    let loc = spaceReplacer(req.body.locality);
+    let url = `${proName}-in-${loc}-lucknow-${uuid}`.toLowerCase();
+    
+    let pd = req.body.projectDetails.trim(); 
+   
+    if(pd == ""){
+       pd = `${req.body.projectName} is a project of ${req.body.companyName} . This Project is Located At ${req.body.projAddress} . ${req.body.projectName} is stabalized by ${req.body.companyName} for selling ${req.body.propType} in very affordable price. The selling price of ${req.body.propType} starts from ${req.body.priceOnwords} Rs  `; 
+       } 
     req.files["gallery"].forEach((item) => {
       tinySrc = uniqid() + "-" + item.originalname;
       sharp(item.buffer)
@@ -704,7 +729,9 @@ router.post("/createProject", uploads, trimRequest.all, async (req, res) => {
       loneAvailability: req.body.loan,
       readyToMove: req.body.ready,
       uuid: uuid,
-      projectDetails: req.body.projectDetails,
+      projectDetails: pd,
+      locality:req.body.locality,
+      companyId:req.body.compId
     });
     if ((project._options.isNewRecord = true)) {
       res.send("New project Added.");
@@ -724,7 +751,7 @@ try {
   let logoImage = {
     logos: []
   };
-  url=`${req.body.CompanyName}-in-${req.body.officeAddress}-lucknow-${req.body.websiteLink}-${req.body.aboutCompany}`;
+ let url=`${req.body.CompanyName}-in-${req.body.officeAddress}-lucknow-${req.body.websiteLink}-${req.body.aboutCompany}`;
   // let uuid = uniqid.time();
     let tinySrc = "";
     let bigSrc = "";

@@ -1,5 +1,5 @@
 const express = require("express");
-const { where } = require("sequelize");
+const db= require("../util/db");
 const { FlatOrHouse, PlotOrLand,Project,Companies,Locality } = require("../models/adminModels");
 const router = express.Router();
 const logger = require("../util/logger");
@@ -102,9 +102,17 @@ router.get("/property-details/:id", async (req, res) => {
   const singleOne = await FlatOrHouse.findOne({
     where: { url: req.params["id"] },
   });
+   
 
-  res.render("flat-details", { data: singleOne, msg:msg });
+      const compProject =  await db.query("select *,com.url as curl from companies as com join projects as proj on com._id=proj.companyId where proj._id='"+singleOne.projectId+"' LIMIT 1 ");
+
+      console.log(compProject[0][0]);
+
+  res.render("flat-details", { data: singleOne,proj:compProject[0][0], msg:msg });
 });
+
+
+
 
 router.get('/real-estate-projects-in-lucknow',async (req,res)=>{
   const project = await Project.findAll({
@@ -163,12 +171,11 @@ router.get("/project-details/:id", async (req, res) => {
   } else {
     msg = null;
   }
-  const projectDetails = await Project.findOne({
-    
-    where: { url: req.params["id"] }
-  });
-  // console.log(projectDetails);
-  res.render("agency-Details", { data: projectDetails, msg:msg });
+  
+  const compProject =  await db.query("select *,com.url as curl from companies as com join projects as proj on com._id=proj.companyId where proj.url='"+req.params["id"]+"' LIMIT 1 ");
+
+ 
+  res.render("agency-Details", { data: compProject[0][0] , msg:msg });
 });
 router.get("/company-details/:id", async (req, res) => {
 
@@ -186,21 +193,6 @@ router.get("/company-details/:id", async (req, res) => {
   res.render("companies-Details", { data: companyDetails, msg:msg });
 });
   
-router.get("/property-details/:id", async (req, res) => {
-  let msg = req.flash("notify");
-  
-  if (msg.length > 0) {
-    msg = msg[0];
-  } else {
-    msg = null;
-  }
-
-  const singleOne = await FlatOrHouse.findOne({
-    where: { url: req.params["id"] },
-  });
-
-  res.render("single", { data: singleOne, msg:msg });
-});
 
 router.get("/plot-details/:id", async (req, res) => {
   let msg = req.flash("notify");
@@ -213,7 +205,11 @@ router.get("/plot-details/:id", async (req, res) => {
     where: { url: req.params["id"] },
   });
 
-  res.render("plot-details", { data: singleOne, msg:msg });
+  const compProject =  await db.query("select *,com.url as curl from companies as com join projects as proj on com._id=proj.companyId where proj._id='"+singleOne.projectId+"' LIMIT 1 ");
+
+ 
+
+  res.render("plot-details", { data: singleOne,proj:compProject[0][0], msg:msg });
 });
 
 router.get("/:id",async (req,res)=>{
