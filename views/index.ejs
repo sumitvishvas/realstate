@@ -15,7 +15,7 @@
 		
     </head>
 	
-    <body class="blue-skin">
+    <body class="blue-skin" id="searchDiv">
 	
 		 <!-- ============================================================== -->
         <!-- Preloader - style you can find in spinners.css -->
@@ -40,9 +40,9 @@
 			
 			
 			<!-- ============================ Hero Banner  Start================================== -->
-			<div class="image-cover hero-banner" style="background:#eff6ff url(assets/img/home-2.png) no-repeat;">
+			<div class="image-cover hero-banner" style="background:#eff6ff url(assets/img/123.png) no-repeat ">
 				<div class="container">
-					<div class="row justify-content-center">
+					<div class="row justify-content-center" >
 						<div class="col-lg-9 col-md-11 col-sm-12">
 							<div class="inner-banner-text text-center">
 								<p class="lead-i">Amet consectetur adipisicing <span class="badge badge-success">New</span></p>
@@ -54,7 +54,7 @@
 										<div class="row">
 											<div class="col-lg-4 col-md-4 col-sm-12 b-r">
 												
-												<div class="form-group">
+												<div class="form-group" >
 													<div class="choose-propert-type">
 														<ul>
 															<li>
@@ -84,7 +84,8 @@
 											
 											<div class="col-lg-2 col-md-3 col-sm-12">
 												<div class="form-group">
-													<a   id="search-btn" class="btn search-btn black">Search</a>
+													<a id="search-btn" class="btn search-btn black">Search</a>
+													<a id="anc-btn" href=""></a>
 
 												</div>
 											</div>
@@ -98,354 +99,283 @@
 					</div>
 				</div>
 			</div>
+			<div class="clearfix"></div>
 			<!-- ============================ Hero Banner End ================================== -->
 			
-			<!-- ================= Explore Property ================= -->
-			<section>
+			<!-- ================= Explore Flats Property ================= -->
+			<section class="pt-6">
 				<div class="container">
+				
+					<div class="row justify-content-center">
+						<div class="col-lg-7 col-md-10 text-center">
+							<div class="sec-heading center mb-4">
+								<h2>Recent Flats for sale </h2>
+								<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
+							</div>
+						</div>
+					</div>
 					
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+							<div class="property-slide">
+								
+								<!-- Single Property -->
+								<% allFlats.forEach((item,index)=>{%>
+									<div class="single-items">
+									<div class="property-listing shadow-none property-2 border">
+								
+										<div class="listing-img-wrapper">
+											<div class="list-img-slide">
+												<div class="click">
+													<% JSON.parse(item.gallery).gallery.forEach((i)=>{%>
+														<div><a href="<%=domain%>property-details/<%=item.url%>"><img src="<%=domain%>assets/uploads/<%=i.smImg%>" class="img-fluid mx-auto" alt="" /></a></div>
+													<%}) %>
+													
+													
+												</div>
+											</div>
+										</div>
+										
+										<div class="listing-detail-wrapper">
+											<div class="listing-short-detail-wrap">
+												<div class="listing-short-detail">
+													<span class="property-type">For Sale</span>
+													<h4 class="listing-name verified"><a href="<%=domain%>property-details/<%=item.url%>" class="prt-link-detail"><%=item.bedrooms%> bhk <%=item.propType%> in <%=item.locality%> Lucknow</a></h4>
+												</div>
+												<div class="listing-short-detail-flex">
+													<h6 class="listing-card-info-price">₹ <%=item.expectedPrice%></h6>
+												</div>
+											</div>
+										</div>
+										
+										<div class="price-features-wrapper">
+											<div class="list-fx-features">
+												<div class="listing-card-info-icon">
+													<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div><%=item.bedrooms%> Beds
+												</div>
+												<div class="listing-card-info-icon">
+													<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div><%=item.bathrooms%> Bath
+												</div>
+												<div class="listing-card-info-icon">
+													<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div><%=item.BuiltUpArea%> sqft
+												</div>
+											</div>
+										</div>
+										
+										<div class="listing-detail-footer">
+											<div class="footer-first">
+												<div class="foot-location"><img src="assets/img/pin.svg" width="18" alt="" /><%=item.socityName%>, <%=item.locality%></div>
+											</div>
+											<div class="footer-flex">
+												<a href="<%=domain%>property-details/<%=item.url%>" class="prt-view">View</a>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							<%})%>
+								<!-- Single Property -->
+								
+								<!-- Single Property -->
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+					<!-- Pagination -->
+					<div class="row pt-4">
+						<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+							<a href="<%=domain%>flats-in-lucknow" class="btn btn-theme-light-2 rounded">Browse More Flats ...</a>
+						</div>
+					</div>
+					
+					
+				</div>
+			</section>
+			<!-- ============================ All plots Property ================================== -->
+			<section class="bg-light">
+				<div class="container">
+				
 					<div class="row justify-content-center">
 						<div class="col-lg-7 col-md-10 text-center">
 							<div class="sec-heading center">
-								<h2>Explore Good places</h2>
+								<h2>Realty Add Plots For Sale</h2>
 								<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
-								<a href="#"  id="anc-btn" ></a>
-
 							</div>
 						</div>
 					</div>
-					
-					<div class="row">
+				
+					<div class="row list-layout">
 						
-						<!-- Single Property -->
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="property-listing property-2">
-								
+						
+						<!-- Single Property Start -->
+						
+							<% plots.forEach((item)=>{ %>
+								<div class="col-lg-6 col-md-12">
+	
+							<div class="property-listing property-1">
+									
 								<div class="listing-img-wrapper">
-									<div class="list-img-slide">
-										<div class="click">
-											<div><a href="single-property-1.html"><img src="assets/img/p-1.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="assets/img/p-9.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="assets/img/p-10.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-										</div>
-									</div>
+									<a href="<%=domain%>plot-details/<%=item.url%>">
+										<img src="assets/uploads/<%=JSON.parse(item.gallery).gallery[0].smImg%>" class="img-fluid mx-auto" alt="Plots in Lucknow Image" />
+									</a>
 								</div>
 								
-								<div class="listing-detail-wrapper">
-									<div class="listing-short-detail-wrap">
-										<div class="listing-short-detail">
-											<span class="property-type">For Rent</span>
-											<h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">Banyon Tree Realty</a></h4>
-										</div>
-										<div class="listing-short-detail-flex">
-											<h6 class="listing-card-info-price">$7,000</h6>
-										</div>
-									</div>
-								</div>
+								<div class="listing-content">
 								
-								<div class="price-features-wrapper">
-									<div class="list-fx-features">
-										<div class="listing-card-info-icon">
-											<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>3 Beds
-										</div>
-										<div class="listing-card-info-icon">
-											<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>1 Bath
-										</div>
-										<div class="listing-card-info-icon">
-											<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>800 sqft
+									<div class="listing-detail-wrapper-box">
+										<div class="listing-detail-wrapper">
+											<div class="listing-short-detail">
+												<h4 class="listing-name"><a href="<%=domain%>plot-details/<%=item.url%>"> <%=item.TotalArea%> sqft <%=item.propType%> plot in
+													<%=item.locality%></a></h4>
+												<span class="prt-types rent">For Sale</span>
+											</div>
+											<div class="list-price">
+												<% let x=Math.round(item.TotalPrice / item.TotalArea)
+                                                                %>
+												<h6 class="listing-card-info-price">₹ <%=x%><sub>/sqft</sub></h6>
+											</div>
 										</div>
 									</div>
-								</div>
+									
+									<div class="price-features-wrapper">
+										<div class="list-fx-features">
+											<div class="listing-card-info-icon">
+												<div class="inc-fleat-icon"><img src="https://image.flaticon.com/icons/png/512/980/980578.png" width="13"
+														alt=""></div>
+												<%=item.TotalPrice %> ₹ 
+											</div>
+											<div class="listing-card-info-icon">
+												<div class="inc-fleat-icon"><img src="assets/img/move.svg"
+														width="13" alt="" /></div>
+												<%= item.TotalArea%> sqft
+											</div>
+										</div>
+									</div>
 								
-								<div class="listing-detail-footer">
-									<div class="footer-first">
-										<div class="foot-location"><img src="assets/img/pin.svg" width="18" alt="" />210 Zirak Road, Canada</div>
+									<div class="listing-footer-wrapper">
+										<div class="listing-locate">
+											<span class="listing-location"><i class="ti-location-pin"></i><%= item.locality%>, Lucknow</span>
+										</div>
+										<div class="listing-detail-btn">
+											<a href="single-property-2.html" class="more-btn">View</a>
+										</div>
 									</div>
-									<div class="footer-flex">
-										<a href="property-detail.html" class="prt-view">View</a>
-									</div>
+									
 								</div>
 								
 							</div>
 						</div>
-						<!-- End Single Property -->
+							<%})%>
 						
-						<!-- Single Property -->
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="property-listing property-2">
-								
-								<div class="listing-img-wrapper">
-									<div class="list-img-slide">
-										<div class="click">
-											<div><a href="single-property-1.html"><img src="assets/img/p-2.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="assets/img/p-11.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="assets/img/p-12.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="listing-detail-wrapper">
-									<div class="listing-short-detail-wrap">
-										<div class="listing-short-detail">
-											<span class="property-type">For Rent</span>
-											<h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">Blue Reef Properties</a></h4>
-										</div>
-										<div class="listing-short-detail-flex">
-											<h6 class="listing-card-info-price">$8,400</h6>
-										</div>
-									</div>
-								</div>
-								
-								<div class="price-features-wrapper">
-									<div class="list-fx-features">
-										<div class="listing-card-info-icon">
-											<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>3 Beds
-										</div>
-										<div class="listing-card-info-icon">
-											<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>1 Bath
-										</div>
-										<div class="listing-card-info-icon">
-											<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>800 sqft
-										</div>
-									</div>
-								</div>
-								
-								<div class="listing-detail-footer">
-									<div class="footer-first">
-										<div class="foot-location"><img src="assets/img/pin.svg" width="18" alt="" />210 Zirak Road, Canada</div>
-									</div>
-									<div class="footer-flex">
-										<a href="property-detail.html" class="prt-view">View</a>
-									</div>
-								</div>
-								
-							</div>
-						</div>
-						<!-- End Single Property -->
-						
-						<!-- Single Property -->
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="property-listing property-2">
-								
-								<div class="listing-img-wrapper">
-									<div class="list-img-slide">
-										<div class="click">
-											<div><a href="single-property-1.html"><img src="assets/img/p-3.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="assets/img/p-13.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="assets/img/p-14.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="listing-detail-wrapper">
-									<div class="listing-short-detail-wrap">
-										<div class="listing-short-detail">
-											<span class="property-type">For Rent</span>
-											<h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">Beacon Homes LLC</a></h4>
-										</div>
-										<div class="listing-short-detail-flex">
-											<h6 class="listing-card-info-price">$9,200</h6>
-										</div>
-									</div>
-								</div>
-								
-								<div class="price-features-wrapper">
-									<div class="list-fx-features">
-										<div class="listing-card-info-icon">
-											<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>3 Beds
-										</div>
-										<div class="listing-card-info-icon">
-											<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>1 Bath
-										</div>
-										<div class="listing-card-info-icon">
-											<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>800 sqft
-										</div>
-									</div>
-								</div>
-								
-								<div class="listing-detail-footer">
-									<div class="footer-first">
-										<div class="foot-location"><img src="assets/img/pin.svg" width="18" alt="" />210 Zirak Road, Canada</div>
-									</div>
-									<div class="footer-flex">
-										<a href="property-detail.html" class="prt-view">View</a>
-									</div>
-								</div>
-								
-							</div>
-						</div>
-						<!-- End Single Property -->
-						
-						<!-- Single Property -->
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="property-listing property-2">
-								
-								<div class="listing-img-wrapper">
-									<div class="list-img-slide">
-										<div class="click">
-											<div><a href="single-property-1.html"><img src="assets/img/p-4.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="assets/img/p-15.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="assets/img/p-16.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="listing-detail-wrapper">
-									<div class="listing-short-detail-wrap">
-										<div class="listing-short-detail">
-											<span class="property-type">For Rent</span>
-											<h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">Bluebell Real Estate</a></h4>
-										</div>
-										<div class="listing-short-detail-flex">
-											<h6 class="listing-card-info-price">$6,500</h6>
-										</div>
-									</div>
-								</div>
-								
-								<div class="price-features-wrapper">
-									<div class="list-fx-features">
-										<div class="listing-card-info-icon">
-											<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>3 Beds
-										</div>
-										<div class="listing-card-info-icon">
-											<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>1 Bath
-										</div>
-										<div class="listing-card-info-icon">
-											<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>800 sqft
-										</div>
-									</div>
-								</div>
-								
-								<div class="listing-detail-footer">
-									<div class="footer-first">
-										<div class="foot-location"><img src="assets/img/pin.svg" width="18" alt="" />210 Zirak Road, Canada</div>
-									</div>
-									<div class="footer-flex">
-										<a href="property-detail.html" class="prt-view">View</a>
-									</div>
-								</div>
-								
-							</div>
-						</div>
-						<!-- End Single Property -->
-						
-						<!-- Single Property -->
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="property-listing property-2">
-								
-								<div class="listing-img-wrapper">
-									<div class="list-img-slide">
-										<div class="click">
-											<div><a href="single-property-1.html"><img src="assets/img/p-5.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="assets/img/p-16.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="assets/img/p-17.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="listing-detail-wrapper">
-									<div class="listing-short-detail-wrap">
-										<div class="listing-short-detail">
-											<span class="property-type">For Rent</span>
-											<h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">Found Property Group</a></h4>
-										</div>
-										<div class="listing-short-detail-flex">
-											<h6 class="listing-card-info-price">$2,850</h6>
-										</div>
-									</div>
-								</div>
-								
-								<div class="price-features-wrapper">
-									<div class="list-fx-features">
-										<div class="listing-card-info-icon">
-											<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>3 Beds
-										</div>
-										<div class="listing-card-info-icon">
-											<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>1 Bath
-										</div>
-										<div class="listing-card-info-icon">
-											<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>800 sqft
-										</div>
-									</div>
-								</div>
-								
-								<div class="listing-detail-footer">
-									<div class="footer-first">
-										<div class="foot-location"><img src="assets/img/pin.svg" width="18" alt="" />210 Zirak Road, Canada</div>
-									</div>
-									<div class="footer-flex">
-										<a href="property-detail.html" class="prt-view">View</a>
-									</div>
-								</div>
-								
-							</div>
-						</div>
-						<!-- End Single Property -->
-						
-						<!-- Single Property -->
-						<div class="col-lg-4 col-md-6 col-sm-12">
-							<div class="property-listing property-2">
-								
-								<div class="listing-img-wrapper">
-									<div class="list-img-slide">
-										<div class="click">
-											<div><a href="single-property-1.html"><img src="assets/img/p-6.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="assets/img/p-12.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-											<div><a href="single-property-1.html"><img src="assets/img/p-25.jpg" class="img-fluid mx-auto" alt="" /></a></div>
-										</div>
-									</div>
-								</div>
-								
-								<div class="listing-detail-wrapper">
-									<div class="listing-short-detail-wrap">
-										<div class="listing-short-detail">
-											<span class="property-type">For Rent</span>
-											<h4 class="listing-name verified"><a href="single-property-1.html" class="prt-link-detail">Strive Partners Realty</a></h4>
-										</div>
-										<div class="listing-short-detail-flex">
-											<h6 class="listing-card-info-price">$8,100</h6>
-										</div>
-									</div>
-								</div>
-								
-								<div class="price-features-wrapper">
-									<div class="list-fx-features">
-										<div class="listing-card-info-icon">
-											<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>3 Beds
-										</div>
-										<div class="listing-card-info-icon">
-											<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>1 Bath
-										</div>
-										<div class="listing-card-info-icon">
-											<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>800 sqft
-										</div>
-									</div>
-								</div>
-								
-								<div class="listing-detail-footer">
-									<div class="footer-first">
-										<div class="foot-location"><img src="assets/img/pin.svg" width="18" alt="" />210 Zirak Road, Canada</div>
-									</div>
-									<div class="footer-flex">
-										<a href="property-detail.html" class="prt-view">View</a>
-									</div>
-								</div>
-								
-							</div>
-						</div>
-						<!-- End Single Property -->
 						
 					</div>
-					
+							
+					<!-- Pagination -->
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-sm-12 text-center">
-							<a href="listings-list-with-sidebar.html" class="btn btn-theme-light-2 rounded">Browse More Properties</a>
+							<a href="<%=domain%>plots-in-lucknow" class="btn btn-theme-light-2 rounded">Browse More Plots ...</a>
 						</div>
 					</div>
 					
-				</div>	
+				</div>		
 			</section>
-			<!-- ================================= Explore Property =============================== -->
+			<!-- ============================ All Featured Property ================================== -->
+			
+			<!-- ================================= Explore plots Property =============================== -->
+			<section class="pt-4 ">
+				<div class="container">
+				
+					<div class="row justify-content-center">
+						<div class="col-lg-7 col-md-10 text-center">
+							<div class="sec-heading center mb-4">
+								<h2>Recently Added Houses for sale </h2>
+								<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="col-lg-12 col-md-12">
+							<div class="property-slide">
+								
+								<!-- Single Property -->
+								<% houses.forEach((item,index)=>{%>
+									<div class="single-items">
+									<div class="property-listing shadow-none property-2 border">
+								
+										<div class="listing-img-wrapper">
+											<div class="list-img-slide">
+												<div class="click">
+													<% JSON.parse(item.gallery).gallery.forEach((i)=>{%>
+														<div><a href="<%=domain%>property-details/<%=item.url%>"><img src="<%=domain%>assets/uploads/<%=i.smImg%>" class="img-fluid mx-auto" alt="" /></a></div>
+													<%}) %>
+													
+													
+												</div>
+											</div>
+										</div>
+										
+										<div class="listing-detail-wrapper">
+											<div class="listing-short-detail-wrap">
+												<div class="listing-short-detail">
+													<span class="property-type">For Sale</span>
+													<h4 class="listing-name verified"><a href="<%=domain%>property-details/<%=item.url%>" class="prt-link-detail"><%=item.bedrooms%> bhk <%=item.propType%> in <%=item.locality%> Lucknow</a></h4>
+												</div>
+												<div class="listing-short-detail-flex">
+													<h6 class="listing-card-info-price">₹ <%=item.expectedPrice%></h6>
+												</div>
+											</div>
+										</div>
+										
+										<div class="price-features-wrapper">
+											<div class="list-fx-features">
+												<div class="listing-card-info-icon">
+													<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div><%=item.bedrooms%> Beds
+												</div>
+												<div class="listing-card-info-icon">
+													<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div><%=item.bathrooms%> Bath
+												</div>
+												<div class="listing-card-info-icon">
+													<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div><%=item.BuiltUpArea%> sqft
+												</div>
+											</div>
+										</div>
+										
+										<div class="listing-detail-footer">
+											<div class="footer-first">
+												<div class="foot-location"><img src="assets/img/pin.svg" width="18" alt="" /><%=item.socityName%>, <%=item.locality%></div>
+											</div>
+											<div class="footer-flex">
+												<a href="<%=domain%>property-details/<%=item.url%>" class="prt-view">View</a>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+							<%})%>
+								<!-- Single Property -->
+								
+								<!-- Single Property -->
+								
+								
+								
+								
+							</div>
+						</div>
+					</div>
+
+					<!-- Pagination -->
+					<div class="row pt-4">
+						<div class="col-lg-12 col-md-12 col-sm-12 text-center">
+							<a href="<%=domain%>house-for-sale-in-lucknow" class="btn btn-theme-light-2 rounded">Browse More Houses ...</a>
+						</div>
+					</div>
+					
+				</div>
+			</section>
 			
 			<!-- ============================ Property Location Start ================================== -->
 			<section class="bg-light">
@@ -461,114 +391,70 @@
 					</div>
 					
 					<div class="row">
-					
-						<div class="col-lg-4 col-md-4">
-							<div class="location-property-wrap">
-								<div class="location-property-thumb">
-									<a href="listings-list-with-sidebar.html"><img src="assets/img/c-1.png" class="img-fluid" alt="" /></a>
-								</div>
-								<div class="location-property-content">
-									<div class="lp-content-flex">
-										<h4 class="lp-content-title">San Francisco, California</h4>
-										<span>12 Properties</span>
-									</div>
-									<div class="lp-content-right">
-										<a href="listings-list-with-sidebar.html" class="lp-property-view"><i class="ti-angle-right"></i></a>
+
+						<% data.slice(-6).forEach((item)=>{ %>
+
+							<div class="col-lg-4 col-md-4">
+								<div class="location-property-wrap">
+									<div class="location-property-content">
+										<div class="lp-content-flex">
+											<h4 class="lp-content-title">Flats in <%=item.localityName %></h4>
+											<span>Lucknow</span>
+										</div>
+										<div class="lp-content-right">
+											<%
+											let lox= item.localityName.trim().replace(/\s+/g, '-');
+											let link=`flats-in-${lox}-lucknow`.toLowerCase().trim() 
+											%>
+											<a href="<%=domain%><%=link%>" class="lp-property-view"><i class="ti-angle-right"></i></a>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
+							<div class="col-lg-4 col-md-4">
+								<div class="location-property-wrap">
+									<div class="location-property-content">
+										<div class="lp-content-flex">
+											<h4 class="lp-content-title">Plots in <%=item.localityName %></h4>
+											<span>Lucknow</span>
+										</div>
+										<div class="lp-content-right">
+											<%
+											 lox= item.localityName.trim().replace(/\s+/g, '-');
+											 link=`plots-in-${lox}-lucknow`.toLowerCase().trim() 
+											%>
+											<a href="<%=domain%><%=link%>" class="lp-property-view"><i class="ti-angle-right"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-4">
+								<div class="location-property-wrap">
+									<div class="location-property-content">
+										<div class="lp-content-flex">
+											<h4 class="lp-content-title">Houses in <%=item.localityName %></h4>
+											<span>Lucknow</span>
+										</div>
+										<div class="lp-content-right">
+											<%
+											 lox= item.localityName.trim().replace(/\s+/g, '-');
+											 link=`houses-in-${lox}-lucknow`.toLowerCase().trim() 
+											%>
+											<a href="<%=domain%><%=link%>" class="lp-property-view"><i class="ti-angle-right"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						<%})%>
 						
-						<div class="col-lg-4 col-md-4">
-							<div class="location-property-wrap">
-								<div class="location-property-thumb">
-									<a href="listings-list-with-sidebar.html"><img src="assets/img/c-2.png" class="img-fluid" alt="" /></a>
-								</div>
-								<div class="location-property-content">
-									<div class="lp-content-flex">
-										<h4 class="lp-content-title">Dunao, California</h4>
-										<span>142 Properties</span>
-									</div>
-									<div class="lp-content-right">
-										<a href="listings-list-with-sidebar.html" class="lp-property-view"><i class="ti-angle-right"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
 						
-						<div class="col-lg-4 col-md-4">
-							<div class="location-property-wrap">
-								<div class="location-property-thumb">
-									<a href="listings-list-with-sidebar.html"><img src="assets/img/c-3.png" class="img-fluid" alt="" /></a>
-								</div>
-								<div class="location-property-content">
-									<div class="lp-content-flex">
-										<h4 class="lp-content-title">Liverpool, London</h4>
-										<span>17 Properties</span>
-									</div>
-									<div class="lp-content-right">
-										<a href="listings-list-with-sidebar.html" class="lp-property-view"><i class="ti-angle-right"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<div class="col-lg-4 col-md-4">
-							<div class="location-property-wrap">
-								<div class="location-property-thumb">
-									<a href="listings-list-with-sidebar.html"><img src="assets/img/c-4.png" class="img-fluid" alt="" /></a>
-								</div>
-								<div class="location-property-content">
-									<div class="lp-content-flex">
-										<h4 class="lp-content-title">San Francisco, New York</h4>
-										<span>72 Properties</span>
-									</div>
-									<div class="lp-content-right">
-										<a href="listings-list-with-sidebar.html" class="lp-property-view"><i class="ti-angle-right"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<div class="col-lg-4 col-md-4">
-							<div class="location-property-wrap">
-								<div class="location-property-thumb">
-									<a href="listings-list-with-sidebar.html"><img src="assets/img/c-5.png" class="img-fluid" alt="" /></a>
-								</div>
-								<div class="location-property-content">
-									<div class="lp-content-flex">
-										<h4 class="lp-content-title">New Orleans, Louisiana</h4>
-										<span>102 Properties</span>
-									</div>
-									<div class="lp-content-right">
-										<a href="listings-list-with-sidebar.html" class="lp-property-view"><i class="ti-angle-right"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<div class="col-lg-4 col-md-4">
-							<div class="location-property-wrap">
-								<div class="location-property-thumb">
-									<a href="listings-list-with-sidebar.html"><img src="assets/img/c-6.png" class="img-fluid" alt="" /></a>
-								</div>
-								<div class="location-property-content">
-									<div class="lp-content-flex">
-										<h4 class="lp-content-title">Los Angeles</h4>
-										<span>95 Properties</span>
-									</div>
-									<div class="lp-content-right">
-										<a href="listings-list-with-sidebar.html" class="lp-property-view"><i class="ti-angle-right"></i></a>
-									</div>
-								</div>
-							</div>
-						</div>
 						
 					</div>
 					
 					<div class="row">
 						<div class="col-lg-12 col-md-12 col-sm-12 text-center">
-							<a href="listings-list-with-sidebar.html" class="btn btn-theme-light rounded">Browse More Locations</a>
+							<a href="#searchDiv" class="btn btn-theme-light rounded">Search For More Locations</a>
 						</div>
 					</div>
 					
@@ -576,521 +462,6 @@
 			</section>
 			<!-- ============================ Property Location End ================================== -->
 			
-			<!-- ============================ All Property ================================== -->
-			<section>
-				<div class="container">
-				
-					<div class="row justify-content-center">
-						<div class="col-lg-7 col-md-10 text-center">
-							<div class="sec-heading center">
-								<h2>Featured Property For Sale</h2>
-								<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores</p>
-							</div>
-						</div>
-					</div>
-				
-					<div class="row list-layout">
-						
-						<!-- Single Property Start -->
-						<div class="col-lg-6 col-md-12">
-							<div class="property-listing property-1">
-									
-								<div class="listing-img-wrapper">
-									<a href="single-property-2.html">
-										<img src="assets/img/p-1.jpg" class="img-fluid mx-auto" alt="" />
-									</a>
-								</div>
-								
-								<div class="listing-content">
-								
-									<div class="listing-detail-wrapper-box">
-										<div class="listing-detail-wrapper">
-											<div class="listing-short-detail">
-												<h4 class="listing-name"><a href="single-property-2.html">Resort Valley Ocs</a></h4>
-												<div class="fr-can-rating">
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star"></i>
-													<span class="reviews_text">(42 Reviews)</span>
-												</div>
-												<span class="prt-types sale">For Sale</span>
-											</div>
-											<div class="list-price">
-												<h6 class="listing-card-info-price">$7,000</h6>
-											</div>
-										</div>
-									</div>
-									
-									<div class="price-features-wrapper">
-										<div class="list-fx-features">
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>3 Beds
-											</div>
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>1 Bath
-											</div>
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>800 sqft
-											</div>
-										</div>
-									</div>
-								
-									<div class="listing-footer-wrapper">
-										<div class="listing-locate">
-											<span class="listing-location"><i class="ti-location-pin"></i>Quice Market, Canada</span>
-										</div>
-										<div class="listing-detail-btn">
-											<a href="single-property-2.html" class="more-btn">View</a>
-										</div>
-									</div>
-									
-								</div>
-								
-							</div>
-						</div>
-						<!-- Single Property End -->
-						
-						<!-- Single Property Start -->
-						<div class="col-lg-6 col-md-12">
-							<div class="property-listing property-1">
-									
-								<div class="listing-img-wrapper">
-									<a href="single-property-2.html">
-										<img src="assets/img/p-2.jpg" class="img-fluid mx-auto" alt="" />
-									</a>
-								</div>
-								
-								<div class="listing-content">
-								
-									<div class="listing-detail-wrapper-box">
-										<div class="listing-detail-wrapper">
-											<div class="listing-short-detail">
-												<h4 class="listing-name"><a href="single-property-2.html">Adobe Property Advisors</a></h4>
-												<div class="fr-can-rating">
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star"></i>
-													<span class="reviews_text">(42 Reviews)</span>
-												</div>
-												<span class="prt-types rent">For Rent</span>
-											</div>
-											<div class="list-price">
-												<h6 class="listing-card-info-price">$6,800</h6>
-											</div>
-										</div>
-									</div>
-									
-									<div class="price-features-wrapper">
-										<div class="list-fx-features">
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>3 Beds
-											</div>
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>1 Bath
-											</div>
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>800 sqft
-											</div>
-										</div>
-									</div>
-								
-									<div class="listing-footer-wrapper">
-										<div class="listing-locate">
-											<span class="listing-location"><i class="ti-location-pin"></i>Quice Market, Canada</span>
-										</div>
-										<div class="listing-detail-btn">
-											<a href="single-property-2.html" class="more-btn">View</a>
-										</div>
-									</div>
-									
-								</div>
-								
-							</div>
-						</div>
-						<!-- Single Property End -->
-
-						<!-- Single Property Start -->
-						<div class="col-lg-6 col-md-12">
-							<div class="property-listing property-1">
-									
-								<div class="listing-img-wrapper">
-									<a href="single-property-2.html">
-										<img src="assets/img/p-3.jpg" class="img-fluid mx-auto" alt="" />
-									</a>
-								</div>
-								
-								<div class="listing-content">
-								
-									<div class="listing-detail-wrapper-box">
-										<div class="listing-detail-wrapper">
-											<div class="listing-short-detail">
-												<h4 class="listing-name"><a href="single-property-2.html">Bluebell Real Estate</a></h4>
-												<div class="fr-can-rating">
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star"></i>
-													<span class="reviews_text">(42 Reviews)</span>
-												</div>
-												<span class="prt-types rent">For Rent</span>
-											</div>
-											<div class="list-price">
-												<h6 class="listing-card-info-price">$7,000</h6>
-											</div>
-										</div>
-									</div>
-									
-									<div class="price-features-wrapper">
-										<div class="list-fx-features">
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>3 Beds
-											</div>
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>1 Bath
-											</div>
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>800 sqft
-											</div>
-										</div>
-									</div>
-								
-									<div class="listing-footer-wrapper">
-										<div class="listing-locate">
-											<span class="listing-location"><i class="ti-location-pin"></i>Quice Market, Canada</span>
-										</div>
-										<div class="listing-detail-btn">
-											<a href="single-property-2.html" class="more-btn">View</a>
-										</div>
-									</div>
-									
-								</div>
-								
-							</div>
-						</div>
-						<!-- Single Property End -->
-
-						<!-- Single Property Start -->
-						<div class="col-lg-6 col-md-12">
-							<div class="property-listing property-1">
-									
-								<div class="listing-img-wrapper">
-									<a href="single-property-2.html">
-										<img src="assets/img/p-4.jpg" class="img-fluid mx-auto" alt="" />
-									</a>
-								</div>
-								
-								<div class="listing-content">
-								
-									<div class="listing-detail-wrapper-box">
-										<div class="listing-detail-wrapper">
-											<div class="listing-short-detail">
-												<h4 class="listing-name"><a href="single-property-2.html">Agile Real Estate Group</a></h4>
-												<div class="fr-can-rating">
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star"></i>
-													<span class="reviews_text">(42 Reviews)</span>
-												</div>
-												<span class="prt-types sale">For Sale</span>
-											</div>
-											<div class="list-price">
-												<h6 class="listing-card-info-price">$8,100</h6>
-											</div>
-										</div>
-									</div>
-									
-									<div class="price-features-wrapper">
-										<div class="list-fx-features">
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>3 Beds
-											</div>
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>1 Bath
-											</div>
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>800 sqft
-											</div>
-										</div>
-									</div>
-								
-									<div class="listing-footer-wrapper">
-										<div class="listing-locate">
-											<span class="listing-location"><i class="ti-location-pin"></i>Quice Market, Canada</span>
-										</div>
-										<div class="listing-detail-btn">
-											<a href="single-property-2.html" class="more-btn">View</a>
-										</div>
-									</div>
-									
-								</div>
-								
-							</div>
-						</div>
-						<!-- Single Property End -->
-
-						<!-- Single Property Start -->
-						<div class="col-lg-6 col-md-12">
-							<div class="property-listing property-1">
-									
-								<div class="listing-img-wrapper">
-									<a href="single-property-2.html">
-										<img src="assets/img/p-5.jpg" class="img-fluid mx-auto" alt="" />
-									</a>
-								</div>
-								
-								<div class="listing-content">
-								
-									<div class="listing-detail-wrapper-box">
-										<div class="listing-detail-wrapper">
-											<div class="listing-short-detail">
-												<h4 class="listing-name"><a href="single-property-2.html">Nestled Real Estate</a></h4>
-												<div class="fr-can-rating">
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star"></i>
-													<span class="reviews_text">(42 Reviews)</span>
-												</div>
-												<span class="prt-types sale">For Sale</span>
-											</div>
-											<div class="list-price">
-												<h6 class="listing-card-info-price">$5,700</h6>
-											</div>
-										</div>
-									</div>
-									
-									<div class="price-features-wrapper">
-										<div class="list-fx-features">
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>3 Beds
-											</div>
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>1 Bath
-											</div>
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>800 sqft
-											</div>
-										</div>
-									</div>
-								
-									<div class="listing-footer-wrapper">
-										<div class="listing-locate">
-											<span class="listing-location"><i class="ti-location-pin"></i>Quice Market, Canada</span>
-										</div>
-										<div class="listing-detail-btn">
-											<a href="single-property-2.html" class="more-btn">View</a>
-										</div>
-									</div>
-									
-								</div>
-								
-							</div>
-						</div>
-						<!-- Single Property End -->
-
-						<!-- Single Property Start -->
-						<div class="col-lg-6 col-md-12">
-							<div class="property-listing property-1">
-									
-								<div class="listing-img-wrapper">
-									<a href="single-property-2.html">
-										<img src="assets/img/p-6.jpg" class="img-fluid mx-auto" alt="" />
-									</a>
-								</div>
-								
-								<div class="listing-content">
-								
-									<div class="listing-detail-wrapper-box">
-										<div class="listing-detail-wrapper">
-											<div class="listing-short-detail">
-												<h4 class="listing-name"><a href="single-property-2.html">Flow Group Real Estate</a></h4>
-												<div class="fr-can-rating">
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star"></i>
-													<span class="reviews_text">(42 Reviews)</span>
-												</div>
-												<span class="prt-types rent">For Rent</span>
-											</div>
-											<div class="list-price">
-												<h6 class="listing-card-info-price">$5,900</h6>
-											</div>
-										</div>
-									</div>
-									
-									<div class="price-features-wrapper">
-										<div class="list-fx-features">
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>3 Beds
-											</div>
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>1 Bath
-											</div>
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>800 sqft
-											</div>
-										</div>
-									</div>
-								
-									<div class="listing-footer-wrapper">
-										<div class="listing-locate">
-											<span class="listing-location"><i class="ti-location-pin"></i>Quice Market, Canada</span>
-										</div>
-										<div class="listing-detail-btn">
-											<a href="single-property-2.html" class="more-btn">View</a>
-										</div>
-									</div>
-									
-								</div>
-								
-							</div>
-						</div>
-						<!-- Single Property End -->
-
-						<!-- Single Property Start -->
-						<div class="col-lg-6 col-md-12">
-							<div class="property-listing property-1">
-									
-								<div class="listing-img-wrapper">
-									<a href="single-property-2.html">
-										<img src="assets/img/p-7.jpg" class="img-fluid mx-auto" alt="" />
-									</a>
-								</div>
-								
-								<div class="listing-content">
-								
-									<div class="listing-detail-wrapper-box">
-										<div class="listing-detail-wrapper">
-											<div class="listing-short-detail">
-												<h4 class="listing-name"><a href="single-property-2.html">Strive Partners Realty</a></h4>
-												<div class="fr-can-rating">
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star"></i>
-													<span class="reviews_text">(42 Reviews)</span>
-												</div>
-												<span class="prt-types sale">For Sale</span>
-											</div>
-											<div class="list-price">
-												<h6 class="listing-card-info-price">$6,200</h6>
-											</div>
-										</div>
-									</div>
-									
-									<div class="price-features-wrapper">
-										<div class="list-fx-features">
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>3 Beds
-											</div>
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>1 Bath
-											</div>
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>800 sqft
-											</div>
-										</div>
-									</div>
-								
-									<div class="listing-footer-wrapper">
-										<div class="listing-locate">
-											<span class="listing-location"><i class="ti-location-pin"></i>Quice Market, Canada</span>
-										</div>
-										<div class="listing-detail-btn">
-											<a href="single-property-2.html" class="more-btn">View</a>
-										</div>
-									</div>
-									
-								</div>
-								
-							</div>
-						</div>
-						<!-- Single Property End -->
-
-						<!-- Single Property Start -->
-						<div class="col-lg-6 col-md-12">
-							<div class="property-listing property-1">
-									
-								<div class="listing-img-wrapper">
-									<a href="single-property-2.html">
-										<img src="assets/img/p-8.jpg" class="img-fluid mx-auto" alt="" />
-									</a>
-								</div>
-								
-								<div class="listing-content">
-								
-									<div class="listing-detail-wrapper-box">
-										<div class="listing-detail-wrapper">
-											<div class="listing-short-detail">
-												<h4 class="listing-name"><a href="single-property-2.html">Black Oak Realty</a></h4>
-												<div class="fr-can-rating">
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star filled"></i>
-													<i class="fas fa-star"></i>
-													<span class="reviews_text">(42 Reviews)</span>
-												</div>
-												<span class="prt-types rent">For Rent</span>
-											</div>
-											<div class="list-price">
-												<h6 class="listing-card-info-price">$8,400</h6>
-											</div>
-										</div>
-									</div>
-									
-									<div class="price-features-wrapper">
-										<div class="list-fx-features">
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13" alt="" /></div>3 Beds
-											</div>
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/bathtub.svg" width="13" alt="" /></div>1 Bath
-											</div>
-											<div class="listing-card-info-icon">
-												<div class="inc-fleat-icon"><img src="assets/img/move.svg" width="13" alt="" /></div>800 sqft
-											</div>
-										</div>
-									</div>
-								
-									<div class="listing-footer-wrapper">
-										<div class="listing-locate">
-											<span class="listing-location"><i class="ti-location-pin"></i>Quice Market, Canada</span>
-										</div>
-										<div class="listing-detail-btn">
-											<a href="single-property-2.html" class="more-btn">View</a>
-										</div>
-									</div>
-									
-								</div>
-								
-							</div>
-						</div>
-						<!-- Single Property End -->								
-						
-					</div>
-							
-					<!-- Pagination -->
-					<div class="row">
-						<div class="col-lg-12 col-md-12 col-sm-12 text-center">
-							<a href="listings-list-with-sidebar.html" class="btn btn-theme-light-2 rounded">Browse More Properties</a>
-						</div>
-					</div>
-					
-				</div>		
-			</section>
-			<!-- ============================ All Featured Property ================================== -->
 			
 			<!-- ============================ Smart Testimonials ================================== -->
 			<section class="bg-orange">

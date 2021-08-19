@@ -59,13 +59,12 @@
 								<div class="property_block_wrap style-2 p-4">
 									<div class="prt-detail-title-desc">
 										<span class="prt-types sale">For Sale</span>
-										<h1><%=data.bedrooms%> BHK <%=data.propType%> in <%=data.locality%></h1>
+										<h1><%=data.bedrooms%> BHK <%=data.propType%> in <%=data.locality%> Lucknow</h1> 
 										
 										<span><i class="lni-map-marker"></i>&nbsp;<%=data.socityName%>, <%=data.locality%>, Lucknow</span>
 										<% let x = Math.round(data.expectedPrice / data.BuiltUpArea)  %>
 										<h3 class="prt-price-fix">₹ <%=x%><sub>/sqft</sub></h3>
 										<h3 class="prt-price-fix"> <u><a href="<%=domain%>project-details/<%=proj.url%>">Project: <%=proj.projectName%></a></u></h3>
-										<h3 class="prt-price-fix"><u> <a href="<%=domain%>company-details/<%=proj.curl%>">Company: <%=proj.companyName%></a></u></h3>
 										
 										<div class="list-fx-features ">
 											<div class="listing-card-info-icon">
@@ -194,7 +193,7 @@
 								</div>
 							</div>
 							
-							<!-- Single Block Wrap -->
+							<!-- Video Block Wrap -->
 							<div class="property_block_wrap style-2">
 								
 								<div class="property_block_wrap_header">
@@ -205,7 +204,7 @@
 									<div class="block-body">
 										
 											<div class="embed-responsive embed-responsive-16by9">
-												<iframe class="embed-responsive-item" src="<%=data.websiteLink%>" allowfullscreen	></iframe>
+												<iframe class="embed-responsive-item" src="<%=data.videoLink%>" allowfullscreen	></iframe>
 											</div>
 										
 									</div>
@@ -302,13 +301,24 @@
 							</div>
 							
 							<div class="details-sidebar">
-							
+								<!-- Companay And Address -->
+								<div class="like_share_wrap b-0">
+									<ul class="like_share_list">
+										<li>Marketed By:</li>
+										<a href="<%=domain%>company-details/<%=proj.curl%>" 
+												><%=proj.companyName%></a>
+												
+									</ul>
+									<span>
+										<i class="lni-map-marker"></i>  <%=proj.officeAddress%>
+									</span>
+								</div>
 								<!-- Agent Detail -->
 								<div class="sides-widget">
 									<div class="sides-widget-header">
 										<div class="agent-photo"><a href="<%=domain%>company-details/<%= proj.curl %> "><img src="assets/uploads/<%=JSON.parse(proj.logos).logos[0].smLogo%>" alt=""></a></div>
 										<div class="sides-widget-details">
-											<h4><a href="#"><%=proj.contactPerson%></a></h4>
+											<h4><a href="<%=domain%>company-details/<%= proj.curl %> "><%=proj.contactPerson%></a></h4>
 											<span><i class="lni-phone-handset"></i><%=proj.contactNumber%></span>
 										</div>
 										<div class="clearfix"></div>

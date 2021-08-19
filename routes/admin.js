@@ -310,7 +310,7 @@ router.post("/createFlat", uploads, trimRequest.all, async (req, res) => {
     let local = spaceReplacer(req.body.locality);
     let type =req.body.propType === "Apartment" ? "flat-Apartment" : req.body.propType;
     let uuid = uniqid.time();
-    let url = `${req.body.bedrooms}bhk-${type}-for-sale-in-${soci}-${local}-lucknow-built-up-area-${req.body.BuiltUpArea}-square-feet-${uuid}`;
+    let url = `${req.body.bedrooms}bhk-${type}-for-sale-in-${local}-lucknow-built-up-area-${req.body.BuiltUpArea}-square-feet-${uuid}`;
     
     url = url.toLowerCase();
     let pd= req.body.propDetails.trim();
@@ -399,7 +399,7 @@ router.post("/createPlot_Land", uploads, trimRequest.all, async (req, res) => {
     let local = spaceReplacer(req.body.locality);
     let type = req.body.propType === "Commercial" ? "Residential" : req.body.propType;
     let uuid = uniqid.time();
-    let url = `${type}-Plots-for-sale-in-${soci}-${local}-lucknow-built-up-area-${req.body.TotalArea}-square-feet-offered-price-${req.body.TotalPrice}-rs-${uuid}`;
+    let url = `${req.body.TotalArea}-square-feet-${type}-Plots-for-sale-in-${local}-lucknow-offered-price-${req.body.TotalPrice}-rs-${uuid}`;
     url = url.toLowerCase();
     let src = uniqid() + "-" + req.files["gallery"][0].originalname;
     await sharp(req.files["gallery"][0].buffer)
@@ -673,7 +673,8 @@ router.get("/leadsFromWeb", async (req, res) => {
 });
 
 router.get("/addComp", async (req, res) => {
-  res.render("admin/addCompany");
+  const loc=await Locality.findAll();
+  res.render("admin/addCompany",{data:loc});
 });
 
 router.post("/createProject", uploads, trimRequest.all, async (req, res) => {
@@ -745,14 +746,19 @@ router.post("/createProject", uploads, trimRequest.all, async (req, res) => {
 });
 const logouplod = upload.fields([{ name: "logo", maxCount: 1 }]);
 router.post('/createComp',logouplod,trimRequest.all, async(req,res)=>{
-  
-try {
-  
-  let logoImage = {
-    logos: []
-  };
- let url=`${req.body.CompanyName}-in-${req.body.officeAddress}-lucknow-${req.body.websiteLink}-${req.body.aboutCompany}`;
-  // let uuid = uniqid.time();
+try{
+      let logoImage = {
+        logos: []
+      };
+   let uuid = uniqid.time();
+   let companyName=  spaceReplacer(req.body.CompanyName);
+   let locality  = spaceReplacer(req.body.locality);
+   let url=`${companyName}-in-${locality}-lucknow-${uuid}`;
+   let aboutCompany=req.body.aboutCompany.trim();
+   if(aboutCompany==""){
+   aboutCompany=`${req.body.CompanyName} is well established real estate company in Lucknow. The office address of ${req.body.CompanyName} is in req.body.officeAddress . the company is fully operational in building and selling flats apartments and plots at a very competitive price in Lucknow. You can contact ${req.body.CompanyName} directly by using xyz.com`;
+
+   }
     let tinySrc = "";
     let bigSrc = "";
     // url="";
@@ -784,15 +790,14 @@ try {
     const company =await Companies.create({
       companyName:req.body.CompanyName,
       url:url,
-      location:req.body.location, 
-     
+      location:req.body.locality, 
       officeAddress:req.body.officeAddress,
       contactPerson:req.body.cpname,
       contactNumber:req.body.conNumber,
       logos:logoImageStr,
       rearRegiNumber:req.body.rrnumber,
       email:req.body.email,
-      aboutCompany:req.body.aboutCompany,
+      aboutCompany:aboutCompany,
       websiteLink:req.body.websiteLink,
       
     });
@@ -807,33 +812,60 @@ try {
   }
 });
 
-router.post("/loadMoreFlatOrHouse", (req, res) => {
+router.post("/loadMoreFlatOrHouse", async (req, res) => {
   let limit = parseInt(req.body.limit);
   let start = parseInt(req.body.start);
+  let local=req.body.local;
   let whr = req.body.whr;
+  let result="";
+  if(local == ""){
+    console.log("in if");
+   result =await FlatOrHouse.findAll({
+      attributes: [
+        "_id",
+        "bedrooms",
+        "propType",
+        "locality",
+        "socityName",
+        "bathrooms",
+        "BuiltUpArea",
+        "expectedPrice",
+        "gallery",
+        "url",
+      ],
+      where: {
+        propType: whr,
+      },
+      offset: start,
+      limit: limit,
+    })
 
-  FlatOrHouse.findAll({
-    attributes: [
-      "_id",
-      "bedrooms",
-      "propType",
-      "locality",
-      "socityName",
-      "bathrooms",
-      "BuiltUpArea",
-      "expectedPrice",
-      "gallery",
-      "url",
-    ],
-    where: {
-      propType: whr,
-    },
-    offset: start,
-    limit: limit,
-  }).then((res) => {
-    console.log("testing", res);
-  });
-  res.send("coolllllll=" + limit);
+  }else{
+    result =await FlatOrHouse.findAll({
+      attributes: [
+        "_id",
+        "bedrooms",
+        "propType",
+        "locality",
+        "socityName",
+        "bathrooms",
+        "BuiltUpArea",
+        "expectedPrice",
+        "gallery",
+        "url",
+      ],
+      where: {
+        propType: whr,
+        locality:local
+      },
+      offset: start,
+      limit: limit,
+    })
+    
+  }
+  console.log("locaal ==", result);
+  res.send(result);
+  
 });
 router.post("/loadMoreProject", async(req, res) => {
   let limit = parseInt(req.body.limit);

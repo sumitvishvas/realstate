@@ -7,11 +7,73 @@ const logger = require("../util/logger");
 router.get('/favicon.ico',async (req,res)=>{
   res.render("404");
  });
+
+ router.get("/contact", (req,res)=>{
+  res.render("contact");
+  
+  });
+router.get("/about",(req,res)=>{
+res.render("about");
+});
  
 router.get("/", async(req, res) => {
     const loc=await Locality.findAll();
-   
-  res.render("index",{data:loc});
+    const allFlats = await FlatOrHouse.findAll({
+      attributes: [
+        "_id",
+        "bedrooms",
+        "propType",
+        "locality",
+        "socityName",
+        "bathrooms",
+        "BuiltUpArea",
+        "expectedPrice",
+        "gallery",
+        "url",
+      ],
+      where: {
+        propType: "Apartment",
+      },
+      order:[['_id','DESC']],
+      limit: 8
+    });
+
+  const allPlots = await PlotOrLand.findAll({
+      attributes: [
+        "_id",
+        "propType",
+        "locality",
+        "socityName",
+        "TotalArea",
+        "TotalPrice",
+        "gallery",
+        "url",
+      ],
+      order:[['_id','DESC']],
+      limit: 10
+    });
+
+    const allHouses = await FlatOrHouse.findAll({
+      attributes: [
+        "_id",
+        "bedrooms",
+        "propType",
+        "locality",
+        "socityName",
+        "bathrooms",
+        "BuiltUpArea",
+        "expectedPrice",
+        "gallery",
+        "url",
+      ],
+      where: {
+        propType: "House",
+      },
+      order:[['_id','DESC']],
+      limit: 8
+    });
+    
+  res.render("index",{data:loc,allFlats:allFlats,plots:allPlots,houses:allHouses});
 });
 
 
@@ -39,7 +101,7 @@ router.get("/flats-in-lucknow", async (req, res) => {
     console.log("Not found!");
   } else {
     
-    res.render("flats", { data: allFlats });
+    res.render("flats", { data: allFlats,local:"",type:"Apartment" });
   }
 });
 router.get("/house-for-sale-in-lucknow", async (req, res) => {
@@ -65,7 +127,7 @@ router.get("/house-for-sale-in-lucknow", async (req, res) => {
     console.log("Not found!");
   } else {
     
-    res.render("flats", { data: allFlats });
+    res.render("flats", { data: allFlats ,local:"",type:"House"});
   }
 });
 
@@ -86,7 +148,7 @@ router.get("/plots-in-lucknow", async (req, res) => {
     console.log("Not found!");
   } else {
     
-    res.render("plots", { data: allPlots });
+    res.render("plots", { data: allPlots,local:"",type:"plots" });
   }
 });
 
@@ -153,12 +215,11 @@ router.get('/real-estate-companies-in-lucknow',async (req,res)=>{
       "email"
     ]
   })
-  console.log("ram",company.length);
+  
     if(company.length !== 0){
       res.render("companies",{data:company});
     }else{
       logger.info("data not found from project table or real-estate-company-in-lucknow Url ");
-  
     }
   
 });
@@ -212,6 +273,10 @@ router.get("/plot-details/:id", async (req, res) => {
   res.render("plot-details", { data: singleOne,proj:compProject[0][0], msg:msg });
 });
 
+
+
+
+
 router.get("/:id",async (req,res)=>{
   const url=req.params.id;
    let x=url.split("-in-");
@@ -242,6 +307,7 @@ router.get("/:id",async (req,res)=>{
     });
     
     res.locals.data=result;
+    res.locals.type="House";
   }else if(type =="flats"){
     let result = await FlatOrHouse.findAll({
       attributes: [
@@ -261,9 +327,9 @@ router.get("/:id",async (req,res)=>{
         locality:locality
       }
     });
-    console.log(result);
-
+    
     res.locals.data=result;
+    res.locals.type="Apartment";
   }else if(type =="plots"){
     const allPlots = await PlotOrLand.findAll({
       attributes: [
@@ -280,19 +346,21 @@ router.get("/:id",async (req,res)=>{
         locality:locality
       }
     });
-    res.render('plots',{data:allPlots});
+    res.render('plots',{data:allPlots,local:locality,type:"plots"});
     return(0);
   }else{
     res.redirect("/favicon.ico");
   }
   
   
-  res.render("flats");
+  res.render("flats",{local:locality});
    }else{
     res.redirect("/favicon.ico");
    }
   
 });
+
+
 
 
 

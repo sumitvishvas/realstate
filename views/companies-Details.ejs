@@ -5,7 +5,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    <title>Resido - Residence & Real Estate HTML Template</title>
+    <title><%=data.companyName%> in <%=data.location%> Lucknow | xyz</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="<%=data.companyName%> is lucknow based real estate company .this company deals in plots and flats offiace address : <%=data.officeAddress%>- Find properties with Rightmove - The Lucknow's largest selection of properties." />
+    <meta name="keywords" content="<%=data.companyName%> ,Real Estate Company Lucknow, plots for sale in lucknow, land in lucknow, land for sale in lucknow" />
+    <meta name="author" content="<%=domain%>" />
+    <meta name="MobileOptimized" content="320" />
+    <meta property='og:title' content='<%=data.companyName%> in <%=data.location%> Lucknow | xyz' />
+    <meta property='og:url' content='<%=domain%>company-details/<%=data.url %> ' />
+    <meta property='og:type' content='website' />
+    <meta property='og:description' content="<%=data.companyName%> is lucknow based real estate company .this company deals in plots and flats offiace address : <%=data.officeAddress%>- Find properties with Rightmove - The Lucknow's largest selection of properties."/>
+    <meta property='og:image' content='<%=domain%>assets/uploads/<%=JSON.parse(data.logos).logos[0].smLogo%>' />
+    <meta property="fb:app_id" content="198590537434942" />
+    <meta property="og:image:width" content="880" />
+    <meta property="og:image:height" content="660" />
+    <meta name='twitter:card' content='Summary' />
+    <meta name='twitter:title' content='<%=data.companyName%> in <%=data.location%> Lucknow | xyz'/>
+    <meta name='twitter:description' content="<%=data.companyName%> is lucknow based real estate company .this company deals in plots and flats offiace address : <%=data.officeAddress%>- Find properties with Rightmove - The Lucknow's largest selection of properties." />
+    <meta name='twitter:url' content='<%=domain%>company-details/<%=data.url %> ' />
+    <meta name='twitter:image' content='<%=domain%>assets/uploads/<%=JSON.parse(data.logos).logos[0].smLogo%>' />
 
     <!-- Custom CSS -->
     <link href="assets/css/styles.css
@@ -55,19 +73,17 @@
                         <div class="col">
 
                             <div class="property_block_wrap style-2 p-4">
-                                <img src="assets/uploads/<%=JSON.parse(data.logos).logos[0].smLogo%>" style="width: 10%;">
+                                <img src="assets/uploads/<%=JSON.parse(data.logos).logos[0].smLogo%>" class="img-thumbnail" >
 
                                 <div class="prt-detail-title-desc">
                                     <!-- <span class="prt-types sale">For Sale</span> -->
                                     <h3>
                                         <%=data.companyName%>
                                     </h3>
-
+                                    <br>
                                     <span><i class="lni-map-marker"></i>
-                                        <%=data.officeAddress%>, <%=data.location%>
+                                        <%=data.officeAddress%>
                                     </span>
-                                    
-                                        <h3 class="prt-price-fix"> <a href="#">abc pvt ltd</a></sub></h3>
                                         <div class="list-fx-features">
                                             <!-- <div class="listing-card-info-icon">
                                                 <div class="inc-fleat-icon"><img src="assets/img/bed.svg" width="13"
@@ -82,7 +98,7 @@
                                             <div class="listing-card-info-icon">
                                                 <div class="inc-fleat-icon"><img src="https://image.flaticon.com/icons/png/512/3616/3616792.png" width="13"
 														alt=""></div>
-                                                <a target="_blank" href="https://<%=data.websiteLink%>">Website</a>
+                                                <a target="_blank" href="<%=data.websiteLink%>">Website</a>
                                             </div>
                                         </div>
 
@@ -105,12 +121,7 @@
 
                         <!-- property main detail -->
                         <div class="col-lg-8 col-md-12 col-sm-12">
-
-
-                            
-
-
-                            <!-- Single Block Wrap -->
+                          <!-- Single Block Wrap -->
                             <div class="property_block_wrap style-2">
 
                                 <div class="property_block_wrap_header">
@@ -137,8 +148,7 @@
                                             <li><strong></strong>
                                                 
                                             </li>
-                                            <li><strong></strong></li>
-                                            <li><strong>Office Address:</strong><%= data.officeAddress %>  ,<%= data.location %> </li>
+                                            <li><strong>Office Address:</strong><%= data.officeAddress %> </li>
                                            
                                         </ul>
                                     </div>
@@ -174,27 +184,7 @@
 
 
                             <!-- Single Block Wrap -->
-                            <div class="property_block_wrap style-2">
-
-                                <div class="property_block_wrap_header">
-                                    <a data-bs-toggle="collapse" data-parent="#loca" data-bs-target="#clSix"
-                                        aria-controls="clSix" href="javascript:void(0);" aria-expanded="true"
-                                        class="collapsed">
-                                        <h4 class="property_block_title">Location</h4>
-                                    </a>
-                                </div>
-
-                                <div id="clSix" class="panel-collapse collapse">
-                                    <div class="block-body">
-                                        <div class="map-container">
-                                            <div id="singleMap" data-latitude="40.7427837"
-                                                data-longitude="-73.11445617675781" data-mapTitle="Our Location"><%= data.location %> </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </div>
+                            
 
                             <!-- Single Block Wrap -->
 
@@ -207,143 +197,7 @@
 
 
                             <!-- Single Block Wrap -->
-                            <div class="property_block_wrap style-2">
-
-                                <div class="property_block_wrap_header">
-                                    <a data-bs-toggle="collapse" data-parent="#nearby" data-bs-target="#clNine"
-                                        aria-controls="clNine" href="javascript:void(0);" aria-expanded="true">
-                                        <h4 class="property_block_title">Nearby</h4>
-                                    </a>
-                                </div>
-
-                                <div id="clNine" class="panel-collapse collapse show">
-                                    <div class="block-body">
-
-                                        <!-- Schools -->
-                                        <div class="nearby-wrap">
-                                            <div class="nearby_header">
-                                                <div class="nearby_header_first">
-                                                    <h5>Schools Around</h5>
-                                                </div>
-                                                <div class="nearby_header_last">
-                                                    <div class="nearby_powerd">
-                                                        Powerd by <img src="assets/img/edu.png" class="img-fluid"
-                                                            alt="" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="neary_section_list">
-
-                                                <div class="neary_section">
-                                                    <div class="neary_section_first">
-                                                        <h4 class="nearby_place_title">Green Iseland School<small>(3.52
-                                                                mi)</small></h4>
-                                                    </div>
-                                                    <div class="neary_section_last">
-                                                        <div class="nearby_place_rate">
-                                                            <i class="fa fa-star filled"></i>
-                                                            <i class="fa fa-star filled"></i>
-                                                            <i class="fa fa-star filled"></i>
-                                                            <i class="fa fa-star filled"></i>
-                                                            <i class="fa fa-star"></i>
-                                                        </div>
-                                                        <small class="reviews-count">(421 Reviews)</small>
-                                                    </div>
-                                                </div>
-
-                                                <div class="neary_section">
-                                                    <div class="neary_section_first">
-                                                        <h4 class="nearby_place_title">Ragni Intermediate
-                                                            College<small>(0.52 mi)</small></h4>
-                                                    </div>
-                                                    <div class="neary_section_last">
-                                                        <div class="nearby_place_rate">
-                                                            <i class="fa fa-star filled"></i>
-                                                            <i class="fa fa-star filled"></i>
-                                                            <i class="fa fa-star filled"></i>
-                                                            <i class="fa fa-star filled"></i>
-                                                            <i class="fa fa-star-half filled"></i>
-                                                        </div>
-                                                        <small class="reviews-count">(470 Reviews)</small>
-                                                    </div>
-                                                </div>
-
-                                                <div class="neary_section">
-                                                    <div class="neary_section_first">
-                                                        <h4 class="nearby_place_title">Rose Wood Primary
-                                                            Scool<small>(0.47 mi)</small></h4>
-                                                    </div>
-                                                    <div class="neary_section_last">
-                                                        <div class="nearby_place_rate">
-                                                            <i class="fa fa-star filled"></i>
-                                                            <i class="fa fa-star filled"></i>
-                                                            <i class="fa fa-star filled"></i>
-                                                            <i class="fa fa-star filled"></i>
-                                                            <i class="fa fa-star"></i>
-                                                        </div>
-                                                        <small class="reviews-count">(204 Reviews)</small>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                        <!-- Hotel & Restaurant -->
-                                        <div class="nearby-wrap">
-                                            <div class="nearby_header">
-                                                <div class="nearby_header_first">
-                                                    <h5>Food Around</h5>
-                                                </div>
-                                                <div class="nearby_header_last">
-                                                    <div class="nearby_powerd">
-                                                        Powerd by <img src="assets/img/food.png" class="img-fluid"
-                                                            alt="" />
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="neary_section_list">
-
-                                                <div class="neary_section">
-                                                    <div class="neary_section_first">
-                                                        <h4 class="nearby_place_title">The Rise hotel<small>(2.42
-                                                                mi)</small></h4>
-                                                    </div>
-                                                    <div class="neary_section_last">
-                                                        <div class="nearby_place_rate">
-                                                            <i class="fa fa-star filled"></i>
-                                                            <i class="fa fa-star filled"></i>
-                                                            <i class="fa fa-star filled"></i>
-                                                            <i class="fa fa-star filled"></i>
-                                                            <i class="fa fa-star filled"></i>
-                                                        </div>
-                                                        <small class="reviews-count">(105 Reviews)</small>
-                                                    </div>
-                                                </div>
-
-                                                <div class="neary_section">
-                                                    <div class="neary_section_first">
-                                                        <h4 class="nearby_place_title">Blue Ocean Bar &
-                                                            Restaurant<small>(1.52 mi)</small></h4>
-                                                    </div>
-                                                    <div class="neary_section_last">
-                                                        <div class="nearby_place_rate">
-                                                            <i class="fa fa-star filled"></i>
-                                                            <i class="fa fa-star filled"></i>
-                                                            <i class="fa fa-star filled"></i>
-                                                            <i class="fa fa-star filled"></i>
-                                                            <i class="fa fa-star"></i>
-                                                        </div>
-                                                        <small class="reviews-count">(40 Reviews)</small>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </div>
-
-                            </div>
+                           
 
                             <!-- Single Write a Review -->
 
@@ -354,24 +208,17 @@
                         <div class="col-lg-4 col-md-12 col-sm-12">
 
                             <!-- Like And Share -->
-                            <div class="like_share_wrap b-0">
-                                <ul class="like_share_list">
-                                    <li><a href="JavaScript:Void(0);" class="btn btn-likes" data-toggle="tooltip"
-                                            data-original-title="Share"><i class="fas fa-share"></i>Share</a></li>
-                                    <li><a href="JavaScript:Void(0);" class="btn btn-likes" data-toggle="tooltip"
-                                            data-original-title="Save"><i class="fas fa-heart"></i>Save</a></li>
-                                </ul>
-                            </div>
+                            
 
                             <div class="details-sidebar">
 
                                 <!-- Agent Detail -->
                                 <div class="sides-widget">
                                     <div class="sides-widget-header">
-                                        <div class="agent-photo"><img src="assets/img/user-6.jpg" alt=""></div>
+                                        <div class="agent-photo"><a href="<%=domain%>company-details/<%=data.url %>"><img src="assets/uploads/<%=JSON.parse(data.logos).logos[0].smLogo%>" alt=""></a></div>
                                         <div class="sides-widget-details">
-                                            <h4><a href="#">Shivangi Preet</a></h4>
-                                            <span><i class="lni-phone-handset"></i>(91) 123 456 7895</span>
+                                            <h4><a href="<%=domain%>company-details/<%=data.url %> "><%=data.contactPerson%></a></h4>
+                                            <span><i class="lni-phone-handset"></i><%=data.contactNumber%></span>
                                         </div>
                                         <div class="clearfix"></div>
                                     </div>
